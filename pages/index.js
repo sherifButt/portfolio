@@ -4,7 +4,7 @@ import Head from "next/head";
 import lottie from "lottie-web";
 import Imgage from 'next/image'
 import { motion, AnimatePresence } from "framer-motion";
-import Accordion from "https://framer.com/m/Accordion-DzH5.js@FxlVIUWgRmYyfA7RfgAS"
+// import Accordion from "https://framer.com/m/Accordion-DzH5.js@FxlVIUWgRmYyfA7RfgAS"
 
 export default function Home () {
   const container = useRef( null );
@@ -72,7 +72,7 @@ export default function Home () {
         <div>
           <div className="flex flex-wrap items-center -mx-8">
             <div className="md:w-1/2 px-8 mb-8">
-              <Accordion />
+              {/* <Accordion /> */}
               <img
                 className="w-4/5 mx-auto right"
                 src="/assets/placeholders-2-0/pictures/new_ideas.svg"
