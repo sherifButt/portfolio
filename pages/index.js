@@ -4,7 +4,7 @@ import Head from "next/head";
 import lottie from "lottie-web";
 import Imgage from 'next/image'
 import { motion, AnimatePresence } from "framer-motion";
-// import Accordion from "https://framer.com/m/Accordion-DzH5.js@FxlVIUWgRmYyfA7RfgAS"
+import ProjectCard from "https://framer.com/m/Project-Card-3HSV.js@IluQ4kF3WI4tVHEYn6HF"
 
 export default function Home () {
   const container = useRef( null );
@@ -72,7 +72,17 @@ export default function Home () {
         <div>
           <div className="flex flex-wrap items-center -mx-8">
             <div className="md:w-1/2 px-8 mb-8">
-              {/* <Accordion /> */}
+              <ProjectCard
+                // Using default values:
+                background="rgb(68, 85, 187)"
+                borderRadius={ 20 }
+                cOMPLETION={ 60 }
+                description="This is a description box of the project. you can have more stuff here brecuse we cannto talk about theis"
+                height={ 218 }
+                shadowColor="rgba(0, 153, 255, 0.5)"
+                title="Project 1"
+                width={ 312 }
+              />
               <img
                 className="w-4/5 mx-auto right"
                 src="/assets/placeholders-2-0/pictures/new_ideas.svg"
