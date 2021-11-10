@@ -1,8 +1,8 @@
 import React from "react";
 import styled from 'styled-components'
-import Imgage from 'next/image'
 import Lottie from '../components/lottie/Lottie'
 import { motion, AnimatePresence } from "framer-motion";
+import Motion from "../components/Motion"
 import ProjectCard from "https://framer.com/m/Project-Card-3HSV.js@IluQ4kF3WI4tVHEYn6HF"
 export default function Home () {
 
@@ -11,8 +11,7 @@ export default function Home () {
       <section className="py-6 px-4">
         <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
           <div className="lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none">
-            <h1 className="text-7xl mb-6 leading-tight font-semibold font-heading">
-
+            <h1 className="lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
               No paper plane can be made without paper
             </h1>
 
@@ -21,25 +20,16 @@ export default function Home () {
               patch to change the way you think about paper. That’s us - people
               who sell limitless paper in the paperless world.
             </p>
-            <motion.div
-              initial={ { x: -500, opacity: 0 } }
-              animate={ { scale: 1.1, x: 30, opacity: 1 } }
-              transition={ {
-                type: "spring",
-                loop: false,
-                stiffness: 260,
-                damping: 20,
-                delay: 1
-              } }>
+            <Motion>
 
               <a className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow"
                 href="#" >
                 Sign up <span className="font-light">for free &rarr;</span>
               </a>
-              <a className="text-indigo-600 hover:underline" href="#">
+              <a className="sm:hidden text-indigo-600 hover:underline" href="#">
                 Learn more
               </a>
-            </motion.div >
+            </Motion >
           </div>
 
           <motion.div className="lg:w-1/2 px-2" drag="x"
