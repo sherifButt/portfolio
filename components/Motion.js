@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 
-const Motion = ( { children } ) => {
+const Motion = ( { children,direction } ) => {
   return (
     <motion.div
       initial={ { x: -500, opacity: 0 } }
@@ -15,6 +15,11 @@ const Motion = ( { children } ) => {
       { children }
     </motion.div >
   )
+}
+
+Motion.defaultProps = {
+  direction: 'right', //top bottom right left
+
 }
 
 export default Motion

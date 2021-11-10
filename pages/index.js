@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Lottie from '../components/lottie/Lottie'
 import { motion, AnimatePresence } from "framer-motion";
 import Motion from "../components/Motion"
-import ProjectCard from "https://framer.com/m/Project-Card-3HSV.js@IluQ4kF3WI4tVHEYn6HF"
+
 export default function Home () {
 
   return (
@@ -55,7 +55,7 @@ export default function Home () {
           <div className="flex flex-wrap items-center -mx-8">
             <div className="md:w-1/2 px-8 mb-8">
               <div className="w-4/5 mx-auto " >
-                <Lottie path="./scanning.json" />
+                <Lottie path="./74907-search-white-tshirt.json" />
               </div>
 
             </div>
