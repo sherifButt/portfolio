@@ -1,30 +1,21 @@
 import React from "react";
-import { useEffect, useRef } from "react";
-import Head from "next/head";
-import lottie from "lottie-web";
+import styled from 'styled-components'
 import Imgage from 'next/image'
+import Lottie from '../components/lottie/Lottie'
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "https://framer.com/m/Project-Card-3HSV.js@IluQ4kF3WI4tVHEYn6HF"
-
 export default function Home () {
-  const container = useRef( null );
-  useEffect( () => {
-    lottie.loadAnimation( {
-      container: container.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: require( "../public/assets/lottie/social.json" ),
-    } );
-  }, [] );
+
   return (
     <>
       <section className="py-6 px-4">
         <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
           <div className="lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none">
             <h1 className="text-7xl mb-6 leading-tight font-semibold font-heading">
+
               No paper plane can be made without paper
             </h1>
+
             <p className="mb-8 text-gray-400 leading-relaxed">
               Professional, dedicated, local. Dunder Mifflin is on its best
               patch to change the way you think about paper. That’s us - people
@@ -35,6 +26,7 @@ export default function Home () {
               animate={ { scale: 1.1, x: 30, opacity: 1 } }
               transition={ {
                 type: "spring",
+                loop: false,
                 stiffness: 260,
                 damping: 20,
                 delay: 1
@@ -56,7 +48,7 @@ export default function Home () {
               stiffness: 260,
               damping: 20,
             } }>
-            <div className="container" ref={ container }></div>
+            <Lottie path="./social.json" />
           </motion.div>
 
         </div>
@@ -72,23 +64,10 @@ export default function Home () {
         <div>
           <div className="flex flex-wrap items-center -mx-8">
             <div className="md:w-1/2 px-8 mb-8">
-              <ProjectCard
-                // Using default values:
-                background="rgb(68, 85, 187)"
-                borderRadius={ 20 }
-                cOMPLETION={ 60 }
-                description="This is a description box of the project. you can have more stuff here brecuse we cannto talk about theis"
-                height={ 218 }
-                shadowColor="rgba(0, 153, 255, 0.5)"
-                title="Project 1"
-                width={ 312 }
-              />
-              <img
-                className="w-4/5 mx-auto right"
-                src="/assets/placeholders-2-0/pictures/new_ideas.svg"
-                alt=""
-              />
-              
+              <div className="w-4/5 mx-auto " >
+                <Lottie path="./scanning.json" />
+              </div>
+
             </div>
             <div className="md:w-1/2 px-8 mb-8">
               <span className="text-6xl">01</span>
@@ -104,11 +83,9 @@ export default function Home () {
           </div>
           <div className="flex flex-wrap items-center -mx-8">
             <div className="md:w-1/2 px-8 mb-8 md:order-1">
-              <img
-                className="w-4/5 mx-auto"
-                src="/assets/placeholders-2-0/pictures/certificate.svg"
-                alt=""
-              />
+              <div className="w-4/5 mx-auto " >
+              <Lottie path="./contact_us.json" />
+</div>
             </div>
             <div className="md:w-1/2 px-8 md:text-right">
               <span className="text-6xl">02</span>
@@ -123,12 +100,9 @@ export default function Home () {
           </div>
           <div className="flex flex-wrap items-center -mx-8">
             <div className="md:w-1/2 px-8 mb-8 order-none">
-              <img
-
-                className="w-4/5 mx-auto"
-                src="/assets/placeholders-2-0/pictures/waiting.svg"
-                alt=""
-              />
+              <div className="w-4/5 mx-auto " >
+                <Lottie path="./sign-in.json" />
+              </div>
             </div>
             <div className="md:w-1/2 px-8">
               <span className="text-6xl">03</span>
@@ -574,3 +548,22 @@ export default function Home () {
     </>
   );
 }
+
+const Title = styled.h1`
+
+color:transparent;
+background-image:url(https://images.unsplash.com/photo-1532467411038-57680e3dc0f1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80);
+background-size:cover;
+background-clip:text;
+-webkit-background-clip:text;
+filter:contrast(120%);
+text-shadow:   
+               
+               
+               
+               0 10px 10px rgba(0,0,0,.2),
+               0 30px 20px rgba(0,0,0,.15);
+ -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgba(0,0,0,.3);
+
+`
