@@ -26,7 +26,7 @@ export default function Home () {
                 href="#" >
                 Sign up <span className="font-light">for free &rarr;</span>
               </a>
-              <a className="sm:hidden text-indigo-600 hover:underline" href="#">
+              <a className="hidden md:contents text-indigo-600 hover:underline" href="#">
                 Learn more
               </a>
             </Motion >
