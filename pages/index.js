@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Lottie from '../components/lottie/Lottie'
 import { motion, AnimatePresence } from "framer-motion";
 import Motion from "../components/Motion"
+import AnimatedText from "../components/AnimatedText";
 
 export default function Home () {
 
@@ -12,7 +13,7 @@ export default function Home () {
         <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
           <div className="lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none">
             <h1 className="lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
-              No paper plane can be made without paper
+              <AnimatedText>No paper plane can be made without paper</AnimatedText>
             </h1>
 
             <p className="mb-8 text-gray-400 leading-relaxed">
@@ -21,7 +22,6 @@ export default function Home () {
               who sell limitless paper in the paperless world.
             </p>
             <Motion>
-
               <a className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow"
                 href="#" >
                 Sign up <span className="font-light">for free &rarr;</span>
@@ -556,4 +556,12 @@ text-shadow:
  -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: rgba(0,0,0,.3);
 
+`
+
+const Text = styled.h1`
+
+
+mix-blend-mode: multiply;
+text-shadow: 0px 12px 23px rgba(169, 180, 203, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 3px 0px #D6DADF;
+//  filter: blur(1px);
 `
