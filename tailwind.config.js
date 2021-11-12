@@ -1,36 +1,37 @@
-const defaultTheme = require( 'tailwindcss/defaultTheme' )
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  mode: 'jit',
-  purge: [ './pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}' ],
-  darkMode: false, // or 'media' or 'class'
+   mode: "jit",
+   purge: [
+      "./pages/**/*.{js,ts,jsx,tsx}",
+      "./components/**/*.{js,ts,jsx,tsx}",
+   ],
+   darkMode: false, // or 'media' or 'class'
 
-  theme: {
-    colors: {
-      ...defaultTheme.colors,
-      'indigo': {
-        '50': '#f8f5f8',
-        '100': '#f0eaf1',
-        '200': '#dacbdc',
-        '300': '#c3acc7',
-        '400': '#976e9c',
-        '500': '#6a3072',
-        '600': '#5f2b67',
-        '700': '#502456',
-        '800': '#401d44',
-        '900': '#341838'
+   theme: {
+      colors: {
+         ...defaultTheme.colors,
+         indigo: {
+            50: "#f9f8fe",
+            100: "#f4f0fd",
+            200: "#e3daf9",
+            300: "#d2c3f5",
+            400: "#b096ee",
+            500: "#8e69e6",
+            600: "#805fcf",
+            700: "#6b4fad",
+            800: "#553f8a",
+            900: "#463371",
+         },
       },
-      
-    },
-    extend: {
-      fontFamily: {
-        'sans': [ 'Poppins', ...defaultTheme.fontFamily.sans ]
+      extend: {
+         fontFamily: {
+            sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+         },
       },
-    },
-  },
-    variants: {
+   },
+   variants: {
       extend: {},
-    },
-    plugins: [],
-  
-}
+   },
+   plugins: [],
+};
