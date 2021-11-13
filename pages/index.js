@@ -3,7 +3,10 @@ import styled from "styled-components";
 import Lottie from "../components/lottie/Lottie";
 import { motion, AnimatePresence } from "framer-motion";
 import Motion from "../components/Motion";
+import PricingSection from "../components/PricingSection";
+
 import AnimatedText from "../components/AnimatedText";
+import Card from "../components/Card";
 
 export default function Home() {
    return (
@@ -12,7 +15,16 @@ export default function Home() {
             <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
                <div className="lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none">
                   <h1 className="lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
-                     No paper plane can be made without paper
+                     No{" "}
+                     <span className="text-indigo-700 tracking-wide">
+                        {" "}
+                        Paper{" "}
+                     </span>{" "}
+                     plane can be made without{" "}
+                     <span className="text-indigo-700 tracking-wide">
+                        {" "}
+                        Paper{" "}
+                     </span>
                   </h1>
 
                   <p className="mb-8 text-gray-400 leading-relaxed">
@@ -53,8 +65,9 @@ export default function Home() {
                   }}>
                   <motion.div
                      animate={{
-                        x: [10, -30, 20, 0, 60, -50],
-                        y: [20, 0, 15, -10, 20, -10],
+                        // x: [10, -30, 20, 0, 60, -50],
+                        y: [ 20, 0, 15, -10, 20, -10 ],
+                        rotate:[1,0,-1,2],
                      }}
                      transition={{
                         type: "spring",
@@ -66,6 +79,7 @@ export default function Home() {
                </motion.div>
             </div>
          </section>
+         <PricingSection />
 
          <section className="py-12 px-4">
             <h2 className="text-4xl mb-2 text-center leading-tight font-semibold font-heading">
@@ -81,11 +95,12 @@ export default function Home() {
                         <motion.div
                            animate={{
                               // x: [20, 0, 10, -10, 20, -15],
-                              y: [15, 0, 20, -5, 20, -10],
+                              y: [ 15, 0, 20, -5, 20, -10 ],
+                              rotate:[1,0,-1,2]
                            }}
                            transition={{
                               // type: "spring",
-                              duration: 8,
+                              duration: 18,
                               yoyo: Infinity,
                            }}>
                            <Lottie path="./60968-contact-center.json" />
@@ -127,7 +142,8 @@ export default function Home() {
                <div className="flex flex-wrap items-center -mx-8">
                   <div className="md:w-1/2 px-8 mb-8 order-none">
                      <div className="w-4/5 mx-auto ">
-                        <Lottie path="./sign-in.json" />
+                        {/* <Lottie path="./sign-in.json" /> */}
+                        <Card />
                      </div>
                   </div>
                   <div className="md:w-1/2 px-8">

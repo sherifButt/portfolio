@@ -23,6 +23,7 @@ module.exports = {
             800: "#553f8a",
             900: "#463371",
          },
+         black: "#121445",
       },
       extend: {
          fontFamily: {

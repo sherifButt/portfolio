@@ -30,7 +30,7 @@ const Nav = () => {
             <span className="block text-sm text-gray-400">Additional </span>
           </a>
         </div>
-        <div><a className="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow" href="#">Try Demo</a></div>
+        <div><Link href="/demo"><a className="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow" href="#">Try Demo</a></Link></div>
       </div>
     </div>
   </nav> )

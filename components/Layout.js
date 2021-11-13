@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <>
       {/* <AnimatePresence exitBeforeEnter> */}
       <Head />
-      <body className="antialiased bg-body text-body font-body ">
+      <body className="bg-gray-50 text-black">
         <div className="container mx-auto px-4 flex flex-col min-h-screen">
           <header>
             <Nav />
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
           </footer>
         </div>
       </body>
-      // {/* </AnimatePresence> */}
+       {/* </AnimatePresence> */}
     </>
   );
 };
