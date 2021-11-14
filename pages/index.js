@@ -20,9 +20,9 @@ export default function Home() {
    const y1 = useTransform(scrollY, [0, 2000], [0, 1500]);
    const filter = useTransform(
       scrollY,
-      v => `blur(${Math.floor(v/70)}px)`
+      v => `blur(${Math.floor(v / 70)}px)`
    );
-console.log(filter)
+
    const [ref, inView, entry] = useInView({
       threshold: 0.5,
       triggerOnce: false,
@@ -87,11 +87,11 @@ console.log(filter)
                </div>
 
                <motion.div
-                  style={{ y: y1, filter,zIndex:-1 }}
+                  style={{ y: y1, filter, zIndex: -1 }}
                   className="lg:w-1/2 px-2"
                   initial={{ opacity: 0 }}
                   animate={{
-                     opacity: .9,
+                     opacity: 0.9,
                   }}
                   transition={{
                      // type: "spring",
