@@ -1,4 +1,4 @@
-import Lottie from './Lottie/Lottie'
+import Lottie from './Lottie'
 import Link from 'next/link'
 import Logo from './Logo'
 
