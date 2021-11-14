@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
-import Lottie from "../components/Lottie/Lottie.js";
+import Lottie from "../components/lottie/Lottie.js";
 import {
    motion,
    useViewportScroll,
