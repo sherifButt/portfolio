@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <>
       {/* <AnimatePresence exitBeforeEnter> */}
       <Head />
-      <body className="bg-gray-50 text-black">
+      <body className=" text-black">
         <div className="container mx-auto px-4 flex flex-col min-h-screen">
           <header>
             <Nav />

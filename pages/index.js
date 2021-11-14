@@ -1,39 +1,74 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
-import Lottie from "../components/lottie/Lottie";
-import { motion, AnimatePresence } from "framer-motion";
+import Lottie from "../components/Lottie";
+import {
+   motion,
+   useViewportScroll,
+   useTransform,
+   useMotionValue,
+} from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import Motion from "../components/Motion";
 import PricingSection from "../components/PricingSection";
-
+import ParallaxItem from "../components/UX/ParallaxItem";
 import AnimatedText from "../components/AnimatedText";
 import Card from "../components/Card";
 
 export default function Home() {
+   const { scrollY, scrollYProgress } = useViewportScroll();
+   const y1 = useTransform(scrollY, [0, 2000], [0, 1500]);
+   const filter = useTransform(
+      scrollY,
+      v => `blur(${Math.floor(v/70)}px)`
+   );
+console.log(filter)
+   const [ref, inView, entry] = useInView({
+      threshold: 0.5,
+      triggerOnce: false,
+   });
+
+   const variants = {
+      visible: {
+         opacity: 1,
+         scale: 1,
+         y: 0,
+      },
+      hidden: {
+         opacity: 0,
+         scale: 0.65,
+         y: 50,
+      },
+   };
    return (
       <>
-         <section className="py-6 px-4">
+         <section className="py-6 px-4" inView={inView}>
             <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
-               <div className="lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none">
-                  <h1 className="lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
-                     No{" "}
-                     <span className="text-indigo-700 tracking-wide">
-                        {" "}
-                        Paper{" "}
-                     </span>{" "}
-                     plane can be made without{" "}
-                     <span className="text-indigo-700 tracking-wide">
-                        {" "}
-                        Paper{" "}
-                     </span>
-                  </h1>
-
-                  <p className="mb-8 text-gray-400 leading-relaxed">
-                     Professional, dedicated, local. Dunder
-                     Mifflin is on its best patch to change the
-                     way you think about paper. That’s us -
-                     people who sell limitless paper in the
-                     paperless world.
-                  </p>
+               <div className="lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none ">
+                  <div className="">
+                     <h1 className="z-50 lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
+                        No{" "}
+                        <span className="text-indigo-700 tracking-wide">
+                           {" "}
+                           Paper{" "}
+                        </span>{" "}
+                        plane can be made without{" "}
+                        <span className="text-indigo-700 tracking-wide">
+                           {" "}
+                           Paper {inView.toString()}
+                        </span>
+                     </h1>
+                  </div>
+                  {!inView && console.log("false")}
+                  {!inView && (
+                     <p className="mb-8 text-gray-400 leading-relaxed">
+                        Professional, dedicated, local. Dunder
+                        Mifflin is on its best patch to change
+                        the way you think about paper. That’s us
+                        - people who sell limitless paper in the
+                        paperless world.
+                     </p>
+                  )}
                   <Motion>
                      <a
                         className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow"
@@ -52,10 +87,11 @@ export default function Home() {
                </div>
 
                <motion.div
+                  style={{ y: y1, filter,zIndex:-1 }}
                   className="lg:w-1/2 px-2"
                   initial={{ opacity: 0 }}
                   animate={{
-                     opacity: 1,
+                     opacity: .9,
                   }}
                   transition={{
                      // type: "spring",
@@ -66,8 +102,8 @@ export default function Home() {
                   <motion.div
                      animate={{
                         // x: [10, -30, 20, 0, 60, -50],
-                        y: [ 20, 0, 15, -10, 20, -10 ],
-                        rotate:[1,0,-1,2],
+                        y: [20, 0, 15, -10, 20, -10],
+                        rotate: [1, 0, -1, 2],
                      }}
                      transition={{
                         type: "spring",
@@ -79,7 +115,7 @@ export default function Home() {
                </motion.div>
             </div>
          </section>
-         <PricingSection />
+         {/* <PricingSection /> */}
 
          <section className="py-12 px-4">
             <h2 className="text-4xl mb-2 text-center leading-tight font-semibold font-heading">
@@ -95,8 +131,8 @@ export default function Home() {
                         <motion.div
                            animate={{
                               // x: [20, 0, 10, -10, 20, -15],
-                              y: [ 15, 0, 20, -5, 20, -10 ],
-                              rotate:[1,0,-1,2]
+                              y: [15, 0, 20, -5, 20, -10],
+                              rotate: [1, 0, -1, 2],
                            }}
                            transition={{
                               // type: "spring",

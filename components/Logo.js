@@ -1,4 +1,4 @@
-import Lottie from "./lottie/Lottie";
+import Lottie from "./Lottie";
 const Logo = () => {
   return (
      <a class="overflow-hidden w-10 md:w-auto" href="/">
