@@ -44,31 +44,33 @@ export default function Home() {
       <>
          <section className="py-6 px-4" inView={inView}>
             <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
-               <div className="lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none ">
-                  <div className="">
-                     <h1 className="z-50 lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
-                        No{" "}
-                        <span className="text-indigo-700 tracking-wide">
-                           {" "}
-                           Paper{" "}
-                        </span>{" "}
-                        plane can be made without{" "}
-                        <span className="text-indigo-700 tracking-wide">
-                           {" "}
-                           Paper {inView.toString()}
-                        </span>
-                     </h1>
-                  </div>
-                  {!inView && console.log("false")}
-                  {!inView && (
-                     <p className="mb-8 text-gray-400 leading-relaxed">
-                        Professional, dedicated, local. Dunder
-                        Mifflin is on its best patch to change
-                        the way you think about paper. That’s us
-                        - people who sell limitless paper in the
-                        paperless world.
-                     </p>
-                  )}
+               <div className="bg-white rounded bg-opacity-70 lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none py-10">
+                  
+                     <div className="">
+                        <h1 className=" z-50 lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
+                           No{" "}
+                           <span className="text-indigo-700 tracking-wide">
+                              {" "}
+                              Paper{" "}
+                           </span>{" "}
+                           plane can be made without{" "}
+                           <span className="text-indigo-700 tracking-wide">
+                              {" "}
+                              Paper {inView.toString()}
+                           </span>
+                        </h1>
+                     </div>
+                     {!inView && console.log("false")}
+                     {!inView && (
+                        <p className=" mb-8 text-gray-400 leading-relaxed">
+                           Professional, dedicated, local. Dunder
+                           Mifflin is on its best patch to change
+                           the way you think about paper. That’s us
+                           - people who sell limitless paper in the
+                           paperless world.
+                        </p>
+                     )}
+                  
                   <Motion>
                      <a
                         className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow"
@@ -176,8 +178,8 @@ export default function Home() {
                   </div>
                </div>
                <div className="flex flex-wrap items-center -mx-8">
-                  <div className="md:w-1/2 px-8 mb-8 order-none">
-                     <div className="w-4/5 mx-auto ">
+                  <div className="md:w-1/2 w-full mt-8 mr-8 md:mr-0 mb-8 order-none">
+                     <div className=" mx-auto ">
                         {/* <Lottie path="./sign-in.json" /> */}
                         <Card />
                      </div>
