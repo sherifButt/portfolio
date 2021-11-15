@@ -17,7 +17,9 @@ import Card from "../components/Card";
 
 export default function Home() {
    const { scrollY, scrollYProgress } = useViewportScroll();
-   const y1 = useTransform(scrollY, [0, 2000], [0, 1500]);
+   const y1 = useTransform( scrollY, [ 0, 2000 ], [ 0, 200 ] );
+   const y2 = useTransform( scrollY, [ 0, 2000 ], [ 0, 1500 ] );
+   
    const filter = useTransform(
       scrollY,
       v => `blur(${Math.floor(v / 70)}px)`
@@ -45,32 +47,31 @@ export default function Home() {
          <section className="py-6 px-4" inView={inView}>
             <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
                <div className="bg-white rounded bg-opacity-70 lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none py-10">
-                  
-                     <div className="">
-                        <h1 className=" z-50 lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
-                           No{" "}
-                           <span className="text-indigo-700 tracking-wide">
-                              {" "}
-                              Paper{" "}
-                           </span>{" "}
-                           plane can be made without{" "}
-                           <span className="text-indigo-700 tracking-wide">
-                              {" "}
-                              Paper {inView.toString()}
-                           </span>
-                        </h1>
-                     </div>
-                     {!inView && console.log("false")}
-                     {!inView && (
-                        <p className=" mb-8 text-gray-400 leading-relaxed">
-                           Professional, dedicated, local. Dunder
-                           Mifflin is on its best patch to change
-                           the way you think about paper. That’s us
-                           - people who sell limitless paper in the
-                           paperless world.
-                        </p>
-                     )}
-                  
+                  <div className="">
+                     <h1 className=" z-50 lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
+                        No{" "}
+                        <span className="text-indigo-700 tracking-wide">
+                           {" "}
+                           Paper{" "}
+                        </span>{" "}
+                        plane can be made without{" "}
+                        <span className="text-indigo-700 tracking-wide">
+                           {" "}
+                           Paper {inView.toString()}
+                        </span>
+                     </h1>
+                  </div>
+                  {!inView && console.log("false")}
+                  {!inView && (
+                     <p className=" mb-8 text-gray-400 leading-relaxed">
+                        Professional, dedicated, local. Dunder
+                        Mifflin is on its best patch to change
+                        the way you think about paper. That’s us
+                        - people who sell limitless paper in the
+                        paperless world.
+                     </p>
+                  )}
+
                   <Motion>
                      <a
                         className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow"
@@ -87,9 +88,16 @@ export default function Home() {
                      </a>
                   </Motion>
                </div>
-
                <motion.div
-                  style={{ y: y1, filter, zIndex: -1 }}
+                  style={{
+                     y: y1,
+                     filter:'blur(16px)',
+                     zIndex: -1,
+                     position: "absolute",
+                     top: 300,
+                     left:170,
+                     scale:.4
+                  }}
                   className="lg:w-1/2 px-2"
                   initial={{ opacity: 0 }}
                   animate={{
@@ -105,6 +113,40 @@ export default function Home() {
                      animate={{
                         // x: [10, -30, 20, 0, 60, -50],
                         y: [20, 0, 15, -10, 20, -10],
+                        rotate: [1, 0, -1, 2],
+                     }}
+                     transition={{
+                        type: "spring",
+                        duration: 8,
+                        yoyo: Infinity,
+                     }}>
+                     <Lottie path="./48604-leadership.json" />
+                  </motion.div>
+               </motion.div>
+
+               <motion.div
+                  style={{
+                     y: y2,
+                     filter,
+                     zIndex: 1,
+                     position: "relative",
+                     top: 20,
+                  }}
+                  className="lg:w-1/2 px-2"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                     opacity: 0.9,
+                  }}
+                  transition={{
+                     // type: "spring",
+                     stiffness: 260,
+                     damping: 20,
+                     duration: 2,
+                  }}>
+                  <motion.div
+                     animate={{
+                        // x: [10, -30, 20, 0, 60, -50],
+                        y: [15, -10, 20, -10, 20, 0],
                         rotate: [1, 0, -1, 2],
                      }}
                      transition={{

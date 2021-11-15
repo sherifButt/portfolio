@@ -1,10 +1,24 @@
+import {motion} from 'framer-motion'
 const Card = () => {
    return (
-      <div className="w-72 ">
-         <div className="h-56 w-72 absolute flex justify-center items-center">
-            <img className="object-cover h-20 w-20 rounded-full"
-               src="https://images.unsplash.com/photo-1484608856193-968d2be4080e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80"
-               alt=""/>
+      <div className="md:w-72 mx-8 ">
+         <div className="h-56 md:w-72 w-full absolute flex justify-center items-center">
+            <motion.div
+               animate={{
+                  y: [3, 0, 1, -5, 8, -6],
+                  rotate: [4, 0, -6, 2],
+               }}
+               transition={{
+                  type: "spring",
+                  duration: 8,
+                  yoyo: Infinity,
+           } }>
+               <img
+                  className="object-cover h-20 w-20 rounded-full"
+                  src="https://images.unsplash.com/photo-1484608856193-968d2be4080e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80"
+                  alt=""
+               />
+            </motion.div>
          </div>
 
          <div className=" h-56 mx-4 w-full lg:w-5/6 bg-indigo-400 rounded-3xl shadow-md  ">
@@ -20,7 +34,8 @@ const Card = () => {
                      stroke-linecap="round"
                      stroke-linejoin="round"
                      stroke-width="1"
-                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
                </svg>
             </div>
 
@@ -30,10 +45,14 @@ const Card = () => {
                      <h1 className="text-gray-500 text-xs">
                         Orders
                      </h1>
-                     <h1 className="text-gray-600 text-sm">340</h1>
+                     <h1 className="text-gray-600 text-sm">
+                        340
+                     </h1>
                   </div>
                   <div className="flex flex-col justify-center items-center">
-                     <h1 className="text-gray-500 text-xs">Spent</h1>
+                     <h1 className="text-gray-500 text-xs">
+                        Spent
+                     </h1>
                      <h1 className="text-gray-600 text-sm">
                         $2,004
                      </h1>
