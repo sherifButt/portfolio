@@ -14,8 +14,8 @@ import {
 const Layout = ({ children },router) => {
    return (
       <>
-         <AnimateSharedLayout
-            exitBeforeEnter
+         <AnimatePresence
+            // exitBeforeEnter
             // initial={false}
             onExitComplete={() => window.scrollTo(0, 0)}>
             <Head />
@@ -30,7 +30,7 @@ const Layout = ({ children },router) => {
                   </footer>
                </div>
             </body>
-         </AnimateSharedLayout>
+         </AnimatePresence>
       </>
    );
 };

@@ -68,13 +68,17 @@ export default function Home() {
                   </div>
                   {!inView && console.log("false")}
                   {!inView && (
-                     <p className=" mb-8 text-gray-400 leading-relaxed">
+                     <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.2 }}
+                        className=" mb-8 text-gray-400 leading-relaxed">
                         Professional, dedicated, local. Dunder
                         Mifflin is on its best patch to change
                         the way you think about paper. That’s us
                         - people who sell limitless paper in the
                         paperless world.
-                     </p>
+                     </motion.p>
                   )}
 
                   <Motion>

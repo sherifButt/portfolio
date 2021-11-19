@@ -121,6 +121,8 @@ export default function Home() {
                </motion.div>
                <motion.div
                   layoutId="title"
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
                   className=" rounded  lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none py-10">
                   <div className="">
                      <h1 className=" z-50 lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
@@ -135,6 +137,19 @@ export default function Home() {
                            Paper
                         </span>
                      </h1>
+                     <Motion>
+                        <Link href="/" passHref>
+                           <a
+                              className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow"
+                              >
+                              
+                              <span className="font-light">
+                                  &larr; back
+                              </span>
+                           </a>
+                        </Link>
+                        
+                     </Motion>
                   </div>
                </motion.div>
             </div>

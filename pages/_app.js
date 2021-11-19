@@ -12,9 +12,16 @@ const variants = {
 function MyApp({ Component, pageProps, router }) {
    return (
       <Layout>
-         
+         <motion.main
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            key={router.route}
+            variants={variants}
+         transition={ { type: "easy" } }
+       >
             <Component {...pageProps} />
-         
+         </motion.main>
       </Layout>
    );
 }
