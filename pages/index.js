@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import StyledLink from "../components/StyledLink";
 import styled from "styled-components";
 import Lottie from "../components/lottie/Lottie.js";
+
 import {
    motion,
    useViewportScroll,
@@ -17,9 +20,9 @@ import Card from "../components/Card";
 
 export default function Home() {
    const { scrollY, scrollYProgress } = useViewportScroll();
-   const y1 = useTransform( scrollY, [ 0, 2000 ], [ 0, 200 ] );
-   const y2 = useTransform( scrollY, [ 0, 2000 ], [ 0, 1500 ] );
-   
+   const y1 = useTransform(scrollY, [0, 400], [0, 200]);
+   const y2 = useTransform(scrollY, [0, 400], [0, 500]);
+
    const filter = useTransform(
       scrollY,
       v => `blur(${Math.floor(v / 70)}px)`
@@ -46,7 +49,9 @@ export default function Home() {
       <>
          <section className="py-6 px-4" inView={inView}>
             <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
-               <div className="bg-white rounded bg-opacity-70 lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none py-10">
+               <motion.div
+                  layoutId="title"
+                  className=" rounded  lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none py-10">
                   <div className="">
                      <h1 className=" z-50 lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
                         No{" "}
@@ -57,7 +62,7 @@ export default function Home() {
                         plane can be made without{" "}
                         <span className="text-indigo-700 tracking-wide">
                            {" "}
-                           Paper {inView.toString()}
+                           Paper
                         </span>
                      </h1>
                   </div>
@@ -73,30 +78,32 @@ export default function Home() {
                   )}
 
                   <Motion>
-                     <a
-                        className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow"
-                        href="#">
-                        Sign up{" "}
-                        <span className="font-light">
-                           for free &rarr;
-                        </span>
-                     </a>
+                     <Link href="/try" passHref>
+                        <a
+                           className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow"
+                           href="#">
+                           Sign up{" "}
+                           <span className="font-light">
+                              for free &rarr;
+                           </span>
+                        </a>
+                     </Link>
                      <a
                         className="hidden md:contents text-indigo-600 hover:underline"
                         href="#">
                         Learn more
                      </a>
                   </Motion>
-               </div>
+               </motion.div>
                <motion.div
                   style={{
                      y: y1,
-                     filter:'blur(16px)',
+                     filter: "blur(16px)",
                      zIndex: -1,
                      position: "absolute",
                      top: 300,
-                     left:170,
-                     scale:.4
+                     left: 170,
+                     scale: 0.4,
                   }}
                   className="lg:w-1/2 px-2"
                   initial={{ opacity: 0 }}
@@ -128,7 +135,7 @@ export default function Home() {
                   style={{
                      y: y2,
                      filter,
-                     zIndex: 1,
+                     zIndex: -1,
                      position: "relative",
                      top: 20,
                   }}

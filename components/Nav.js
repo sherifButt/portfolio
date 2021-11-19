@@ -5,10 +5,10 @@ const Nav = () => {
    return (
       <nav>
          <div className="text-right py-2 px-4">
-            <Link href="/signin">
+            <Link href="/signin" passHref>
                <a
                   className="lg:inline-block mr-6 lg:mt-0 text-sm text-blue-900 hover:text-indigo-600"
-                  href="#">
+                  >
                   Sign in
                </a>
             </Link>
@@ -20,13 +20,13 @@ const Nav = () => {
          </div>
          <div className="flex flex-wrap items-center justify-between p-4 border-t">
             <div className="flex flex-shrink-0 mr-6">
-               <Link href="/">
-                  <a
+               
+                  <div
                      className="text-xl text-indigo-600 font-semibold font-heading"
                      href="#">
                      <Logo />
-                  </a>
-               </Link>
+                  </div>
+               
             </div>
             <div className="block lg:hidden">
                <button className="navbar-burger flex items-center py-2 px-3 text-indigo-500 rounded border border-indigo-500">
@@ -70,7 +70,7 @@ const Nav = () => {
                   <Link href="/demo">
                      <a
                         className="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow"
-                        href="#">
+                       >
                         Try Demo
                      </a>
                   </Link>

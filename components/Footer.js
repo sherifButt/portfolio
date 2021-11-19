@@ -3,7 +3,7 @@ import Logo from "./Logo"
 const Fotter = () => {
   return ( <footer>
     <div className="flex flex-wrap items-center py-4 px-4 border-b">
-      <div className="w-full lg:w-1/5 text-center lg:text-left"><a className="text-xl text-indigo-600 font-semibold font-heading" href="#"><Logo/></a></div>
+      <div className="w-full lg:w-1/5 text-center lg:text-left"><Logo/></div>
       <div className="w-full lg:w-3/5 mt-4 lg:mt-0 text-center"><a className="inline-block mx-4 mb-4 lg:mb-0 text-blue-900 hover:text-indigo-600" href="#">Products</a><a className="inline-block mx-4 mb-4 lg:mb-0 text-blue-900 hover:text-indigo-600" href="#">Team</a><a className="inline-block mx-4 mb-4 lg:mb-0 text-blue-900 hover:text-indigo-600" href="#">Customers</a><a className="inline-block mx-4 mb-4 lg:mb-0 text-blue-900 hover:text-indigo-600" href="#">Blog</a></div>
       <div className="flex justify-center space-x-6 lg:justify-end w-full lg:w-1/5 my-2 lg:my-0">
         <a href="#">

@@ -2,26 +2,37 @@
 import Head from "./Header";
 import Nav from "./Nav";
 import Footer from "./Footer";
-import { animate, AnimatePresence, motion } from "framer-motion";
-const Layout = ({ children }) => {
-  return (
-    <>
-      {/* <AnimatePresence exitBeforeEnter> */}
-      <Head />
-      <body className=" text-black">
-        <div className="container mx-auto px-4 flex flex-col min-h-screen">
-          <header>
-            <Nav />
-          </header>
-          <main className="flex-grow">{children}</main>
-          <footer>
-            <Footer />
-          </footer>
-        </div>
-      </body>
-       {/* </AnimatePresence> */}
-    </>
-  );
+import Router from "next/router";
+
+import {
+   animate,
+   AnimatePresence,
+   AnimateSharedLayout,
+   motion,
+} from "framer-motion";
+
+const Layout = ({ children },router) => {
+   return (
+      <>
+         <AnimateSharedLayout
+            exitBeforeEnter
+            // initial={false}
+            onExitComplete={() => window.scrollTo(0, 0)}>
+            <Head />
+            <body className=" text-black">
+               <div className="container mx-auto px-4 flex flex-col min-h-screen">
+                  <header>
+                     <Nav />
+                  </header>
+                  <main className="flex-grow" key={router.route}>{children}</main>
+                  <footer>
+                     <Footer />
+                  </footer>
+               </div>
+            </body>
+         </AnimateSharedLayout>
+      </>
+   );
 };
 
 export default Layout;

@@ -17,8 +17,8 @@ const Lottie = ( { name, loop, autoplay, renderer, path } ) => {
     } );
 
   }, [] )
-  return (
-    <span className=" container" ref={ container }></span>
+  
+  return (<span className="container" ref={ container }></span>
   )
 }
 
