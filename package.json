@@ -6,6 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^1.0.5",
     "framer": "^2.0.0-beta.13",
     "framer-motion": "latest",
     "lottie-web": "^5.7.14",

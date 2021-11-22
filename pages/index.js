@@ -1,22 +1,16 @@
-import React, { useState, useRef, useEffect } from "react";
-import Link from "next/link";
-import StyledLink from "../components/StyledLink";
-import styled from "styled-components";
-import Lottie from "../components/lottie/Lottie.js";
-
 import {
    motion,
-   useViewportScroll,
    useTransform,
-   useMotionValue,
-} from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
-import Motion from "../components/Motion";
-import PricingSection from "../components/PricingSection";
-import ParallaxItem from "../components/UX/ParallaxItem";
-import AnimatedText from "../components/AnimatedText";
-import Card from "../components/Card";
+   useViewportScroll
+} from "framer-motion"
+import Link from "next/link"
+import React from "react"
+import { useInView } from "react-intersection-observer"
+import styled from "styled-components"
+import Lottie from "../components/Lottie/index.js"
+import Motion from "../components/Motion"
+import HowItWorks from "../components/HowItWorks"
+import Faq from "../components/Faq"
 
 export default function Home() {
    const { scrollY, scrollYProgress } = useViewportScroll();
@@ -47,11 +41,9 @@ export default function Home() {
    };
    return (
       <>
-         <section className="py-6 px-4" inView={inView}>
+         <section className="py-6 px-4" >
             <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
-               <motion.div
-                  layoutId="title"
-                  className=" rounded  lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none py-10">
+               <div className=" rounded  lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none py-10">
                   <div className="">
                      <h1 className=" z-50 lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
                         No{" "}
@@ -66,20 +58,15 @@ export default function Home() {
                         </span>
                      </h1>
                   </div>
-                  {!inView && console.log("false")}
-                  {!inView && (
-                     <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.2 }}
-                        className=" mb-8 text-gray-400 leading-relaxed">
+                  
+                     <p className=" mb-8 text-gray-400 leading-relaxed">
                         Professional, dedicated, local. Dunder
                         Mifflin is on its best patch to change
                         the way you think about paper. That’s us
                         - people who sell limitless paper in the
                         paperless world.
-                     </motion.p>
-                  )}
+                     </p>
+                  
 
                   <Motion>
                      <Link href="/try" passHref>
@@ -92,85 +79,31 @@ export default function Home() {
                            </span>
                         </a>
                      </Link>
-                     <a
-                        className="hidden md:contents text-indigo-600 hover:underline"
-                        href="#">
-                        Learn more
-                     </a>
+                    
                   </Motion>
-               </motion.div>
-               <motion.div
-                  style={{
-                     y: y1,
-                     filter: "blur(16px)",
-                     zIndex: -1,
-                     position: "absolute",
-                     top: 300,
-                     left: 170,
-                     scale: 0.4,
-                  }}
-                  className="lg:w-1/2 px-2"
-                  initial={{ opacity: 0 }}
-                  animate={{
-                     opacity: 0.9,
-                  }}
-                  transition={{
-                     // type: "spring",
-                     stiffness: 260,
-                     damping: 20,
-                     duration: 2,
-                  }}>
-                  <motion.div
-                     animate={{
-                        // x: [10, -30, 20, 0, 60, -50],
-                        y: [20, 0, 15, -10, 20, -10],
-                        rotate: [1, 0, -1, 2],
-                     }}
-                     transition={{
-                        type: "spring",
-                        duration: 8,
-                        yoyo: Infinity,
-                     }}>
-                     <Lottie path="./48604-leadership.json" />
-                  </motion.div>
-               </motion.div>
+               </div>
 
                <motion.div
-                  style={{
-                     y: y2,
-                     filter,
-                     zIndex: -1,
-                     position: "relative",
-                     top: 20,
-                  }}
                   className="lg:w-1/2 px-2"
-                  initial={{ opacity: 0 }}
                   animate={{
-                     opacity: 0.9,
+                     // x: [10, -30, 20, 0, 60, -50],
+                     y: [15, -10, 20, -10, 20, 0],
+                     rotate: [1, 0, -1, 2],
                   }}
                   transition={{
-                     // type: "spring",
-                     stiffness: 260,
-                     damping: 20,
-                     duration: 2,
+                     type: "spring",
+                     duration: 8,
+                     yoyo: Infinity,
                   }}>
-                  <motion.div
-                     animate={{
-                        // x: [10, -30, 20, 0, 60, -50],
-                        y: [15, -10, 20, -10, 20, 0],
-                        rotate: [1, 0, -1, 2],
-                     }}
-                     transition={{
-                        type: "spring",
-                        duration: 8,
-                        yoyo: Infinity,
-                     }}>
-                     <Lottie path="./48604-leadership.json" />
-                  </motion.div>
+                  <Lottie path="./48604-leadership.json" />
                </motion.div>
             </div>
          </section>
-         {/* <PricingSection /> */}
+         {/* <PricingSection /> */ }
+         <Faq/>
+         <HowItWorks/>
+
+         
 
          <section className="py-12 px-4">
             <h2 className="text-4xl mb-2 text-center leading-tight font-semibold font-heading">
@@ -233,8 +166,7 @@ export default function Home() {
                <div className="flex flex-wrap items-center -mx-8">
                   <div className="md:w-1/2 w-full mt-8 mr-8 md:mr-0 mb-8 order-none">
                      <div className=" mx-auto ">
-                        {/* <Lottie path="./sign-in.json" /> */}
-                        <Card />
+                        <Lottie path="./sign-in.json" />
                      </div>
                   </div>
                   <div className="md:w-1/2 px-8">

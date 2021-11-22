@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import { motion, AnimatePresence } from "framer-motion";
 
 const variants = {
-   hidden: { opacity: 0, x: 0, y: 0 },
+   hidden: { opacity: 0, x: 0, y: 30 },
    enter: { opacity: 1, x: 0, y: 0 },
    exit: { opacity: 0, x: 0, y: 100 },
 };
@@ -18,8 +18,7 @@ function MyApp({ Component, pageProps, router }) {
             exit="exit"
             key={router.route}
             variants={variants}
-         transition={ { type: "easy" } }
-       >
+            transition={{ type: "easy" }}>
             <Component {...pageProps} />
          </motion.main>
       </Layout>

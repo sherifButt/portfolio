@@ -1,29 +1,20 @@
-
-import React, { useState, useRef, useEffect } from "react";
-import Link from 'next/link';
-import StyledLink from '../components/StyledLink'
-import styled from "styled-components";
-import Lottie from "../components/lottie/Lottie.js";
-
 import {
-   motion,
-   useViewportScroll,
-   useTransform,
-   useMotionValue,
-} from "framer-motion";
-import { useInView } from "react-intersection-observer";
+   motion, useTransform, useViewportScroll
+} from "framer-motion"
+import Link from "next/link"
+import React from "react"
+import { useInView } from "react-intersection-observer"
+import styled from "styled-components"
+import Lottie from "../components/Lottie/index.js"
+import Motion from "../components/Motion"
 
-import Motion from "../components/Motion";
-import PricingSection from "../components/PricingSection";
-import ParallaxItem from "../components/UX/ParallaxItem";
-import AnimatedText from "../components/AnimatedText";
-import Card from "../components/Card";
+
 
 export default function Home() {
    const { scrollY, scrollYProgress } = useViewportScroll();
-   const y1 = useTransform( scrollY, [ 0, 400 ], [ 0, 200 ] );
-   const y2 = useTransform( scrollY, [ 0, 400 ], [ 0, 500 ] );
-   
+   const y1 = useTransform(scrollY, [0, 400], [0, 200]);
+   const y2 = useTransform(scrollY, [0, 400], [0, 500]);
+
    const filter = useTransform(
       scrollY,
       v => `blur(${Math.floor(v / 70)}px)`
@@ -51,74 +42,20 @@ export default function Home() {
          <section className="py-6 px-4" inView={inView}>
             <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
                <motion.div
-                  style={{
-                     y: y1,
-                     filter: "blur(16px)",
-                     zIndex: -1,
-                     position: "absolute",
-                     top: 300,
-                     left: 170,
-                     scale: 0.4,
-                  }}
                   className="lg:w-1/2 px-2"
-                  initial={{ opacity: 0 }}
                   animate={{
-                     opacity: 0.9,
+                     // x: [10, -30, 20, 0, 60, -50],
+                     y: [15, -10, 20, -10, 20, 0],
+                     rotate: [1, 0, -1, 2],
                   }}
                   transition={{
-                     // type: "spring",
-                     stiffness: 260,
-                     damping: 20,
-                     duration: 2,
+                     type: "spring",
+                     duration: 8,
+                     yoyo: Infinity,
                   }}>
-                  <motion.div
-                     animate={{
-                        // x: [10, -30, 20, 0, 60, -50],
-                        y: [20, 0, 15, -10, 20, -10],
-                        rotate: [1, 0, -1, 2],
-                     }}
-                     transition={{
-                        type: "spring",
-                        duration: 8,
-                        yoyo: Infinity,
-                     }}>
-                     <Lottie path="./48604-leadership.json" />
-                  </motion.div>
+                  <Lottie path="./48604-leadership.json" />
                </motion.div>
 
-               <motion.div
-                  style={{
-                     y: y2,
-                     filter,
-                     zIndex: -1,
-                     position: "relative",
-                     top: 20,
-                  }}
-                  className="lg:w-1/2 px-2"
-                  initial={{ opacity: 0 }}
-                  animate={{
-                     opacity: 0.9,
-                  }}
-                  transition={{
-                     // type: "spring",
-                     stiffness: 260,
-                     damping: 20,
-                     duration: 2,
-                  }}>
-                  <motion.div
-                     animate={{
-                        // x: [10, -30, 20, 0, 60, -50],
-                        y: [15, -10, 20, -10, 20, 0],
-                        rotate: [1, 0, -1, 2],
-                     }}
-                     transition={{
-                        type: "spring",
-                        duration: 8,
-                        yoyo: Infinity,
-                     }}>
-                     <Lottie path="./48604-leadership.json" />
-                  </motion.div>
-               </motion.div>
                <motion.div
                   layoutId="title"
                   initial={{ scale: 0.8, opacity: 0 }}
@@ -139,16 +76,12 @@ export default function Home() {
                      </h1>
                      <Motion>
                         <Link href="/" passHref>
-                           <a
-                              className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow"
-                              >
-                              
+                           <a className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow">
                               <span className="font-light">
-                                  &larr; back
+                                 &larr; back
                               </span>
                            </a>
                         </Link>
-                        
                      </Motion>
                   </div>
                </motion.div>
