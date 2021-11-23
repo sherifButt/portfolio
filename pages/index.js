@@ -1,16 +1,16 @@
 import {
    motion,
    useTransform,
-   useViewportScroll
-} from "framer-motion"
-import Link from "next/link"
-import React from "react"
-import { useInView } from "react-intersection-observer"
-import styled from "styled-components"
-import Lottie from "../components/Lottie/"
-import Motion from "../components/Motion"
-import HowItWorks from "../components/HowItWorks"
-import Faq from "../components/Faq"
+   useViewportScroll,
+} from "framer-motion";
+import Link from "next/link";
+import React from "react";
+import { useInView } from "react-intersection-observer";
+import styled from "styled-components";
+import Lottie from "../components/Lottie/";
+import Motion from "../components/Motion";
+import HowItWorks from "../components/HowItWorks";
+import Faq from "../components/Faq";
 
 export default function Home() {
    const { scrollY, scrollYProgress } = useViewportScroll();
@@ -41,7 +41,7 @@ export default function Home() {
    };
    return (
       <>
-         <section className="py-6 px-4" >
+         <section className="py-6 px-4">
             <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
                <div className=" rounded  lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none py-10">
                   <div className="">
@@ -58,15 +58,14 @@ export default function Home() {
                         </span>
                      </h1>
                   </div>
-                  
-                     <p className=" mb-8 text-gray-400 leading-relaxed">
-                        Professional, dedicated, local. Dunder
-                        Mifflin is on its best patch to change
-                        the way you think about paper. That’s us
-                        - people who sell limitless paper in the
-                        paperless world.
-                     </p>
-                  
+
+                  <p className=" mb-8 text-gray-400 leading-relaxed">
+                     Professional, dedicated, local. Dunder
+                     Mifflin is on its best patch to change the
+                     way you think about paper. That’s us -
+                     people who sell limitless paper in the
+                     paperless world.
+                  </p>
 
                   <Motion>
                      <Link href="/try" passHref>
@@ -79,7 +78,6 @@ export default function Home() {
                            </span>
                         </a>
                      </Link>
-                    
                   </Motion>
                </div>
 
@@ -99,11 +97,9 @@ export default function Home() {
                </motion.div>
             </div>
          </section>
-         {/* <PricingSection /> */ }
-         <Faq/>
-         <HowItWorks/>
-
-         
+         {/* <PricingSection /> */}
+         <Faq />
+         <HowItWorks />
 
          <section className="py-12 px-4">
             <h2 className="text-4xl mb-2 text-center leading-tight font-semibold font-heading">
