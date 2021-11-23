@@ -5,7 +5,7 @@ import Link from "next/link"
 import React from "react"
 import { useInView } from "react-intersection-observer"
 import styled from "styled-components"
-import Lottie from "../components/Lottie/index.js"
+import Lottie from "../components/Lottie"
 import Motion from "../components/Motion"
 
 
