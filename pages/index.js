@@ -7,7 +7,7 @@ import Link from "next/link";
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
-import Lottie from "../components/Lotties/Lottie";
+import Lottie from "../components/Lottie";
 import Motion from "../components/Motion";
 import HowItWorks from "../components/HowItWorks";
 import Faq from "../components/Faq";
