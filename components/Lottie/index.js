@@ -10,7 +10,7 @@ const Lottie = ({ name, loop, autoplay, renderer, path }) => {
          renderer,
          loop,
          autoplay,
-         animationData: path ? require(`${path}`) : data,
+         animationData: path ? require(`./animationData/${path}`) : data,
          name,
       });
    }, []);

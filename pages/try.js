@@ -53,7 +53,7 @@ export default function Home() {
                      duration: 8,
                      yoyo: Infinity,
                   }}>
-                  <Lottie path="./48604-leadership.json" />
+                  <Lottie path="48604-leadership.json" />
                </motion.div>
 
                <motion.div

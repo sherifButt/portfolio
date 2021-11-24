@@ -17,7 +17,7 @@ import {
    XIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import Dropdown from "../Dropdown";
+import Dropdown from "../../Dropdown";
 
 const solutions = [
    {

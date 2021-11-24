@@ -1,15 +1,7 @@
-// import Head from "next/head";
-import Head from "./Header/Head";
-import Nav from "./Header";
-import Footer from "./Footer";
-import Router from "next/router";
-
-import {
-   animate,
-   AnimatePresence,
-   AnimateSharedLayout,
-   motion,
-} from "framer-motion";
+import { AnimatePresence } from "framer-motion"
+import Footer from "./Footer"
+import Nav from "./Navigation"
+import Head from "./Navigation/Head"
 
 const Layout = ({ children }, router) => {
    return (
