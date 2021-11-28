@@ -4,3 +4,11 @@
 @tailwind utilities;
 
 
+@font-face {
+  font-family: "honey";
+  src: url("/fonts/HelloHoneyPersonalUse-2OEo8.otf");
+}
+
+body {
+  @apply font-custom;
+}

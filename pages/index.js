@@ -40,13 +40,13 @@ export default function Home() {
    };
    return (
       <>
-         <Header />
+         <Header variant={1}  />
          <Faq />
          <HowItWorks variant={2} />
          <Features />
          <Testimonials variant={2} />
          <Team />
-         <Pricing variant={ 1 }/>
+         <Pricing variant={1} />
          <Faq variant={2} />
          <CallToAction />
       </>

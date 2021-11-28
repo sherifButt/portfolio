@@ -28,7 +28,8 @@ const Item = ({ title, children }) => {
                      points="2,7 12,17 22,7"
                      strokeLinejoin="round"
                   />
-               </svg>
+           </svg>
+           
             </div>
          </button>
          {isOpen && (
@@ -40,7 +41,7 @@ const Item = ({ title, children }) => {
    );
 };
 
-const Faq = () => {
+const Faq = ({ logoSrc }) => {
    return (
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
          <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
@@ -48,18 +49,7 @@ const Faq = () => {
                <Link href="/">
                   <a href="/" className="mb-6 sm:mx-auto">
                      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
-                        <svg
-                           className="w-10 h-10 text-indigo-400"
-                           stroke="currentColor"
-                           viewBox="0 0 52 52">
-                           <polygon
-                              strokeWidth="3"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              fill="none"
-                              points="29 13 14 29 25 29 23 39 38 23 27 23"
-                           />
-                        </svg>
+                        <img className="w-7" src={logoSrc} />
                      </div>
                   </a>
                </Link>

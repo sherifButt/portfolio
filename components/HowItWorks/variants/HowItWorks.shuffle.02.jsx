@@ -45,7 +45,7 @@ const HowItWorks = () => {
             <div className="flex flex-wrap items-center -mx-8">
                <div className="md:w-1/2 px-8 mb-8 md:order-1">
                   <div className="w-4/5 mx-auto ">
-                     <Lottie path="contact_us.json" />
+                     <Lottie path="57489-proof-reading.json" />
                   </div>
                </div>
                <div className="md:w-1/2 px-8 md:text-right">
@@ -63,7 +63,7 @@ const HowItWorks = () => {
             <div className="flex flex-wrap items-center -mx-8">
                <div className="md:w-1/2 w-full mt-8 mr-8 md:mr-0 mb-8 order-none">
                   <div className=" mx-auto ">
-                     <Lottie path="sign-in.json" />
+                     <Lottie path="64150-express-courier-delivery.json" />
                   </div>
                </div>
                <div className="md:w-1/2 px-8">
