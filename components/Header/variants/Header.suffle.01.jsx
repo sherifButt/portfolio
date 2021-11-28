@@ -13,7 +13,7 @@ const Header = ({ title, subtitle, button, img }) => {
    return (
       <section className="py-6 px-4">
          <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
-            <div className=" rounded  lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none py-10">
+            <div className=" rounded  lg:w-1/2 px-2 lg:pr-10 mt-0 lg:mt-0 order-1 lg:order-none py-10">
                <motion.div
                   animate={{
                      // x: [10, -30, 20, 0, 60, -50],
@@ -26,7 +26,7 @@ const Header = ({ title, subtitle, button, img }) => {
                      yoyo: Infinity,
                   }}>
                   <div className="">
-                     <h1 className=" z-50 lg:text-7xl text-5xl mb-6 leading-tight font-semibold font-heading">
+                     <h1 className=" z-50 lg:text-7xl text-5xl tracking-wider mb-6 leading-tight font-semibold font-heading">
                         <span
                            className=""
                            className="Container"
@@ -63,8 +63,8 @@ const Header = ({ title, subtitle, button, img }) => {
                className="lg:w-1/2 px-2 "
                animate={{
                   // x: [10, -30, 20, 0, 60, -50],
-                  y: [15, -10, 20, -10, 20, 0],
-                  rotate: [1, 0, -1, 2],
+                  y: [15, -10, 8, -10, 20, 0],
+                  rotate: [1, 0, -1, 0.5],
                }}
                transition={{
                   type: "spring",

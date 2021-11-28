@@ -7,11 +7,11 @@ const Logo = ({ src, text, alt, href, sr }) => {
          <Link href={href} passHref>
             <a className="inline-flex items-center">
                <span className="sr-only"> {sr} </span>
-               <img
+               {src?<img
                   className="h-8 w-auto sm:h-10 text-indigo-500"
                   src={src}
                   alt={alt}
-               />
+               />:""}
                <span className="ml-2 font-size-20  text-2xl text-gray-500 align-middle h-auto inline">
                   {text}
                </span>
