@@ -12,7 +12,7 @@ const Logo = ({ src, text, alt, href, sr }) => {
                   src={src}
                   alt={alt}
                />:""}
-               <span className="ml-2 font-size-20  text-2xl text-gray-500 align-middle h-auto inline">
+               <span className="font-lagag ml-2 font-size-15 mt-4 text-2xl text-gray-500 dark:text-gray-200 align-middle h-auto inline">
                   {text}
                </span>
             </a>

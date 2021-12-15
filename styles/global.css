@@ -1,5 +1,7 @@
 /* ./styles/globals.css */
 @tailwind base;
+
+
 @tailwind components;
 @tailwind utilities;
 
@@ -8,7 +10,14 @@
   font-family: "honey";
   src: url("/fonts/HelloHoneyPersonalUse-2OEo8.otf");
 }
+@font-face {
+  font-family: "lagag";
+  src: url("/fonts/LaGaglianePersonalUse-w1xV2.ttf");
+}
 
-body {
-  /* @apply font-custom; */
+p{
+  font-weight: 300;
+}
+h1,h2{
+font-family:"lagag"
 }

@@ -1,15 +1,16 @@
-import { useTransform, useViewportScroll } from "framer-motion"
-import React from "react"
-import { useInView } from "react-intersection-observer"
-import styled from "styled-components"
-import CallToAction from "../components/CallToAction"
-import Faq from "../components/Faq"
-import Features from "../components/Features"
-import Header from "../components/Header"
-import HowItWorks from "../components/HowItWorks"
-import Pricing from "../components/Pricing"
-import Team from "../components/Team"
-import Testimonials from "../components/Testimonials"
+import { useTransform, useViewportScroll } from "framer-motion";
+import React from "react";
+import { useInView } from "react-intersection-observer";
+import styled from "styled-components";
+import Blog from "../components/Blog";
+import CallToAction from "../components/CallToAction";
+import Faq from "../components/Faq";
+import Features from "../components/Features";
+import Header from "../components/Header";
+import HowItWorks from "../components/HowItWorks";
+import Pricing from "../components/Pricing";
+import Team from "../components/Team";
+import Testimonials from "../components/Testimonials";
 
 export default function Home() {
    const { scrollY, scrollYProgress } = useViewportScroll();
@@ -40,11 +41,12 @@ export default function Home() {
    };
    return (
       <>
-         <Header variant={1}  />
-         <Faq />
-         <HowItWorks variant={2} />
+         <Header variant={1} />
          <Features />
-         <Testimonials variant={2} />
+         <Blog variant={ 3 }/>
+         {/* <Faq /> */}
+         <Testimonials variant={3} />
+         {/* <HowItWorks variant={2} /> */}
          <Team />
          <Pricing variant={1} />
          <Faq variant={2} />

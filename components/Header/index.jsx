@@ -1,4 +1,4 @@
-import Header_1 from "./variants/Header.suffle.01";
+import Header_1 from "./variants/Header.shuffle.01";
 import data from "../../siteData.config";
 
 const Header = ({
@@ -53,7 +53,7 @@ Header.defaultProps = {
    img: data?.header.img
       ? data.header.img
     : {
-      imgSrc: "48604-leadership.json",
+      imgSrc: {light:"48604-leadership.json",dark:""},
     width:4},
 };
 
