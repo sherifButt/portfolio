@@ -41,8 +41,8 @@ export default function Home() {
    };
    return (
       <>
-         <Header variant={1} />
-         <Features />
+         <Header variant={1}  />
+         <Features  />
          <Blog variant={ 3 }/>
          {/* <Faq /> */}
          <Testimonials variant={3} />

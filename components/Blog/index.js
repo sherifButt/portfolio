@@ -8,12 +8,7 @@ const { title, subtitle, posts } = data?.portafolio
    ? data.portafolio
    : "";
 
-const Blog = ({
-   variant,
-   title,
-   subtitle,
-   posts,
-}) => {
+const Blog = ({ variant, title, subtitle, posts, items }) => {
    let html;
 
    switch (variant) {
@@ -29,6 +24,7 @@ const Blog = ({
                title={title}
                subtitle={subtitle}
                posts={posts}
+               items={items}
             />
          );
          break;
@@ -48,5 +44,7 @@ Blog.defaultProps = {
       ? subtitle
       : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
    posts: posts ? posts : [],
+   items: 3,
 };
+
 export default Blog;

@@ -55,7 +55,7 @@ export default function Example() {
                         onChange={themeToggle}
                         className={`${
                            enableDark
-                              ? "bg-green-600"
+                              ? "bg-indigo-600"
                               : "bg-gray-200"
                         } relative inline-flex items-center h-6 rounded-full w-11`}>
                         <span className="sr-only">
@@ -77,7 +77,7 @@ export default function Example() {
                         onChange={setEnabled}
                         className={`${
                            enabled
-                              ? "bg-green-600"
+                              ? "bg-indigo-600"
                               : "bg-gray-200"
                         } relative inline-flex items-center h-6 rounded-full w-11`}>
                         <span className="sr-only">
