@@ -4,7 +4,12 @@ import {
    ArrowNarrowRightIcon,
 } from "@heroicons/react/solid";
 
-export default function Pagination({className}) {
+export default function Pagination({
+   className,
+   setCurrentPage,
+   pages,
+   items,
+}) {
    return (
       <div className={className}>
          <nav className="border-t border-gray-200 dark:border-gray-800 px-4 flex items-center justify-between sm:px-0">
@@ -20,42 +25,27 @@ export default function Pagination({className}) {
                </a>
             </div>
             <div className="hidden md:-mt-px md:flex">
-               <Link href="#" passHref>
-                  <a
-                     href="#"
-                     className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:hover:border-gray-500 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium">
-                     1
-                  </a>
-               </Link>
-               {/* Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" */}
+               {}
+
                <a
-                  href="#"
-                  className="border-indigo-500 text-indigo-600 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium"
-                  aria-current="page">
+                  onClick={() => setCurrentPage(1)}
+                  className="cursor-pointer border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:hover:border-gray-500 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium">
+                  1
+               </a>
+
+               {/* Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" */}
+
+               <a
+                  className="cursor-pointer border-indigo-500 text-indigo-600 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium"
+                  aria-current="page"
+                  onClick={() => setCurrentPage(2)}>
                   2
                </a>
                <a
-                  href="#"
-                  className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium">
+                  className="cursor-pointer border-indigo-500 text-indigo-600 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium"
+                  aria-current="page"
+                  onClick={() => setCurrentPage(3)}>
                   3
-               </a>
-               <span className="border-transparent text-gray-500 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium">
-                  ...
-               </span>
-               <a
-                  href="#"
-                  className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium">
-                  8
-               </a>
-               <a
-                  href="#"
-                  className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium">
-                  9
-               </a>
-               <a
-                  href="#"
-                  className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium">
-                  10
                </a>
             </div>
             <div className="-mt-px w-0 flex-1 flex justify-end">
