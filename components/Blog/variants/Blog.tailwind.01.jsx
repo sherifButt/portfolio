@@ -1,8 +1,7 @@
 import Card from "../Card";
 import Pagination from "../Pagination";
 
-
-export default function Blog({items, title, subtitle, posts }) {
+export default function Blog({ items, title, subtitle, posts }) {
    return (
       <section className="flex lg:h-screen_">
          <div className="m-auto relative  pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
@@ -21,6 +20,7 @@ export default function Blog({items, title, subtitle, posts }) {
                <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
                   {posts.map(
                      ({
+                        id,
                         title,
                         href,
                         imageUrl,
@@ -32,6 +32,7 @@ export default function Blog({items, title, subtitle, posts }) {
                         readingTime,
                      }) => (
                         <Card
+                           id={id}
                            title={title}
                            href={href}
                            imageUrl={imageUrl}
@@ -53,9 +54,9 @@ export default function Blog({items, title, subtitle, posts }) {
 }
 
 Blog.defaultProps = {
-  items:3,
+   items: 3,
    title: "From the Blog",
    subtitle:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
-  posts: []
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
+   posts: [],
 };
