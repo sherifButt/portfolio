@@ -1,4 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
+
+import { useRouter } from "next/router";
+import { getData } from "../api/data";
+
 const stats = [
    { label: "Founded", value: "2021" },
    { label: "Employees", value: "5" },
@@ -6,7 +10,10 @@ const stats = [
    { label: "Raised", value: "$25M" },
 ];
 
-export default function Example() {
+export default function Example({post}) {
+  //  const router = useRouter();
+  //  const { id } = router.query;
+
    return (
       <div className="relative  py-16 sm:py-24">
          <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
@@ -56,41 +63,7 @@ export default function Example() {
                      />
                      <div className="absolute inset-0 bg-indigo-500 mix-blend-multiply" />
                      <div className="absolute inset-0 bg-gradient-to-t from-indigo-600 via-indigo-600 opacity-90" />
-                     <div className="relative px-8">
-                        <div>
-                           <img
-                              className="h-12"
-                              src="https://tailwindui.com/img/logos/workcation.svg?color=white"
-                              alt="Workcation"
-                           />
-                        </div>
-                        <blockquote className="mt-8">
-                           <div className="relative text-lg font-medium text-white dark:text-black md:flex-grow">
-                              <svg
-                                 className="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-indigo-400"
-                                 fill="currentColor"
-                                 viewBox="0 0 32 32"
-                                 aria-hidden="true">
-                                 <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                              </svg>
-                              <p className="relative">
-                                 Tincidunt integer commodo,
-                                 cursus etiam aliquam neque, et.
-                                 Consectetur pretium in volutpat,
-                                 diam. Montes, magna cursus nulla
-                                 feugiat dignissim id lobortis
-                                 amet.
-                              </p>
-                           </div>
-
-                           <footer className="mt-4">
-                              <p className="text-base font-semibold text-indigo-200">
-                                 Sarah Williams, CEO at
-                                 Workcation
-                              </p>
-                           </footer>
-                        </blockquote>
-                     </div>
+                     <div className="relative px-8"></div>
                   </div>
                </div>
             </div>
@@ -99,7 +72,7 @@ export default function Example() {
                {/* Content area */}
                <div className="pt-12 sm:pt-16 lg:pt-20">
                   <h2 className="text-3xl text-gray-900 dark:text-gray-100 font-extrabold tracking-normal  sm:text-4xl leading-8">
-                     On a mission to empower teams
+                     On a mission to empower teams {post.id}
                   </h2>
                   <div className="mt-6 text-gray-500 space-y-6">
                      <p className="text-lg">
@@ -169,3 +142,14 @@ export default function Example() {
       </div>
    );
 }
+
+export const getServerSideProps = async context => {
+   const data = await getData();
+   const posts = data.portafolio.posts;
+console.log(posts.filter(i => (i.id == context.params.id)));
+   return {
+     props: {
+       post: posts.filter( i => ( i.id == context.params.id ) )
+     },
+   };
+};

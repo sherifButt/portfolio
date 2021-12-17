@@ -16,7 +16,7 @@ const Header = ( { title, subtitle, button, img } ) => {
 
    const hearoImg = img.imgSrc.light?.includes("json") ? (
       <>
-         <div className="dark:hidden w-2/3 mx-auto">
+         <div className="dark:hidden lg:w-2/3 mx-auto">
             {/* <Lottie path={ img.imgSrc.light } /> */}
             <Card/>
          </div>
@@ -33,9 +33,9 @@ const Header = ( { title, subtitle, button, img } ) => {
    );
 
    return (
-      <section className="py-6 px-4 h-[90vh] flex">
+      <section className="py-6 px-4 lg:h-[90vh] flex">
          <div className="flex flex-wrap items-center text-center lg:text-left -mx-2 ">
-            <div className=" rounded  lg:w-1/2 px-2 lg:pr-10 -mt-10 lg:mt-0 order-1 lg:order-none py-10 z-10 ">
+            <div className=" rounded  lg:w-1/2 px-2 lg:pr-10  lg:mt-0 order-1 lg:order-none py-10 z-10 ">
                <motion.div
                   animate={{
                      // x: [10, -30, 20, 0, 60, -50],

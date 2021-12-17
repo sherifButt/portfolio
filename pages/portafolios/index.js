@@ -1,10 +1,5 @@
 import Blog from "../../components/Blog";
-import data from "../../siteData.config_02";
 import { getData } from "../api/data";
-
-const { title, subtitle, posts } = data?.portafolio
-   ? data.portafolio
-   : "";
 
 const Portafolio = ({posts,title,subtitle}) => {
    return (
@@ -15,12 +10,13 @@ const Portafolio = ({posts,title,subtitle}) => {
          subtitle={subtitle}
          posts={posts} 
       />
-   );
+   ); 
 };
 
 export default Portafolio;
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ( context ) => {
+  console.log(`context`, context)
    const data = await getData();
    return {
       props: {

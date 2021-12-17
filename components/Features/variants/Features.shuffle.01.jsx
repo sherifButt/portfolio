@@ -9,7 +9,6 @@ const Features = ({
 }) => {
    return (
       <section className="py-12 px-4 ">
-         
             <h2 className="text-4xl text-center mb-12 font-semibold font-heading dark:text-gray-200 ">
                {title}
             </h2>

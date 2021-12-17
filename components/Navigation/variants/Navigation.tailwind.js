@@ -353,7 +353,7 @@ export default function Example() {
             <Popover.Panel
                focus
                className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-20">
-               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-gray-900 divide-y-2 divide-gray-50 dark:divide-gray-700 ">
+               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-gray-900 border-gray-800 border divide-y-2 divide-gray-50 dark:divide-gray-700 ">
                   <div className="pt-5 pb-6 px-5">
                      <div className="flex items-center justify-between">
                         <div>
@@ -377,12 +377,12 @@ export default function Example() {
                               <a
                                  key={item.name}
                                  href={item.href}
-                                 className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                 className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">
                                  <item.icon
                                     className="flex-shrink-0 h-6 w-6 text-indigo-600"
                                     aria-hidden="true"
                                  />
-                                 <span className="ml-3 text-base font-medium text-gray-900 ">
+                                 <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-300 ">
                                     {item.name}
                                  </span>
                               </a>
@@ -391,10 +391,10 @@ export default function Example() {
                      </div>
                   </div>
                   <div className="py-6 px-5 space-y-6">
-                     <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+                     <div className="grid grid-cols-2 gap-y-4 gap-x-8 ">
                         <a
                            href="#"
-                           className="text-base font-medium text-gray-900 hover:text-gray-700 ">
+                           className="text-base font-medium text-gray-900 dark:text-gray-400 hover:text-gray-700 ">
                            Pricing
                         </a>
 

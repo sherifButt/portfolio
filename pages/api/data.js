@@ -1,4 +1,4 @@
-import data from "../../siteData.config_02";
+import data from "../../siteData.config";
 
 
 

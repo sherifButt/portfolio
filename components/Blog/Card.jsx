@@ -9,7 +9,7 @@ const Card = ({
    readingTime,
    author,
 }) => {
-   return (
+   return ( 
       <div
          key={title}
          className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:scale-105 transition ease-in-out ">

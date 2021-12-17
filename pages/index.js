@@ -43,7 +43,7 @@ export default function Home() {
       <>
          <Header variant={1}  />
          <Features  />
-         <Blog variant={ 3 }/>
+         <Blog variant={ 3 } items={ 3 }/>
          {/* <Faq /> */}
          <Testimonials variant={3} />
          {/* <HowItWorks variant={2} /> */}
