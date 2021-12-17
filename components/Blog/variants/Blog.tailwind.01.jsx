@@ -8,15 +8,17 @@ export default function Blog({
    subtitle,
    posts,
    isPagination,
-} ) {
+}) {
+   // Pagination
+   const postsCount = posts.length;
+   const pages = Math.ceil(postsCount / items);
+   const [currentPage, setCurrentPage] = useState(1);
 
-  // Pagination
-  const postsCount = posts.length
-  const pages = Math.ceil(postsCount/items)
-  const [ currentPage, setCurrentPage ] = useState( 1 );
-  
-  const offset = (currentPage - 1) * items + 1;
-  const currentPosts= posts.slice(offset-1, offset+items-1);
+   const offset = (currentPage - 1) * items + 1;
+   const currentPosts = posts.slice(
+      offset - 1,
+      offset + items - 1
+   );
    return (
       <section className="flex lg:h-screen_">
          <div className="m-auto relative  pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
@@ -70,7 +72,8 @@ export default function Blog({
                   className="mt-10 z-20"
                   items={items}
                   setCurrentPage={setCurrentPage}
-                  pages={6}
+                  currentPage={currentPage}
+                  pages={pages}
                />
             ) : (
                ""

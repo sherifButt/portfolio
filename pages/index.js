@@ -11,8 +11,9 @@ import HowItWorks from "../components/HowItWorks";
 import Pricing from "../components/Pricing";
 import Team from "../components/Team";
 import Testimonials from "../components/Testimonials";
+import { getData } from "./api/data";
 
-export default function Home() {
+export default function Home({ posts, title, subtitle }) {
    const { scrollY, scrollYProgress } = useViewportScroll();
    const y1 = useTransform(scrollY, [0, 400], [0, 200]);
    const y2 = useTransform(scrollY, [0, 400], [0, 500]);
@@ -41,9 +42,16 @@ export default function Home() {
    };
    return (
       <>
-         <Header variant={1}  />
-         <Features  />
-         <Blog variant={ 3 } items={ 3 }/>
+         <Header variant={1} />
+         <Features />
+         <Blog
+            variant={3}
+            
+            items={3}
+            title={title}
+            subtitle={subtitle}
+            posts={posts}
+         />
          {/* <Faq /> */}
          <Testimonials variant={3} />
          {/* <HowItWorks variant={2} /> */}
@@ -74,3 +82,15 @@ const Text = styled.h1`
       0px 4px 4px rgba(0, 0, 0, 0.25), 0px 3px 0px #d6dadf;
    //  filter: blur(1px);
 `;
+
+export const getStaticProps = async context => {
+   console.log(`context`, context);
+   const data = await getData();
+   return {
+      props: {
+         posts: data.portafolio.posts,
+         title: data.portafolio.title,
+         subtitle: data.portafolio.subtitle,
+      },
+   };
+};
