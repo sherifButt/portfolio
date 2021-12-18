@@ -14,7 +14,7 @@ const Card = ( {
    return (
       <div
          key={title}
-         className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:scale-105 transition ease-in-out ">
+         className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:scale-105 transition ease-in-out dark:bg-gray-800 ">
          <Link
             Link
             href={`${href}/[id]`}

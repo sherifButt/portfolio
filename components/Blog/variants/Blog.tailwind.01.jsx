@@ -50,8 +50,8 @@ export default function Blog({
                            datetime,
                            date,
                            readingTime,
-                        }) => (
-                           <Card
+                        },i) => (
+                           <Card key={"blog_"+i}
                               id={id}
                               title={title}
                               href={href}

@@ -58,8 +58,8 @@ const stats = [
                         src={post.imageUrl}
                         alt=""
                      />
-                     <div className="absolute inset-0 bg-indigo-500 mix-blend-multiply" />
-                     <div className="absolute inset-0 bg-gradient-to-t from-indigo-600 via-indigo-600 opacity-50" />
+                     {/* <div className="absolute inset-0 bg-indigo-500 mix-blend-multiply" /> */}
+                     {/* <div className="absolute inset-0 bg-gradient-to-t from-indigo-600 via-indigo-600 opacity-50" /> */}
                      <div className="relative px-8"></div>
                   </div>
                </div>
@@ -68,7 +68,7 @@ const stats = [
             <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
                {/* Content area */}
                <div className="pt-12 sm:pt-16 lg:pt-20">
-                  <h2 className="leading-[40] text-3xl text-black dark:text-gray-100 font-extrabold tracking-normal  sm:text-4xl ">
+                  <h2 className="leading-relaxed text-4xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal ">
                      {post.title}
                   </h2>
                   <div className="mt-6 text-gray-500 space-y-6">

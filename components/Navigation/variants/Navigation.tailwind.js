@@ -109,9 +109,13 @@ function classNames(...classes) {
    return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Example({className}) {
    return (
-      <Popover className="relative bg-white dark:bg-transparent">
+      <Popover
+         className={classNames(
+            className,
+            "fixed top-0 left-0 right-0 bg-white dark:bg-transparent z-20"
+         )}>
          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center border-b-2 border-gray-100 dark:border-gray-700 py-6 md:justify-start md:space-x-10">
                <Logo />

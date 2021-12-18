@@ -4,6 +4,10 @@ import {
    ArrowNarrowRightIcon,
 } from "@heroicons/react/solid";
 
+function classNames(...classes) {
+   return classes.filter(Boolean).join(" ");
+}
+
 export default function Pagination({
    className,
    setCurrentPage,
@@ -11,24 +15,7 @@ export default function Pagination({
    pages,
    items,
 }) {
-   //
-   let html = [];
-   const defaultClass =
-      "cursor-pointer border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:hover:border-gray-500 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium";
-   const currentClass = "border-indigo-500 text-indigo-600";
-   for (let i = 1; i <= pages; i++) {
-      html.push(
-         <a
-            onClick={() => setCurrentPage(i)}
-            className={
-               currentPage == i
-                  ? currentClass + defaultClass
-                  : defaultClass
-            }>
-            {i}
-         </a>
-      );
-   }
+   
 
    return (
       <div className={className}>
@@ -51,7 +38,18 @@ export default function Pagination({
                )}
             </div>
             <div className="hidden md:-mt-px md:flex">
-               {html}
+               {new Array(pages).fill(0).map((page, i) => (
+                  <a key={"page_"+i}
+                     onClick={() => setCurrentPage(i + 1)}
+                     className={classNames(
+                        "cursor-pointer border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:hover:border-gray-500 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium",
+                        currentPage == i + 1
+                           ? "border-indigo-500 text-indigo-600"
+                           : ""
+                     )}>
+                     {i + 1}
+                  </a>
+               ))}
             </div>
             <div className="-mt-px w-0 flex-1 flex justify-end">
                {currentPage == pages ? (

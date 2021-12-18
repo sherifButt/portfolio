@@ -8,7 +8,7 @@ const Portafolio = ({ posts, title, subtitle }) => {
          {/* <Breadcrumb className="mt-8 ml-8" /> */}
          <Blog
             variant={3}
-            items={3}
+            items={6}
             title={title}
             subtitle={subtitle}
             posts={posts}

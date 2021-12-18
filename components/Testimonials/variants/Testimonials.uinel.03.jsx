@@ -1,8 +1,10 @@
-import Clouds from "./Clouds";
+import Clouds from "../Clouds";
 import data from "../../../siteData.config";
 const { title, subtitle, clouds } = data?.testimonials
    ? data.testimonials
    : "";
+
+
 
 const Testimonials = () => {
    return (
@@ -29,7 +31,7 @@ const Testimonials = () => {
                   <div className="flex flex-wrap">
                      {clouds.filter(Boolean).map((cloud, i) => (
                         <Clouds
-                           key={i}
+                           key={"cloud_"+i}
                            imgSrc={cloud.img.imgSrc}
                            title={cloud.title}
                            bgColor={cloud.img.bgColor}
