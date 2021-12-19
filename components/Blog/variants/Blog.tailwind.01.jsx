@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "../../NoScrollLink";
 import Card from "../Card";
 import Pagination from "../Pagination";
+import Lottie from "../../Lottie";
 
 export default function Blog({
    items,
@@ -40,55 +41,63 @@ export default function Blog({
                      {subtitle}
                   </p>
                </div>
-               <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-                  {Array.isArray(currentPosts) &&
-                     currentPosts
-                        .filter(Boolean)
-                        .slice(0, items)
-                        .map(
-                           (
-                              {
-                                 id,
-                                 title,
-                                 href,
-                                 imageUrl,
-                                 category,
-                                 description,
-                                 author,
-                                 datetime,
-                                 date,
-                                 readingTime,
-                              },
-                              i
-                           ) => (
-                              <Card
-                                 key={"blog_" + i}
-                                 id={id}
-                                 title={title}
-                                 href={href}
-                                 imageUrl={imageUrl}
-                                 category={category}
-                                 description={description}
-                                 author={author}
-                                 datetime={datetime}
-                                 date={date}
-                                 readingTime={readingTime}
-                              />
-                           )
-                        )}
+               <div >
+                  <Lottie
+                     className="-z-20 w-200 absolute "
+                     path="blob_2color_yellow_red.json"
+                  />
+                  <div className=" mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+                     {Array.isArray(currentPosts) &&
+                        currentPosts
+                           .filter(Boolean)
+                           .slice(0, items)
+                           .map(
+                              (
+                                 {
+                                    id,
+                                    title,
+                                    href,
+                                    imageUrl,
+                                    category,
+                                    description,
+                                    author,
+                                    datetime,
+                                    date,
+                                    readingTime,
+                                 },
+                                 i
+                              ) => (
+                                 <Card
+                                    key={"blog_" + i}
+                                    id={id}
+                                    title={title}
+                                    href={href}
+                                    imageUrl={imageUrl}
+                                    category={category}
+                                    description={description}
+                                    author={author}
+                                    datetime={datetime}
+                                    date={date}
+                                    readingTime={readingTime}
+                                 />
+                              )
+                           )}
+                  </div>
                </div>
             </div>
-            {!isPagination ? (
-               <Pagination
-                  className="mt-10 z-20"
-                  items={items}
-                  setCurrentPage={setCurrentPage}
-                  currentPage={currentPage}
-                  pages={pages}
-               />
-            ) : (
-               ""
-            )}
+            <div className="z-30">
+              {!isPagination ? (
+                 <Pagination
+                    className="mt-10 z-10"
+                    items={items}
+                    setCurrentPage={setCurrentPage}
+                    currentPage={currentPage}
+                    pages={pages}
+                 />
+              ) : (
+                 ""
+              )}
+            </div>
          </div>
       </section>
    );

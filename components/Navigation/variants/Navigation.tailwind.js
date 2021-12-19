@@ -235,7 +235,7 @@ export default function Example({className}) {
                                  open
                                     ? "text-gray-900 dark:text-gray-200"
                                     : "text-gray-500 dark:text-gray-400",
-                                 "group bg-white dark:bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-indigo-900 focus:ring-indigo-500 pl-3"
+                                 "group  dark:bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-indigo-900 focus:ring-indigo-500 pl-3"
                               )}>
                               <span>More</span>
                               <ChevronDownIcon

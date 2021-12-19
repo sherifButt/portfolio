@@ -1,7 +1,7 @@
 import lottie from "lottie-web";
 import { useEffect, useRef } from "react";
 
-const Lottie = ({ name, loop, autoplay, renderer, path }) => {
+const Lottie = ({className, name, loop, autoplay, renderer, path }) => {
    const container = useRef(null);
 
    useEffect(() => {
@@ -15,7 +15,7 @@ const Lottie = ({ name, loop, autoplay, renderer, path }) => {
       });
    }, []);
 
-   return <span className={"container"} ref={container}></span>;
+   return <div className={`container ${className}`} ref={container}></div>;
 };
 
 Lottie.defaultProps = {

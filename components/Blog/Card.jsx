@@ -21,7 +21,7 @@ const Card = ( {
   return (
      <div
         key={title}
-        className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:scale-105 transition ease-in-out dark:bg-gray-800 ">
+        className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:scale-105 transition ease-in-out dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-20 ">
         <Link href={`${href}/${id}`} passHref>
            <a>
               <div className="flex-shrink-0">
@@ -31,7 +31,7 @@ const Card = ( {
                     alt=""
                  />
               </div>
-              <div className="flex-1 bg-white dark:bg-gray-800 p-6 flex flex-col justify-between">
+              <div className="flex-1  p-6 flex flex-col justify-between ">
                  <div className="flex-1">
                     <p className="text-sm font-medium text-indigo-600">
                        {Array.isArray(category) &&
@@ -39,7 +39,10 @@ const Card = ( {
                              <a
                                 key={cat.name}
                                 href={cat.href}
-                                className={classNames(cat.color,"hover:underline inline-flex items-center mr-2 px-3 py-0.5 rounded-full text-sm font-medium")}>
+                                className={classNames(
+                                   cat.color,
+                                   "hover:underline inline-flex items-center mr-2 px-3 py-0.5 rounded-full text-sm font-medium"
+                                )}>
                                 {cat.name}
                              </a>
                           ))}
@@ -48,7 +51,7 @@ const Card = ( {
                        <p className="text-xl font-semibold text-gray-900 dark:text-gray-100 ">
                           {title}
                        </p>
-                       <p className="mt-3 text-base text-gray-500 dark:text-gray-400">
+                       <p className="mt-3 text-base text-gray-500 dark:text-gray-300">
                           {description}
                        </p>
                     </a>
