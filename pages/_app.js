@@ -29,8 +29,11 @@ function MyApp({ Component, pageProps, router }) {
                   animate="enter"
                   exit="exit"
                   key={router.route}
-                  transition={{ type: "easeOut",duration:.5 }}>
-                  <Component {...pageProps} />
+                  transition={{
+                     type: "easeOut",
+                     duration: 0.5,
+                  }}>
+                  <Component {...pageProps} key={router.route} />
                </motion.main>
             </AnimatePresence>
          </AnimateSharedLayout>

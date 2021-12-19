@@ -4,7 +4,7 @@ import Blog_03 from "./variants/Blog.tailwind.01";
 
 
 
-const Blog = ({ variant, title, subtitle, posts, items }) => {
+const Blog = ({ variant, title,href, subtitle, posts, items }) => {
    let html;
 
    switch (variant) {
@@ -17,8 +17,9 @@ const Blog = ({ variant, title, subtitle, posts, items }) => {
       case 3:
          html = (
             <Blog_03
-               title={title}
-               subtitle={subtitle}
+               title={ title }
+               subtitle={ subtitle }
+               href={href}
                posts={posts}
                items={items}
             />
@@ -35,7 +36,8 @@ const Blog = ({ variant, title, subtitle, posts, items }) => {
 
 Blog.defaultProps = {
    variant: 1,
-   title:  "Boost your conversion rate",
+   title: "Boost your conversion rate",
+   href:"/blog",
    subtitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
    posts:  [],
    items: 3,

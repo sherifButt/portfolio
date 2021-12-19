@@ -114,7 +114,7 @@ export default function Example({className}) {
       <Popover
          className={classNames(
             className,
-            "fixed top-0 left-0 right-0 bg-white dark:bg-transparent z-20"
+            "fixed top-0 left-0 right-0 bg-white dark:bg-gray-900 z-20"
          )}>
          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center border-b-2 border-gray-100 dark:border-gray-700 py-6 md:justify-start md:space-x-10">
@@ -357,11 +357,12 @@ export default function Example({className}) {
             <Popover.Panel
                focus
                className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-20">
-               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-gray-900 border-gray-800 border divide-y-2 divide-gray-50 dark:divide-gray-700 ">
+               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-gray-900 dark:border-gray-800 dark:border divide-y-2 divide-gray-50 dark:divide-gray-700 ">
                   <div className="pt-5 pb-6 px-5">
                      <div className="flex items-center justify-between">
                         <div>
-                           <Logo text="" />
+                           {/* <Logo text="" /> */}
+                           <Dropdown />
                         </div>
                         <div className="-mr-2">
                            <Popover.Button className="bg-white dark:bg-transparent  rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -386,7 +387,7 @@ export default function Example({className}) {
                                     className="flex-shrink-0 h-6 w-6 text-indigo-600"
                                     aria-hidden="true"
                                  />
-                                 <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-300 ">
+                                 <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-400 ">
                                     {item.name}
                                  </span>
                               </a>
@@ -394,24 +395,24 @@ export default function Example({className}) {
                         </nav>
                      </div>
                   </div>
-                  <div className="py-6 px-5 space-y-6">
+                  <div className="py-6 px-5 space-y-6 dark:bg-gray-800">
                      <div className="grid grid-cols-2 gap-y-4 gap-x-8 ">
                         <a
                            href="#"
-                           className="text-base font-medium text-gray-900 dark:text-gray-400 hover:text-gray-700 ">
+                           className="text-base font-medium text-gray-900 dark:text-gray-600 hover:text-gray-700 ">
                            Pricing
                         </a>
 
                         <a
                            href="#"
-                           className="text-base font-medium text-gray-900 hover:text-gray-700">
+                           className="text-base font-medium text-gray-900 dark:text-gray-600 hover:text-gray-700">
                            Docs
                         </a>
                         {resources.map(item => (
                            <a
                               key={item.name}
                               href={item.href}
-                              className="text-base font-medium text-gray-900 hover:text-gray-700">
+                              className="text-base font-medium text-gray-900 dark:text-gray-600 hover:text-gray-700">
                               {item.name}
                            </a>
                         ))}

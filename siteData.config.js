@@ -3,11 +3,12 @@ export default {
       title: "From the Portafolio",
       subtitle:
          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
+      href: "/blog",
       posts: [
          {
             id: 1,
             title: "Boost your conversion rate",
-            href: "/portafolio",
+            href: "/blog",
             category: { name: "Article", href: "#" },
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
@@ -26,7 +27,7 @@ export default {
          {
             id: 2,
             title: "How to use search engine optimization to drive sales",
-            href: "/portafolio",
+            href: "/blog",
             category: { name: "Video", href: "#" },
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
@@ -45,7 +46,7 @@ export default {
          {
             id: 3,
             title: "Improve your customer experience",
-            href: "/portafolio",
+            href: "/blog",
             category: { name: "Case Study", href: "#" },
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
@@ -64,7 +65,7 @@ export default {
          {
             id: 4,
             title: "How to use search engine optimization to drive sales",
-            href: "/portafolio",
+            href: "/blog",
             category: { name: "Video", href: "#" },
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
@@ -83,7 +84,7 @@ export default {
          {
             id: 5,
             title: "Boost your conversion rate",
-            href: "/portafolio",
+            href: "/blog",
             category: { name: "Article", href: "#" },
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
@@ -102,7 +103,7 @@ export default {
          {
             id: 6,
             title: "Boost your conversion rate",
-            href: "/portafolio",
+            href: "/blog",
             category: { name: "Article", href: "#" },
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
@@ -121,7 +122,7 @@ export default {
          {
             id: 7,
             title: "Boost your conversion rate",
-            href: "/portafolio",
+            href: "/blog",
             category: { name: "Article", href: "#" },
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
@@ -143,14 +144,18 @@ export default {
       title: "From the Portafolio",
       subtitle:
          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
+      href: "/portafolio",
       posts: [
          {
             id: 1,
-            title: "Boost your conversion rate",
+            title: "Animating Next.js page transitions with Framer Motion",
             href: "/portafolio",
-            category: { name: "Article", href: "#" },
+            category: [
+               { name: "Article", href: "/article" },
+               { name: "Books", href: "/books" },
+            ],
             description:
-               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+               "A few months ago I rebuilt my Dev.to powered Next.js website from scratch. While building it, I decided adding animations would bring its simple design to life. Previously, I'd used CSS transitions and JavaScript to achieve animations on a webpage. This time I wanted to use an animation library built for React.js that I could use in future projects. Enter Framer Motion.",
             date: "Mar 16, 2020",
             datetime: "2020-03-16",
             imageUrl:
@@ -167,7 +172,18 @@ export default {
             id: 2,
             title: "How to use search engine optimization to drive sales",
             href: "/portafolio",
-            category: { name: "Video", href: "#" },
+            category: [
+               {
+                  name: "Video",
+                  href: "/video",
+                  color: "bg-red-100 text-red-800",
+               },
+               {
+                  name: "Books",
+                  href: "/books",
+                  color: "bg-indigo-100 text-indigo-800",
+               },
+            ],
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
             date: "Mar 10, 2020",
@@ -186,7 +202,18 @@ export default {
             id: 3,
             title: "Improve your customer experience",
             href: "/portafolio",
-            category: { name: "Case Study", href: "#" },
+            category: [
+               {
+                  name: "Article",
+                  href: "/article",
+                  color: "bg-indigo-100 text-indigo-800",
+               },
+               {
+                  name: "Books",
+                  href: "/books",
+                  color: "bg-indigo-100 text-indigo-800",
+               },
+            ],
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
             date: "Feb 12, 2020",
@@ -205,7 +232,18 @@ export default {
             id: 4,
             title: "How to use search engine optimization to drive sales",
             href: "/portafolio",
-            category: { name: "Video", href: "#" },
+            category: [
+               {
+                  name: "Video",
+                  href: "/video",
+                  color: "bg-red-100 text-red-800",
+               },
+               {
+                  name: "Books",
+                  href: "/books",
+                  color: "bg-green-100 text-green-800",
+               },
+            ],
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
             date: "Mar 10, 2020",
@@ -224,7 +262,18 @@ export default {
             id: 5,
             title: "Boost your conversion rate",
             href: "/portafolio",
-            category: { name: "Article", href: "#" },
+            category: [
+               {
+                  name: "Article",
+                  href: "/article",
+                  color: "bg-indigo-100 text-indigo-800",
+               },
+               {
+                  name: "Books",
+                  href: "/books",
+                  color: "bg-green-100 text-green-800",
+               },
+            ],
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
             date: "Mar 16, 2020",
@@ -243,7 +292,10 @@ export default {
             id: 6,
             title: "How to use search engine optimization to drive sales",
             href: "/portafolio",
-            category: { name: "Video", href: "#" },
+            category: [
+               { name: "Music", href: "/music" },
+               { name: "Books", href: "/books" },
+            ],
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
             date: "Mar 10, 2020",
@@ -262,7 +314,10 @@ export default {
             id: 7,
             title: "Boost your conversion rate",
             href: "/portafolio",
-            category: { name: "Article", href: "#" },
+            category: [
+               { name: "Article", href: "/article" },
+               { name: "Books", href: "/books" },
+            ],
             description:
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
             date: "Mar 16, 2020",
@@ -332,7 +387,7 @@ export default {
                imgSrc: "assets/imgs/miro.svg",
                width: "2/3",
                alt: "Miro",
-               css: "md:ml-auto",
+               css: "lg:ml-auto",
             },
          },
          {

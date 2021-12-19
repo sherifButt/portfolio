@@ -16,7 +16,7 @@ const Layout = ({ children }, router) => {
                <header className="relative">
                   <Nav />
                </header>
-               <main className="flex-grow" key={router.route}>
+               <main className="flex-grow mt-20" key={router.route}>
                   {children}
                </main>
                <footer>

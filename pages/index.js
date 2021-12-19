@@ -13,7 +13,7 @@ import Team from "../components/Team";
 import Testimonials from "../components/Testimonials";
 import { getData } from "./api/data";
 
-export default function Home({ posts, title, subtitle }) {
+export default function Home({ posts, title,href, subtitle }) {
    const { scrollY, scrollYProgress } = useViewportScroll();
    const y1 = useTransform(scrollY, [0, 400], [0, 200]);
    const y2 = useTransform(scrollY, [0, 400], [0, 500]);
@@ -46,8 +46,8 @@ export default function Home({ posts, title, subtitle }) {
          <Features />
          <Blog
             variant={3}
-            
-            items={3}
+            items={ 3 }
+            href={href}
             title={title}
             subtitle={subtitle}
             posts={posts}
@@ -90,6 +90,7 @@ export const getStaticProps = async context => {
       props: {
          posts: data.portafolio.posts,
          title: data.portafolio.title,
+         href: data.portafolio.href,
          subtitle: data.portafolio.subtitle,
       },
    };

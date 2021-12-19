@@ -1,8 +1,9 @@
-import Link from "next/link";
+import Link from "../NoScrollLink";
 import {
    ArrowNarrowLeftIcon,
    ArrowNarrowRightIcon,
 } from "@heroicons/react/solid";
+import { AnimateSharedLayout } from "framer-motion"
 
 function classNames(...classes) {
    return classes.filter(Boolean).join(" ");
@@ -15,8 +16,6 @@ export default function Pagination({
    pages,
    items,
 }) {
-   
-
    return (
       <div className={className}>
          <nav className="border-t border-gray-200 dark:border-gray-800 px-4 flex items-center justify-between sm:px-0">
@@ -38,8 +37,9 @@ export default function Pagination({
                )}
             </div>
             <div className="hidden md:-mt-px md:flex">
-               {new Array(pages).fill(0).map((page, i) => (
-                  <a key={"page_"+i}
+               {new Array(pages).fill(0).map((_, i) => (
+                  <a
+                     key={"page_" + i}
                      onClick={() => setCurrentPage(i + 1)}
                      className={classNames(
                         "cursor-pointer border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:hover:border-gray-500 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium",
