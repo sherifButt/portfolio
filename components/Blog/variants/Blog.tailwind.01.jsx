@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "../../NoScrollLink";
-import Card from "../Card";
+import Card from "../Card_02";
 import Pagination from "../Pagination";
 import Lottie from "../../Lottie";
 
@@ -41,9 +41,9 @@ export default function Blog({
                      {subtitle}
                   </p>
                </div>
-               <div >
+               <div>
                   <Lottie
-                     className="-z-20 w-200 absolute "
+                     className="-z-20 w-200 absolute blur-sm"
                      path="blob_2color_yellow_red.json"
                   />
                   <div className=" mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
@@ -86,17 +86,17 @@ export default function Blog({
                </div>
             </div>
             <div className="z-30">
-              {!isPagination ? (
-                 <Pagination
-                    className="mt-10 z-10"
-                    items={items}
-                    setCurrentPage={setCurrentPage}
-                    currentPage={currentPage}
-                    pages={pages}
-                 />
-              ) : (
-                 ""
-              )}
+               {!isPagination ? (
+                  <Pagination
+                     className="mt-10 z-10"
+                     items={items}
+                     setCurrentPage={setCurrentPage}
+                     currentPage={currentPage}
+                     pages={pages}
+                  />
+               ) : (
+                  ""
+               )}
             </div>
          </div>
       </section>

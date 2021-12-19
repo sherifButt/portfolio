@@ -18,7 +18,11 @@ const Header = ( { title, subtitle, button, img } ) => {
       <>
          <div className="dark:hidden lg:w-2/3 mx-auto">
             {/* <Lottie path={ img.imgSrc.light } /> */}
-            <Card/>
+            <Lottie
+               className="-z-20 w-300 absolute blur-sm"
+               path="blob_2color_yellow_red.json"
+            />
+            <Card />
          </div>
          <div className="hidden dark:inline-block">
             <Lottie path={img.imgSrc.dark} />
@@ -65,7 +69,7 @@ const Header = ( { title, subtitle, button, img } ) => {
                   <Motion>
                      <Link href="/try" passHref>
                         <a
-                           className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow"
+                           className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50"
                            href="#">
                            {button.text}{" "}
                            <span className="font-light">
@@ -82,10 +86,9 @@ const Header = ( { title, subtitle, button, img } ) => {
 
             <motion.div
                className="lg:w-1/2 px-2"
-               initial={{y:-300,opacity:0}}
-               animate={ { y: 0,opacity:1 } }
-               transition={{duration:.7}}
-               >
+               initial={{ y: -300, opacity: 0 }}
+               animate={{ y: 0, opacity: 1 }}
+               transition={{ duration: 0.7 }}>
                <motion.div
                   animate={{
                      // x: [10, -30, 20, 0, 60, -50],
@@ -99,7 +102,6 @@ const Header = ( { title, subtitle, button, img } ) => {
                   }}>
                   {hearoImg}
                </motion.div>
-               
             </motion.div>
          </div>
       </section>

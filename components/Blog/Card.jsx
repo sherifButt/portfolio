@@ -21,7 +21,7 @@ const Card = ( {
   return (
      <div
         key={title}
-        className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:scale-105 transition ease-in-out dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-20 ">
+        className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:scale-105 transition ease-in-out dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-40 ">
         <Link href={`${href}/${id}`} passHref>
            <a>
               <div className="flex-shrink-0">
@@ -47,10 +47,10 @@ const Card = ( {
                              </a>
                           ))}
                     </p>
-                    <a href={href} className="block mt-2">
-                       <p className="text-xl font-semibold text-gray-900 dark:text-gray-100 ">
+                    <a href={href} className="block mt-3">
+                       <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 leading-relaxed">
                           {title}
-                       </p>
+                       </h3>
                        <p className="mt-3 text-base text-gray-500 dark:text-gray-300">
                           {description}
                        </p>
