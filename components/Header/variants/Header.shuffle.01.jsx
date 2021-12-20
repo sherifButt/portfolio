@@ -54,7 +54,7 @@ const Header = ({ title, subtitle, button, img }) => {
                      yoyo: Infinity,
                   }}>
                   <div>
-                     <h1 className="font-lagag z-10 lg:text-7xl text-5xl lg:tracking-normal tracking-widest mb-6 dark:text-gray-100   lg:leading-tight  font-normal leading-relaxed font-heading ">
+                     <h1 className="font-lagag z-10 lg:text-7xl text-5xl lg:tracking-normal tracking-widest mb-6 dark:text-gray-100   lg:leading-tight  font-normal leading-relaxed font-heading drop-shadow-sm shadow-indigo-500/50">
                         <span
                            className="Container"
                            dangerouslySetInnerHTML={{
@@ -71,7 +71,7 @@ const Header = ({ title, subtitle, button, img }) => {
                   <Motion>
                      <Link href="/try" passHref>
                         <a
-                           className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50"
+                           className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40"
                            href="#">
                            {button.text}{" "}
                            <span className="font-light">

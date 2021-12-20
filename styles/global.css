@@ -21,3 +21,41 @@ p{
 h1,h2,h3{
 font-family:"lagag"
 }
+
+
+
+
+
+
+code,
+.code,
+pre {
+  
+  background: #424242;
+  color: greenyellow;
+  font-size: 14px;
+  padding: 10px;
+  
+  border-radius: 10px;
+  
+}
+
+pre:before {
+    display: block;
+    width: calc(100%);
+    margin-left: -3px;
+    margin-top: -3px;
+    padding: 3px;
+    text-transform: uppercase;
+    content: attr(data-lang);
+    
+  }
+  pre.o {
+    color: orange;
+  }
+  pre.w {
+    color: white;
+  }
+
+
+  

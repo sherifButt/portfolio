@@ -27,7 +27,7 @@ const Features = ({
          <div className="text-center">
             <Link href="#" passHref>
                <a
-                  className="inline-block py-4 px-8 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow-lg shadow-indigo-500/50"
+                  className="inline-block py-4 px-8 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40"
                   href="#">
                   {ctaButton.text}{" "}
                   <span className="font-light">
