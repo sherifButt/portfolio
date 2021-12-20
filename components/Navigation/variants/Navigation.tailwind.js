@@ -218,7 +218,7 @@ export default function Example({className}) {
 
                   <a
                      href="#"
-                     className="text-base font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 dark:text-gray-400 dark:hover:text-gray-200">
+                     className="text-base font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
                      Pricing
                   </a>
                   <Link href="/faq" passHref>

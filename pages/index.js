@@ -47,6 +47,7 @@ export default function Home({ posts, title,href, subtitle }) {
          <Blog
             variant={3}
             items={ 3 }
+            rows={1}
             href={href}
             title={title}
             subtitle={subtitle}

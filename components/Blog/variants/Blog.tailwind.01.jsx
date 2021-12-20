@@ -46,7 +46,7 @@ export default function Blog({
                      className="-z-20 w-200 absolute blur-sm"
                      path="blob_2color_yellow_red.json"
                   />
-                  <div className=" mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+                  <div className=" mt-12 max-w-lg mx-auto grid gap-20 lg:grid-cols-3 lg:max-w-none">
                      {Array.isArray(currentPosts) &&
                         currentPosts
                            .filter(Boolean)

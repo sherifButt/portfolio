@@ -158,8 +158,7 @@ export default {
                "A few months ago I rebuilt my Dev.to powered Next.js website from scratch. While building it, I decided adding animations would bring its simple design to life. Previously, I'd used CSS transitions and JavaScript to achieve animations on a webpage. This time I wanted to use an animation library built for React.js that I could use in future projects. Enter Framer Motion.",
             date: "Mar 16, 2020",
             datetime: "2020-03-16",
-            imageUrl:
-               "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+            imageUrl: "/assets/imgs/Screenshot.png",
             readingTime: "6 min",
             author: {
                name: "Roel Aufderehar",

@@ -18,7 +18,7 @@ export default function Pagination({
 }) {
    return (
       <div className={className}>
-         <nav className="border-t border-gray-200 dark:border-gray-800 px-4 flex items-center justify-between sm:px-0">
+         <nav className="border-t border-gray-200 dark:border-gray-800 px-4 flex items-center justify-between sm:px-0 relative">
             <div className="-mt-px w-0 flex-1 flex">
                {currentPage == 1 ? (
                   ""
