@@ -155,7 +155,7 @@ export default {
                { name: "Books", href: "/books" },
             ],
             description:
-               "A few months ago I rebuilt my Dev.to powered Next.js website from scratch. While building it, I decided adding animations would bring its simple design to life. Previously, I'd used CSS transitions and JavaScript to achieve animations on a webpage. This time I wanted to use an animation library built for React.js that I could use in future projects. Enter Framer Motion.",
+               "<p>A few months ago I rebuilt my Dev.to powered Next.js website from scratch.</p>\n<p>While building it, I decided adding animations would bring its simple design to life. Previously, I'd used CSS transitions and JavaScript to achieve animations on a webpage.</p>\n<p>This time I wanted to use an animation library built for React.js that I could use in future projects. Enter Framer Motion.</p>\n<p>&nbsp;</p>\n<p><code>let r=8</code></p>\n<p><code>funtion Man(tim){</code></p>\n<p><code>console.log(r*8)</code></p>\n<p><code>}</code></p>",
             date: "Mar 16, 2020",
             datetime: "2020-03-16",
             imageUrl: "/assets/imgs/Screenshot.png",

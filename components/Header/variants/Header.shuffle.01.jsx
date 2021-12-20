@@ -1,18 +1,20 @@
-import {useEffect} from 'react'
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Lottie from "../../Lottie";
 import Motion from "../../Motion";
-import { useTheme } from "next-themes"
-import Card from "../../Blog/Card" 
+import { useTheme } from "next-themes";
+import Card from "../../Blog/Card";
+import DOMPurify from "isomorphic-dompurify";
 
-const Header = ( { title, subtitle, button, img } ) => {
+const Header = ({ title, subtitle, button, img }) => {
+   let cleanTitle = DOMPurify.sanitize(title);
+
    const { theme, setTheme } = useTheme();
-   
-   useEffect( () => {
-   console.log(theme)
-},[theme])
 
+   useEffect(() => {
+      console.log(theme);
+   }, [theme]);
 
    const hearoImg = img.imgSrc.light?.includes("json") ? (
       <>
@@ -56,7 +58,7 @@ const Header = ( { title, subtitle, button, img } ) => {
                         <span
                            className="Container"
                            dangerouslySetInnerHTML={{
-                              __html: title,
+                              __html: cleanTitle,
                            }}></span>
                      </h1>
                   </div>

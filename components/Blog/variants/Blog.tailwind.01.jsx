@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "../../NoScrollLink";
-import Card from "../Card_02";
+import Card from "../Card";
 import Pagination from "../Pagination";
 import Lottie from "../../Lottie";
 
@@ -43,10 +43,10 @@ export default function Blog({
                </div>
                <div>
                   <Lottie
-                     className="-z-20 w-200 absolute blur-sm"
+                     className="z-0 w-200 absolute blur-sm"
                      path="blob_2color_yellow_red.json"
                   />
-                  <div className=" mt-12 max-w-lg mx-auto grid gap-20 lg:grid-cols-3 lg:max-w-none">
+                  <div className=" mt-12 max-w-lg mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none">
                      {Array.isArray(currentPosts) &&
                         currentPosts
                            .filter(Boolean)

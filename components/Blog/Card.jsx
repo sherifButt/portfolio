@@ -52,7 +52,9 @@ const Card = ( {
                           {title}
                        </h3>
                        <p className="mt-3 text-base text-gray-500 dark:text-gray-300">
-                          {description}
+                          {description
+                             .replace(/(<([^>]+)>)/gi, "")
+                             .substring( 0, 150 ) }{ " "}...
                        </p>
                     </a>
                  </div>

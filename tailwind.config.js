@@ -1,5 +1,6 @@
+const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
-
+console.log(`colors`, colors)
 module.exports = {
    mode: "jit",
    purge: [
@@ -10,7 +11,10 @@ module.exports = {
 
    theme: {
       colors: {
-         ...defaultTheme.colors,
+         ...colors,
+         
+         
+         
          indigo: {
             50: "#f9f8fe",
             100: "#f4f0fd",
@@ -23,7 +27,9 @@ module.exports = {
             800: "#553f8a",
             900: "#463371",
          },
+
          black: "#121445",
+         
       },
       extend: {
          fontFamily: {
@@ -31,10 +37,13 @@ module.exports = {
             honey: ["honey", ...defaultTheme.fontFamily.sans],
             lagag: ["lagag", ...defaultTheme.fontFamily.sans],
          },
+         // colors: {
+         //    gray: colors.zink,
+         // }
       },
    },
    variants: {
       extend: {},
-      },
+   },
    plugins: [],
 };
