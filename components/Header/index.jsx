@@ -7,6 +7,7 @@ const Header = ({
    subtitle,
    button,
    img,
+   posts
 }) => {
    let html;
 
@@ -22,7 +23,8 @@ const Header = ({
                title={title}
                subtitle={subtitle}
              button={ button }
-             img={img}
+               img={ img }
+               posts={posts}
             />
          );
          break;

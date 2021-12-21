@@ -7,15 +7,16 @@ import { useTheme } from "next-themes";
 import Card from "../../Blog/Card";
 import DOMPurify from "isomorphic-dompurify";
 
-const Header = ({ title, subtitle, button, img }) => {
+const Header = ({
+   title,
+   subtitle,
+   button,
+   img,
+   posts,
+   displayedPost,
+}) => {
    let cleanTitle = DOMPurify.sanitize(title);
-
    const { theme, setTheme } = useTheme();
-
-   useEffect(() => {
-      console.log(theme);
-   }, [theme]);
-
    const hearoImg = img.imgSrc.light?.includes("json") ? (
       <>
          <div className="dark:hidden lg:w-2/3 mx-auto">
@@ -24,7 +25,7 @@ const Header = ({ title, subtitle, button, img }) => {
                className="-z-20 w-300 absolute blur-sm"
                path="blob_2color_yellow_red.json"
             />
-            <Card />
+            <Card posts={posts} displayedPost={1} />
          </div>
          <div className="hidden dark:inline-block">
             <Lottie path={img.imgSrc.dark} />
@@ -54,7 +55,7 @@ const Header = ({ title, subtitle, button, img }) => {
                      yoyo: Infinity,
                   }}>
                   <div>
-                     <h1 className="font-lagag z-10 lg:text-7xl text-5xl lg:tracking-normal tracking-widest mb-6 dark:text-gray-100   lg:leading-tight  font-normal leading-relaxed font-heading drop-shadow-sm shadow-indigo-500/50">
+                     <h1 className="font-lagag z-10 lg:text-7xl text-5xl lg:tracking-normal tracking-widest mb-6 dark:text-gray-100 font-normal leading-normal font-heading text-left">
                         <span
                            className="Container"
                            dangerouslySetInnerHTML={{

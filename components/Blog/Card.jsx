@@ -1,4 +1,5 @@
 import Link from "../NoScrollLink";
+ import Image from "next/image";  
 
 function classNames ( ...classes ) {
   return classes.filter(Boolean).join(" ")
@@ -15,19 +16,29 @@ const Card = ( {
    imageUrl,
    readingTime,
    author,
+   posts, // posts array 
+   displayedPost // selected post to display
 }) => {
   
   
   return (
      <div
-        key={title}
+        key={posts ? posts[displayedPost].title : title}
         className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:scale-105 transition ease-in-out dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-40 ">
-        <Link href={`${href}/${id}`} passHref>
+        <Link
+           href={`${posts ? posts[displayedPost].href : href}/${
+              posts ? posts[displayedPost].id : id
+           }`}
+           passHref>
            <a>
               <div className="flex-shrink-0">
                  <img
                     className="h-48 w-full object-cover "
-                    src={imageUrl}
+                    src={
+                       posts
+                          ? posts[displayedPost].imageUrl
+                          : imageUrl
+                    }
                     alt=""
                  />
               </div>
@@ -37,24 +48,59 @@ const Card = ( {
                        {Array.isArray(category) &&
                           category.filter(Boolean).map(cat => (
                              <a
-                                key={cat.name}
-                                href={cat.href}
+                                key={
+                                   posts
+                                      ? posts[displayedPost].cat
+                                           .name
+                                      : cat.name
+                                }
+                                href={
+                                   posts
+                                      ? posts[displayedPost].cat
+                                           .href
+                                      : cat.href
+                                }
                                 className={classNames(
-                                   cat.color,
+                                   posts
+                                      ? posts[displayedPost].cat
+                                           .color
+                                      : cat.color,
                                    "hover:underline inline-flex items-center mr-2 px-3 py-0.5 rounded-full text-sm font-medium"
                                 )}>
-                                {cat.name}
+                                {posts
+                                   ? posts[displayedPost].cat
+                                        .name
+                                   : cat.name}
                              </a>
                           ))}
                     </p>
-                    <a href={href} className="block mt-3">
-                       <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 leading-relaxed">
-                          {title}
+                    <a
+                       href={
+                          posts
+                             ? posts[displayedPost].href
+                             : href
+                       }
+                       className="block mt-3">
+                       <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 leading-relaxed text-left">
+                          {posts
+                             ? posts[displayedPost].title
+                             : title}
                        </h3>
-                       <p className="mt-3 text-base text-gray-500 dark:text-gray-300">
-                          {description
+                       <span>
+                          <object
+                             type="image/svg+xml"
+                             data="/assets/imgs/basic_animation.svg"
+                             width={40}
+                             height={40}></object>
+                       </span>
+                       <p className="mt-3 text-base text-gray-500 dark:text-gray-300 text-left">
+                          {(posts
+                             ? posts[displayedPost].description
+                             : description
+                          )
                              .replace(/(<([^>]+)>)/gi, "")
-                             .substring( 0, 150 ) }{ " "}...
+                             .substring(0, 150)}{" "}
+                          ...
                        </p>
                     </a>
                  </div>
@@ -62,11 +108,19 @@ const Card = ( {
                     <div className="flex-shrink-0">
                        <a href={author.href}>
                           <span className="sr-only">
-                             {author.name}
+                             {posts
+                                ? posts[displayedPost].author
+                                     .name
+                                : author.name}
                           </span>
                           <img
                              className="h-10 w-10 rounded-full"
-                             src={author.imageUrl}
+                             src={
+                                posts
+                                   ? posts[displayedPost].author
+                                        .imageUrl
+                                   : author.imageUrl
+                             }
                              alt=""
                           />
                        </a>
@@ -74,9 +128,17 @@ const Card = ( {
                     <div className="ml-3">
                        <p className="text-sm font-medium text-gray-900 dark:text-gray-300">
                           <a
-                             href={author.href}
+                             href={
+                                posts
+                                   ? posts[displayedPost].author
+                                        .href
+                                   : author.href
+                             }
                              className="hover:underline">
-                             {author.name}
+                             {posts
+                                ? posts[displayedPost].author
+                                     .name
+                                : author.name}
                           </a>
                        </p>
                        <div className="flex space-x-1 text-sm text-gray-500">
@@ -84,7 +146,13 @@ const Card = ( {
                           <span aria-hidden="true">
                              &middot;
                           </span>
-                          <span>{readingTime} read</span>
+                          <span>
+                             {posts
+                                ? posts[displayedPost]
+                                     .readingTime
+                                : readingTime}{" "}
+                             read
+                          </span>
                        </div>
                     </div>
                  </div>

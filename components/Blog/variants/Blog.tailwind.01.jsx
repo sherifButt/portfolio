@@ -32,7 +32,7 @@ export default function Blog({
                <div className="text-center">
                   <Link href={href} passHref>
                      <a>
-                        <h2 className="cursor-pointer text-5xl tracking-tight font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl">
+                        <h2 className="cursor-pointer text-5xl text-left md:text-center leading-normal tracking-tight font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl">
                            {title}
                         </h2>
                      </a>
