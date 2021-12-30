@@ -1,6 +1,6 @@
 import Faq from '../components/Faq'
-const faq = () => {
-   return <Faq/>
+const Faqs = () => {
+   return <Faq variant={3} />;
 }
 
-export default Faq
+export default Faqs

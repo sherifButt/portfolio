@@ -12,6 +12,7 @@ function classNames(...classes) {
 export default function Pagination({
    className,
    setCurrentPage,
+   setPreviousPage,
    currentPage,
    pages,
    items,
@@ -24,10 +25,15 @@ export default function Pagination({
                   ""
                ) : (
                   <a
-                     onClick={() =>
-                        setCurrentPage(currentPage - 1)
+                        onClick={ () => {
+                           setPreviousPage(currentPage)
+                          
+                           setTimeout(() => {
+                               setCurrentPage(currentPage - 1);
+                           }, 400);
+                        }                                           
                      }
-                     className="cursor-pointer border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                    className="cursor-pointer border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
                      <ArrowNarrowLeftIcon
                         className="mr-3 h-5 w-5 text-gray-400"
                         aria-hidden="true"
@@ -40,7 +46,13 @@ export default function Pagination({
                {new Array(pages).fill(0).map((_, i) => (
                   <a
                      key={"page_" + i}
-                     onClick={() => setCurrentPage(i + 1)}
+                     onClick={ () => {
+                        setPreviousPage( currentPage )
+                        
+                        setTimeout(() => {
+                           setCurrentPage(i + 1);
+                        }, 400);
+                     } }
                      className={classNames(
                         "cursor-pointer border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:hover:border-gray-500 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium",
                         currentPage == i + 1
@@ -56,8 +68,10 @@ export default function Pagination({
                   ""
                ) : (
                   <a
-                     onClick={() =>
-                        setCurrentPage(currentPage + 1)
+                     onClick={() =>{
+                           setPreviousPage(currentPage)
+                           setTimeout(()=>{setCurrentPage( currentPage + 1 )},400)
+                        }
                      }
                      className="cursor-pointer border-t-2 border-transparent pt-4 pl-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
                      Next

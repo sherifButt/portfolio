@@ -6,6 +6,8 @@ import Motion from "../../Motion";
 import { useTheme } from "next-themes";
 import Card from "../../Blog/Card";
 import DOMPurify from "isomorphic-dompurify";
+import Blog from "../../Blog/variants/Blog.tailwind.01"
+import Blob from "../../MorphedSvg/svg/Blob"
 
 const Header = ({
    title,
@@ -19,13 +21,15 @@ const Header = ({
    const { theme, setTheme } = useTheme();
    const hearoImg = img.imgSrc.light?.includes("json") ? (
       <>
-         <div className="dark:hidden lg:w-2/3 mx-auto">
+         <div className="dark:hidden lg:w-3/4 mx-auto">
             {/* <Lottie path={ img.imgSrc.light } /> */}
-            <Lottie
+            {/* <Lottie
                className="-z-20 w-300 absolute blur-sm"
                path="blob_2color_yellow_red.json"
-            />
-            <Card posts={posts} displayedPost={1} />
+            /> */}
+            <Blob />
+            {/* <Card posts={posts} displayedPost={1} /> */}
+            <Blog posts={ posts } items={ 1 } rows={ 1 } columns={ 1 } isSubtitle={ false } isTitle={ false } isPagination={ false } isPaginationArrows={ true } noObservation={ true }/>
          </div>
          <div className="hidden dark:inline-block">
             <Lottie path={img.imgSrc.dark} />
@@ -55,7 +59,7 @@ const Header = ({
                      yoyo: Infinity,
                   }}>
                   <div>
-                     <h1 className="font-lagag z-10 lg:text-7xl text-5xl lg:tracking-normal tracking-widest mb-6 dark:text-gray-100 font-normal leading-normal font-heading text-left">
+                     <h1 className="font-lagag z-10 lg:text-7xl text-5xl lg:tracking-normal tracking-widest mb-6 dark:text-gray-100 font-normal leading-normal lg:leading-tight font-heading text-left">
                         <span
                            className="Container"
                            dangerouslySetInnerHTML={{

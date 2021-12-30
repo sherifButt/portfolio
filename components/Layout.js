@@ -11,12 +11,14 @@ const Layout = ({ children }, router) => {
    return (
       <ThemeProvider attribute="class">
          <Head />
-         <body className=" text-black bg-white dark:bg-gray-900">
+         <body className=" text-black bg-white dark:bg-gray-900 max-w-7xl lg:max-w-none mx-auto py-8 px-4 sm:py-16 sm:px-6 lg:px-8">
             <div className="container mx-auto px-4 flex flex-col min-h-screen">
                <header className="relative">
                   <Nav />
                </header>
-               <main className="flex-grow mt-20" key={router.route}>
+               <main
+                  className="flex-grow"
+                  key={router.route}>
                   {children}
                </main>
                <footer>

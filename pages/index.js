@@ -1,5 +1,9 @@
-import { useTransform, useViewportScroll } from "framer-motion";
-import React from "react";
+import {
+   useTransform,
+   useViewportScroll,
+   useAnimation,
+} from "framer-motion";
+import React,{useState,useEffect} from "react";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import Blog from "../components/Blog";
@@ -13,21 +17,17 @@ import Team from "../components/Team";
 import Testimonials from "../components/Testimonials";
 import { getData } from "./api/data";
 
-export default function Home({ posts, title,href, subtitle }) {
-   const { scrollY, scrollYProgress } = useViewportScroll();
-   const y1 = useTransform(scrollY, [0, 400], [0, 200]);
-   const y2 = useTransform(scrollY, [0, 400], [0, 500]);
-
-   const filter = useTransform(
-      scrollY,
-      v => `blur(${Math.floor(v / 70)}px)`
-   );
-
-   const [ref, inView, entry] = useInView({
+export default function Home({ posts, title, href, subtitle }) {
+   // framer motion animation contrll
+   const animationControl = useAnimation();
+   
+   // Hook allow us to control the elemnt in the screen view
+   const { inView, entry, ref } = useInView({
       threshold: 0.5,
       triggerOnce: false,
-   });
-
+   } );
+  
+     
    const variants = {
       visible: {
          opacity: 1,
@@ -44,15 +44,20 @@ export default function Home({ posts, title,href, subtitle }) {
       <>
          <Header variant={1} posts={posts} />
          <Features />
-         <Blog
-            variant={3}
-            items={3}
-            rows={1}
-            href={href}
-            title={title}
-            subtitle={subtitle}
-            posts={posts}
-         />
+         
+          
+             <Blog
+                  variant={3}
+                  items={3}
+                  rows={1}
+                  href={href}
+                  title={title}
+                  subtitle={subtitle}
+               posts={ posts }
+               
+               />
+          
+         
          {/* <Faq /> */}
          <Testimonials variant={3} />
          {/* <HowItWorks variant={2} /> */}

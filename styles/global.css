@@ -1,7 +1,5 @@
 /* ./styles/globals.css */
 @tailwind base;
-
-
 @tailwind components;
 @tailwind utilities;
 
@@ -26,21 +24,23 @@ font-family:"lagag"
 
 
 
-
+/*
 code,
 .code,
 pre {
   
-  background: #424242;
-  color: greenyellow;
+  background: #32323570;
+  color: rgb(255, 255, 255);
   font-size: 14px;
   padding:15px;
-  padding-left: 30px;
+  padding-left: 20px;
   
   border-radius: 5px;
   
 }
-
+code{
+  background-color: transparent;
+}
 pre:before {
     display: block;
     width: calc(100%);
@@ -58,5 +58,25 @@ pre:before {
     color: white;
   }
 
+@keyframes play60 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -26400px 0px;
+  }
+}
+.shapeshifter {
+  animation-duration: 2000ms;
+  animation-timing-function: steps(60);
+  width: 440px;
+  height: 440px;
+  background-repeat: no-repeat;
+ 
+}
+.shapeshifter.play {
+  animation-name: play60;
+  animation-iteration-count: infinite;
+}
 
-  
+  */

@@ -12,9 +12,7 @@ module.exports = {
    theme: {
       colors: {
          ...colors,
-         
-         
-         
+
          indigo: {
             50: "#f9f8fe",
             100: "#f4f0fd",
@@ -29,7 +27,6 @@ module.exports = {
          },
 
          black: "#121445",
-         
       },
       extend: {
          fontFamily: {
@@ -45,5 +42,5 @@ module.exports = {
    variants: {
       extend: {},
    },
-   plugins: [],
+   plugins: [require("@tailwindcss/typography")],
 };

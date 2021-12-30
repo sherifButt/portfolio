@@ -1,5 +1,6 @@
 import Faq_01 from "./variants/Faq.shuffle.01";
 import Faq_02 from "./variants/Faq.shuffle.02";
+import Faq_03 from "./variants/Faq.tailwind.01";
 import data from "../../siteData.config";
 
 const Faq = ({ variant, logoSrc }) => {
@@ -12,6 +13,9 @@ const Faq = ({ variant, logoSrc }) => {
       case 2:
          html = <Faq_02 logoSrc={logoSrc} />;
          break;
+      case 3:
+         html = <Faq_03 logoSrc={logoSrc} />;
+         break;
 
       default:
          html = <Faq_01 logoSrc={logoSrc} />;
@@ -22,7 +26,7 @@ const Faq = ({ variant, logoSrc }) => {
 };
 
 Faq.defaultProps = {
-   variant: 1,
+   variant: 3,
    logoSrc: data?.logo.src ? data.logo.src : "/sbolio.svg",
 };
 export default Faq;
