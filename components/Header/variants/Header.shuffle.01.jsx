@@ -27,11 +27,27 @@ const Header = ({
                className="-z-20 w-300 absolute blur-sm"
                path="blob_2color_yellow_red.json"
             /> */}
-            <Blob />
+            <div className="-z-20 scale-150 md:scale-[2] mt-10 md:mt-40 ml-30 md:lm-50 absolute blur-lg">
+               <Blob className=" absolute blur-sm" />
+            </div>
             {/* <Card posts={posts} displayedPost={1} /> */}
-            <Blog posts={ posts } items={ 1 } rows={ 1 } columns={ 1 } isSubtitle={ false } isTitle={ false } isPagination={ false } isPaginationArrows={ true } noObservation={ true }/>
+            <Blog
+               posts={posts}
+               items={1}
+               rows={1}
+               columns={1}
+               isSubtitle={false}
+               isTitle={false}
+               isBackground={false}
+               isPagination={false}
+               isPaginationArrows={true}
+               noObservation={true}
+            />
          </div>
          <div className="hidden dark:inline-block">
+            <div className="-z-20 scale-125 md:scale-[2] mt-40 ml-30 absolute blur-lg">
+               <Blob className=" absolute blur-sm" />
+            </div>
             <Lottie path={img.imgSrc.dark} />
          </div>
       </>

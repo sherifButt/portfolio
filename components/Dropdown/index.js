@@ -46,7 +46,7 @@ export default function Example() {
             leave="transition ease-in duration-75"
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95">
-            <Menu.Items className="dark:shadow-gray-900 dark:border dark:border-gray-800 sm:origin-top-left lg:origin-top-right absolute lg:right-0 sm:left-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-900 ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 dark:divide-gray-700 focus:outline-none z-10">
+            <Menu.Items className="dark:shadow-gray-900 dark:border dark:border-gray-800 origin-top-left md:origin-top-right absolute md:right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-900 ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 dark:divide-gray-700 focus:outline-none z-10">
                <div className="py-1">
                   <div className="flex justify-between px-4 py-2 text-sm dark:text-gray-400">
                      Dark Mode

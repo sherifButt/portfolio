@@ -1,9 +1,9 @@
 import MorphedSvg from '../index'
 
-const Blob = () => {
+const Blob = ({className}) => {
   return (
-     <div>
-        <MorphedSvg
+     
+        <MorphedSvg className={className}
            viewBox="0 0 450 450"
            width="350"
            height="350"
@@ -86,7 +86,7 @@ const Blob = () => {
               // },
            ]}
         />
-     </div>
+     
   );
 }
 
