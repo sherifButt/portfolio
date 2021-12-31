@@ -41,7 +41,7 @@ export default function Home({ posts, title, href, subtitle }) {
    };
    return (
       <>
-         {/* <Header variant={1} posts={posts} /> */}
+         <Header variant={1} posts={posts} />
          <Features />
          <Blog
             variant={3}

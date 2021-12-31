@@ -79,7 +79,7 @@ export default function Blog({
    }, [ previousPage, currentPage ] );
    
    return (
-      <section className="flex">
+      <section className="">
          <div
             className={`m-auto relative  ${
                isTitle ? "pt-16" : ""
