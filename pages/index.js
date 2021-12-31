@@ -3,7 +3,7 @@ import {
    useViewportScroll,
    useAnimation,
 } from "framer-motion";
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import Blog from "../components/Blog";
@@ -20,14 +20,13 @@ import { getData } from "./api/data";
 export default function Home({ posts, title, href, subtitle }) {
    // framer motion animation contrll
    const animationControl = useAnimation();
-   
+
    // Hook allow us to control the elemnt in the screen view
    const { inView, entry, ref } = useInView({
       threshold: 0.5,
       triggerOnce: false,
-   } );
-  
-     
+   });
+
    const variants = {
       visible: {
          opacity: 1,
@@ -42,22 +41,17 @@ export default function Home({ posts, title, href, subtitle }) {
    };
    return (
       <>
-         <Header variant={1} posts={posts} />
-         <Features />
-         
-          
-             <Blog
-                  variant={3}
-                  items={3}
-                  rows={1}
-                  href={href}
-                  title={title}
-                  subtitle={subtitle}
-               posts={ posts }
-               
-               />
-          
-         
+         {/* <Header variant={1} posts={posts} /> */}
+         {/* <Features /> */}
+         {/* <Blog
+            variant={3}
+            items={3}
+            rows={1}
+            href={href}
+            title={title}
+            subtitle={subtitle}
+            posts={posts}
+         /> */}
          {/* <Faq /> */}
          <Testimonials variant={3} />
          {/* <HowItWorks variant={2} /> */}
