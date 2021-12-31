@@ -89,7 +89,7 @@ export default function Blog({
                <div className=" h-1/3 sm:h-2/3" />
             </div>
             <div className="relative max-w-7xl mx-auto">
-               <div className="text-center">
+               <div className="relative z-10 text-center">
                   {isTitle ? (
                      <Link href={href} passHref>
                         <a>
@@ -104,7 +104,7 @@ export default function Blog({
                   {isSubtitle ? (
                      <p
                         ref={ref}
-                        className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+                        className=" mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
                         {subtitle}
                      </p>
                   ) : (
@@ -113,7 +113,7 @@ export default function Blog({
                </div>
                <div className="flex  justify-center items-center">
                   {isPaginationArrows ? (
-                     <div className=" mr-4 h-auto  text-6xl  origin-right hover:scale-y-[2.4] scale-y-[2] ease-out duration-200 text-gray-300 drop-shadow-md hover:drop-shadow-lg hover:text-indigo-600 cursor-pointer">
+                     <div className=" mr-2 h-auto -ml-14 lg:ml-0  text-6xl  origin-right hover:scale-y-[2.4] scale-y-[2] ease-out duration-200 text-gray-300 drop-shadow-md hover:drop-shadow-lg hover:text-indigo-600 cursor-pointer">
                         {currentPage == 1 ? (
                            <>&nbsp;</>
                         ) : (
@@ -137,7 +137,7 @@ export default function Blog({
                   <div>
                      {isBackground ? (
                         <Lottie
-                           className="z-0 w-200 absolute blur-sm flex items-center"
+                           className="z-0 w-200 absolute blur-sm flex items-center scale-130"
                            path="blob_2color_yellow_red.json"
                         />
                      ) : (
@@ -195,7 +195,7 @@ export default function Blog({
                      </motion.div>
                   </div>
                   {isPaginationArrows ? (
-                     <div className="ml-4  text-6xl  origin-left hover:scale-y-[2.4] scale-y-[2] ease-out duration-200 text-gray-300 drop-shadow-md hover:drop-shadow-lg hover:text-indigo-600 cursor-pointer">
+                     <div className="ml-2 -mr-10 md:mr-0  text-6xl  origin-left hover:scale-y-[2.4] scale-y-[2] ease-out duration-200 text-gray-300 drop-shadow-md hover:drop-shadow-lg hover:text-indigo-600 cursor-pointer">
                         {currentPage == pages ? (
                            <>&nbsp;</>
                         ) : (

@@ -44,7 +44,7 @@ const Card = ({
                </div>
                <div className="flex-1  p-6 flex flex-col justify-between ">
                   <div className="flex-1">
-                     <p className="text-sm font-medium text-indigo-600">
+                     <p className="text-sm font-medium text-indigo-600 hidden md:inline-block">
                         {Array.isArray(category) &&
                            category.filter(Boolean).map(cat => (
                               <a
@@ -88,7 +88,7 @@ const Card = ({
                         </h3>
                         
 
-                        <p className="mt-3 text-base text-gray-500 dark:text-gray-300 text-left">
+                        <p className="mt-3 text-base text-gray-500 dark:text-gray-300 text-left hidden md:inline-block">
                            {(posts
                               ? posts[displayedPost].description
                               : description

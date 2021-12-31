@@ -27,7 +27,7 @@ const Header = ({
                className="-z-20 w-300 absolute blur-sm"
                path="blob_2color_yellow_red.json"
             /> */}
-            <div className="-z-20 scale-150 md:scale-[2] mt-10 md:mt-40 ml-30 md:lm-50 absolute blur-lg">
+            <div className="-z-20 scale-150 md:scale-[2] mt-10 md:mt-32 ml-30  absolute  hidden md:inline-block">
                <Blob className=" absolute blur-sm" />
             </div>
             {/* <Card posts={posts} displayedPost={1} /> */}
@@ -75,7 +75,7 @@ const Header = ({
                      yoyo: Infinity,
                   }}>
                   <div>
-                     <h1 className="font-lagag z-10 lg:text-7xl text-5xl lg:tracking-normal tracking-widest mb-6 dark:text-gray-100 font-normal leading-normal lg:leading-tight font-heading text-left">
+                     <h1 className="font-lagag z-10 lg:text-7xl text-5xl lg:tracking-normal tracking-widest mb-6 dark:text-gray-100 font-normal leading-normal lg:leading-tight font-heading text-left -mt-20 md:mt-0">
                         <span
                            className="Container"
                            dangerouslySetInnerHTML={{
