@@ -43,7 +43,7 @@ export default function Home({ posts, title, href, subtitle }) {
       <>
          {/* <Header variant={1} posts={posts} /> */}
          {/* <Features /> */}
-         {/* <Blog
+         <Blog
             variant={3}
             items={3}
             rows={1}
@@ -51,7 +51,7 @@ export default function Home({ posts, title, href, subtitle }) {
             title={title}
             subtitle={subtitle}
             posts={posts}
-         /> */}
+         />
          {/* <Faq /> */}
          <Testimonials variant={3} />
          {/* <HowItWorks variant={2} /> */}
