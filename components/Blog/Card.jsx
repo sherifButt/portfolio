@@ -82,11 +82,14 @@ const Card = ({
                         }
                         className="block mt-3">
                         <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 leading-relaxed text-left">
-                           {posts
+                           {(posts
                               ? posts[displayedPost].title
-                              : title}
+                              : title
+                           )
+                              .replace(/(<([^>]+)>)/gi, "")
+                              .substring(0, 45)}{" "}
+                           →
                         </h3>
-                        
 
                         <p className="mt-3 text-base text-gray-500 dark:text-gray-300 text-left hidden md:inline-block">
                            {(posts
@@ -94,7 +97,7 @@ const Card = ({
                               : description
                            )
                               .replace(/(<([^>]+)>)/gi, "")
-                              .substring(0, 150)}{" "}
+                              .substring(0, 80)}{" "}
                            ...
                         </p>
                      </a>

@@ -417,7 +417,7 @@ export default {
       sr: "site logo",
    },
    header: {
-      title: "Web is a <span>Living</span> Thing ",
+      title: "Web is a <span>Living</span> Thing",
       subtitle:
          "Professional, dedicated, local. the way you think about paper. That’s us - people who sell limitless paper in the paperless world.",
       button: {

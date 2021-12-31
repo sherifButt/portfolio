@@ -27,9 +27,20 @@ const Header = ({
                className="-z-20 w-300 absolute blur-sm"
                path="blob_2color_yellow_red.json"
             /> */}
-            <div className="-z-20 scale-150 md:scale-[2] mt-10 md:mt-32 ml-30  absolute  hidden md:inline-block">
+            <motion.div
+               initial={{ opacity: 0, filter: `blur(50px)` }}
+               animate={{
+                  opacity: [0, 1],
+                  filter: [
+                     
+                     `blur(50px)`,
+                     `blur(0px)`,
+                  ],
+               }}
+               transition={{ duration: 6, type: "spring",repeat: Infinity,repeatType:"reverse" }}
+               className="-z-20 scale-150 md:scale-[2] mt-10 md:mt-32 ml-30  absolute  hidden md:inline-block">
                <Blob className=" absolute blur-sm" />
-            </div>
+            </motion.div>
             {/* <Card posts={posts} displayedPost={1} /> */}
             <Blog
                posts={posts}
@@ -45,9 +56,19 @@ const Header = ({
             />
          </div>
          <div className="hidden dark:inline-block">
-            <div className="-z-20 scale-125 md:scale-[2] mt-40 ml-30 absolute blur-lg">
+            <motion.div
+               initial={{ opacity: 0, filter: `blur(50px)` }}
+               animate={{
+                  opacity: [0, .9],
+                  filter: [
+                     
+                     `blur(100px)`,
+                     `blur(50px)`,
+                  ],
+               }}
+               transition={{ duration: 6, type: "spring" }} className="-z-20 scale-125 md:scale-[2] mt-40 ml-30 absolute blur-lg">
                <Blob className=" absolute blur-sm" />
-            </div>
+            </motion.div>
             <Lottie path={img.imgSrc.dark} />
          </div>
       </>
