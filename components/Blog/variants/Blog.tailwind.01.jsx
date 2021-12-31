@@ -76,13 +76,14 @@ export default function Blog({
          controls.start("hidden");
          controls.start("visible");
       }
-   }, [previousPage, currentPage]);
+   }, [ previousPage, currentPage ] );
+   
    return (
-      <section className="flex lg:h-screen_">
+      <section className="flex">
          <div
             className={`m-auto relative  ${
                isTitle ? "pt-16" : ""
-            } pb-20 px-4 sm:px-6 ${
+            } pb-20 ${
                isTitle ? "lg:pt-24" : ""
             }  lg:pb-28 lg:px-8`}>
             <div className=" inset-0">
