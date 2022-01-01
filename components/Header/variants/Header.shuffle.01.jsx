@@ -6,8 +6,8 @@ import Motion from "../../Motion";
 import { useTheme } from "next-themes";
 import Card from "../../Blog/Card";
 import DOMPurify from "isomorphic-dompurify";
-import Blog from "../../Blog/variants/Blog.tailwind.01"
-import Blob from "../../MorphedSvg/svg/Blob"
+import Blog from "../../Blog/variants/Blog.tailwind.01";
+import Blob from "../../MorphedSvg/svg/Blob";
 
 const Header = ({
    title,
@@ -16,9 +16,11 @@ const Header = ({
    img,
    posts,
    displayedPost,
-}) => {
+} ) => {
+   
    let cleanTitle = DOMPurify.sanitize(title);
    const { theme, setTheme } = useTheme();
+
    const hearoImg = img.imgSrc.light?.includes("json") ? (
       <>
          <div className="dark:hidden lg:w-3/4 mx-auto">
@@ -31,15 +33,14 @@ const Header = ({
                initial={{ opacity: 0, filter: `blur(50px)` }}
                animate={{
                   opacity: [0, 1],
-                  filter: [
-                     
-                     `blur(50px)`,
-                     `blur(0px)`,
-                  ],
+                  filter: [`blur(50px)`, `blur(0px)`],
                }}
-               transition={{ duration: 6, type: "spring",repeat: Infinity,repeatType:"reverse" }}
-               className="-z-20 scale-150 md:scale-[2] mt-10 md:mt-32 ml-30  absolute  hidden md:inline-block">
-               <Blob className=" absolute blur-sm" />
+               transition={{
+                  duration: 3,
+                  type: "spring",
+               }}
+               className="-z-20 scale-150 md:scale-[2] mt-10 md:mt-32 ml-30  absolute  ">
+               <Blob className="absolute" />
             </motion.div>
             {/* <Card posts={posts} displayedPost={1} /> */}
             <Blog
@@ -59,15 +60,12 @@ const Header = ({
             <motion.div
                initial={{ opacity: 0, filter: `blur(50px)` }}
                animate={{
-                  opacity: [0, .9],
-                  filter: [
-                     
-                     `blur(100px)`,
-                     `blur(50px)`,
-                  ],
+                  opacity: [0, 0.9],
+                  filter: [`blur(100px)`, `blur(50px)`],
                }}
-               transition={{ duration: 6, type: "spring" }} className="-z-20 scale-125 md:scale-[2] mt-40 ml-30 absolute blur-lg">
-               <Blob className=" absolute blur-sm" />
+               transition={{ duration: 3, type: "spring" }}
+               className="-z-20 scale-125 md:scale-[2] mt-40 ml-30 absolute blur-lg">
+               <Blob className=" absolute" />
             </motion.div>
             <Lottie path={img.imgSrc.dark} />
          </div>
@@ -129,7 +127,7 @@ const Header = ({
             </div>
 
             <motion.div
-               className="lg:w-1/2 px-2"
+               className="lg:w-1/2 px-2 overflow-hiden md:overflow-none "
                initial={{ y: -300, opacity: 0 }}
                animate={{ y: 0, opacity: 1 }}
                transition={{ duration: 0.7 }}>
