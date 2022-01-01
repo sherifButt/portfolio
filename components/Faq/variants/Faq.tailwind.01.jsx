@@ -29,11 +29,11 @@ export default function Example() {
    return (
       <div className="">
          <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
-               <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200 dark:divide-gray-800">
+               <h2 className="text-center text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
                   Frequently asked questions
                </h2>
-               <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+               <dl className="mt-6 space-y-6 divide-y divide-gray-200 dark:divide-gray-800">
                   {faqs.map(faq => (
                      <Disclosure
                         as="div"
@@ -43,7 +43,7 @@ export default function Example() {
                            <>
                               <dt className="text-lg">
                                  <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
-                                    <span className="font-medium text-gray-900">
+                                    <span className="font-medium text-black dark:text-gray-400">
                                        {faq.question}
                                     </span>
                                     <span className="ml-6 h-7 flex items-center">
@@ -52,7 +52,7 @@ export default function Example() {
                                              open
                                                 ? "-rotate-180"
                                                 : "rotate-0",
-                                             "h-6 w-6 transform"
+                                             "h-6 w-6 transform dark:text-gray-700"
                                           )}
                                           aria-hidden="true"
                                        />

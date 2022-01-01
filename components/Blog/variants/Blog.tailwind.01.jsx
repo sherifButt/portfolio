@@ -16,7 +16,7 @@ const container = {
       opacity: 1,
       transition: {
          when: "beforeChildren",
-         staggerChildren: 0.3,
+         staggerChildren: 0.6,
          duration: 0.3,
       },
    },
@@ -51,7 +51,7 @@ export default function Blog({
       triggerOnce: false,
    });
 
-   if (!noObservation) inView = true;
+   if (noObservation) inView = true;
 
    // Pagination
    const postsCount = posts.length;
@@ -101,7 +101,9 @@ export default function Blog({
                      </Link>
                   ) : (
                      ""
-                  )}
+                  ) }
+                  
+                  
                   {isSubtitle ? (
                      <p
                         ref={ref}

@@ -51,6 +51,7 @@ export default function Home({ posts, title, href, subtitle }) {
             title={title}
             subtitle={subtitle}
             posts={posts}
+            noObservation={false}
          />
          {/* <Faq /> */}
          <Testimonials variant={3} />
