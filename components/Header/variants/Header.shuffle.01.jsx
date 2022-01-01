@@ -39,7 +39,7 @@ const Header = ({
                   duration: 3,
                   type: "spring",
                }}
-               className="-z-20 scale-90 md:scale-[2] mt-10 md:mt-32 ml-30  absolute  overflow-hiden md:overflow-none">
+               className="-z-20 scale-90 md:scale-[2] mt-10 md:mt-32 ml-30  absolute  hidden md:inline-block">
                <Blob className="absolute" />
             </motion.div>
             {/* <Card posts={posts} displayedPost={1} /> */}
