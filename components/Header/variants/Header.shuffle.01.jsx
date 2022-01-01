@@ -39,7 +39,7 @@ const Header = ({
                   duration: 3,
                   type: "spring",
                }}
-               className="-z-20 scale-100 md:scale-[2] mt-10 md:mt-32 ml-30  absolute  ">
+               className="-z-20 scale-90 md:scale-[2] mt-10 md:mt-32 ml-30  absolute  overflow-hiden md:overflow-none">
                <Blob className="absolute" />
             </motion.div>
             {/* <Card posts={posts} displayedPost={1} /> */}
@@ -64,7 +64,7 @@ const Header = ({
                   filter: [`blur(100px)`, `blur(50px)`],
                }}
                transition={{ duration: 3, type: "spring" }}
-               className="-z-20 scale-125 md:scale-[2] mt-40 ml-30 absolute  overflow-hiden md:overflow-none">
+               className="-z-20 scale-90 md:scale-[2] mt-40 ml-30 absolute  overflow-hiden md:overflow-none">
                <Blob className=" absolute" />
             </motion.div>
             <Lottie path={img.imgSrc.dark} />
