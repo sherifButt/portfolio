@@ -40,7 +40,7 @@ const Header = ({
                   type: "spring",
                }}
                className="-z-20 scale-90 md:scale-[2] mt-10 md:mt-32 ml-30  absolute  hidden md:inline-block">
-               <Blob className="absolute" />
+               <Blob className="absolute z-20" />
             </motion.div>
             {/* <Card posts={posts} displayedPost={1} /> */}
             <Blog
@@ -56,7 +56,7 @@ const Header = ({
                noObservation={true}
             />
          </div>
-         <div className="hidden dark:inline-block">
+         <div className="hidden dark:inline-block mt-10  -z-50">
             <motion.div
                initial={{ opacity: 0, filter: `blur(50px)` }}
                animate={{
@@ -64,7 +64,7 @@ const Header = ({
                   filter: [`blur(100px)`, `blur(50px)`],
                }}
                transition={{ duration: 3, type: "spring" }}
-               className="-z-20 scale-90 md:scale-[2] mt-40 ml-30 absolute  overflow-hiden md:overflow-none">
+               className="-z-20 scale-90 md:scale-[2] md:mt-40  absolute">
                <Blob className=" absolute" />
             </motion.div>
             <Lottie path={img.imgSrc.dark} />
@@ -94,7 +94,7 @@ const Header = ({
                      yoyo: Infinity,
                   }}>
                   <div>
-                     <h1 className="font-lagag z-10 lg:text-7xl text-5xl lg:tracking-normal tracking-widest mb-6 dark:text-gray-100 font-normal leading-normal lg:leading-normal font-heading text-left -mt-20 md:mt-0">
+                     <h1 className="font-lagag z-10 lg:text-7xl text-4xl lg:tracking-normal tracking-widest mb-6 dark:text-white font-normal leading-normal  font-heading md:text-left -mt-10 md:mt-0 drop-shadow-md">
                         <span
                            className="Container"
                            dangerouslySetInnerHTML={{
@@ -103,7 +103,7 @@ const Header = ({
                      </h1>
                   </div>
                </motion.div>
-               <p className=" mb-8 text-gray-400 leading-relaxed ">
+               <p className=" mb-8 text-gray-400 leading-relaxed hidden md:inline-block">
                   {subtitle}
                </p>
 
@@ -111,7 +111,7 @@ const Header = ({
                   <Motion>
                      <Link href="/try" passHref>
                         <a
-                           className="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40"
+                           className="inline-block mt-10 md:mt-0 py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40"
                            href="#">
                            {button.text}{" "}
                            <span className="font-light">

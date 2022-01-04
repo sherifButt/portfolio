@@ -108,7 +108,7 @@ MorphedSvg.defaultProps = {
    fill: "#5C63FE",
    opacity: 1,
    blur: 1,
-  rotate: [ 3, 12, -4, 2, -7, 8, 3 ],
+  rotate: 0,
    scale:[1,1.1,.9,1.2,1],
    repeat: Infinity,
    duration: 2,

@@ -9,7 +9,7 @@ function classNames(...classes) {
    return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Dropdown() {
    const { theme, setTheme } = useTheme()
    const [enableDark, setEnableDark] = useState(
       theme === "light" ? false : true

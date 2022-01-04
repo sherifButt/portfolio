@@ -3,6 +3,7 @@ import axios from "axios";
 import Interviews from "../components/Interviews"
 import MorphedSvg from "../components/MorphedSvg"
 import Blob from "../components/MorphedSvg/svg/Blob";
+import Drop from "../components/MorphedSvg/svg/Drop";
 
 const api = "https://randomuser.me/api";
 
@@ -53,6 +54,7 @@ const Interview = ({ data }) => {
                   "url(/assets/imgs/sprite_30fps.svg)",
             } }></div>
          <Blob/>
+         <Drop/>
          <MorphedSvg
             viewBox="0 0 450 450"
             width="350"
