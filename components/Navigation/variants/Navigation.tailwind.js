@@ -139,15 +139,16 @@ export default function Example({ className }) {
       <Popover
          className={classNames(
             className,
-            "fixed top-0 left-0 right-0 bg-white dark:bg-transparent z-20 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20"
+            "fixed top-0 left-0 right-0 md:bg-white md:dark:bg-transparent z-20 bg-clip-padding backdrop-filter md:backdrop-blur-xl md:bg-opacity-20"
          )}>
          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <motion.div
                variants={container}
                initial="hidden"
                animate="visible"
-               className="flex justify-between items-center border-b border-gray-200 dark:border-gray-700 py-6 md:justify-start md:space-x-10">
-               <Logo />
+               className="flex justify-between items-center md:border-b border-gray-200 dark:border-gray-700 py-6 md:justify-start md:space-x-10"
+            >
+               <div className="hidden md:inline-block"><Logo /></div>
 
                <div className="-mr-2 -my-2 md:hidden">
                   <Popover.Button className="bg-white dark:bg-transparent  rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

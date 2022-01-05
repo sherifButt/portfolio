@@ -42,7 +42,9 @@ const Header = ({
                <Blob className="absolute z-20" />
             </motion.div>
             {/* <Card posts={posts} displayedPost={1} /> */}
-            <div className="mt-10"><Lottie path={img.imgSrc.light} /></div>
+            
+               <Lottie path={img.imgSrc.light} />
+            
             {/* <Blog
                posts={posts}
                items={1}
@@ -56,18 +58,20 @@ const Header = ({
                noObservation={true}
             /> */}
          </div>
-         <div className="hidden dark:inline-block mt-10  -z-50">
+         <div className="hidden dark:inline-block -mt-10 ">
             <motion.div
+               className=" scale-90 md:scale-[2] md:mt-40  absolute"
                initial={{ opacity: 0, filter: `blur(50px)` }}
                animate={{
                   opacity: [0, 0.9],
                   filter: [`blur(100px)`, `blur(50px)`],
                }}
-               transition={{ duration: 3, type: "spring" }}
-               className="-z-20 scale-90 md:scale-[2] md:mt-40  absolute">
-               <Blob className=" absolute" />
+               transition={{ duration: 3, type: "spring" }}>
+               <Blob className=" absolute " />
             </motion.div>
-            <Lottie path={img.imgSrc.dark} />
+            <div className="relative -z-50 md:z-0">
+               <Lottie path={ img.imgSrc.dark } />
+            </div>
          </div>
       </>
    ) : (
@@ -79,7 +83,7 @@ const Header = ({
    );
 
    return (
-      <section className="py-6 px-4 lg:h-[90vh] flex">
+      <section className="py-6 px-3 lg:h-[90vh] flex">
          <div className="flex flex-wrap items-center text-center lg:text-left -mx-2 ">
             <div className=" rounded  lg:w-1/2 px-2 lg:pr-10  lg:mt-0 order-1 lg:order-none py-10 z-10 ">
                <motion.div
@@ -94,7 +98,7 @@ const Header = ({
                      yoyo: Infinity,
                   }}>
                   <div>
-                     <h1 className="font-lagag z-10 lg:text-7xl text-[40px] lg:tracking-normal tracking-widest mb-6 dark:text-white font-normal leading-normal  font-heading md:text-left mt-0 md:mt-0 drop-shadow-md">
+                     <h1 className="font-lagag z-10 lg:text-7xl text-[40px] lg:tracking-normal tracking-widest mb-6 dark:text-white font-normal leading-normal  font-heading md:text-left -mt-20 md:mt-0 drop-shadow-md">
                         <span
                            className="Container"
                            dangerouslySetInnerHTML={{
@@ -103,7 +107,7 @@ const Header = ({
                      </h1>
                   </div>
                </motion.div>
-               <p className=" mb-8 text-gray-400 leading-relaxed hidden md:inline-block">
+               <p className=" mb-1 text-gray-400 leading-relaxed">
                   {subtitle}
                </p>
 
@@ -127,7 +131,7 @@ const Header = ({
             </div>
 
             <motion.div
-               className="lg:w-1/2 px-2  "
+               className="lg:w-1/2 px-2"
                initial={{ y: -300, opacity: 0 }}
                animate={{ y: 0, opacity: 1 }}
                transition={{ duration: 0.7 }}>

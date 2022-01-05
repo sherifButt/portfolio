@@ -417,13 +417,18 @@ export default {
       sr: "site logo",
    },
    header: {
-      title: "Web is a_<span>Living</span> Thing",
+      // Build eye catching and dynamic websites and e-shops fast.
+      // I help companies build fast, eye catching and dynamic websites
+      // title: "Web is a_<span>Living</span> Thing",
+      // title: "Build eye-catching and dynamic websites and ecommerce fast.",
+title:"I make the <span>Web</span> come <sapn>Alive</sapn>",
       subtitle:
-         "Professional, dedicated, local. the way you think about paper. That’s us - people who sell limitless paper in the paperless world.",
+         "I'm a super web developer, I'll help you to build super eye-catching, fast and dynamic websites or web-shop",
+      // I make the Web come Alive
       button: {
          enabled: true,
-         text: "Sign up",
-         textLight: "for free",
+         text: "Hire me",
+         textLight: "I can Help",
          icon: 8594,
       },
       img: {
