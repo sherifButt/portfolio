@@ -24,7 +24,6 @@ const Header = ({
    const hearoImg = img.imgSrc.light?.includes("json") ? (
       <>
          <div className="dark:hidden lg:w-3/4 mx-auto">
-            {/* <Lottie path={ img.imgSrc.light } /> */}
             {/* <Lottie
                className="-z-20 w-300 absolute blur-sm"
                path="blob_2color_yellow_red.json"
@@ -39,11 +38,12 @@ const Header = ({
                   duration: 3,
                   type: "spring",
                }}
-               className="-z-20 scale-90 md:scale-[2] mt-10 md:mt-32 ml-30  absolute  hidden md:inline-block">
+               className="-z-20 scale-90 md:scale-[2] mt-0 md:mt-20 ml-30  absolute  ">
                <Blob className="absolute z-20" />
             </motion.div>
             {/* <Card posts={posts} displayedPost={1} /> */}
-            <Blog
+            <div className="mt-10"><Lottie path={img.imgSrc.light} /></div>
+            {/* <Blog
                posts={posts}
                items={1}
                rows={1}
@@ -54,7 +54,7 @@ const Header = ({
                isPagination={false}
                isPaginationArrows={true}
                noObservation={true}
-            />
+            /> */}
          </div>
          <div className="hidden dark:inline-block mt-10  -z-50">
             <motion.div
@@ -94,7 +94,7 @@ const Header = ({
                      yoyo: Infinity,
                   }}>
                   <div>
-                     <h1 className="font-lagag z-10 lg:text-7xl text-4xl lg:tracking-normal tracking-widest mb-6 dark:text-white font-normal leading-normal  font-heading md:text-left -mt-10 md:mt-0 drop-shadow-md">
+                     <h1 className="font-lagag z-10 lg:text-7xl text-[40px] lg:tracking-normal tracking-widest mb-6 dark:text-white font-normal leading-normal  font-heading md:text-left mt-0 md:mt-0 drop-shadow-md">
                         <span
                            className="Container"
                            dangerouslySetInnerHTML={{
@@ -111,7 +111,7 @@ const Header = ({
                   <Motion>
                      <Link href="/try" passHref>
                         <a
-                           className="inline-block mt-10 md:mt-0 py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40"
+                           className="inline-block mt-5 md:mt-0 py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40"
                            href="#">
                            {button.text}{" "}
                            <span className="font-light">
