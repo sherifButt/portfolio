@@ -433,8 +433,8 @@ title:"I make the <span>Web</span> come <sapn>Alive</sapn>",
       },
       img: {
          imgSrc: {
-            light: "content_managment_01.json",
-            dark: "content_managment_01_dark.json",
+            light: "content_managment_03.json",
+            dark: "content_managment_02_dark.json",
          },
          width: "2/3",
       },

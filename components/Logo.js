@@ -1,9 +1,9 @@
 import Link from "next/link";
 import data from "../siteData.config";
 import StyledLink from "../components/StyledLink";
-const Logo = ({ src, text, alt, href, sr }) => {
+const Logo = ({className, src, text, alt, href, sr }) => {
    return (
-      <div className="flex justify-start lg:w-0 lg:flex-1 align-middle">
+      <div className={`flex justify-start lg:w-0 lg:flex-1 align-middle ${className}`}>
          <Link href={href} passHref>
             <a className="inline-flex items-center">
                <span className="sr-only"> {sr} </span>

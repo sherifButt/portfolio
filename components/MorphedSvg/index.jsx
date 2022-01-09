@@ -22,6 +22,7 @@ const MorphedSvg = ({
    const variants = {
       start: {
          d: start,
+
       },
       end: {
          d: end,
@@ -63,9 +64,11 @@ const MorphedSvg = ({
                         rotateY: 0,
                         scale: 1,
                         originX: 0,
+                        
                      }}
                      animate={{
                         d: p.end,
+                        
                         rotateZ: p.rotate ? p.rotate : rotate,
                         rotateY: p.rotate ? p.rotate : rotate,
                        scale: p.scale ? p.scale : scale,

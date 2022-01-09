@@ -1,15 +1,15 @@
-import { useEffect } from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import Lottie from "../../Lottie";
-import Motion from "../../Motion";
-import { useTheme } from "next-themes";
-import Card from "../../Blog/Card";
-import DOMPurify from "isomorphic-dompurify";
-import Blog from "../../Blog/variants/Blog.tailwind.01";
-import Blob from "../../MorphedSvg/svg/Blob";
+import { useEffect } from "react"
+import { motion } from "framer-motion"
+import Link from "next/link"
+import Lottie from "../../Lottie"
+import Motion from "../../Motion"
+import { useTheme } from "next-themes"
+import Card from "../../Blog/Card"
+import DOMPurify from "isomorphic-dompurify"
+import Blog from "../../Blog/variants/Blog.tailwind.01"
+import Blob from "../../MorphedSvg/svg/Blob"
 
-const Header = ({
+const Header = ( {
    title,
    subtitle,
    button,
@@ -17,9 +17,8 @@ const Header = ({
    posts,
    displayedPost,
 } ) => {
-   
-   let cleanTitle = DOMPurify.sanitize(title);
-   const { theme, setTheme } = useTheme();
+   let cleanTitle = DOMPurify.sanitize( title )
+   const { theme, setTheme } = useTheme()
 
    const hearoImg = img.imgSrc.light?.includes("json") ? (
       <>
@@ -29,22 +28,27 @@ const Header = ({
                path="blob_2color_yellow_red.json"
             /> */}
             <motion.div
-               initial={{ opacity: 0, filter: `blur(50px)` }}
+               initial={ {
+                  opacity: 0,
+                  // filter: `blur(50px)`
+               } }
                animate={{
                   opacity: [0, 1],
-                  filter: [`blur(50px)`, `blur(0px)`],
+                  // filter: [`blur(50px)`, `blur(0px)`],
                }}
                transition={{
                   duration: 3,
                   type: "spring",
                }}
-               className="-z-20 scale-90 md:scale-[2] mt-0 md:mt-20 ml-30  absolute  ">
-               <Blob className="absolute z-20" />
+               className="-z-20 scale-90 md:scale-[2] mt-0 md:mt-20 ml-30  absolute hidden lg:inline-block  ">
+               <Blob
+                  fill="none"
+                  strokeWidth={1}
+                  className="absolute z-20"
+               />
             </motion.div>
             {/* <Card posts={posts} displayedPost={1} /> */}
-            
-               <Lottie path={img.imgSrc.light} />
-            
+            <Lottie path={img.imgSrc.light} />
             {/* <Blog
                posts={posts}
                items={1}
@@ -58,7 +62,7 @@ const Header = ({
                noObservation={true}
             /> */}
          </div>
-         <div className="hidden dark:inline-block -mt-10 ">
+         <div className="hidden dark:inline-block  ">
             <motion.div
                className=" scale-90 md:scale-[2] md:mt-40  absolute"
                initial={{ opacity: 0, filter: `blur(50px)` }}
@@ -69,8 +73,8 @@ const Header = ({
                transition={{ duration: 3, type: "spring" }}>
                <Blob className=" absolute " />
             </motion.div>
-            <div className="relative -z-50 md:z-0">
-               <Lottie path={ img.imgSrc.dark } />
+            <div className="relative ">
+               <Lottie path={img.imgSrc.dark} />
             </div>
          </div>
       </>
@@ -83,76 +87,76 @@ const Header = ({
    );
 
    return (
-      <section className="py-6 px-3 lg:h-[90vh] flex">
+      <section className="lg:py-6 -py-10 px-3 lg:h-[90vh] flex">
          <div className="flex flex-wrap items-center text-center lg:text-left -mx-2 ">
             <div className=" rounded  lg:w-1/2 px-2 lg:pr-10  lg:mt-0 order-1 lg:order-none py-10 z-10 ">
                <motion.div
-                  animate={{
+                  animate={ {
                      // x: [10, -30, 20, 0, 60, -50],
-                     y: [1, -5, 4, -3, 6, -3],
+                     y: [ 1, -5, 4, -3, 6, -3 ],
                      // rotate: [1, 0, -1, 2],
-                  }}
-                  transition={{
+                  } }
+                  transition={ {
                      type: "spring",
                      duration: 8,
                      yoyo: Infinity,
-                  }}>
+                  } }>
                   <div>
-                     <h1 className="font-lagag z-10 lg:text-7xl text-[40px] lg:tracking-normal tracking-widest mb-6 dark:text-white font-normal leading-normal  font-heading md:text-left -mt-20 md:mt-0 drop-shadow-md">
+                     <h1 className="font-lagag z-10 lg:text-7xl  text-[40px] lg:tracking-normal tracking-widest mb-6 dark:text-white font-semibold leading-snug lg:leading-[6rem]  font-heading md:text-left -mt-20 md:mt-0 ">
                         <span
                            className="Container"
-                           dangerouslySetInnerHTML={{
+                           dangerouslySetInnerHTML={ {
                               __html: cleanTitle,
-                           }}></span>
+                           } }></span>
                      </h1>
                   </div>
                </motion.div>
                <p className=" mb-1 text-gray-400 leading-relaxed">
-                  {subtitle}
+                  { subtitle }
                </p>
 
-               {button?.enabled ? (
+               { button?.enabled ? (
                   <Motion>
                      <Link href="/try" passHref>
                         <a
                            className="inline-block mt-5 md:mt-0 py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40"
                            href="#">
-                           {button.text}{" "}
+                           { button.text }{ " " }
                            <span className="font-light">
-                              {button.textLight}{" "}
-                              {String.fromCharCode(button.icon)}{" "}
+                              { button.textLight }{ " " }
+                              { String.fromCharCode( button.icon ) }{ " " }
                            </span>
                         </a>
                      </Link>
                   </Motion>
                ) : (
                   ""
-               )}
+               ) }
             </div>
 
             <motion.div
                className="lg:w-1/2 px-2"
-               initial={{ y: -300, opacity: 0 }}
-               animate={{ y: 0, opacity: 1 }}
-               transition={{ duration: 0.7 }}>
+               initial={ { y: -300, opacity: 0 } }
+               animate={ { y: 0, opacity: 1 } }
+               transition={ { duration: 0.7 } }>
                <motion.div
-                  animate={{
+                  animate={ {
                      // x: [10, -30, 20, 0, 60, -50],
-                     y: [15, -10, 8, -10, 20, 0],
-                     rotate: [1, 0, -1, 0.5],
-                  }}
-                  transition={{
+                     y: [ 15, -10, 8, -10, 20, 0 ],
+                     rotate: [ 1, 0, -1, 0.5 ],
+                  } }
+                  transition={ {
                      type: "spring",
                      duration: 8,
                      yoyo: Infinity,
-                  }}>
-                  {hearoImg}
+                  } }>
+                  { hearoImg }
                </motion.div>
             </motion.div>
          </div>
       </section>
-   );
-};
+   )
+}
 
 const customShapeDividerBottom1638543774 = {
    position: "absolute",
@@ -162,6 +166,6 @@ const customShapeDividerBottom1638543774 = {
    overflow: "hidden",
    lineHeight: 0,
    transform: "rotate(180deg)",
-};
+}
 
-export default Header;
+export default Header

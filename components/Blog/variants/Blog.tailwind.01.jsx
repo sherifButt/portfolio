@@ -15,8 +15,8 @@ const container = {
    visible: {
       opacity: 1,
       transition: {
-         when: "beforeChildren",
-         staggerChildren: 0.6,
+         // when: "beforeChildren",
+         // staggerChildren: 0.6,
          duration: 0.3,
       },
    },

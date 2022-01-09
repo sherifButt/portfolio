@@ -146,9 +146,9 @@ export default function Example({ className }) {
                variants={container}
                initial="hidden"
                animate="visible"
-               className="flex justify-between items-center md:border-b border-gray-200 dark:border-gray-700 py-6 md:justify-start md:space-x-10"
-            >
-               <div className="hidden md:inline-block"><Logo /></div>
+               className="flex justify-between items-center md:border-b border-gray-200 dark:border-gray-700 py-6 md:justify-start md:space-x-10">
+               <Logo className="hidden md:inline-block" />
+               <ThemeSwitch />
 
                <div className="-mr-2 -my-2 md:hidden">
                   <Popover.Button className="bg-white dark:bg-transparent  rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -408,7 +408,7 @@ export default function Example({ className }) {
 
                   <motion.div variants={item}>
                      {" "}
-                     <ThemeSwitch />
+                     {/* <ThemeSwitch /> */}
                      {/* <Dropdown /> */}
                   </motion.div>
                </div>
@@ -423,18 +423,16 @@ export default function Example({ className }) {
             leave="duration-100 ease-in"
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95">
-            
             <Popover.Panel
                focus
                className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-20">
-               
                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-gray-900 dark:border-gray-800 dark:border divide-y-2 divide-gray-50 dark:divide-gray-700 ">
                   <div className="pt-5 pb-6 px-5">
                      <div className="flex items-center justify-between">
                         <div>
-                           {/* <Logo text="" /> */}
+                           <Logo />
                            {/* <Dropdown /> */}
-                           <ThemeSwitch />
+                           {/* <ThemeSwitch /> */}
                         </div>
                         <div className="-mr-2">
                            <Popover.Button className="bg-white dark:bg-transparent  rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
