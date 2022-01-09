@@ -2,7 +2,13 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { motion } from "framer-motion";
+import {
+   motion,
+   useViewportScroll,
+   useTransform,
+} from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import {
    BookmarkAltIcon,
    CalendarIcon,
@@ -20,7 +26,7 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Dropdown from "../../Dropdown";
 import Logo from "../../Logo";
-import ThemeSwitch from "../../Options/ThemeSwitch"
+import ThemeSwitch from "../../Options/ThemeSwitch";
 
 const solutions = [
    {
@@ -130,11 +136,37 @@ const item = {
    },
 };
 
+const menuVariants = {
+   visble: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 2, ease: "easeOut" },
+   },
+   hidden: {
+      x: -100,
+      opacity: 0,
+      scale: 0.1,
+      transition: { duration: 2, ease: "easeOut" },
+   },
+};
+
 function classNames(...classes) {
    return classes.filter(Boolean).join(" ");
 }
 
 export default function Example({ className }) {
+   // scroll parallax
+   const { scrollY } = useViewportScroll();
+   const y1 = useTransform(scrollY, [0, 300], [0, 200]);
+   const y2 = useTransform(scrollY, [0, 50], [0, -230]);
+
+   const { ref, inView, entry } = useInView({
+      // Optional options
+      threshold: 0.5,
+      triggerOnce: false,
+   });
+
    return (
       <Popover
          className={classNames(
@@ -148,7 +180,12 @@ export default function Example({ className }) {
                animate="visible"
                className="flex justify-between items-center md:border-b border-gray-200 dark:border-gray-700 py-6 md:justify-start md:space-x-10">
                <Logo className="hidden md:inline-block" />
-               <ThemeSwitch />
+               <motion.div
+                  className="flex items-center "
+                  style={{ x: y2 }}>
+                  <Logo className="md:hidden mr-5" />
+                  <ThemeSwitch/>
+               </motion.div>
 
                <div className="-mr-2 -my-2 md:hidden">
                   <Popover.Button className="bg-white dark:bg-transparent  rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
