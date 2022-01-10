@@ -158,14 +158,8 @@ function classNames(...classes) {
 export default function Example({ className }) {
    // scroll parallax
    const { scrollY } = useViewportScroll();
-   const y1 = useTransform(scrollY, [0, 300], [0, 200]);
+   const y1 = useTransform(scrollY, [0, 50], [1, 0]);
    const y2 = useTransform(scrollY, [0, 50], [0, -230]);
-
-   const { ref, inView, entry } = useInView({
-      // Optional options
-      threshold: 0.5,
-      triggerOnce: false,
-   });
 
    return (
       <Popover
@@ -183,8 +177,8 @@ export default function Example({ className }) {
                <motion.div
                   className="flex items-center "
                   style={{ x: y2 }}>
-                  <Logo className="md:hidden mr-5" />
-                  <ThemeSwitch/>
+                  <motion.div style={{opacity:y1}} ><Logo className="md:hidden mr-5" /></motion.div>
+                  <ThemeSwitch />
                </motion.div>
 
                <div className="-mr-2 -my-2 md:hidden">
@@ -460,6 +454,7 @@ export default function Example({ className }) {
             leave="duration-100 ease-in"
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95">
+            
             <Popover.Panel
                focus
                className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-20">

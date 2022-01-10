@@ -1,5 +1,11 @@
 import { useEffect } from "react"
-import { motion } from "framer-motion"
+import {
+   useViewportScroll,
+   motion,
+   useTransform,
+   useMotionValue,
+} from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Link from "next/link"
 import Lottie from "../../Lottie"
 import Motion from "../../Motion"
@@ -19,19 +25,34 @@ const Header = ( {
 } ) => {
    let cleanTitle = DOMPurify.sanitize( title )
    const { theme, setTheme } = useTheme()
+   const { scrollY } = useViewportScroll();
+   const y1 = useTransform(scrollY, [0, 300], [0, 270]);
+   const y2 = useTransform(scrollY, [0, 50], [0, 30]);
+
+   const [ref, inView, entry] = useInView({
+      /* Optional options */
+      threshold: 1,
+      triggerOnce: false,
+   } );
+   console.log( `inView`, inView )
+   console.log(`y2`, y1.lastUpdated / 1000);
+   const variants = {
+      visible: { opacity: 1, x: 0 },
+      hidden:{ opacity: 0,x:20} 
+}
 
    const hearoImg = img.imgSrc.light?.includes("json") ? (
       <>
-         <div className="dark:hidden lg:w-3/4 mx-auto">
+         <div className="dark:hidden lg:w-3/4 mx-auto ">
             {/* <Lottie
                className="-z-20 w-300 absolute blur-sm"
                path="blob_2color_yellow_red.json"
             /> */}
             <motion.div
-               initial={ {
+               initial={{
                   opacity: 0,
                   // filter: `blur(50px)`
-               } }
+               }}
                animate={{
                   opacity: [0, 1],
                   // filter: [`blur(50px)`, `blur(0px)`],
@@ -39,8 +60,9 @@ const Header = ( {
                transition={{
                   duration: 3,
                   type: "spring",
-               }}
-               className="-z-20 scale-90 md:scale-[2] mt-0 md:mt-10 ml-30  absolute hidden lg:inline-block  ">
+               } }
+               // whileHover={{scale:.9}}
+               className="-z-20 scale-90 md:scale-[2] mt-0 md:mt-10 ml-30  absolute hidden lg:inline-block ">
                <Blob
                   fill="none"
                   strokeWidth={1}
@@ -48,7 +70,10 @@ const Header = ( {
                />
             </motion.div>
             {/* <Card posts={posts} displayedPost={1} /> */}
-            <Lottie path={img.imgSrc.light} />
+            <div className="opacity-70 ease-in duration-300 hover:opacity-100  hover:scale-110">
+               {" "}
+               <Lottie path={img.imgSrc.light} />
+            </div>
             {/* <Blog
                posts={posts}
                items={1}
@@ -73,7 +98,7 @@ const Header = ( {
                transition={{ duration: 3, type: "spring" }}>
                <Blob className=" absolute " />
             </motion.div>
-            <div className="relative ">
+            <div className="relative opacity-70 ease-in duration-300 hover:opacity-100 hover:scale-105">
                <Lottie path={img.imgSrc.dark} />
             </div>
          </div>
@@ -117,17 +142,19 @@ const Header = ( {
 
                { button?.enabled ? (
                   <Motion>
-                     <Link href="/try" passHref>
-                        <a
-                           className="inline-block mt-5 md:mt-0 py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40"
-                           href="#">
-                           { button.text }{ " " }
-                           <span className="font-light">
-                              { button.textLight }{ " " }
-                              { String.fromCharCode( button.icon ) }{ " " }
-                           </span>
-                        </a>
-                     </Link>
+                     <motion.div ref={ref} vairants={variants} initial="visible" animate={y1.lastUpdated/300>300?"visible":"hidden"}>
+                        <Link href="/try" passHref>
+                           <a
+                              className="inline-block mt-5 md:mt-0 py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40"
+                              href="#">
+                              { button.text }{ " " }
+                              <span className="font-light">
+                                 { button.textLight }{ " " }
+                                 { String.fromCharCode( button.icon ) }{ " " }
+                              </span>
+                           </a>
+                        </Link>
+                     </motion.div>
                   </Motion>
                ) : (
                   ""
