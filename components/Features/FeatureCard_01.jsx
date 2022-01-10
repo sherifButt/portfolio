@@ -10,14 +10,14 @@ const FeatureCard = ({ path, title, text, key }) => {
                         <svg
                            fill="none"
                            stroke="currentColor"
-                           viewbox="0 0 24 24"
+                           viewBox="-2 -2 28 28"
                            xmlns="http://www.w3.org/2000/svg"
-                           className="h-6 w-6 text-white dark:text-black"
+                           className="h-8 w-8 text-white dark:text-black"
                            aria-hidden="true">
                            <path
                               stroke-linecap="round"
                               stroke-linejoin="round"
-                              stroke-width="2"
+                              stroke-width="1.5"
                               d={path}></path>
                         </svg>
                      </span>

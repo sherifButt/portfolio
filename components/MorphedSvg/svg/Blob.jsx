@@ -4,7 +4,7 @@ const Blob = ({ className, fill, stroke,strokeWidth }) => {
    return (
       <MorphedSvg
          className={className}
-         viewBox="0 0 460 460"
+         viewBox="-30 0 520 520"
          width="370"
          height="370"
          paths={[

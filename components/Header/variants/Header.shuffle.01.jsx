@@ -112,7 +112,7 @@ const Header = ( {
    );
 
    return (
-      <section className="lg:py-6 -py-10 px-3 lg:h-[90vh] flex">
+      <section className="lg:py-4 -py-10 px-3 lg:h-[90vh] flex">
          <div className="flex flex-wrap items-center text-center lg:text-left -mx-2 ">
             <div className=" rounded  lg:w-1/2 px-2 lg:pr-10  lg:mt-0 order-1 lg:order-none py-10 z-10 ">
                <motion.div
@@ -127,7 +127,7 @@ const Header = ( {
                      yoyo: Infinity,
                   } }>
                   <div>
-                     <h1 className="font-lagag z-10 lg:text-7xl  text-[40px] lg:tracking-normal tracking-widest mb-6 dark:text-white font-semibold md:font-normal leading-snug lg:leading-[6rem]   md:text-left -mt-20 md:mt-0 ">
+                     <h1 className="font-lagag z-10 lg:text-7xl md:text-6xl  text-[40px] lg:tracking-normal tracking-widest mb-4 dark:text-white font-semibold md:font-normal leading-snug lg:leading-[6rem]   md:text-left -mt-20 md:mt-0 ">
                         <span
                            className="Container"
                            dangerouslySetInnerHTML={ {
@@ -145,7 +145,7 @@ const Header = ( {
                      <motion.div ref={ref} vairants={variants} initial="visible" animate={y1.lastUpdated/300>300?"visible":"hidden"}>
                         <Link href="/try" passHref>
                            <a
-                              className="inline-block mt-5 md:mt-0 py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40"
+                              className="inline-block mt-5 md:mt-2 py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40"
                               href="#">
                               { button.text }{ " " }
                               <span className="font-light">

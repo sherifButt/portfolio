@@ -175,11 +175,16 @@ export default function Example({ className }) {
                className="flex justify-between items-center md:border-b border-gray-200 dark:border-gray-700 py-6 md:justify-start md:space-x-10">
                <Logo className="hidden md:inline-block" />
                <motion.div
-                  className="flex items-center "
+                  className="flex items-center md:hidden"
                   style={{ x: y2 }}>
-                  <motion.div style={{opacity:y1}} ><Logo className="md:hidden mr-5" /></motion.div>
+                  <motion.div style={{ opacity: y1 }}>
+                     <Logo className="mr-5" />
+                  </motion.div>
                   <ThemeSwitch />
                </motion.div>
+               <div className="hidden md:inline-block">
+                  <ThemeSwitch />
+               </div>
 
                <div className="-mr-2 -my-2 md:hidden">
                   <Popover.Button className="bg-white dark:bg-transparent  rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -428,13 +433,13 @@ export default function Example({ className }) {
                      variants={item}
                      href="#"
                      className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
-                     Sign in
+                     Resume
                   </motion.a>
                   <motion.a
                      variants={item}
                      href="#"
                      className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-md dark:shadow-gray-900 text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700  shadow-indigo-500/50">
-                     Sign up
+                     Hire Me
                   </motion.a>
 
                   <motion.div variants={item}>
@@ -454,7 +459,6 @@ export default function Example({ className }) {
             leave="duration-100 ease-in"
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95">
-            
             <Popover.Panel
                focus
                className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-20">
@@ -523,14 +527,14 @@ export default function Example({ className }) {
                         <a
                            href="#"
                            className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                           Sign up
+                           Hire me 
                         </a>
                         <p className="mt-6 text-center text-base font-medium text-gray-500">
-                           Existing customer?{" "}
+                           Get my {" "}
                            <a
                               href="#"
                               className="text-indigo-600 hover:text-indigo-500">
-                              Sign in
+                              Resume
                            </a>
                         </p>
                      </div>
