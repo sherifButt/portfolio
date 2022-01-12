@@ -70,7 +70,7 @@ const Header = ( {
                />
             </motion.div>
             {/* <Card posts={posts} displayedPost={1} /> */}
-            <div className="opacity-70 ease-in duration-300 hover:opacity-100  hover:scale-110">
+            <div className="opacity-70 md:opacity-100 ease-in duration-300 hover:opacity-100  hover:scale-110">
                {" "}
                <Lottie path={img.imgSrc.light} />
             </div>

@@ -334,7 +334,7 @@ export default {
       ],
    },
    features: {
-      title: "I will make your website better..",
+      title: "I will make your web-site better..",
       subtitle: "this what i can do for your web app",
       ctaButton: {
          enabled: true,
