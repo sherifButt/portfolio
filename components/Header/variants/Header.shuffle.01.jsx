@@ -23,7 +23,7 @@ const Header = ( {
    posts,
    displayedPost,
 } ) => {
-   let cleanTitle = DOMPurify.sanitize( title )
+   // let cleanTitle = DOMPurify.sanitize( title )
    const { theme, setTheme } = useTheme()
    const { scrollY } = useViewportScroll();
    const y1 = useTransform(scrollY, [0, 300], [0, 270]);
@@ -34,8 +34,8 @@ const Header = ( {
       threshold: 1,
       triggerOnce: false,
    } );
-   console.log( `inView`, inView )
-   console.log(`y2`, y1.lastUpdated / 1000);
+   // console.log( `inView`, inView )
+   // console.log(`y2`, y1.lastUpdated / 1000);
    const variants = {
       visible: { opacity: 1, x: 0 },
       hidden:{ opacity: 0,x:20} 
@@ -128,11 +128,7 @@ const Header = ( {
                   } }>
                   <div>
                      <h1 className="font-lagag z-10 lg:text-7xl md:text-6xl  text-[40px] lg:tracking-normal tracking-widest mb-4 dark:text-white font-semibold md:font-normal leading-snug lg:leading-[6rem]   md:text-left -mt-20 md:mt-0 ">
-                        <span
-                           className="Container"
-                           dangerouslySetInnerHTML={ {
-                              __html: cleanTitle,
-                           } }></span>
+                        {title}
                      </h1>
                   </div>
                </motion.div>

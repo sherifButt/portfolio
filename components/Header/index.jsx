@@ -11,10 +11,10 @@ const Header = ({
 }) => {
    let html;
 
-   title = title.replace(
-      /<span[^>]*>/g,
-      '<span class="text-indigo-700 tracking-wide">'
-   );
+   // title = title.replace(
+   //    /<span[^>]*>/g,
+   //    '<span class="text-indigo-700 tracking-wide">'
+   // );
 
    switch (variant) {
       case 1:

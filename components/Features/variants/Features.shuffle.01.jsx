@@ -6,7 +6,9 @@ import {
    useAnimation,
    motion,
    AnimatePresence,
+   AnimateSharedLayout,
 } from "framer-motion";
+import FlashText from "../../Options/FlashText";
 
 const container = {
    hidden: { opacity: 0 },
@@ -33,69 +35,6 @@ const Features = ({
    subCta,
    features,
 }) => {
-   // text loop
-   const [titleLooped, setTitleLooped] = useState(title);
-   const [titleOpacity, setTitleOpacity] = useState(1);
-   const [titleY, setTitleY] = useState(-10);
-   let xjs;
-   // const []
-
-   const i = useRef(0);
-   const loopText = (str, toBeReplaced) => {
-      let text = str;
-
-      const wordsToLoopCount = Object.keys(toBeReplaced);
-      const largestArr = [];
-      for (const [key, value] of Object.entries(toBeReplaced)) {
-         if (
-            i.current >= Math.max(...largestArr) &&
-            largestArr.length !== 0
-         )
-            i.current = 0;
-         console.log(`i.current+1`, i.current + 1, value.length);
-         largestArr.push(value.length);
-         if (i.current + 1 > value.length) {
-            text = text.replace(
-               new RegExp(key.toString(), "g"),
-               value[value.length - 1]
-            );
-         } else {
-            text = text.replace(
-               new RegExp(key.toString(), "g"),
-               value[i.current]
-            );
-            console.log(`text`, text, i.current, largestArr);
-         }
-      }
-      i.current++;
-
-      xjs = (
-         <motion.h2
-            key="title"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="text-4xl text-center mb-12 font-semibold leading-normal font-heading dark:text-gray-200 ">
-            {text}
-            {/* {titleLooped} */}
-         </motion.h2>
-      );
-
-      return text;
-   };
-
-   const loop1 = {
-      hi: ["Helo", "howdi", "hio", "bllo", "chiao", "hi"],
-      sherif: ["sheriff", "sheko", "sherif"],
-      good: ["exelent", "amazing", "sweet", "good"],
-   };
-
-   // text loop animation
-   const varinatsTextLoop = {
-      hidden: { opacity: 0, y: -5 },
-      visible: { opacity: 1, x: 0 },
-   };
-
    // framer motion animation control
    const controlFeaturesAnimation = useAnimation();
 
@@ -109,54 +48,11 @@ const Features = ({
       controlFeaturesAnimation.start("visible");
    }
 
-   if (inView) {
-      // console.log(
-      //    loopText("well hi sherif hi again good", loop1)
-      // );
-   }
-
-   useEffect(() => {
-      let i = true;
-      setInterval(() => {
-         let text = loopText(
-            "well hi sherif hi again good",
-            loop1
-         );
-         setTitleOpacity( 1 );
-         // setTitleY(0)
-         setTitleLooped(text);
-
-         setTimeout(() => {
-            setTitleOpacity( 0 );
-            // setTitleY(-10)
-         }, 2000);
-      }, 3000);
-      // return () => clearInterval(interval);
-   }, []);
-
    return (
       <div className="py-12 px-4 ">
          <h2 className="text-4xl text-center  mb-12 font-semibold leading-normal font-heading dark:text-gray-200 ">
-            Hi there{" "}
-            <motion.span
-               key="title"
-               initial={{ opacity: 0, y: -20 }}
-               animate={{ opacity: titleOpacity, y: titleY }}
-               exit={{ opacity: 0 }}>
-               {/* {text} */}
-               {titleLooped}
-            </motion.span>{" "}
-            in the{" "}
-            <motion.span
-               key="title"
-               initial={{ opacity: 0, y: -20 }}
-               animate={{ opacity: titleOpacity, y: titleY }}
-               exit={{ opacity: 0 }}>
-               {/* {text} */}
-               {titleLooped}
-            </motion.span>
+            {title}
          </h2>
-
          <motion.div
             ref={ref}
             variants={container}
