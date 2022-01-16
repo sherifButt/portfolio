@@ -335,16 +335,16 @@ export default {
       ],
    },
    features: {
-      // title: [
-      //    "I will make your Web",
-      //    <FlashText delay={8000} className="text-indigo-700">
-      //       App|Site
-      //    </FlashText>,
-      //    " ",
-      //    <FlashText delay={4000} className="text-indigo-700">
-      //       Faster..|Better..|Dyanmic..|Scalable..
-      //    </FlashText>,
-      // ],
+      title: [
+         "I will make your Web",
+         <FlashText delay={8000} className="text-indigo-700">
+            App|Site
+         </FlashText>,
+         " ",
+         <FlashText delay={4000} className="text-indigo-700">
+            Faster..|Better..|Dyanmic..|Scalable..
+         </FlashText>,
+      ],
       subtitle: "this what i can do for your web app",
       ctaButton: {
          enabled: true,
