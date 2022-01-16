@@ -127,7 +127,7 @@ const Header = ( {
                      yoyo: Infinity,
                   } }>
                   <div>
-                     <h1 className="font-lagag z-10 lg:text-7xl md:text-6xl  text-[40px] lg:tracking-normal tracking-widest mb-4 dark:text-white font-semibold md:font-normal leading-snug lg:leading-[6rem]   md:text-left -mt-20 md:mt-0 ">
+                     <h1 className="font-lagag z-10 lg:text-7xl md:text-6xl  text-[38px] lg:tracking-normal tracking-widest mb-4 dark:text-white font-semibold md:font-normal leading-snug lg:leading-[6rem]   md:text-left -mt-20 md:mt-0 ">
                         {title}
                      </h1>
                   </div>
