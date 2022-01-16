@@ -4,7 +4,7 @@ import { useEffect } from "react/cjs/react.development";
 
 const FlashText = ( {  children,className,delay } ) => {
    const text = children.split("|");
-   const [sliderText, setSliderText] = useState(text[1]);
+   const [sliderText, setSliderText] = useState(text[1]?text[1]:null);
    const [titleOpacity, setTitleOpacity] = useState(1);
    const [ titleY, setTitleY ] = useState( -10 );
    const [isAnimation,setIsAnimation] = useState(false)
