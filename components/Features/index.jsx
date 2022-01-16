@@ -42,9 +42,7 @@ const Features = ({
 
 Features.defaultProps = {
    variant: 1,
-   title: title
-      ? title
-      : ("i"),
+   title: title ? title : "I can do.",
    subtitle: subtitle ? subtitle : "this what i can do",
    ctaButton: ctaButton
       ? ctaButton
@@ -57,15 +55,12 @@ Features.defaultProps = {
    subCta: subCta
       ? subCta
       : "Your own Dunder Mifflin account will serve you in the wonderful voyage through our products",
-   features: features
-      ? features
-      : [
-           {
-              path: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
-              title: "High durability",
-              text: "Forget about paper jams with our increased stability product. Ideal for high-quality printing and photocopying.",
-           },
-        ],
+   features: features?features:[
+         {
+            path: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+            title: "High durability",
+            text: "Forget about paper jams with our increased stability product. Ideal for high-quality printing and photocopying.",
+         },],
 };
 
 

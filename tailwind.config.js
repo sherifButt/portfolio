@@ -1,6 +1,6 @@
 const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
-console.log(`colors`, colors)
+
 module.exports = {
    mode: "jit",
    purge: [

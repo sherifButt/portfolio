@@ -2,15 +2,17 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { useEffect } from "react/cjs/react.development";
 
-const FlashText = ( {  children,className,delay } ) => {
-   const text = children&&children.split("|");
-   const [sliderText, setSliderText] = useState(text[1]?text[1]:null);
+const FlashText = ({ children, className, delay }) => {
+   const text = children && children.split("|");
+   const [sliderText, setSliderText] = useState(
+      text[1] ? text[1] : null
+   );
    const [titleOpacity, setTitleOpacity] = useState(1);
-   const [ titleY, setTitleY ] = useState( -10 );
-   const [isAnimation,setIsAnimation] = useState(false)
+   const [titleY, setTitleY] = useState(-10);
+   const [isAnimation, setIsAnimation] = useState(true);
 
-   const counter = useRef( 0 );
-   const timer = useRef()
+   const counter = useRef(0);
+   const timer = useRef();
    let word;
 
    const textEngine = text => {
@@ -23,19 +25,25 @@ const FlashText = ( {  children,className,delay } ) => {
    };
 
    
+
+   const timeLoop = () => {
       timer.current = setInterval(() => {
-         setTitleOpacity( 0 );
-         setTitleY(10)
+         setTitleOpacity(0);
+         setTitleY(10);
          setTimeout(() => {
             textEngine(text);
          }, 800);
          setTimeout(() => {
-            setTitleOpacity( 1 );
+            setTitleOpacity(1);
             setTitleY(0);
          }, 800);
       }, delay);
-   
+   };
 
+if (isAnimation) {
+      timeLoop();
+      setIsAnimation(false);
+   }
    return (
       <motion.span
          key={sliderText}
@@ -49,8 +57,9 @@ const FlashText = ( {  children,className,delay } ) => {
          whileHover={() => {
             clearInterval(timer.current);
          }}
-         onHoverEnd={() => {
-            setIsAnimation(!isAnimation);
+         onHoverEnd={ () => {
+            timeLoop()
+            setIsAnimation(true);
          }}>
          {sliderText}
       </motion.span>
@@ -60,7 +69,7 @@ const FlashText = ( {  children,className,delay } ) => {
 FlashText.defaultProps = {
    children: "insert_your|text_here",
    className: "",
-   delay:4000,
+   delay: 4000,
 };
 
 export default FlashText;

@@ -47,18 +47,7 @@ const Features = ({
    return (
       <div className="py-12 px-4 ">
          <h2 className="text-4xl text-center  mb-12 font-semibold leading-normal font-heading dark:text-gray-200 ">
-            <FlashText
-               key="key1"
-               delay={8000}
-               className="text-indigo-700">
-               App|Site
-            </FlashText>{" "}
-            <FlashText
-               key="key2"
-               delay={4000}
-               className="text-indigo-700">
-               Faster..|Better..|Dyanmic..|Scalable..
-            </FlashText>
+            {title}
          </h2>
          <motion.div
             ref={ref}
