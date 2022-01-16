@@ -44,22 +44,21 @@ Features.defaultProps = {
    variant: 1,
    title: title
       ? title
-      : [
-           "I will make your Web",
+      : (<>I will make your Web
            <FlashText
               key="key1"
               delay={8000}
               className="text-indigo-700">
               App|Site
-           </FlashText>,
-           " ",
+           </FlashText>
+          { " "}
            <FlashText
               key="key2"
               delay={4000}
               className="text-indigo-700">
               Faster..|Better..|Dyanmic..|Scalable..
-           </FlashText>,
-        ],
+           </FlashText>
+        </>),
    subtitle: subtitle ? subtitle : "this what i can do",
    ctaButton: ctaButton
       ? ctaButton
