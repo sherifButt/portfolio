@@ -335,16 +335,7 @@ export default {
       ],
    },
    features: {
-      title: [
-         "I will make your Web",
-         <FlashText key="key1" delay={8000} className="text-indigo-700">
-            App|Site
-         </FlashText>,
-         " ",
-         <FlashText key="key2" delay={4000} className="text-indigo-700">
-            Faster..|Better..|Dyanmic..|Scalable..
-         </FlashText>,
-      ],
+      title: "",
       subtitle: "this what i can do for your web app",
       ctaButton: {
          enabled: true,
