@@ -1,14 +1,9 @@
-import { useState, useEffect, useRef } from "react";
-import Feature from "../FeatureCard_01";
-import Link from "next/link";
-import { useInView } from "react-intersection-observer";
 import {
-   useAnimation,
-   motion,
-   AnimatePresence,
-   AnimateSharedLayout,
-} from "framer-motion";
-import FlashText from "../../Options/FlashText";
+   motion, useAnimation
+} from "framer-motion"
+import Link from "next/link"
+import { useInView } from "react-intersection-observer"
+import Feature from "../FeatureCard_01"
 
 const container = {
    hidden: { opacity: 0 },
