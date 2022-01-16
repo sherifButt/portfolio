@@ -1,5 +1,6 @@
 import Features_01 from "./variants/Features.shuffle.01";
 import data from "../../siteData.config";
+import FlashText from "../Options/FlashText";
 
 const { title, subtitle, ctaButton, subCta, features } =
    data?.features ? data.features : "";
