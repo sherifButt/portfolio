@@ -430,7 +430,7 @@ export default {
    },
    logo: {
       src: "/sbolio.svg",
-      text: "SHERIFBUTT",
+      text: "SBUTT",
       alt: "sherif's butt portfolio",
       href: "/",
       sr: "site logo",

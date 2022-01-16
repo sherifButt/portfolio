@@ -11,7 +11,7 @@ const Layout = ({ children }, router) => {
    return (
       <ThemeProvider attribute="class">
          <Head />
-         <body className=" text-black bg-white dark:bg-gray-900 max-w-7xl lg:max-w-none mx-auto py-4 px-4 sm:py-16 sm:px-6 lg:px-8">
+         <body className=" text-black bg-white dark:bg-gray-900 max-w-7xl lg:max-w-none mx-auto py-4  sm:py-16 sm:px-6 lg:px-8">
             <div className="container mx-auto px-4 flex flex-col min-h-screen">
                <header className="relative">
                   <Nav />

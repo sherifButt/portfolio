@@ -112,9 +112,9 @@ const Header = ( {
    );
 
    return (
-      <section className="lg:py-4 -py-10 px-3 lg:h-[90vh] flex">
+      <section className="lg:py-4 -py-10 lg:h-[90vh] flex">
          <div className="flex flex-wrap items-center text-center lg:text-left -mx-2 ">
-            <div className=" rounded  lg:w-1/2 px-2 lg:pr-10  lg:mt-0 order-1 lg:order-none py-10 z-10 ">
+            <div className=" rounded  lg:w-1/2  lg:pr-10  lg:mt-0 order-1 lg:order-none py-10 z-10 ">
                <motion.div
                   animate={ {
                      // x: [10, -30, 20, 0, 60, -50],
