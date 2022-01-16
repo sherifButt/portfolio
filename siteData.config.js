@@ -337,11 +337,11 @@ export default {
    features: {
       title: [
          "I will make your Web",
-         <FlashText delay={8000} className="text-indigo-700">
+         <FlashText key="key1" delay={8000} className="text-indigo-700">
             App|Site
          </FlashText>,
          " ",
-         <FlashText delay={4000} className="text-indigo-700">
+         <FlashText key="key2" delay={4000} className="text-indigo-700">
             Faster..|Better..|Dyanmic..|Scalable..
          </FlashText>,
       ],
