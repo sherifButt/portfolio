@@ -4,7 +4,7 @@ import {
 import Link from "next/link"
 import { useInView } from "react-intersection-observer"
 import Feature from "../FeatureCard_01"
-
+import FlashText from "../../Options/FlashText"
 const container = {
    hidden: { opacity: 0 },
    visible: {
