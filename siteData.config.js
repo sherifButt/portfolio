@@ -337,7 +337,7 @@ export default {
    features: {
       title: [
          "I will make your Web",
-         <FlashText  delay={8000}>
+         <FlashText  delay={12000}>
             App|Site
          </FlashText>,
          " ",
