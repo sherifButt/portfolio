@@ -4,7 +4,7 @@ import { useEffect } from "react/cjs/react.development";
 
 const FlashText = ( {  children,className,delay } ) => {
    const text = children.split("|");
-   const [sliderText, setSliderText] = useState(text&&text[1]);
+   const [sliderText, setSliderText] = useState(text[1]);
    const [titleOpacity, setTitleOpacity] = useState(1);
    const [ titleY, setTitleY ] = useState( -10 );
    const [isAnimation,setIsAnimation] = useState(false)
@@ -14,7 +14,7 @@ const FlashText = ( {  children,className,delay } ) => {
    let word;
 
    const textEngine = text => {
-      text&&text.map((w, i) => {
+      text.map((w, i) => {
          if (counter.current >= text.length) counter.current = 0;
          if (i === counter.current) word = w;
       });
