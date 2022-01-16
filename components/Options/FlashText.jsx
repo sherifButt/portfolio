@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { useEffect } from "react/cjs/react.development";
 
-const TextSlider = ( {  children,className,delay } ) => {
+const FlashText = ( {  children,className,delay } ) => {
    const text = children?.split("|")
    const [sliderText, setSliderText] = useState(text&&text[1]);
    const [titleOpacity, setTitleOpacity] = useState(1);
@@ -57,10 +57,10 @@ const TextSlider = ( {  children,className,delay } ) => {
    );
 };
 
-TextSlider.defaultProps = {
+FlashText.defaultProps = {
    children: "insert_your text_here",
    className: "",
    delay:4000,
 };
 
-export default TextSlider;
+export default FlashText;
