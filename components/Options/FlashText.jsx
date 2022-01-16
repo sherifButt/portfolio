@@ -22,7 +22,7 @@ const FlashText = ( {  children,className,delay } ) => {
       setSliderText(word);
    };
 
-   useEffect(() => {
+   
       timer.current = setInterval(() => {
          setTitleOpacity( 0 );
          setTitleY(10)
@@ -34,7 +34,7 @@ const FlashText = ( {  children,className,delay } ) => {
             setTitleY(0);
          }, 800);
       }, delay);
-   }, [isAnimation]);
+   
 
    return (
       <motion.span
