@@ -60,11 +60,11 @@ const Header = ( {
                transition={{
                   duration: 3,
                   type: "spring",
-               } }
+               }}
                // whileHover={{scale:.9}}
                className="-z-20 scale-90 md:scale-[2] mt-0 md:mt-10 ml-30  absolute hidden lg:inline-block ">
                <Blob
-                  fill="none"
+                  fill="#805fcf"
                   strokeWidth={1}
                   className="absolute z-20"
                />
