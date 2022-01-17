@@ -448,13 +448,13 @@ export default {
       // title: "Build eye-catching and dynamic websites and ecommerce fast.",
       title: (
          <>
-            <FlashText delay={8000}>We'll|I</FlashText> make the{" "}
+            I make the{" "}
             <FlashText delay={8000} className="text-indigo-700">
                Internet|Web
             </FlashText>
             {" come "}
             <FlashText delay={8000} className="text-indigo-700">
-               True|Alive
+               True|to Live
             </FlashText>
          </>
       ),
