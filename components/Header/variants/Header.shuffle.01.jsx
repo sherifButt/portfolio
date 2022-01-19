@@ -108,11 +108,11 @@ const Header = ( {
          className={`w-${img.width} mx-auto z-0`}
          src={img.imgSrc}
          style={{ mixBlendMode: "multiply" }}
-      />
+      /> 
    );
 
    return (
-      <section className="lg:py-4 -py-10 px-3 lg:h-[90vh] flex">
+      <section className="lg:py-4  md:px-3 lg:h-[90vh] flex">
          <div className="flex flex-wrap items-center text-center lg:text-left -mx-2 ">
             <div className=" rounded  lg:w-1/2  lg:pr-10  lg:mt-0 order-1 lg:order-none py-10 z-10 ">
                <motion.div
@@ -127,12 +127,12 @@ const Header = ( {
                      yoyo: Infinity,
                   } }>
                   <div>
-                     <h1 className="font-lagag z-10 -mx-4 lg:text-7xl md:text-6xl  text-[38px] lg:tracking-normal tracking-widest mb-4 dark:text-white font-semibold md:font-normal leading-snug lg:leading-[6rem]   md:text-left -mt-20 md:mt-0 ">
+                     <h1 className="font-lagag z-10 -mx-4 lg:text-7xl md:text-6xl   text-[38px] lg:tracking-normal tracking-widest mb-4 dark:text-white font-semibold md:font-normal leading-snug lg:leading-[6rem]   md:text-left -mt-20 md:mt-0 ">
                         {title}
                      </h1>
                   </div>
                </motion.div>
-               <p className=" mb-1 text-gray-400 leading-relaxed">
+               <p className=" mb-1 text-gray-400 leading-normal md:leading-relaxed">
                   { subtitle }
                </p>
 
