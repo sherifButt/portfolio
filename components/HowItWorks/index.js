@@ -1,7 +1,8 @@
 import HowItWorks_01 from './variants/HowItWorks.shuffle.01'    
 import HowItWorks_02 from './variants/HowItWorks.shuffle.02'
+import HowItWorks_03 from './variants/HowItWorks.shuffle.03'
 
-const HowItWorks = ( { variant } ) => {
+const HowItWorks = ( { data,variant } ) => {
    let html
 
    switch (variant) {
@@ -10,6 +11,9 @@ const HowItWorks = ( { variant } ) => {
          break;
       case 2:
          html = <HowItWorks_02/>
+         break;
+      case 3:
+         html = <HowItWorks_03/>
          break;
    
       default:
@@ -21,6 +25,7 @@ const HowItWorks = ( { variant } ) => {
 }
 
 HowItWorks.defaultProps = {
+  // howitwork: {},
    variant: 1,
 };
 export default HowItWorks

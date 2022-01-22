@@ -24,7 +24,8 @@ const item = {
    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
 };
 
-const Features = ({
+const Features = ( {
+   pretitle,
    title,
    subtitle,
    ctaButton,
@@ -36,7 +37,7 @@ const Features = ({
 
    // Hook allow us to control the elemnt in the screen view
    let { inView, entry, ref } = useInView({
-      threshold: 0.5,
+      threshold: 0.4,
       triggerOnce: false,
    });
 
@@ -46,9 +47,16 @@ const Features = ({
 
    return (
       <div className="py-12 px-4 ">
-         <h2 className="text-4xl text-center  mb-12 font-semibold leading-normal font-heading dark:text-gray-200 ">
-            {title}
-         </h2>
+         <div className="mb-20 2xl:mb-36 text-center">
+            <span className="block mb-9 text-xs leading-4 font-medium uppercase tracking-widest text-gray-300">
+               
+               {pretitle}
+            </span>
+            <h2 className="dark:text-white text-4xl md:text-10xl xl:text-11xl leading-none font-heading font-medium ">
+               {title}
+            </h2>
+         </div>
+
          <motion.div
             ref={ref}
             variants={container}

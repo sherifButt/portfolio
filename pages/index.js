@@ -17,7 +17,13 @@ import Team from "../components/Team";
 import Testimonials from "../components/Testimonials";
 import { getData } from "./api/data";
 
-export default function Home({ posts, title, href, subtitle }) {
+export default function Home({
+   data,
+   posts,
+   title,
+   href,
+   subtitle,
+}) {
    // framer motion animation contrll
    const animationControl = useAnimation();
 
@@ -42,7 +48,8 @@ export default function Home({ posts, title, href, subtitle }) {
    return (
       <>
          <Header variant={1} posts={posts} />
-         <Features />
+         <HowItWorks variant={3} data={data} />
+         <Features data={data} />
          <Blog
             variant={3}
             items={3}
@@ -54,11 +61,10 @@ export default function Home({ posts, title, href, subtitle }) {
             noObservation={false}
          />
          {/* <Faq /> */}
-         <Testimonials variant={3} />
-         {/* <HowItWorks variant={2} /> */}
-         <Team />
-         <Pricing variant={1} />
-         <Faq variant={2} />
+         <Testimonials variant={3} data={data} />
+         {/* <Team /> */}
+         {/* <Pricing variant={1} /> */}
+         <Faq variant={3} />
          <CallToAction />
       </>
    );
@@ -89,6 +95,7 @@ export const getStaticProps = async context => {
    const data = await getData();
    return {
       props: {
+         
          posts: data.portafolio.posts,
          title: data.portafolio.title,
          href: data.portafolio.href,

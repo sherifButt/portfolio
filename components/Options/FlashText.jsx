@@ -3,10 +3,14 @@ import { useRef, useState } from "react";
 import { useEffect } from "react/cjs/react.development";
 
 const FlashText = ({ children, className, delay }) => {
-   const text = children && children.split("|");
+   
+   let text
+      
+      text = children && children.split( "|" );
    const [sliderText, setSliderText] = useState(
       text[1] ? text[1] : null
    );
+   
    const [titleOpacity, setTitleOpacity] = useState(1);
    const [titleY, setTitleY] = useState(-10);
    const [isAnimation, setIsAnimation] = useState(true);
@@ -24,8 +28,6 @@ const FlashText = ({ children, className, delay }) => {
       setSliderText(word);
    };
 
-   
-
    const timeLoop = () => {
       timer.current = setInterval(() => {
          setTitleOpacity(0);
@@ -40,7 +42,7 @@ const FlashText = ({ children, className, delay }) => {
       }, delay);
    };
 
-if (isAnimation) {
+   if (isAnimation) {
       timeLoop();
       setIsAnimation(false);
    }
@@ -57,8 +59,8 @@ if (isAnimation) {
          whileHover={() => {
             clearInterval(timer.current);
          }}
-         onHoverEnd={ () => {
-            timeLoop()
+         onHoverEnd={() => {
+            timeLoop();
             setIsAnimation(true);
          }}>
          {sliderText}
