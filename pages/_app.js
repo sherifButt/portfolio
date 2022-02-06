@@ -17,7 +17,7 @@ const variants = {
 
 function MyApp({ Component, pageProps, router }) {
    return (
-      <Layout>
+      <Layout >
          <AnimateSharedLayout>
             <AnimatePresence
                exitBeforeEnter
@@ -40,5 +40,7 @@ function MyApp({ Component, pageProps, router }) {
       </Layout>
    );
 }
+
+
 
 export default MyApp;

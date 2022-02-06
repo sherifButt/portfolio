@@ -91,11 +91,10 @@ const Text = styled.h1`
 `;
 
 export const getStaticProps = async context => {
-   console.log(`context`, context);
+   
    const data = await getData();
    return {
       props: {
-         
          posts: data.portafolio.posts,
          title: data.portafolio.title,
          href: data.portafolio.href,

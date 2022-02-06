@@ -12,6 +12,7 @@ const Card = ({
    title,
    href,
    category,
+   excerpt,
    description,
    date,
    datetime,
@@ -93,8 +94,8 @@ const Card = ({
 
                         <p className="mt-3 text-base text-gray-500 dark:text-gray-300 text-left hidden md:inline-block">
                            {(posts
-                              ? posts[displayedPost].description
-                              : description
+                              ? posts[displayedPost].excerpt
+                              : excerpt
                            )
                               .replace(/(<([^>]+)>)/gi, "")
                               .substring(0, 80)}{" "}
@@ -167,6 +168,7 @@ Card.defaultProps = {
    title: "Boost your conversion rate",
    href: "#",
    category: { name: "Article", href: "#" },
+   excerpt: "lorem epxom",
    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
    date: "Mar 16, 2020",

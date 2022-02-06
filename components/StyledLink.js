@@ -6,7 +6,7 @@ const StyledLinks = motion(styled.a``);
 
 const StyledLink = ({ children, href, className }) => {
    return (
-      <StyledLinks href={href} className={className}>
+      <StyledLinks href={href} className={className} passHref>
          {children}
       </StyledLinks>
    );

@@ -116,16 +116,16 @@ const Header = ( {
          <div className="flex flex-wrap items-center text-center lg:text-left -mx-2 ">
             <div className=" rounded  lg:w-1/2  lg:pr-10  lg:mt-0 order-1 lg:order-none py-10 z-10 ">
                <motion.div
-                  animate={ {
+                  animate={{
                      // x: [10, -30, 20, 0, 60, -50],
-                     y: [ 1, -5, 4, -3, 6, -3 ],
+                     y: [1, -5, 4, -3, 6, -3],
                      // rotate: [1, 0, -1, 2],
-                  } }
-                  transition={ {
+                  }}
+                  transition={{
                      type: "spring",
                      duration: 8,
                      yoyo: Infinity,
-                  } }>
+                  }}>
                   <div>
                      <h1 className="font-lagag z-10 -mx-4 md:text-5xl   text-[38px] lg:tracking-normal tracking-widest mb-4 dark:text-white font-semibold md:font-normal leading-snug lg:leading-[5rem]   md:text-left -mt-20 md:mt-0 ">
                         {title}
@@ -133,20 +133,28 @@ const Header = ( {
                   </div>
                </motion.div>
                <p className=" mb-1 text-gray-400 leading-normal md:leading-relaxed">
-                  { subtitle }
+                  {subtitle}
                </p>
 
-               { button?.enabled ? (
+               {button?.enabled ? (
                   <Motion>
-                     <motion.div ref={ref} vairants={variants} initial="visible" animate={y1.lastUpdated/300>300?"visible":"hidden"}>
-                        <Link href="/try" passHref>
-                           <a
-                              className="inline-block mt-5 md:mt-10  py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40"
-                              href="#">
-                              { button.text }{ " " }
+                     <motion.div
+                        ref={ref}
+                        vairants={variants}
+                        initial="visible"
+                        animate={
+                           y1.lastUpdated / 300 > 300
+                              ? "visible"
+                              : "hidden"
+                        }>
+                        <Link href={button.href} passHref>
+                           <a className="inline-block mt-5 md:mt-10  py-4 px-8 mr-6 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded  shadow-lg shadow-indigo-500/50 hover:shadow-indigo-700/40">
+                              {button.text}{" "}
                               <span className="font-light">
-                                 { button.textLight }{ " " }
-                                 { String.fromCharCode( button.icon ) }{ " " }
+                                 {button.textLight}{" "}
+                                 {String.fromCharCode(
+                                    button.icon
+                                 )}{" "}
                               </span>
                            </a>
                         </Link>
@@ -154,31 +162,31 @@ const Header = ( {
                   </Motion>
                ) : (
                   ""
-               ) }
+               )}
             </div>
 
             <motion.div
                className="lg:w-1/2 px-2"
-               initial={ { y: -300, opacity: 0 } }
-               animate={ { y: 0, opacity: 1 } }
-               transition={ { duration: 0.7 } }>
+               initial={{ y: -300, opacity: 0 }}
+               animate={{ y: 0, opacity: 1 }}
+               transition={{ duration: 0.7 }}>
                <motion.div
-                  animate={ {
+                  animate={{
                      // x: [10, -30, 20, 0, 60, -50],
-                     y: [ 15, -10, 8, -10, 20, 0 ],
-                     rotate: [ 1, 0, -1, 0.5 ],
-                  } }
-                  transition={ {
+                     y: [15, -10, 8, -10, 20, 0],
+                     rotate: [1, 0, -1, 0.5],
+                  }}
+                  transition={{
                      type: "spring",
                      duration: 8,
                      yoyo: Infinity,
-                  } }>
-                  { hearoImg }
+                  }}>
+                  {hearoImg}
                </motion.div>
             </motion.div>
          </div>
       </section>
-   )
+   );
 }
 
 const customShapeDividerBottom1638543774 = {

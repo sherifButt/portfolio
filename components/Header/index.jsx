@@ -7,7 +7,7 @@ const Header = ({
    subtitle,
    button,
    img,
-   posts
+   posts,
 }) => {
    let html;
 
@@ -22,8 +22,8 @@ const Header = ({
             <Header_1
                title={title}
                subtitle={subtitle}
-             button={ button }
-               img={ img }
+               button={button}
+               img={img}
                posts={posts}
             />
          );
@@ -50,13 +50,15 @@ Header.defaultProps = {
            enabled: true,
            text: "click me",
            textLight: "for free",
+           href: "/contact",
            icon: 8594,
         },
    img: data?.header.img
       ? data.header.img
-    : {
-      imgSrc: {light:"48604-leadership.json",dark:""},
-    width:4},
+      : {
+           imgSrc: { light: "48604-leadership.json", dark: "" },
+           width: 4,
+        },
 };
 
 export default Header;

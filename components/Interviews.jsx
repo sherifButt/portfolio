@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+
 import InterviewsUsers from "./InterviewsUsers";
+import TemplateCreator from "./TemplateCreator"
 
 import { PlusIcon } from "@heroicons/react/solid";
 
@@ -13,7 +15,9 @@ const Interviews = () => {
    const [dataJSON, setDataJSON] = useState("");
    const [toggleJSONData, setToggleJSONData] = useState(true);
    const [fetchError, setFetchError] = useState("nothing");
-   const [page, setPage] = useState(1);
+   const [ page, setPage ] = useState( 1 );
+   
+ 
 
    useEffect(() => {
 		getRandomData( api );
@@ -88,6 +92,8 @@ const Interviews = () => {
                </article>
             )}
          </div>
+         
+         <TemplateCreator/>
       </div>
    );
 };

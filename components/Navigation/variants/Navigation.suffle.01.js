@@ -2,7 +2,7 @@ import Link from "next/link";
 import Logo from "../../Logo";
 
 const Header = () => {
-   cl
+   
    return (
       <nav>
          <div className="text-right py-2 px-4">

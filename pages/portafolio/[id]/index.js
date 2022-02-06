@@ -2,6 +2,8 @@
 
 import { getData } from "../../api/data";
 import DOMPurify from "isomorphic-dompurify";
+import matter from 'gray-matter'
+import {marked} from 'marked'
 
 const stats = [
    { label: "Founded", value: "2021" },
@@ -10,8 +12,8 @@ const stats = [
    { label: "Raised", value: "$25M" },
 ];
 
-const  Example=({ post }) => {
-    let description = DOMPurify.sanitize(post.description)  // clean description 
+const  Example=({ post,content }) => {
+    let description = marked(DOMPurify.sanitize(content))  // clean description 
     return (
        <div className=" relative  py-16 sm:py-24">
           <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
@@ -77,8 +79,7 @@ const  Example=({ post }) => {
                          <span
                             className="Container"
                             dangerouslySetInnerHTML={{
-                               __html: description,
-                            }}></span>
+                               __html: description}}></span>
                       </p>
                    </article>
                 </div>
@@ -121,11 +122,16 @@ const  Example=({ post }) => {
 export const getServerSideProps = async (context) => {
    const data = await getData();
    const posts = await data.portafolio.posts;
-  // console.log( posts.filter( i => i.id == context.params.id ) );
-  const post =  await posts.filter(i => i.id == context.params.id);
+   // console.log( posts.filter( i => i.id == context.params.id ) );
+   const post = await posts.filter(
+      i => i.id == context.params.id
+   );
+    const {content}=matter(post?[0].description) 
+   console.log(content);
    return {
       props: {
-         post:post[0]
+         post: post[ 0 ],
+         content
       },
    };
 };
