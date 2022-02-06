@@ -58,7 +58,7 @@ const  Example=({ post,content }) => {
                    <div className="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
                       <img
                          className="absolute inset-0 h-full w-full object-cover"
-                         src={post.imageUrl}
+                         src={post?.imageUrl}
                          alt=""
                       />
                       {/* <div className="absolute inset-0 bg-indigo-500 mix-blend-multiply" /> */}
@@ -72,7 +72,7 @@ const  Example=({ post,content }) => {
                 {/* Content area */}
                 <div className="pt-12 sm:pt-16 lg:pt-20">
                    <h2 className="leading-relaxed text-4xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal ">
-                      {post.title}
+                      {post?.title}
                    </h2>
                    <article className="prose dark:prose-invert mt-6 text-gray-500 space-y-6">
                       <p className="text-lg">
@@ -120,20 +120,27 @@ const  Example=({ post,content }) => {
  }
 
 export const getServerSideProps = async (context) => {
-   const data = await getData();
+   try{const data = await getData();
    const posts = await data.portafolio.posts;
    // console.log( posts.filter( i => i.id == context.params.id ) );
    const post = await posts.filter(
       i => i.id == context.params.id
-   );
-    const {content}=matter(post?[0].description) 
+   )[0];
+    const {content}=matter(post.description) 
    console.log(content);
    return {
       props: {
-         post: post[ 0 ],
+         post: post,
          content
       },
-   };
+      }
+   }catch ( e )
+ {
+    return {
+       notFound: true,
+    };
+   }
 };
+
 
 export default Example;

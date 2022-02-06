@@ -121,31 +121,29 @@ const Example = ({ post, content }) => {
 };
 
 export const getServerSideProps = async context => {
-   try {
-      const data = await getData();
-      const posts = await data.portafolio.posts;
-      // console.log( posts.filter( i => i.id == context.params.id ) );
-      const post = await posts.filter(
-         i => i.id == context.params.id
-      );
-      console.log(post)
-      
-      const { content } = matter(post[0].description);
-      console.log(content);
-      return {
-         props: {
-            post: post[0],
-            content,
-         },
-      };
-   } catch (e) {
-      console.log("faild to get posts");
-      return {
-         props: {
-            // post: "null",
-            content: "no posts",
-         },
-      };
+ try { const data = await getData();
+   const posts = await data.blog.posts;
+
+   // console.log( posts.filter( i => i.id == context.params.id ) );
+   const post = await posts.filter(
+      i => i.id == context.params.id
+   )[0];
+   
+
+   const { content } = matter( post?.description );
+   
+   console.log(content);
+   return {
+      props: {
+         post: post,
+         content,
+      }
+    }
+ } catch ( e )
+ {
+    return {
+       notFound: true,
+    };
    }
 };
 
