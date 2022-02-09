@@ -1,12 +1,12 @@
 import Link from "../NoScrollLink"
 
-const MenuPosts = ( { posts , mainTilte } ) => {
+const MenuPosts = ( { posts , mainTitle } ) => {
    return (
       
          <div className="px-5 py-5 bg-gray-50  dark:bg-gray-800 sm:px-8 sm:py-8">
             <div>
                <h3 className="text-sm tracking-wide font-medium text-gray-500 uppercase">
-                  Recent {mainTilte}s
+                  Recent {mainTitle}
                </h3>
                <ul role="list" className="mt-4 space-y-4">
                   {posts?.slice(0, 5).map(item => (
@@ -28,7 +28,7 @@ const MenuPosts = ( { posts , mainTilte } ) => {
                <Link href={posts[0].href}  passHref>
                   <a className="font-medium text-indigo-600 hover:text-indigo-500">
                      {" "}
-                     View all {mainTilte}s{" "}
+                     View all {mainTitle}{" "}
                      <span aria-hidden="true">&rarr;</span>
                   </a>
                </Link>
@@ -39,6 +39,6 @@ const MenuPosts = ( { posts , mainTilte } ) => {
 };
 
 MenuPosts.defaultProps = {
-   mainTilte:"post"
+   mainTitle:"posts"
 }
 export default MenuPosts

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "../../NoScrollLink";
-import Card from "../Card";
+import Card from "../CardFlip";
 import Pagination from "../Pagination";
 import Lottie from "../../Lottie";
 import {
@@ -94,16 +94,15 @@ export default function Blog({
                   {isTitle ? (
                      <Link href={href} passHref>
                         <a>
-                           <h2 className=" text-5xl  md:text-left text-center leading-normal tracking-tight font-extrabold text-gray-900 dark:text-gray-100 ">
+                           <h2 className=" text-5xl text-center leading-normal tracking-tight font-extrabold text-gray-900 dark:text-gray-100 ">
                               {title}
                            </h2>
                         </a>
                      </Link>
                   ) : (
                      ""
-                  ) }
-                  
-                  
+                  )}
+
                   {isSubtitle ? (
                      <p
                         ref={ref}
@@ -163,8 +162,10 @@ export default function Blog({
                                        id,
                                        title,
                                        href,
+                                       callToAction,
                                        imageUrl,
                                        category,
+                                       excerpt,
                                        description,
                                        author,
                                        datetime,
@@ -180,7 +181,11 @@ export default function Blog({
                                           id={id}
                                           title={title}
                                           href={href}
+                                          callToAction={
+                                             callToAction
+                                          }
                                           imageUrl={imageUrl}
+                                          excerpt={excerpt}
                                           category={category}
                                           description={
                                              description
@@ -241,7 +246,7 @@ export default function Blog({
 
 Blog.defaultProps = {
    items: 3,
-   href: "portafolio",
+   href: "blog",
    columns: 3,
    rows: 1,
    isTitle: true,

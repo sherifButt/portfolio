@@ -1,6 +1,8 @@
 import Clouds from "../Clouds";
 import data from "../../../siteData.config";
-
+const { title, subtitle, clouds } = data?.testimonials
+   ? data.testimonials
+   : "";
 
 
 
@@ -18,16 +20,16 @@ const Testimonials = ({data}) => {
                         className=""
                         className="Container"
                         dangerouslySetInnerHTML={{
-                           __html: data.title,
+                           __html: title,
                         }}></span>
                   </h2>
                   <p className="text-lg leading-6 mb-20 xl:mb-0 text-darkBlueGray-400 dark:text-gray-400">
-                     {data.subtitle}
+                     {subtitle}
                   </p>
                </div>
                <div className="w-full lg:w-2/3 xl:w-1/2 px-4">
                   <div className="flex flex-wrap">
-                     {data.posts.filter(Boolean).map((cloud, i) => (
+                     {clouds.filter(Boolean).map((cloud, i) => (
                         <Clouds
                            key={"cloud_"+i}
                            imgSrc={cloud.img.imgSrc}

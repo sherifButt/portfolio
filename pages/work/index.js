@@ -2,7 +2,7 @@ import Blog from "../../components/Blog";
 import Breadcrumb from "../../components/Breadcrumbs";
 import { getData } from "../api/data";
 
-const Portafolio = ({ posts, title,href, subtitle }) => {
+const Work = ({ posts, title,href, subtitle }) => {
    return (
       <>
          {/* <Breadcrumb className="mt-8 ml-8" /> */}
@@ -18,17 +18,17 @@ const Portafolio = ({ posts, title,href, subtitle }) => {
    );
 };
 
-export default Portafolio;
+export default Work;
 
 export const getStaticProps = async context => {
    console.log(`context`, context);
    const data = await getData();
    return {
       props: {
-         posts: data.portafolio.posts,
-         title: data.portafolio.title,
-         href: data.portafolio.href,
-         subtitle: data.portafolio.subtitle,
+         posts: data.work.posts,
+         title: data.work.title,
+         href: data.work.href,
+         subtitle: data.work.subtitle,
       },
    };
 };

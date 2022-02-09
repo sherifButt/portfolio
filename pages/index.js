@@ -16,6 +16,7 @@ import Pricing from "../components/Pricing";
 import Team from "../components/Team";
 import Testimonials from "../components/Testimonials";
 import { getData } from "./api/data";
+import axios from   "axios"
 
 export default function Home({
    data,
@@ -23,6 +24,7 @@ export default function Home({
    title,
    href,
    subtitle,
+   testimonials,
 }) {
    // framer motion animation contrll
    const animationControl = useAnimation();
@@ -48,8 +50,7 @@ export default function Home({
    return (
       <>
          <Header variant={1} posts={posts} />
-         <HowItWorks variant={3} data={data} />
-         <Features data={data} />
+         {/* <HowItWorks variant={3} data={data} /> */}
          <Blog
             variant={3}
             items={3}
@@ -60,8 +61,9 @@ export default function Home({
             posts={posts}
             noObservation={false}
          />
+         <Features data={data} />
          {/* <Faq /> */}
-         <Testimonials variant={3} data={data} />
+         <Testimonials variant={3} data={testimonials} />
          {/* <Team /> */}
          {/* <Pricing variant={1} /> */}
          <Faq variant={3} />
@@ -93,12 +95,16 @@ const Text = styled.h1`
 export const getStaticProps = async context => {
    
    const data = await getData();
+   
+   // const res = await axios( '/api/data' );
+   // const data = res.data
    return {
       props: {
-         posts: data.portafolio.posts,
-         title: data.portafolio.title,
-         href: data.portafolio.href,
-         subtitle: data.portafolio.subtitle,
+         testimonials: data.testimonials,
+         posts: data.work.posts,
+         title: data.work.title,
+         href: data.work.href,
+         subtitle: data.work.subtitle,
       },
    };
 };

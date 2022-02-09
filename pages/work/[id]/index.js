@@ -121,7 +121,7 @@ const  Example=({ post,content }) => {
 
 export const getServerSideProps = async (context) => {
    try{const data = await getData();
-   const posts = await data.portafolio.posts;
+   const posts = await data.work.posts;
    // console.log( posts.filter( i => i.id == context.params.id ) );
    const post = await posts.filter(
       i => i.id == context.params.id

@@ -246,17 +246,25 @@ export default function Navigation({ className, data }) {
                                     <div className="rounded-lg shadow-lg dark:shadow-gray-900 dark:border dark:border-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
                                        <MenuIcons
                                           posts={
-                                             data.category?.posts
+                                             data.toolkit?.posts
                                           }
                                           category={
-                                             data?.category
+                                             data?.toolkit
                                           }
+                                          mainTitle="tools"
+                                       />
+                                       <MenuPosts
+                                          posts={
+                                             data.work?.posts
+                                          }
+                                          mainTitle="work"
                                        />
                                        <MenuCallsToAction
                                           posts={
                                              data.callsToAction
                                                 ?.posts
                                           }
+                                          
                                        />
                                     </div>
                                  </Popover.Panel>
@@ -319,13 +327,15 @@ export default function Navigation({ className, data }) {
                                           posts={
                                              data.category?.posts
                                           }
-                                          category={data?.category}
+                                          category={
+                                             data?.category
+                                          }
                                        />
                                        <MenuPosts
                                           posts={
                                              data.blog?.posts
                                           }
-                                          mainTilte="post"
+                                          mainTitle="posts"
                                        />
                                     </div>
                                  </Popover.Panel>

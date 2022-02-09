@@ -1,5 +1,4 @@
 import Blog_01 from "./variants/Bolg.shuffle.01";
-// import Blog_02 from "./variants/Blog.devdojo.01";
 import Blog_03 from "./variants/Blog.tailwind.01";
 
 const Blog = ({
