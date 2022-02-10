@@ -3,7 +3,7 @@ import Link from "../NoScrollLink";
 import Image from "next/image";
 import Blob from "../Blob";
 import MorphedSvg from "../MorphedSvg";
-import { GithubIcon } from "@heroicons/react/solid";
+import { XIcon } from "@heroicons/react/solid";
 import ReactCardFlip from "react-card-flip";
 
 function classNames(...classes) {
@@ -25,18 +25,30 @@ const Card = ({
    author,
    posts, // posts array
    displayedPost, // selected post to display
-} ) => {
-    const [isFlipped, setIsFlipped] = useState(false);
+}) => {
+   const [isFlipped, setIsFlipped] = useState(false);
+   const [isOff, setIsOff] = useState(true);
 
-    const handleClick = () => {
-       setIsFlipped(!isFlipped);
-    };
+   const handleMouseEnter = () => {
+      if (isOff) setIsFlipped(!isFlipped);
+   };
+   const handleMouseLeave = () => {
+     if (!isOff) setIsOff(!isOff);
+      if ( isOff ) setIsFlipped( !isFlipped );
+      
+   };
+   const handleCrossClick = () => {
+      setIsFlipped( !isFlipped );
+      setIsOff(!isOff)
+   }
    return (
       <ReactCardFlip
          isFlipped={isFlipped}
          flipDirection="horizontal">
+         {/* Flip front side */}
          <div
-            onMouseEnter={handleClick}
+            onMouseEnter={handleMouseEnter}
+            onClick={handleMouseEnter}
             className=" flex flex-col rounded-lg shadow-lg overflow-hidden  dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-40">
             <img
                className="h-96 -mb-2 w-full object-cover "
@@ -79,127 +91,123 @@ const Card = ({
                   ))}
             </p>
          </div>
+         {/* flip back side */}
          <div
             key={posts ? posts[displayedPost].title : title}
             className="flex flex-col rounded-lg shadow-lg overflow-hidden  dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-40 "
-            onMouseLeave={handleClick}>
-            <Link
-               href={`${
-                  posts ? posts[displayedPost].href : href
-               }/${posts ? posts[displayedPost].id : id}`}
-               passHref>
-               <a>
-                  <div className="flex-shrink-0">
-                     <img
-                        className="h-48 -mb-2 w-full object-cover "
-                        src={
-                           posts
-                              ? posts[displayedPost].imageUrl
-                              : imageUrl
-                        }
-                        alt=""
-                     />
+            onMouseLeave={handleMouseLeave}>
+            <div className="flex-shrink-0">
+               <div className="ml-auto p-3 absolute right-0">
+                  <div className="-mx-1.5 -my-1.5">
+                     <button
+                        onClick={handleCrossClick}
+                        type="button"
+                        className="inline-flex   rounded-md p-1.5 text-gray-900 hover:text-indigo-500  focus:outline-none  ">
+                        <span className="sr-only">Dismiss</span>
+                        <XIcon
+                           className="h-5 w-5"
+                           aria-hidden="true"
+                        />
+                     </button>
                   </div>
-                  <div className="flex-1  p-6 flex flex-col justify-between ">
-                     <div className="flex-1">
-                        <p className="text-sm font-medium dark:text-indigo-400  text-indigo-600 hidden md:inline-block ">
-                           {Array.isArray(category) &&
-                              category
-                                 .filter(Boolean)
-                                 .map(cat => (
-                                    <a
-                                       key={
-                                          posts
-                                             ? posts[
-                                                  displayedPost
-                                               ].cat.title
-                                             : cat.title
-                                       }
-                                       href={
-                                          posts
-                                             ? posts[
-                                                  displayedPost
-                                               ].cat.href
-                                             : cat.href
-                                       }
-                                       className={classNames(
-                                          posts
-                                             ? posts[
-                                                  displayedPost
-                                               ].cat.color
-                                             : cat.color,
-                                          "hover:underline dark:bg-gray-800 mt-2 inline-flex items-center mr-2 px-3 py-0.5 rounded-full text-sm font-medium "
-                                       )}>
-                                       {posts
-                                          ? posts[displayedPost]
-                                               .cat.title
-                                          : cat.title}
-                                    </a>
-                                 ))}
+               </div>
+               <img
+                  className="h-48 -mb-2 w-full object-cover "
+                  src={
+                     posts
+                        ? posts[displayedPost].imageUrl
+                        : imageUrl
+                  }
+                  alt=""
+               />
+            </div>
+            <div className="flex-1  p-6 flex flex-col justify-between ">
+               <div className="flex-1">
+                  <p className="text-sm font-medium dark:text-indigo-400  text-indigo-600 hidden md:inline-block ">
+                     {Array.isArray(category) &&
+                        category.filter(Boolean).map(cat => (
+                           <a
+                              key={
+                                 posts
+                                    ? posts[displayedPost].cat
+                                         .title
+                                    : cat.title
+                              }
+                              href={
+                                 posts
+                                    ? posts[displayedPost].cat
+                                         .href
+                                    : cat.href
+                              }
+                              className={classNames(
+                                 posts
+                                    ? posts[displayedPost].cat
+                                         .color
+                                    : cat.color,
+                                 "hover:underline dark:bg-gray-800 mt-2 inline-flex items-center mr-2 px-3 py-0.5 rounded-full text-sm font-medium "
+                              )}>
+                              {posts
+                                 ? posts[displayedPost].cat.title
+                                 : cat.title}
+                           </a>
+                        ))}
+                  </p>
+
+                  <Link
+                     href={`${
+                        posts ? posts[displayedPost].href : href
+                     }/${posts ? posts[displayedPost].id : id}`}
+                     passHref>
+                     <a>
+                        <h3 className="text-xl mt-5  font-semibold text-gray-900 dark:text-gray-100 leading-relaxed text-left">
+                           {(posts
+                              ? posts[displayedPost].title
+                              : title
+                           )
+                              .replace(/(<([^>]+)>)/gi, "")
+                              .substring(0, 45)}{" "}
+                           →
+                        </h3>
+
+                        <p className="mt-3 text-base text-gray-500  text-left hidden md:inline-block">
+                           {(posts
+                              ? posts[displayedPost].excerpt
+                              : excerpt
+                           ).substring(0, 80)}{" "}
+                           ...
                         </p>
-                        <a
-                           href={
-                              posts
-                                 ? posts[displayedPost].href
-                                 : href
-                           }
-                           className="block mt-5">
-                           <h3 className="text-xl  font-semibold text-gray-900 dark:text-gray-100 leading-relaxed text-left">
-                              {(posts
-                                 ? posts[displayedPost].title
-                                 : title
-                              )
-                                 .replace(/(<([^>]+)>)/gi, "")
-                                 .substring(0, 45)}{" "}
-                              →
-                           </h3>
+                     </a>
+                  </Link>
+               </div>
 
-                           <p className="mt-3 text-base text-gray-500  text-left hidden md:inline-block">
-                              {(posts
-                                 ? posts[displayedPost].excerpt
-                                 : excerpt
-                              ).substring(0, 80)}{" "}
-                              ...
-                           </p>
-                        </a>
-                     </div>
-
-                     <span className="relative z-0 inline-flex mt-5 right">
-                        {posts
-                           ? posts[displayedPost].callToAction
-                           : callToAction.map(button => (
-                                <Link
-                                   href={button.href}
-                                   passHref>
-                                   <a>
-                                      <button
-                                         type="button"
-                                         className="inline-flex items-center px-4 mr-2 py-2 border dark:border-indigo-600 border-gray-300 shadow-sm text-sm font-medium rounded-md dark:text-indigo-900 text-gray-700 bg-white dark:bg-indigo-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:shadow-lg dark:shadow-indigo-500/50">
-                                         {button.icon ? (
-                                            <svg
-                                               xmlns="http://www.w3.org/2000/svg"
-                                               width="20"
-                                               height="20"
-                                               viewBox="0 0 24 24"
-                                               className="fill-indigo-700 dark:fill-indigo-900 mr-1">
-                                               <path
-                                                  d={button.icon}
-                                               />
-                                            </svg>
-                                         ) : (
-                                            ""
-                                         )}
-                                         {button
-                                            ? button.title
-                                            : ""}
-                                      </button>
-                                   </a>
-                                </Link>
-                             ))}
-                     </span>
-                  </div>
-               </a>
-            </Link>
+               <span className="relative z-0 inline-flex mt-5 right">
+                  {posts
+                     ? posts[displayedPost].callToAction
+                     : callToAction.map(button => (
+                          <Link href={button.href} passHref>
+                             <a>
+                                <button
+                                   type="button"
+                                   className="inline-flex items-center px-4 mr-2 py-2 border dark:border-indigo-600 border-gray-300 shadow-sm text-sm font-medium rounded-md dark:text-indigo-900 text-gray-700 bg-white dark:bg-indigo-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:shadow-lg dark:shadow-indigo-500/50">
+                                   {button.icon ? (
+                                      <svg
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         width="20"
+                                         height="20"
+                                         viewBox="0 0 24 24"
+                                         className="fill-indigo-700 dark:fill-indigo-900 mr-1">
+                                         <path d={button.icon} />
+                                      </svg>
+                                   ) : (
+                                      ""
+                                   )}
+                                   {button ? button.title : ""}
+                                </button>
+                             </a>
+                          </Link>
+                       ))}
+               </span>
+            </div>
          </div>
       </ReactCardFlip>
    );
@@ -225,7 +233,5 @@ Card.defaultProps = {
          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
    },
 };
-
-
 
 export default Card;
