@@ -30,14 +30,16 @@ const Card = ({
    const [isOff, setIsOff] = useState(true);
 
    const handleMouseEnter = () => {
+      if (!isOff) setIsOff(!isOff);
       if (isOff) setIsFlipped(!isFlipped);
    };
    const handleMouseLeave = () => {
-     if (!isOff) setIsOff(!isOff);
+     
       if ( isOff ) setIsFlipped( !isFlipped );
       
    };
    const handleCrossClick = () => {
+      
       setIsFlipped( !isFlipped );
       setIsOff(!isOff)
    }
@@ -87,7 +89,7 @@ const Card = ({
                            className="fill-indigo-700 dark:fill-indigo-600 mr-1  ">
                            <path d={cat.icon} />
                         </svg>
-                        {" "}
+                        &nbsp;
                      </a>
                   ))}
             </p>
