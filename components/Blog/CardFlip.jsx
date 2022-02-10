@@ -87,6 +87,7 @@ const Card = ({
                            className="fill-indigo-700 dark:fill-indigo-600 mr-1  ">
                            <path d={cat.icon} />
                         </svg>
+                        v
                      </a>
                   ))}
             </p>
