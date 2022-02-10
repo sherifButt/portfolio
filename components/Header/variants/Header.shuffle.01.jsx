@@ -158,6 +158,14 @@ const Header = ( {
                               </span>
                            </a>
                         </Link>
+                        <Link href={button.href} passHref>
+                           <a className="inline-block mt-5 md:mt-10  py-4 px-8 mr-6 leading-none text-indigo-400 border-2 border-indigo-600 bg-transparent hover:text-white font-light rounded  shadow-lg  hover:shadow-indigo-700/40">
+                              Check my work{" "}
+                              <span className="font-light">
+                                 &darr;
+                              </span>
+                           </a>
+                        </Link>
                      </motion.div>
                   </Motion>
                ) : (

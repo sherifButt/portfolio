@@ -2,7 +2,7 @@ import FlashText from "./components/Options/FlashText";
 export default {
    category: {
       pretitle: "What do we say often?",
-      title: "From the Portafolio",
+      title: "From the Portfolio",
       subtitle:
          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
       href: "/category",
@@ -310,7 +310,7 @@ export default {
    },
    work: {
       pretitle: "I did it!",
-      title: "Check My Work",
+      title: "My Work",
       subtitle:
          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
       href: "/work",
@@ -608,12 +608,12 @@ export default {
    callsToAction: {
       posts: [
          {
-            title: "Resume",
+            title: "CV",
             href: "/resume",
             icon: "M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z",
          },
          {
-            title: "Hire Me",
+            title: "Contact Me",
             href: "/contact",
             icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
          },
@@ -798,15 +798,17 @@ export default {
       pretitle: "What do we do?",
       title: (
          <>
-            I convert your{" "}
-            <span className="text-indigo-700">IDEAS</span> to Web
+            I translate{" "}
+            <span className="text-indigo-700">IDEAS</span> into{" "}
+            <span className="text-indigo-700">code</span> using{" "}
             <FlashText className="text-indigo-700">
-               Apps|Sites|Shops
+               Javascript|React|NextJs|html
             </FlashText>
          </>
       ),
       subtitle:
-         "🇬🇧 I'm Sherif, MERN FullStack Web Dev, I'd Love to help building your next modern, fast and dynamic web project, websites, web app or web-shop",
+         // "🇬🇧 I'm Sherif, MERN FullStack Web Dev, I'd Love to help building your next modern, fast and dynamic web project, websites, web app or web-shop",
+         "🇬🇧 Hi, I’m Sherif: passionate, self-taught front web developer with experience in structuring, developing and implementing interactive websites and webapps - hence, I desinged and coded this protfolio-site... 😎",
       // I make the Web come Alive
       button: {
          enabled: true,
