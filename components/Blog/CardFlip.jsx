@@ -66,19 +66,13 @@ const Card = ({
                   category.filter(Boolean).map(cat => (
                      <a
                         key={
-                           posts
-                              ? posts[displayedPost].cat.title
-                              : cat.title
+                          cat.title
                         }
                         href={
-                           posts
-                              ? posts[displayedPost].cat.href
-                              : cat.href
+                           cat.href
                         }
                         className={classNames(
-                           posts
-                              ? posts[displayedPost].cat.color
-                              : cat.color,
+                           cat.color,
                            "hover:underline bg-transparent  mt-2 inline-flex items-center  px-3 py-0.5 rounded-full text-sm font-medium "
                         )}>
                         <svg
@@ -131,27 +125,16 @@ const Card = ({
                         category.filter(Boolean).map(cat => (
                            <a
                               key={
-                                 posts
-                                    ? posts[displayedPost].cat
-                                         .title
-                                    : cat.title
+                                cat.title
                               }
                               href={
-                                 posts
-                                    ? posts[displayedPost].cat
-                                         .href
-                                    : cat.href
+                                cat.href
                               }
                               className={classNames(
-                                 posts
-                                    ? posts[displayedPost].cat
-                                         .color
-                                    : cat.color,
+                                  cat.color,
                                  "hover:underline dark:bg-gray-800 mt-2 inline-flex items-center mr-2 px-3 py-0.5 rounded-full text-sm font-medium "
                               )}>
-                              {posts
-                                 ? posts[displayedPost].cat.title
-                                 : cat.title}
+                              {cat.title}
                            </a>
                         ))}
                   </p>
