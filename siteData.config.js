@@ -802,7 +802,7 @@ export default {
             <span className="text-indigo-700">IDEAS</span> into{" "}
             <span className="text-indigo-700">code</span> using{" "}
             <FlashText className="text-indigo-700">
-               Javascript|React|NextJs|html
+               Javascript|React|NextJs|html|css|sass
             </FlashText>
          </>
       ),

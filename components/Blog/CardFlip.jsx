@@ -65,12 +65,8 @@ const Card = ({
                {Array.isArray(category) &&
                   category.filter(Boolean).map(cat => (
                      <a
-                        key={
-                          cat.title
-                        }
-                        href={
-                           cat.href
-                        }
+                        key={cat.title}
+                        href={cat.href}
                         className={classNames(
                            cat.color,
                            "hover:underline bg-transparent  mt-2 inline-flex items-center  px-3 py-0.5 rounded-full text-sm font-medium "
@@ -91,7 +87,7 @@ const Card = ({
          {/* flip back side */}
          <div
             key={posts ? posts[displayedPost].title : title}
-            className="flex flex-col rounded-lg shadow-lg overflow-hidden  dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-40 "
+            className="flex h-96 flex-col rounded-lg shadow-lg overflow-hidden  dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-40 border dark:border-0  border-gray-100 dark:border-gray-800"
             onMouseLeave={handleMouseLeave}>
             <div className="flex-shrink-0">
                <div className="ml-auto p-3 absolute right-0">
@@ -99,7 +95,7 @@ const Card = ({
                      <button
                         onClick={handleCrossClick}
                         type="button"
-                        className="inline-flex   rounded-md p-1.5 text-gray-900 hover:text-indigo-500  focus:outline-none  ">
+                        className="inline-flex   rounded-md p-1.5 text-gray-900 dark:text-gray-200 hover:text-indigo-500  focus:outline-none  ">
                         <span className="sr-only">Dismiss</span>
                         <XIcon
                            className="h-5 w-5"
@@ -108,7 +104,7 @@ const Card = ({
                      </button>
                   </div>
                </div>
-               <img
+               {/* <img
                   className="h-48 -mb-2 w-full object-cover "
                   src={
                      posts
@@ -116,7 +112,7 @@ const Card = ({
                         : imageUrl
                   }
                   alt=""
-               />
+               /> */}
             </div>
             <div className="flex-1  p-6 flex flex-col justify-between ">
                <div className="flex-1">
@@ -124,14 +120,10 @@ const Card = ({
                      {Array.isArray(category) &&
                         category.filter(Boolean).map(cat => (
                            <a
-                              key={
-                                cat.title
-                              }
-                              href={
-                                cat.href
-                              }
+                              key={cat.title}
+                              href={cat.href}
                               className={classNames(
-                                  cat.color,
+                                 cat.color,
                                  "hover:underline dark:bg-gray-800 mt-2 inline-flex items-center mr-2 px-3 py-0.5 rounded-full text-sm font-medium "
                               )}>
                               {cat.title}
@@ -174,7 +166,7 @@ const Card = ({
                              <a>
                                 <button
                                    type="button"
-                                   className="inline-flex items-center px-4 mr-2 py-2 border dark:border-indigo-600 border-gray-300 shadow-sm text-sm font-medium rounded-md dark:text-indigo-900 text-gray-700 bg-white dark:bg-indigo-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:shadow-lg dark:shadow-indigo-500/50">
+                                   className="inline-flex items-center px-4 mr-2 py-2 border dark:border-indigo-600 border-indigo-600 shadow-sm text-sm font-medium rounded-md dark:text-indigo-900 text-indigo-600 bg-white dark:bg-indigo-600 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:shadow-lg dark:shadow-indigo-500/50">
                                    {button.icon ? (
                                       <svg
                                          xmlns="http://www.w3.org/2000/svg"

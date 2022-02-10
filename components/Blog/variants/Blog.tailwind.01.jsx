@@ -76,10 +76,10 @@ export default function Blog({
          controls.start("hidden");
          controls.start("visible");
       }
-   }, [ previousPage, currentPage ] );
-   
+   }, [previousPage, currentPage]);
+
    return (
-      <section className="">
+      <section id="blog" className="">
          <div
             className={`m-auto relative  ${
                isTitle ? "pt-16" : ""
@@ -122,7 +122,6 @@ export default function Blog({
                            <a
                               onClick={() => {
                                  setPreviousPage(currentPage);
-
                                  setTimeout(() => {
                                     setCurrentPage(
                                        currentPage - 1
