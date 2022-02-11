@@ -261,7 +261,7 @@ export default function Example() {
                         />
                      </div>
                   </div>
-                  <div className="sm:col-span-2">
+                  {/* <div className="sm:col-span-2">
                      <label
                         htmlFor="phone-number"
                         className="block text-sm font-medium text-gray-700 dark:text-gray-400">
@@ -307,7 +307,7 @@ export default function Example() {
                            value={formFields.phone}
                         />
                      </div>
-                  </div>
+                  </div> */}
                   <div className="sm:col-span-2">
                      <label
                         htmlFor="message"
