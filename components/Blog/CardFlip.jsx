@@ -61,7 +61,7 @@ const Card = ({
                }
                alt=""
             />
-            <p className="text-sm p-1 mt-2 font-medium dark:text-indigo-400  text-indigo-600 hidden md:inline-block ">
+            <p className=" text-sm p-1 mt-1 font-medium dark:text-indigo-400  text-indigo-600 hidden md:inline-block ">
                {Array.isArray(category) &&
                   category.filter(Boolean).map(cat => (
                      <a
@@ -73,10 +73,10 @@ const Card = ({
                         )}>
                         <svg
                            xmlns="http://www.w3.org/2000/svg"
-                           width="30"
-                           height="30"
+                           width="24"
+                           height="24"
                            viewBox="0 0 24 24"
-                           className="fill-indigo-700 dark:fill-indigo-600 mr-1  ">
+                           className="fill-indigo-00 dark:fill-indigo-500 mr-1 drop-shadow-sm ">
                            <path d={cat.icon} />
                         </svg>
                         &nbsp;

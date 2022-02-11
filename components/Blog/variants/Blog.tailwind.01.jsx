@@ -90,7 +90,9 @@ export default function Blog({
                <div className=" h-1/3 sm:h-2/3" />
             </div>
             <div className="relative max-w-7xl mx-auto">
-               <div className="relative z-10 text-center">
+               <div
+                  ref={ref}
+                  className="relative z-10 text-center">
                   {isTitle ? (
                      <Link href={href} passHref>
                         <a>
@@ -104,9 +106,7 @@ export default function Blog({
                   )}
 
                   {isSubtitle ? (
-                     <p
-                        ref={ref}
-                        className=" mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+                     <p className=" mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
                         {subtitle}
                      </p>
                   ) : (
