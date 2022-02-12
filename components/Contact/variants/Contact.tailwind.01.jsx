@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Switch } from "@headlessui/react";
 import axios from "axios";
 import Alert from "../Alert_01";
+import { motion, AnimatePresence } from "framer-motion";
 
 function classNames(...classes) {
    return classes.filter(Boolean).join(" ");
@@ -21,6 +22,17 @@ export default function Example() {
       isAlert: false,
       message: "",
       success: true,
+   });
+
+   const [isFormDisabled, setIsFormDisabled] = useState({
+      firstName: false,
+      lastName: false,
+      email: false,
+      country: false,
+      phone: false,
+      message: false,
+      privacyPolicy: false,
+      button: false,
    });
 
    const handleToggleAlert = () => {
@@ -49,18 +61,19 @@ export default function Example() {
             message: "Please fill in missing information below!",
             success: false,
          });
-         return ;
+         return;
       }
-
+      setIsFormDisabled({ ...isFormDisabled, button: true });
       const response = await sendData(formFields);
-
+      if (response)
+         setIsFormDisabled({ ...isFormDisabled, button: false });
       setAlert({
          isAlert: true,
          message: response.message,
          success: response.success,
-      } );
-     
-      setAgreed(false)
+      });
+
+      setAgreed(false);
 
       setFormFields({
          firstName: "",
@@ -160,15 +173,21 @@ export default function Example() {
                </p>
             </div>
             <div className="mt-12">
-               {alert.isAlert ? (
-                  <Alert
-                     message={alert.message}
-                     success={alert.success}
-                     className="my-5"
-                     handleToggleAlert={handleToggleAlert}
-                  />
-               ) : (
-                  ""
+               {alert.isAlert && (
+                  <AnimatePresence>
+                     <motion.div
+                        key="alert2"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}>
+                        <Alert
+                           message={alert.message}
+                           success={alert.success}
+                           className="my-5"
+                           handleToggleAlert={handleToggleAlert}
+                        />
+                     </motion.div>
+                  </AnimatePresence>
                )}
                <form
                   action="#"
@@ -187,7 +206,7 @@ export default function Example() {
                            name="first-name"
                            id="first-name"
                            autoComplete="given-name"
-                           className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md "
+                           className="border py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md "
                            onChange={e =>
                               setFormFields({
                                  ...formFields,
@@ -210,7 +229,7 @@ export default function Example() {
                            name="last-name"
                            id="last-name"
                            autoComplete="family-name"
-                           className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                           className="border py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                            onChange={e =>
                               setFormFields({
                                  ...formFields,
@@ -249,8 +268,8 @@ export default function Example() {
                            id="email"
                            name="email"
                            type="email"
-                           autoComplete="email"
-                           className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                           autoComplete="email" 
+                           className="border py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                            onChange={e =>
                               setFormFields({
                                  ...formFields,
@@ -378,9 +397,33 @@ export default function Example() {
                   </div>
                   <div className="sm:col-span-2">
                      <button
+                        disabled={isFormDisabled.button}
                         type="submit"
-                        className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Let's talk
+                        className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 disabled:bg-indigo-300 disabled:cursor-not-allowed hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        {isFormDisabled.button ? (
+                           <>
+                              <svg
+                                 class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 fill="none"
+                                 viewBox="0 0 24 24">
+                                 <circle
+                                    class="opacity-25"
+                                    cx="12"
+                                    cy="12"
+                                    r="10"
+                                    stroke="currentColor"
+                                    stroke-width="4"></circle>
+                                 <path
+                                    class="opacity-75"
+                                    fill="currentColor"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                              </svg>
+                              Sending...
+                           </>
+                        ) : (
+                           "Let's talk"
+                        )}
                      </button>
                   </div>
                </form>

@@ -254,7 +254,7 @@ Blog.defaultProps = {
    title: "From the Blog",
    subtitle:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
-   posts: [],
+   // posts: [],
    isPagination: true,
    isPaginationArrows: false,
 };
