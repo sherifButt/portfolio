@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "../../NoScrollLink";
-import Card from "../CardFlip";
+import Card from "../Card_02";
 import Pagination from "../Pagination";
 import Lottie from "../../Lottie";
 import {

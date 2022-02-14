@@ -31,6 +31,7 @@ import MenuIcons from "../MenuIcons";
 import MenuCallsToAction from "../MenuCallsToAction";
 import MenuPosts from "../MenuPosts";
 
+
 const work = [
    {
       name: "Analytics",
@@ -244,15 +245,7 @@ export default function Navigation({ className, data }) {
                                  leaveTo="opacity-0 translate-y-1">
                                  <Popover.Panel className="absolute z-20 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                                     <div className="rounded-lg shadow-lg dark:shadow-gray-900 dark:border dark:border-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                       <MenuIcons
-                                          posts={
-                                             data.toolkit?.posts
-                                          }
-                                          category={
-                                             data?.toolkit
-                                          }
-                                          mainTitle="tools"
-                                       />
+                                       
                                        <MenuPosts
                                           posts={
                                              data.work?.posts
@@ -273,6 +266,59 @@ export default function Navigation({ className, data }) {
                         )}
                      </Popover>
                   </motion.div>
+                  <motion.div variants={item}>
+                     <Popover className="relative">
+                        {({ open }) => (
+                           <>
+                              <Popover.Button
+                                 className={classNames(
+                                    open
+                                       ? "text-gray-900 dark:text-gray-200"
+                                       : "text-gray-500 dark:text-gray-400",
+                                    "group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-indigo-900 focus:ring-indigo-500 pl-3"
+                                 )}>
+                                 <span className="capitalize">
+                                    toolkit
+                                 </span>
+                                 <ChevronDownIcon
+                                    className={classNames(
+                                       open
+                                          ? "text-gray-600"
+                                          : "text-gray-400",
+                                       "ml-2 h-5 w-5 group-hover:text-gray-500"
+                                    )}
+                                    aria-hidden="true"
+                                 />
+                              </Popover.Button>
+
+                              <Transition
+                                 as={Fragment}
+                                 enter="transition ease-out duration-200"
+                                 enterFrom="opacity-0 translate-y-1"
+                                 enterTo="opacity-100 translate-y-0"
+                                 leave="transition ease-in duration-150"
+                                 leaveFrom="opacity-100 translate-y-0"
+                                 leaveTo="opacity-0 translate-y-1">
+                                 <Popover.Panel className="absolute z-20 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                                    <div className="rounded-lg shadow-lg dark:shadow-gray-900 dark:border dark:border-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
+                                       <MenuIcons
+                                          posts={
+                                             data.toolkit?.posts
+                                          }
+                                          category={
+                                             data?.toolkit
+                                          }
+                                          mainTitle="tools"
+                                       />
+                                       
+                                       
+                                    </div>
+                                 </Popover.Panel>
+                              </Transition>
+                           </>
+                        )}
+                     </Popover>
+                  </motion.div>
 
                   <motion.a
                      variants={item}
@@ -280,13 +326,7 @@ export default function Navigation({ className, data }) {
                      className="capitalize text-base font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
                      about
                   </motion.a>
-                  <motion.div variants={item}>
-                     <Link href="/faq" passHref>
-                        <a className="text-base font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
-                           Faq
-                        </a>
-                     </Link>
-                  </motion.div>
+                  
 
                   <motion.div variants={item}>
                      <Popover className="relative">

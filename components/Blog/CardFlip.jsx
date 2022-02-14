@@ -21,6 +21,7 @@ const Card = ({
    date,
    datetime,
    imageUrl,
+   imageUrlDetail,
    readingTime,
    author,
    posts, // posts array
@@ -104,15 +105,15 @@ const Card = ({
                      </button>
                   </div>
                </div>
-               {/* <img
+               {/* {imageUrlDetail&&<img
                   className="h-48 -mb-2 w-full object-cover "
                   src={
                      posts
-                        ? posts[displayedPost].imageUrl
-                        : imageUrl
+                        ? posts[displayedPost].imageUrlDetail
+                        : imageUrlDetail
                   }
                   alt=""
-               /> */}
+               />} */}
             </div>
             <div className="flex-1  p-6 flex flex-col justify-between ">
                <div className="flex-1">
@@ -137,7 +138,9 @@ const Card = ({
                      }/${posts ? posts[displayedPost].id : id}`}
                      passHref>
                      <a>
-                        <h3 className="text-xl mt-5  font-semibold text-gray-900 dark:text-gray-100 leading-relaxed text-left">
+                        <h3
+                           className="text-xl mt-5  font-semibold text-gray-900 dark:text-gray-100 leading-relaxed text-left"
+                        >
                            {(posts
                               ? posts[displayedPost].title
                               : title

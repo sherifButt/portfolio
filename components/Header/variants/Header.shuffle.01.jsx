@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState} from "react"
 import {
    useViewportScroll,
    motion,
@@ -12,8 +12,9 @@ import Motion from "../../Motion"
 import { useTheme } from "next-themes"
 import Card from "../../Blog/Card"
 import DOMPurify from "isomorphic-dompurify"
-import Blog from "../../Blog/variants/Blog.tailwind.01"
+import Blog from "../../Blog"
 import Blob from "../../MorphedSvg/svg/Blob"
+import ReactCardFlip from "react-card-flip"
 
 const Header = ( {
    title,
@@ -23,6 +24,16 @@ const Header = ( {
    posts,
    displayedPost,
 } ) => {
+   const [ isFlipped, setIsFlipped ] = useState( false );
+   const [isOff, setIsOff] = useState(true);
+
+   const handleMouseEnter = () => {
+      if (!isOff) setIsOff(!isOff);
+      if (isOff) setIsFlipped(!isFlipped);
+   };
+   const handleMouseLeave = () => {
+      if (isOff) setIsFlipped(!isFlipped);
+   };
    // let cleanTitle = DOMPurify.sanitize( title )
    const { theme, setTheme } = useTheme()
    const { scrollY } = useViewportScroll();
@@ -70,22 +81,33 @@ const Header = ( {
                />
             </motion.div>
             {/* <Card posts={posts} displayedPost={1} /> */}
-            <div className="opacity-70 md:opacity-100 ease-in duration-300 hover:opacity-100  hover:scale-110">
-               {" "}
-               <Lottie path={img.imgSrc.light} />
-            </div>
-            {/* <Blog
-               posts={posts}
-               items={1}
-               rows={1}
-               columns={1}
-               isSubtitle={false}
-               isTitle={false}
-               isBackground={false}
-               isPagination={false}
-               isPaginationArrows={true}
-               noObservation={true}
-            /> */}
+
+            <ReactCardFlip
+               isFlipped={isFlipped}
+               flipDirection="horizontal">
+               <div
+                  onMouseEnter={handleMouseEnter}
+                  onClick={handleMouseEnter}
+                  className="opacity-70 md:opacity-100 ease-in duration-300 hover:opacity-100  hover:scale-110">
+                  {" "}
+                  <Lottie path={img.imgSrc.light} />
+               </div>
+               <div onMouseLeave={handleMouseLeave}>
+                  <Blog
+                     variant={2}
+                     posts={posts}
+                     items={1}
+                     rows={1}
+                     columns={1}
+                     isSubtitle={false}
+                     isTitle={false}
+                     isBackground={false}
+                     isPagination={false}
+                     isPaginationArrows={true}
+                     noObservation={true}
+                  />
+               </div>
+            </ReactCardFlip>
          </div>
          <div className="hidden dark:inline-block  ">
             <motion.div
@@ -108,7 +130,7 @@ const Header = ( {
          className={`w-${img.width} mx-auto z-0`}
          src={img.imgSrc}
          style={{ mixBlendMode: "multiply" }}
-      /> 
+      />
    );
 
    return (

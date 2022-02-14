@@ -1,4 +1,5 @@
 import Blog_01 from "./variants/Bolg.shuffle.01";
+import Blog_02 from "./variants/Blog.tailwind.02";
 import Blog_03 from "./variants/Blog.tailwind.01";
 
 const Blog = ({
@@ -21,10 +22,40 @@ const Blog = ({
 
    switch (variant) {
       case 1:
-         html = <Blog_01 />;
+         html = (
+            <Blog_01
+               title={title}
+               subtitle={subtitle}
+               href={href}
+               posts={posts}
+               items={items}
+               columns={columns}
+               rows={rows}
+               isTitle={isTitle}
+               isSubtitle={isSubtitle}
+               isBackground={isBackground}
+               isPagination={isPagination}
+               isPaginationArrows={isPaginationArrows}
+            />
+         );
          break;
       case 2:
-         html = <Blog_02 />;
+         html = (
+            <Blog_02
+               title={title}
+               subtitle={subtitle}
+               href={href}
+               posts={posts}
+               items={items}
+               columns={columns}
+               rows={rows}
+               isTitle={isTitle}
+               isSubtitle={isSubtitle}
+               isBackground={isBackground}
+               isPagination={isPagination}
+               isPaginationArrows={isPaginationArrows}
+            />
+         );
          break;
       case 3:
          html = (
