@@ -322,7 +322,7 @@ export default function Navigation({ className, data }) {
 
                   <motion.a
                      variants={item}
-                     href="#"
+                     href="/about"
                      className="capitalize text-base font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
                      about
                   </motion.a>

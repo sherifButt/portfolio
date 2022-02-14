@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react"
+import { useEffect, useState } from "react";
 import {
    useViewportScroll,
    motion,
@@ -6,25 +6,25 @@ import {
    useMotionValue,
 } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Link from "next/link"
-import Lottie from "../../Lottie"
-import Motion from "../../Motion"
-import { useTheme } from "next-themes"
-import Card from "../../Blog/Card"
-import DOMPurify from "isomorphic-dompurify"
-import Blog from "../../Blog"
-import Blob from "../../MorphedSvg/svg/Blob"
-import ReactCardFlip from "react-card-flip"
+import Link from "next/link";
+import Lottie from "../../Lottie";
+import Motion from "../../Motion";
+import { useTheme } from "next-themes";
+import Card from "../../Blog/Card";
+import DOMPurify from "isomorphic-dompurify";
+import Blog from "../../Blog";
+import Blob from "../../MorphedSvg/svg/Blob";
+import ReactCardFlip from "react-card-flip";
 
-const Header = ( {
+const Header = ({
    title,
    subtitle,
    button,
    img,
    posts,
    displayedPost,
-} ) => {
-   const [ isFlipped, setIsFlipped ] = useState( false );
+}) => {
+   const [isFlipped, setIsFlipped] = useState(false);
    const [isOff, setIsOff] = useState(true);
 
    const handleMouseEnter = () => {
@@ -35,7 +35,7 @@ const Header = ( {
       if (isOff) setIsFlipped(!isFlipped);
    };
    // let cleanTitle = DOMPurify.sanitize( title )
-   const { theme, setTheme } = useTheme()
+   const { theme, setTheme } = useTheme();
    const { scrollY } = useViewportScroll();
    const y1 = useTransform(scrollY, [0, 300], [0, 270]);
    const y2 = useTransform(scrollY, [0, 50], [0, 30]);
@@ -44,13 +44,13 @@ const Header = ( {
       /* Optional options */
       threshold: 1,
       triggerOnce: false,
-   } );
+   });
    // console.log( `inView`, inView )
    // console.log(`y2`, y1.lastUpdated / 1000);
    const variants = {
       visible: { opacity: 1, x: 0 },
-      hidden:{ opacity: 0,x:20} 
-}
+      hidden: { opacity: 0, x: 20 },
+   };
 
    const hearoImg = img.imgSrc.light?.includes("json") ? (
       <>
@@ -93,7 +93,7 @@ const Header = ( {
                   <Lottie path={img.imgSrc.light} />
                </div>
                <div onMouseLeave={handleMouseLeave}>
-                  <Blog
+                  {/* <Blog
                      variant={2}
                      posts={posts}
                      items={1}
@@ -105,7 +105,12 @@ const Header = ( {
                      isPagination={false}
                      isPaginationArrows={true}
                      noObservation={true}
-                  />
+                  /> */}
+                  <Link href="#blog">
+                     <a>
+                        <img src="/assets/imgs/posts/portfolio_12_tbg.png" />
+                     </a>
+                  </Link>
                </div>
             </ReactCardFlip>
          </div>
@@ -120,9 +125,23 @@ const Header = ( {
                transition={{ duration: 3, type: "spring" }}>
                <Blob className=" absolute " />
             </motion.div>
-            <div className="relative opacity-70 ease-in duration-300 hover:opacity-100 hover:scale-105">
-               <Lottie path={img.imgSrc.dark} />
-            </div>
+            <ReactCardFlip
+               isFlipped={isFlipped}
+               flipDirection="horizontal">
+               <div
+                  onMouseEnter={handleMouseEnter}
+                  onClick={handleMouseEnter}
+                  className="relative opacity-70 ease-in duration-300 hover:opacity-100 hover:scale-105">
+                  <Lottie path={img.imgSrc.dark} />
+               </div>
+               <div onMouseLeave={handleMouseLeave}>
+                  <Link href="#blog">
+                     <a>
+                        <img src="/assets/imgs/posts/portfolio_12_tbg.png" />
+                     </a>
+                  </Link>
+               </div>
+            </ReactCardFlip>
          </div>
       </>
    ) : (
@@ -217,7 +236,7 @@ const Header = ( {
          </div>
       </section>
    );
-}
+};
 
 const customShapeDividerBottom1638543774 = {
    position: "absolute",
@@ -227,6 +246,6 @@ const customShapeDividerBottom1638543774 = {
    overflow: "hidden",
    lineHeight: 0,
    transform: "rotate(180deg)",
-}
+};
 
-export default Header
+export default Header;
