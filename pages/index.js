@@ -66,8 +66,8 @@ export default function Home({
          <Testimonials variant={3} data={testimonials} />
          {/* <Team /> */}
          {/* <Pricing variant={1} /> */}
-         <Faq variant={3} />
-         <CallToAction />
+         {/* <Faq variant={3} /> */}
+         {/* <CallToAction /> */}
       </>
    );
 }

@@ -175,7 +175,7 @@ export default {
          },
 
          {
-            id: 10,
+            id: 11,
             title: "Redux",
             href: "/redux",
             color: "bg-indigo-100 text-indigo-800",
@@ -186,7 +186,7 @@ export default {
             icon: "M 16.6886 16.0829 c 0.7482 -0.0775 1.3158 -0.7225 1.29 -1.4966 c -0.0257 -0.774 -0.6708 -1.3933 -1.4448 -1.3933 h -0.0516 c -0.7999 0.0258 -1.4191 0.6966 -1.3933 1.4965 c 0.0258 0.3871 0.1806 0.7225 0.4128 0.9547 c -0.8772 1.7288 -2.2189 2.993 -4.2313 4.0509 c -1.3675 0.7225 -2.7865 0.9805 -4.2055 0.7999 c -1.1611 -0.1548 -2.0641 -0.6708 -2.6318 -1.5224 c -0.8256 -1.2643 -0.903 -2.6318 -0.2063 -3.9993 c 0.4902 -0.9805 1.2642 -1.703 1.7544 -2.0642 c -0.1032 -0.3354 -0.258 -0.903 -0.3354 -1.3158 c -3.7412 2.7092 -3.3541 6.3731 -2.2189 8.1018 c 0.8514 1.2902 2.5801 2.09 4.4894 2.09 c 0.516 0 1.032 -0.0516 1.548 -0.1806 c 3.3026 -0.6451 5.8053 -2.6061 7.2243 -5.5217 Z m 4.541 -3.1994 c -1.9609 -2.2964 -4.8506 -3.5607 -8.1532 -3.5607 h -0.4128 c -0.2322 -0.4644 -0.7225 -0.7741 -1.2643 -0.7741 h -0.0516 C 10.548 8.5745 9.9288 9.2453 9.9545 10.0452 c 0.0258 0.774 0.6708 1.3933 1.4448 1.3933 h 0.0516 c 0.5676 -0.0258 1.0579 -0.3871 1.2643 -0.8773 h 0.4644 c 1.9609 0 3.8185 0.5676 5.4957 1.6771 c 1.29 0.8515 2.2189 1.961 2.7349 3.3026 c 0.4386 1.0837 0.4128 2.1416 -0.0516 3.0447 c -0.7224 1.3675 -1.935 2.1157 -3.5347 2.1157 c -1.0321 0 -2.0125 -0.3097 -2.5285 -0.5419 c -0.2838 0.258 -0.7998 0.6708 -1.1611 0.9289 c 1.1095 0.516 2.2448 0.7998 3.3284 0.7998 c 2.4769 0 4.3088 -1.3675 5.0054 -2.735 c 0.7482 -1.4966 0.6966 -4.0767 -1.2385 -6.2699 Z M 8.1226 16.5214 c 0.0258 0.7741 0.6708 1.3933 1.4448 1.3933 h 0.0516 c 0.7998 -0.0257 1.419 -0.6966 1.3932 -1.4965 c -0.0257 -0.7741 -0.6708 -1.3933 -1.4448 -1.3933 h -0.0516 c -0.0516 0 -0.1291 0 -0.1806 0.0257 c -1.0579 -1.7545 -1.4965 -3.6638 -1.3416 -5.728 c 0.1031 -1.5481 0.6192 -2.8898 1.5222 -3.9994 c 0.7482 -0.9547 2.193 -1.4191 3.1735 -1.4448 c 2.7349 -0.0516 3.8958 3.3542 3.9733 4.7217 c 0.3354 0.0774 0.903 0.258 1.2901 0.3871 C 17.6432 4.8074 15.0631 2.64 12.5863 2.64 c -2.3221 0 -4.4636 1.6771 -5.3151 4.1541 c -1.1868 3.3026 -0.4128 6.4763 1.0321 8.9791 c -0.1289 0.1806 -0.2064 0.4644 -0.1806 0.7483 Z",
          },
          {
-            id: 11,
+            id: 12,
             title: "Express",
             href: "/espress",
             color: "bg-indigo-100 text-indigo-800",
@@ -197,7 +197,7 @@ export default {
             icon: "M 22.23 17.8927 a 1.3073 1.3073 90 0 1 -1.6202 -0.6156 l -2.9498 -4.0792 l -0.4275 -0.5703 l -3.4226 4.6546 a 1.2534 1.2534 90 0 1 -1.5407 0.6053 l 4.4101 -5.9166 l -4.1023 -5.3446 a 1.3637 1.3637 90 0 1 1.6245 0.5694 l 3.0575 4.1296 l 3.0746 -4.1125 a 1.2269 1.2269 90 0 1 1.5287 -0.5711 L 20.2703 8.7545 l -2.1563 2.807 a 0.5694 0.5694 90 0 0 0 0.8499 l 4.1074 5.4823 z M 1.7117 11.8975 l 0.3591 -1.7741 c 0.9867 -3.5081 5.0086 -4.9676 7.7754 -2.7958 c 1.6202 1.2731 2.0246 3.0754 1.9451 5.1069 H 2.6642 C 2.5163 16.0622 5.1343 18.2527 8.4816 17.1335 a 3.4867 3.4867 90 0 0 2.2076 -2.459 c 0.177 -0.5694 0.4685 -0.6669 1.0038 -0.5027 a 4.6315 4.6315 90 0 1 -2.2136 3.3832 a 5.3626 5.3626 90 0 1 -6.2466 -0.7977 a 5.6216 5.6216 90 0 1 -1.4022 -3.2986 c 0 -0.2009 -0.0684 -0.389 -0.1146 -0.5694 A 75.5221 75.5221 90 0 1 1.71 11.8983 z m 0.9636 -0.2445 h 8.2542 c -0.0513 -2.63 -1.7109 -4.4956 -3.9245 -4.5127 c -2.4641 -0.0342 -4.2271 1.7904 -4.3357 4.5007 z",
          },
          {
-            id: 12,
+            id: 13,
             title: "JWT",
             href: "/jwt",
             color: "bg-indigo-100 text-indigo-800",
@@ -205,18 +205,7 @@ export default {
             experience: 1,
             description:
                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
-            icon: "M 7.0809 8.8061 C 7.8298 5.8023 9.7028 4.3001 12.6988 4.3001 c 4.4943 0 5.0561 3.3795 7.3033 3.9428 c 1.4983 0.3757 2.809 -0.1876 3.9325 -1.6898 C 23.1858 9.557 21.3128 11.0591 18.3168 11.0591 c -4.4943 0 -5.0561 -3.3795 -7.3033 -3.9428 C 9.5151 6.7407 8.2045 7.3039 7.0809 8.8061 z M 1.463 15.5652 C 2.2118 12.5613 4.0849 11.0591 7.0809 11.0591 c 4.4943 0 5.0561 3.3795 7.3033 3.9428 c 1.4983 0.3757 2.809 -0.1876 3.9325 -1.6898 C 17.5679 16.316 15.6949 17.8182 12.6988 17.8182 c -4.4943 0 -5.0561 -3.3795 -7.3033 -3.9428 C 3.8972 13.4997 2.5866 14.063 1.463 15.5652 z",
-         },
-         {
-            id: 13,
-            title: "Mongoose",
-            href: "/mongoose",
-            color: "bg-indigo-100 text-indigo-800",
-            level: 3,
-            experience: 1,
-            description:
-               "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
-            icon: "M 7.0809 8.8061 C 7.8298 5.8023 9.7028 4.3001 12.6988 4.3001 c 4.4943 0 5.0561 3.3795 7.3033 3.9428 c 1.4983 0.3757 2.809 -0.1876 3.9325 -1.6898 C 23.1858 9.557 21.3128 11.0591 18.3168 11.0591 c -4.4943 0 -5.0561 -3.3795 -7.3033 -3.9428 C 9.5151 6.7407 8.2045 7.3039 7.0809 8.8061 z M 1.463 15.5652 C 2.2118 12.5613 4.0849 11.0591 7.0809 11.0591 c 4.4943 0 5.0561 3.3795 7.3033 3.9428 c 1.4983 0.3757 2.809 -0.1876 3.9325 -1.6898 C 17.5679 16.316 15.6949 17.8182 12.6988 17.8182 c -4.4943 0 -5.0561 -3.3795 -7.3033 -3.9428 C 3.8972 13.4997 2.5866 14.063 1.463 15.5652 z",
+            icon: "M 13.3414 7.315 L 13.3216 2 h -2.9637 l 0.0198 5.315 l 1.4818 2.0352 z m -2.9637 9.1086 v 5.3348 h 2.9637 v -5.3348 l -1.4819 -2.0351 z m 2.9967 -0.0118 l 3.1219 4.3074 l 2.3908 -1.7388 l -3.1219 -4.3073 l -2.3908 -0.7707 z M 10.3776 7.315 L 7.236 3.0077 L 4.8452 4.7464 l 3.1219 4.3074 l 2.4105 0.7706 z M 7.9671 9.0538 L 2.9089 7.4138 L 2 10.2195 l 5.0582 1.6597 l 2.3908 -0.7904 z m 6.2832 3.596 l 1.4818 2.0352 l 5.0582 1.6399 L 21.6992 13.5192 l -5.0582 -1.64 z M 16.641 11.8792 L 21.6992 10.2195 l -0.9089 -2.8057 l -5.0582 1.64 l -1.4818 2.0351 z m -9.5829 0 L 2 13.5192 l 0.9089 2.8057 l 5.0582 -1.6399 l 1.4818 -2.0352 z m 0.9131 2.8123 l -3.1219 4.3073 l 2.3908 1.7388 l 3.1416 -4.3074 v -2.5093 z m 7.765 -5.6312 l 3.1219 -4.3074 l -2.3908 -1.7388 l -3.1219 4.3074 v 2.5093 z",
          },
          {
             id: 14,
@@ -227,7 +216,18 @@ export default {
             experience: 1,
             description:
                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
-            icon: "M 7.0809 8.8061 C 7.8298 5.8023 9.7028 4.3001 12.6988 4.3001 c 4.4943 0 5.0561 3.3795 7.3033 3.9428 c 1.4983 0.3757 2.809 -0.1876 3.9325 -1.6898 C 23.1858 9.557 21.3128 11.0591 18.3168 11.0591 c -4.4943 0 -5.0561 -3.3795 -7.3033 -3.9428 C 9.5151 6.7407 8.2045 7.3039 7.0809 8.8061 z M 1.463 15.5652 C 2.2118 12.5613 4.0849 11.0591 7.0809 11.0591 c 4.4943 0 5.0561 3.3795 7.3033 3.9428 c 1.4983 0.3757 2.809 -0.1876 3.9325 -1.6898 C 17.5679 16.316 15.6949 17.8182 12.6988 17.8182 c -4.4943 0 -5.0561 -3.3795 -7.3033 -3.9428 C 3.8972 13.4997 2.5866 14.063 1.463 15.5652 z",
+            icon: "m 12.375 3.125 l 0.4612 -0.4225 a 0.625 0.625 90 0 0 -0.9225 0 L 12.375 3.125 Z m 0 16.25 l -0.4913 0.3862 a 0.625 0.625 90 0 0 0.9825 0 L 12.375 19.375 Z M 8.7788 14.7975 l -0.4913 0.3875 l 0.4913 -0.3875 Z m 0.3075 -8.0838 L 8.625 6.29 l 0.4612 0.4213 Z m 6.5775 0 l 0.4612 -0.4225 l -0.4612 0.4213 Z m 0.3075 8.0838 l 0.4913 0.3875 l -0.4913 -0.3875 Z M 13 21.25 V 3.125 H 11.75 V 21.25 h 1.25 Z m -0.1338 -2.2612 L 9.27 14.4125 l -0.9825 0.7725 l 3.5962 4.5775 l 0.9825 -0.7725 Z M 9.5463 7.135 L 12.8375 3.5475 L 11.9125 2.7025 L 8.625 6.29 l 0.92 0.845 Z M 11.9138 3.5475 l 3.29 3.5875 l 0.9213 -0.8438 L 12.8362 2.7037 L 11.9125 3.5462 Z m 3.5663 10.8638 l -3.5962 4.5775 l 0.9825 0.7725 l 3.5962 -4.5775 l -0.9825 -0.7725 Z m -0.2762 -7.275 a 5.625 5.625 90 0 1 0.275 7.275 l 0.9838 0.7725 a 6.875 6.875 90 0 0 -0.3375 -8.8925 l -0.9213 0.8438 Z m -5.9337 7.275 a 5.625 5.625 90 0 1 0.2762 -7.275 L 8.625 6.29 a 6.875 6.875 90 0 0 -0.3375 8.8925 l 0.9825 -0.7725 Z",
+         },
+         {
+            id: 15,
+            title: "Framer motion",
+            href: "/framer",
+            color: "bg-indigo-100 text-indigo-800",
+            level: 3,
+            experience: 1,
+            description:
+               "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
+            icon: "M 11.8496 8.4561 h 6.6793 V 1.9 h -13.2354 v 0.0616 L 11.8496 8.4561 z M 11.8496 8.4561 H 5.1703 v 6.5561 h 13.2354 v -0.0616 L 11.8496 8.4561 L 11.8496 8.4561 z M 5.1703 14.9815 h 6.6177 V 21.5992 L 5.1703 14.9815 z",
          },
       ],
    },
@@ -406,6 +406,12 @@ export default {
             href: "/work",
             callToAction: [
                {
+                  title: "ReadMore",
+                  href: "/work/1",
+                  alt: "Read more aobut this project",
+                  icon: "",
+               },
+               {
                   title: "View Live",
                   href: "https://portfolio-zeta-vert.vercel.app/",
                   alt: "web site",
@@ -418,7 +424,7 @@ export default {
                   icon: "M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z",
                },
             ],
-            category: [2, 3, 5, 8, 10], //toolkit
+            category: [2, 3, 5, 8, 10,15], //toolkit
             excerpt:
                "A simple Nextjs portafolio that uses hosted js datafile to demostrate my work and development skills. I desided to use Nextjs as it provides very tood support for seo and provides serverside rendring out of the box.",
             chalanges: "",
@@ -444,6 +450,12 @@ export default {
             href: "/work",
             callToAction: [
                {
+                  title: "ReadMore",
+                  href: "/work/2",
+                  alt: "Read more aobut this project",
+                  icon: "",
+               },
+               {
                   title: "View Live",
                   href: "https://mern-shopping-list-fullstack.herokuapp.com",
                   alt: "web site",
@@ -456,7 +468,7 @@ export default {
                   icon: "M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z",
                },
             ],
-            category: [1, 3, 4, 6, , 10, 11, 12, 13],
+            category: [1, 3, 4, 6, 10, 11, 12, 13, 14],
             excerpt:
                "Introduction Parsing and display of math equations is included in this blo",
 
@@ -472,185 +484,6 @@ export default {
                href: "#",
                imageUrl:
                   "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            },
-         },
-         {
-            id: 3,
-            title: "Improve your customer experience",
-            href: "/work",
-            callToAction: [
-               {
-                  title: "View Live",
-                  href: "https://laughing-lumiere-4c9856.netlify.app/",
-                  alt: "web site",
-                  icon: "",
-               },
-               {
-                  title: "",
-                  href: "https://github.com/timlrx/tailwind-nextjs-starter-blog",
-                  alt: "get sroce code on GitHub",
-                  icon: "M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z",
-               },
-            ],
-            category: [1, 2],
-            excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
-
-            description:
-               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n# Introduction\n\nParsing and display of math equations is included in this blog template. Parsing of math is enabled by `remark-math` and `rehype-katex`.\nKaTeX and its associated font is included in `_document.js` so feel free to use it on any page.\n^[For the full list of supported TeX functions, check out the [KaTeX documentation](https://katex.org/docs/supported.html)]\n\nInline math symbols can be included by enclosing the term between the `$` symbol.\n\nMath code blocks are denoted by `$$`.\n\nIf you intend to use the `$` sign instead of math, you can escape it (`\\$`), or specify the HTML entity (`&dollar;`) [^2]\n\nInline or manually enumerated footnotes are also supported. Click on the links above to see them in action.\n\n[^2]: \\$10 and &dollar;20.\n\n# Deriving the OLS Estimator\n\nUsing matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.\n\nThe vector of outcome variables $\\mathbf{Y}$ is a $n \\times 1$ matrix,\n\n```tex\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n$$\n\nThe matrix of regressors $\\mathbf{X}$ is a $n \\times k$ matrix (or each row is a $k \\times 1$ vector),\n\n```latex\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n$$\n\nThe vector of error terms $\\mathbf{U}$ is also a $n \\times 1$ matrix.\n\nAt times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.\n\n## Least Squares\n\n**Start**:  \n$$y_i = \\mathbf{x}'_i \\beta + u_i$$\n\n**Assumptions**:\n\n1. Linearity (given above)\n2. $E(\\mathbf{U}|\\mathbf{X}) = 0$ (conditional independence)\n3. rank($\\mathbf{X}$) = $k$ (no multi-collinearity i.e. full rank)\n4. $Var(\\mathbf{U}|\\mathbf{X}) = \\sigma^2 I_n$ (Homoskedascity)\n\n**Aim**:  \nFind $\\beta$ that minimises the sum of squared errors:\n\n$$\nQ = \\sum_{i=1}^{n}{u_i^2} = \\sum_{i=1}^{n}{(y_i - \\mathbf{x}'_i\\beta)^2} = (Y-X\\beta)'(Y-X\\beta)\n$$\n\n**Solution**:  \nHints: $Q$ is a $1 \\times 1$ scalar, by symmetry $\\frac{\\partial b'Ab}{\\partial b} = 2Ab$.\n\nTake matrix derivative w.r.t $\\beta$:\n\n```tex\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n```\n\n$$\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n$$",
-            icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
-            date: "Feb 12, 2020",
-            datetime: "2020-02-12",
-            imageUrl: "/assets/imgs/posts/portfolio_04.jpg",
-            readingTime: "11 min",
-            author: {
-               name: "Daniela Metz",
-               href: "#",
-               imageUrl:
-                  "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            },
-         },
-         {
-            id: 4,
-            title: "How to use search engine optimization to drive sales",
-            href: "/work",
-            callToAction: [
-               {
-                  title: "View Live",
-                  href: "https://laughing-lumiere-4c9856.netlify.app/",
-                  alt: "web site",
-                  icon: "",
-               },
-               {
-                  title: "",
-                  href: "https://github.com/timlrx/tailwind-nextjs-starter-blog",
-                  alt: "get sroce code on GitHub",
-                  icon: "M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z",
-               },
-            ],
-            category: [1],
-            excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
-
-            description:
-               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n# Introduction\n\nParsing and display of math equations is included in this blog template. Parsing of math is enabled by `remark-math` and `rehype-katex`.\nKaTeX and its associated font is included in `_document.js` so feel free to use it on any page.\n^[For the full list of supported TeX functions, check out the [KaTeX documentation](https://katex.org/docs/supported.html)]\n\nInline math symbols can be included by enclosing the term between the `$` symbol.\n\nMath code blocks are denoted by `$$`.\n\nIf you intend to use the `$` sign instead of math, you can escape it (`\\$`), or specify the HTML entity (`&dollar;`) [^2]\n\nInline or manually enumerated footnotes are also supported. Click on the links above to see them in action.\n\n[^2]: \\$10 and &dollar;20.\n\n# Deriving the OLS Estimator\n\nUsing matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.\n\nThe vector of outcome variables $\\mathbf{Y}$ is a $n \\times 1$ matrix,\n\n```tex\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n$$\n\nThe matrix of regressors $\\mathbf{X}$ is a $n \\times k$ matrix (or each row is a $k \\times 1$ vector),\n\n```latex\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n$$\n\nThe vector of error terms $\\mathbf{U}$ is also a $n \\times 1$ matrix.\n\nAt times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.\n\n## Least Squares\n\n**Start**:  \n$$y_i = \\mathbf{x}'_i \\beta + u_i$$\n\n**Assumptions**:\n\n1. Linearity (given above)\n2. $E(\\mathbf{U}|\\mathbf{X}) = 0$ (conditional independence)\n3. rank($\\mathbf{X}$) = $k$ (no multi-collinearity i.e. full rank)\n4. $Var(\\mathbf{U}|\\mathbf{X}) = \\sigma^2 I_n$ (Homoskedascity)\n\n**Aim**:  \nFind $\\beta$ that minimises the sum of squared errors:\n\n$$\nQ = \\sum_{i=1}^{n}{u_i^2} = \\sum_{i=1}^{n}{(y_i - \\mathbf{x}'_i\\beta)^2} = (Y-X\\beta)'(Y-X\\beta)\n$$\n\n**Solution**:  \nHints: $Q$ is a $1 \\times 1$ scalar, by symmetry $\\frac{\\partial b'Ab}{\\partial b} = 2Ab$.\n\nTake matrix derivative w.r.t $\\beta$:\n\n```tex\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n```\n\n$$\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n$$",
-            icon: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z",
-            date: "Mar 10, 2020",
-            datetime: "2020-03-10",
-            imageUrl: "/assets/imgs/posts/portfolio_05.jpg",
-            readingTime: "4 min",
-            author: {
-               name: "Brenna Goyette",
-               href: "#",
-               imageUrl:
-                  "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            },
-         },
-         {
-            id: 5,
-            title: "Boost your conversion rate",
-            href: "/work",
-            callToAction: [
-               {
-                  title: "View Live",
-                  href: "https://laughing-lumiere-4c9856.netlify.app/",
-                  alt: "web site",
-                  icon: "",
-               },
-               {
-                  title: "",
-                  href: "https://github.com/timlrx/tailwind-nextjs-starter-blog",
-                  alt: "get sroce code on GitHub",
-                  icon: "M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z",
-               },
-            ],
-            category: [1, 5, 6, 9],
-            description:
-               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n# Introduction\n\nParsing and display of math equations is included in this blog template. Parsing of math is enabled by `remark-math` and `rehype-katex`.\nKaTeX and its associated font is included in `_document.js` so feel free to use it on any page.\n^[For the full list of supported TeX functions, check out the [KaTeX documentation](https://katex.org/docs/supported.html)]\n\nInline math symbols can be included by enclosing the term between the `$` symbol.\n\nMath code blocks are denoted by `$$`.\n\nIf you intend to use the `$` sign instead of math, you can escape it (`\\$`), or specify the HTML entity (`&dollar;`) [^2]\n\nInline or manually enumerated footnotes are also supported. Click on the links above to see them in action.\n\n[^2]: \\$10 and &dollar;20.\n\n# Deriving the OLS Estimator\n\nUsing matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.\n\nThe vector of outcome variables $\\mathbf{Y}$ is a $n \\times 1$ matrix,\n\n```tex\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n$$\n\nThe matrix of regressors $\\mathbf{X}$ is a $n \\times k$ matrix (or each row is a $k \\times 1$ vector),\n\n```latex\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n$$\n\nThe vector of error terms $\\mathbf{U}$ is also a $n \\times 1$ matrix.\n\nAt times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.\n\n## Least Squares\n\n**Start**:  \n$$y_i = \\mathbf{x}'_i \\beta + u_i$$\n\n**Assumptions**:\n\n1. Linearity (given above)\n2. $E(\\mathbf{U}|\\mathbf{X}) = 0$ (conditional independence)\n3. rank($\\mathbf{X}$) = $k$ (no multi-collinearity i.e. full rank)\n4. $Var(\\mathbf{U}|\\mathbf{X}) = \\sigma^2 I_n$ (Homoskedascity)\n\n**Aim**:  \nFind $\\beta$ that minimises the sum of squared errors:\n\n$$\nQ = \\sum_{i=1}^{n}{u_i^2} = \\sum_{i=1}^{n}{(y_i - \\mathbf{x}'_i\\beta)^2} = (Y-X\\beta)'(Y-X\\beta)\n$$\n\n**Solution**:  \nHints: $Q$ is a $1 \\times 1$ scalar, by symmetry $\\frac{\\partial b'Ab}{\\partial b} = 2Ab$.\n\nTake matrix derivative w.r.t $\\beta$:\n\n```tex\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n```\n\n$$\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n$$",
-            icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
-            date: "Mar 16, 2020",
-            datetime: "2020-03-16",
-            imageUrl: "/assets/imgs/posts/portfolio_06.jpg",
-            readingTime: "6 min",
-            author: {
-               name: "Roel Aufderehar",
-               href: "#",
-               imageUrl:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            },
-         },
-         {
-            id: 6,
-            title: "How to use search engine optimization to drive sales",
-            href: "/work",
-            callToAction: [
-               {
-                  title: "View Live",
-                  href: "https://laughing-lumiere-4c9856.netlify.app/",
-                  alt: "web site",
-                  icon: "",
-               },
-               {
-                  title: "",
-                  href: "https://github.com/timlrx/tailwind-nextjs-starter-blog",
-                  alt: "get sroce code on GitHub",
-                  icon: "M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z",
-               },
-            ],
-            category: [1, 6, 7],
-            excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
-
-            description:
-               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n# Introduction\n\nParsing and display of math equations is included in this blog template. Parsing of math is enabled by `remark-math` and `rehype-katex`.\nKaTeX and its associated font is included in `_document.js` so feel free to use it on any page.\n^[For the full list of supported TeX functions, check out the [KaTeX documentation](https://katex.org/docs/supported.html)]\n\nInline math symbols can be included by enclosing the term between the `$` symbol.\n\nMath code blocks are denoted by `$$`.\n\nIf you intend to use the `$` sign instead of math, you can escape it (`\\$`), or specify the HTML entity (`&dollar;`) [^2]\n\nInline or manually enumerated footnotes are also supported. Click on the links above to see them in action.\n\n[^2]: \\$10 and &dollar;20.\n\n# Deriving the OLS Estimator\n\nUsing matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.\n\nThe vector of outcome variables $\\mathbf{Y}$ is a $n \\times 1$ matrix,\n\n```tex\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n$$\n\nThe matrix of regressors $\\mathbf{X}$ is a $n \\times k$ matrix (or each row is a $k \\times 1$ vector),\n\n```latex\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n$$\n\nThe vector of error terms $\\mathbf{U}$ is also a $n \\times 1$ matrix.\n\nAt times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.\n\n## Least Squares\n\n**Start**:  \n$$y_i = \\mathbf{x}'_i \\beta + u_i$$\n\n**Assumptions**:\n\n1. Linearity (given above)\n2. $E(\\mathbf{U}|\\mathbf{X}) = 0$ (conditional independence)\n3. rank($\\mathbf{X}$) = $k$ (no multi-collinearity i.e. full rank)\n4. $Var(\\mathbf{U}|\\mathbf{X}) = \\sigma^2 I_n$ (Homoskedascity)\n\n**Aim**:  \nFind $\\beta$ that minimises the sum of squared errors:\n\n$$\nQ = \\sum_{i=1}^{n}{u_i^2} = \\sum_{i=1}^{n}{(y_i - \\mathbf{x}'_i\\beta)^2} = (Y-X\\beta)'(Y-X\\beta)\n$$\n\n**Solution**:  \nHints: $Q$ is a $1 \\times 1$ scalar, by symmetry $\\frac{\\partial b'Ab}{\\partial b} = 2Ab$.\n\nTake matrix derivative w.r.t $\\beta$:\n\n```tex\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n```\n\n$$\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n$$",
-            icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
-
-            date: "Mar 10, 2020",
-            datetime: "2020-03-10",
-            imageUrl: "/assets/imgs/posts/portfolio_07.jpg",
-            readingTime: "4 min",
-            author: {
-               name: "Brenna Goyette",
-               href: "#",
-               imageUrl:
-                  "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            },
-         },
-         {
-            id: 7,
-            title: "Boost your conversion rate",
-            href: "/work",
-            callToAction: [
-               {
-                  title: "View Live",
-                  href: "https://laughing-lumiere-4c9856.netlify.app/",
-                  alt: "web site",
-                  icon: "",
-               },
-               {
-                  title: "",
-                  href: "https://github.com/timlrx/tailwind-nextjs-starter-blog",
-                  alt: "get sroce code on GitHub",
-                  icon: "M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z",
-               },
-            ],
-            category: [2],
-            excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
-
-            description:
-               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n# Introduction\n\nParsing and display of math equations is included in this blog template. Parsing of math is enabled by `remark-math` and `rehype-katex`.\nKaTeX and its associated font is included in `_document.js` so feel free to use it on any page.\n^[For the full list of supported TeX functions, check out the [KaTeX documentation](https://katex.org/docs/supported.html)]\n\nInline math symbols can be included by enclosing the term between the `$` symbol.\n\nMath code blocks are denoted by `$$`.\n\nIf you intend to use the `$` sign instead of math, you can escape it (`\\$`), or specify the HTML entity (`&dollar;`) [^2]\n\nInline or manually enumerated footnotes are also supported. Click on the links above to see them in action.\n\n[^2]: \\$10 and &dollar;20.\n\n# Deriving the OLS Estimator\n\nUsing matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.\n\nThe vector of outcome variables $\\mathbf{Y}$ is a $n \\times 1$ matrix,\n\n```tex\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n$$\n\nThe matrix of regressors $\\mathbf{X}$ is a $n \\times k$ matrix (or each row is a $k \\times 1$ vector),\n\n```latex\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n$$\n\nThe vector of error terms $\\mathbf{U}$ is also a $n \\times 1$ matrix.\n\nAt times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.\n\n## Least Squares\n\n**Start**:  \n$$y_i = \\mathbf{x}'_i \\beta + u_i$$\n\n**Assumptions**:\n\n1. Linearity (given above)\n2. $E(\\mathbf{U}|\\mathbf{X}) = 0$ (conditional independence)\n3. rank($\\mathbf{X}$) = $k$ (no multi-collinearity i.e. full rank)\n4. $Var(\\mathbf{U}|\\mathbf{X}) = \\sigma^2 I_n$ (Homoskedascity)\n\n**Aim**:  \nFind $\\beta$ that minimises the sum of squared errors:\n\n$$\nQ = \\sum_{i=1}^{n}{u_i^2} = \\sum_{i=1}^{n}{(y_i - \\mathbf{x}'_i\\beta)^2} = (Y-X\\beta)'(Y-X\\beta)\n$$\n\n**Solution**:  \nHints: $Q$ is a $1 \\times 1$ scalar, by symmetry $\\frac{\\partial b'Ab}{\\partial b} = 2Ab$.\n\nTake matrix derivative w.r.t $\\beta$:\n\n```tex\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n```\n\n$$\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n$$",
-            icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
-            date: "Mar 16, 2020",
-            datetime: "2020-03-16",
-            imageUrl:
-               "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-            readingTime: "6 min",
-            author: {
-               name: "Roel Aufderehar",
-               href: "#",
-               imageUrl:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
             },
          },
       ],
