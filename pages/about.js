@@ -52,7 +52,7 @@ const About = () => {
                        <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
                           <img
                              className="rounded-lg shadow-lg object-cover object-center"
-                             src="/assets/imgs/posts/sbutt_about.jpg"
+                             src="/assets/imgs/posts/sbutt_about_01.jpg"
                              alt="Sherif holding a loaf of sower dough bread"
                              width={1184}
                              height={1376}

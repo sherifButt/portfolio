@@ -154,7 +154,7 @@ const Card = ({
                            {(posts
                               ? posts[displayedPost].excerpt
                               : excerpt
-                           ).substring(0, 80)}{" "}
+                           ).substring(0, 180)}{" "}
                            ...
                         </p>
                      </a>
