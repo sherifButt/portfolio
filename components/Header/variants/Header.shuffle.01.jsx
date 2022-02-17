@@ -25,14 +25,18 @@ const Header = ({
    displayedPost,
 }) => {
    const [isFlipped, setIsFlipped] = useState(false);
-   const [isOff, setIsOff] = useState(true);
+   const [ isOff, setIsOff ] = useState( true );
+   
+   const [blobColor, setBlobColor] = useState("#805fcf");
 
    const handleMouseEnter = () => {
+      setBlobColor("#c6a177");
       if (!isOff) setIsOff(!isOff);
-      if (isOff) setIsFlipped(!isFlipped);
+      if ( isOff ) setIsFlipped( !isFlipped );
    };
    const handleMouseLeave = () => {
-      if (isOff) setIsFlipped(!isFlipped);
+      setBlobColor("#805fcf");
+      if ( isOff ) setIsFlipped( !isFlipped );
    };
    // let cleanTitle = DOMPurify.sanitize( title )
    const { theme, setTheme } = useTheme();
@@ -77,7 +81,7 @@ const Header = ({
                <Blob
                   fill="#805fcf"
                   strokeWidth={1}
-                  className="absolute z-20"
+                  className="absolute z-20 "
                />
             </motion.div>
             {/* <Card posts={posts} displayedPost={1} /> */}
@@ -108,7 +112,7 @@ const Header = ({
                   /> */}
                   <Link href="#blog">
                      <a>
-                        <img src="/assets/imgs/posts/portfolio_12_tbg.png" />
+                        <img src="/assets/imgs/posts/portfolio_17.png" />
                      </a>
                   </Link>
                </div>
@@ -123,7 +127,7 @@ const Header = ({
                   filter: [`blur(100px)`, `blur(50px)`],
                }}
                transition={{ duration: 3, type: "spring" }}>
-               <Blob className=" absolute " />
+               <Blob fill="#805fcf" className=" absolute " />
             </motion.div>
             <ReactCardFlip
                isFlipped={isFlipped}
@@ -137,7 +141,7 @@ const Header = ({
                <div onMouseLeave={handleMouseLeave}>
                   <Link href="#blog">
                      <a>
-                        <img src="/assets/imgs/posts/portfolio_12_tbg.png" />
+                        <img src="/assets/imgs/posts/portfolio_17.png" />
                      </a>
                   </Link>
                </div>

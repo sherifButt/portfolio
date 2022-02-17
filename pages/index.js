@@ -26,10 +26,10 @@ export default function Home({
    subtitle,
    testimonials,
 }) {
-   // framer motion animation contrll
+   // framer motion animation control
    const animationControl = useAnimation();
 
-   // Hook allow us to control the elemnt in the screen view
+   // Hook allow us to control the element in the screen view
    const { inView, entry, ref } = useInView({
       threshold: 0.5,
       triggerOnce: false,
@@ -49,19 +49,19 @@ export default function Home({
    };
    return (
       <>
-         <Header variant={1} posts={posts} />
+         <Header variant={1} posts={posts?posts:[]} />
          {/* <HowItWorks variant={3} data={data} /> */}
          <Blog
             variant={3}
-            items={3}
-            rows={1}
+            items={6}
+            rows={2}
             href={href}
             title={title}
             subtitle={subtitle}
-            posts={posts}
+            posts={posts?posts:[]}
             noObservation={false}
          />
-         <Features data={data} />
+         {/* <Features data={data} /> */}
          {/* <Faq /> */}
          <Testimonials variant={3} data={testimonials} />
          {/* <Team /> */}
@@ -95,11 +95,12 @@ const Text = styled.h1`
 export const getStaticProps = async context => {
    
    const data = await getData();
-   
    // const res = await axios( '/api/data' );
    // const data = res.data
+   console.log(data)
    return {
       props: {
+         data,
          testimonials: data.testimonials,
          posts: data.work.posts,
          title: data.work.title,

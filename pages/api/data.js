@@ -1,31 +1,33 @@
 import data from "../../siteData.config";
 
-export default async function helloAPI ( req, res ) {
-   const _data = await { ...data };
+export default async function helloAPI(req, res) {
+   const _data = await { ...JSON.parse(JSON.stringify(data)) };
    // replace blog categories id: with category object
    // iterate through data object to ge to category
    const replaceCatIdWithFullObject = async (
-      data,
+      _data,
       type = "blog", // Post type to manipulate
       category = "category" // category type to consume
    ) => {
-      _data[type].posts.map((post, postIdx) => {
-         let arr = [];
-         post.category.map((cats, catsIdx) => {
-            // check the relevant category object to match blog post's id
-            _data[category].posts.map((c, ii) => {
-               if (c.id === cats) arr = [...arr, c];
-            });
-            _data[type].posts[postIdx].category = arr;
-         });
-      });
-
-      return _data;
+      _data[type].posts.map(
+        (post, postIdx) => {
+           let arr = [];
+           post.category.map((cats, catsIdx) => {
+              // check the relevant category object to match blog post's id
+              _data[category].posts.map((c, ii) => {
+                 if (c.id === cats) arr = [...arr, c];
+              });
+              _data[type].posts[postIdx].category = arr;
+           });
+        }
+     );
+ 
+      return  _data;
    };
 
-   // const _data = await require( '../../siteData.config' )
 
-   // console.log('data', data)
+
+   
    let _cats = await replaceCatIdWithFullObject(
       _data,
       "blog",
@@ -40,15 +42,15 @@ export default async function helloAPI ( req, res ) {
 }
 
 export const getData = async () => {
-   
-   const _data = await {...data}
+   const _data = await { ...JSON.parse(JSON.stringify(data)) };
    // replace blog categories id: with category object
    // iterate through data object to ge to category
-   const replaceCatIdWithFullObject = async (data,
+   const replaceCatIdWithFullObject = async (
+      _data,
       type = "blog", // Post type to manipulate
       category = "category" // category type to consume
    ) => {
-        _data[type].posts.map((post, postIdx) => {
+     await _data[type].posts.map((post, postIdx) => {
          let arr = [];
          post.category.map((cats, catsIdx) => {
             // check the relevant category object to match blog post's id
@@ -57,20 +59,23 @@ export const getData = async () => {
             });
             _data[type].posts[postIdx].category = arr;
          });
-        } );
-      
-      return _data;
+      });
+
+      return await _data;
    };
 
-   // const _data = await require( '../../siteData.config' )
-
-   // console.log('data', data)
-     let _cats = await replaceCatIdWithFullObject(_data,"blog", "category");
-      let _work = await replaceCatIdWithFullObject(
-         _cats,
-         "work",
-         "toolkit"
-      );
    
-   return await _work;
-}
+   let _cats = await replaceCatIdWithFullObject(
+      _data,
+      "blog",
+      "category"
+   );
+   
+   let _work = await replaceCatIdWithFullObject(
+      _cats,
+      "work",
+      "toolkit"
+   );
+
+   return  _work;
+};

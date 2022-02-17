@@ -49,11 +49,10 @@ const Card = ({
          isFlipped={isFlipped}
          flipDirection="horizontal">
          {/* Flip front side */}
-         <div
-            onMouseEnter={handleMouseEnter}
-            onClick={handleMouseEnter}
-            className=" flex flex-col rounded-lg shadow-lg overflow-hidden  dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-40">
+         <div className=" flex flex-col rounded-lg shadow-lg overflow-hidden  dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-40">
             <img
+               onMouseEnter={handleMouseEnter}
+               onClick={handleMouseEnter}
                className="h-96 -mb-2 w-full object-cover "
                src={
                   posts
@@ -138,9 +137,7 @@ const Card = ({
                      }/${posts ? posts[displayedPost].id : id}`}
                      passHref>
                      <a>
-                        <h3
-                           className="text-xl mt-5  font-semibold text-gray-900 dark:text-gray-100 leading-relaxed text-left"
-                        >
+                        <h3 className="text-xl mt-5  font-semibold text-gray-900 dark:text-gray-100 leading-relaxed text-left">
                            {(posts
                               ? posts[displayedPost].title
                               : title
@@ -169,7 +166,11 @@ const Card = ({
                              <a>
                                 <button
                                    type="button"
-                                   className="inline-flex items-center px-4 mr-2 py-2 border dark:border-indigo-600 border-indigo-600 shadow-sm text-sm font-medium rounded-md dark:text-indigo-100 text-indigo-600 bg-white dark:bg-indigo-600 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:shadow-lg dark:shadow-indigo-500/50">
+                                   className={`${
+                                      button.href
+                                         ? ""
+                                         : "cursor-not-allowed hover:bg-white"
+                                   } inline-flex items-center px-4 mr-2 py-2 border dark:border-indigo-600 border-indigo-600 shadow-sm text-sm font-medium rounded-md dark:text-indigo-100 text-indigo-600 bg-white dark:bg-indigo-600 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:shadow-lg dark:shadow-indigo-500/50`}>
                                    {button.icon ? (
                                       <svg
                                          xmlns="http://www.w3.org/2000/svg"

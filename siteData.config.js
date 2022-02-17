@@ -63,7 +63,7 @@ export default {
          {
             id: 1,
             title: "css3",
-            href: "/css",
+            href: "/toolkit/1",
             description:
                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
 
@@ -74,7 +74,7 @@ export default {
          },
          {
             id: 2,
-            title: "Html5",
+            title: "Semantic Html5",
             href: "/html",
             color: "bg-indigo-100 text-indigo-800",
             level: 3,
@@ -228,6 +228,17 @@ export default {
             description:
                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
             icon: "M 11.8496 8.4561 h 6.6793 V 1.9 h -13.2354 v 0.0616 L 11.8496 8.4561 z M 11.8496 8.4561 H 5.1703 v 6.5561 h 13.2354 v -0.0616 L 11.8496 8.4561 L 11.8496 8.4561 z M 5.1703 14.9815 h 6.6177 V 21.5992 L 5.1703 14.9815 z",
+         },
+         {
+            id: 16,
+            title: "Wordpress",
+            href: "/wordpress",
+            color: "bg-indigo-100 text-indigo-800",
+            level: 3,
+            experience: 1,
+            description:
+               "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
+            icon: "M 3.4499 12.2 C 3.4499 15.6637 5.4628 18.6569 8.3816 20.0753 L 4.2075 8.6389 C 3.722 9.7271 3.4499 10.9314 3.4499 12.2 L 3.4499 12.2 Z M 18.1076 11.7585 C 18.1076 10.677 17.7191 9.9281 17.386 9.3452 C 16.9424 8.6244 16.5266 8.014 16.5266 7.2932 C 16.5266 6.4888 17.1367 5.74 17.996 5.74 C 18.0348 5.74 18.0716 5.7448 18.1094 5.747 C 16.5526 4.3207 14.4785 3.4499 12.2004 3.4499 C 9.1434 3.4499 6.4538 5.0184 4.8892 7.3941 C 5.0945 7.4002 5.288 7.4046 5.4523 7.4046 C 6.3676 7.4046 7.7844 7.2935 7.7844 7.2935 C 8.2561 7.2657 8.3117 7.9585 7.8405 8.0143 C 7.8405 8.0143 7.3664 8.0701 6.8389 8.0977 L 10.0255 17.576 L 11.9405 11.8327 L 10.5771 8.0974 C 10.1059 8.0697 9.6595 8.014 9.6595 8.014 C 9.188 7.9863 9.2433 7.2654 9.7148 7.2932 C 9.7148 7.2932 11.1599 7.4042 12.0197 7.4042 C 12.9348 7.4042 14.3518 7.2932 14.3518 7.2932 C 14.8238 7.2654 14.8793 7.9582 14.4079 8.014 C 14.4079 8.014 13.9328 8.0697 13.4064 8.0974 L 16.5686 17.5039 L 17.4414 14.5872 C 17.8197 13.3769 18.1076 12.5076 18.1076 11.7585 L 18.1076 11.7585 Z M 12.3539 12.9655 L 9.7285 20.5945 C 10.5124 20.8249 11.3414 20.951 12.2004 20.951 C 13.2194 20.951 14.1966 20.7748 15.1062 20.455 C 15.0827 20.4175 15.0614 20.3777 15.0439 20.3344 L 12.3539 12.9655 L 12.3539 12.9655 Z M 19.8785 8.0018 C 19.9162 8.2805 19.9375 8.5797 19.9375 8.9016 C 19.9375 9.7896 19.7716 10.7878 19.2721 12.0359 L 16.5992 19.7638 C 19.2007 18.2468 20.9505 15.4284 20.9505 12.2002 C 20.9507 10.6789 20.562 9.2483 19.8785 8.0018 L 19.8785 8.0018 Z M 12.2004 2 C 6.576 2 2 6.5757 2 12.2 C 2 17.825 6.576 22.4006 12.2004 22.4006 C 17.8245 22.4006 22.4012 17.825 22.4012 12.2 C 22.4011 6.5757 17.8245 2 12.2004 2 L 12.2004 2 Z M 12.2004 21.933 C 6.8339 21.933 2.4677 17.5668 2.4677 12.2 C 2.4677 6.8336 6.8338 2.4677 12.2004 2.4677 C 17.5666 2.4677 21.9325 6.8336 21.9325 12.2 C 21.9325 17.5668 17.5666 21.933 12.2004 21.933 L 12.2004 21.933 Z",
          },
       ],
    },
@@ -424,7 +435,7 @@ export default {
                   icon: "M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z",
                },
             ],
-            category: [2, 3, 5, 8, 10,15], //toolkit
+            category: [1, 2, 3, 4, 6, 10, 15], //toolkit
             excerpt:
                "A simple Nextjs portafolio that uses hosted js datafile to demostrate my work and development skills. I desided to use Nextjs as it provides very tood support for seo and provides serverside rendring out of the box.",
             chalanges: "",
@@ -468,7 +479,7 @@ export default {
                   icon: "M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z",
                },
             ],
-            category: [1, 3, 4, 6, 10, 11, 12, 13, 14],
+            category: [1, 3, 4, 6, 11, 12, 13, 14],
             excerpt:
                "Introduction Parsing and display of math equations is included in this blo",
 
@@ -478,6 +489,120 @@ export default {
             date: "Mar 10, 2020",
             datetime: "2020-03-10",
             imageUrl: "/assets/imgs/posts/portfolio_02.jpg",
+            readingTime: "4 min",
+            author: {
+               name: "Brenna Goyette",
+               href: "#",
+               imageUrl:
+                  "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+            },
+         },
+         {
+            id: 3,
+            title: "Music Player",
+            href: "/work",
+            callToAction: [
+               {
+                  title: "ReadMore",
+                  href: "/work/3",
+                  alt: "Read more aobut this project",
+                  icon: "",
+               },
+               {
+                  title: "View Live",
+                  href: "https://youthful-kepler-2e1757.netlify.app",
+                  alt: "muslic player app",
+                  icon: "",
+               },
+               {
+                  title: "",
+                  href: "https://github.com/sherifButt/music-player",
+                  alt: "get sroce code on GitHub",
+                  icon: "M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z",
+               },
+            ],
+            category: [1, 2, 3, 4, 6],
+            excerpt:
+               "Introduction Parsing and display of math equations is included in this blo",
+
+            description:
+               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n# Introduction\n\nParsing and display of math equations is included in this blog template. Parsing of math is enabled by `remark-math` and `rehype-katex`.\nKaTeX and its associated font is included in `_document.js` so feel free to use it on any page.\n^[For the full list of supported TeX functions, check out the [KaTeX documentation](https://katex.org/docs/supported.html)]\n\nInline math symbols can be included by enclosing the term between the `$` symbol.\n\nMath code blocks are denoted by `$$`.\n\nIf you intend to use the `$` sign instead of math, you can escape it (`\\$`), or specify the HTML entity (`&dollar;`) [^2]\n\nInline or manually enumerated footnotes are also supported. Click on the links above to see them in action.\n\n[^2]: \\$10 and &dollar;20.\n\n# Deriving the OLS Estimator\n\nUsing matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.\n\nThe vector of outcome variables $\\mathbf{Y}$ is a $n \\times 1$ matrix,\n\n```tex\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n$$\n\nThe matrix of regressors $\\mathbf{X}$ is a $n \\times k$ matrix (or each row is a $k \\times 1$ vector),\n\n```latex\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n$$\n\nThe vector of error terms $\\mathbf{U}$ is also a $n \\times 1$ matrix.\n\nAt times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.\n\n## Least Squares\n\n**Start**:  \n$$y_i = \\mathbf{x}'_i \\beta + u_i$$\n\n**Assumptions**:\n\n1. Linearity (given above)\n2. $E(\\mathbf{U}|\\mathbf{X}) = 0$ (conditional independence)\n3. rank($\\mathbf{X}$) = $k$ (no multi-collinearity i.e. full rank)\n4. $Var(\\mathbf{U}|\\mathbf{X}) = \\sigma^2 I_n$ (Homoskedascity)\n\n**Aim**:  \nFind $\\beta$ that minimises the sum of squared errors:\n\n$$\nQ = \\sum_{i=1}^{n}{u_i^2} = \\sum_{i=1}^{n}{(y_i - \\mathbf{x}'_i\\beta)^2} = (Y-X\\beta)'(Y-X\\beta)\n$$\n\n**Solution**:  \nHints: $Q$ is a $1 \\times 1$ scalar, by symmetry $\\frac{\\partial b'Ab}{\\partial b} = 2Ab$.\n\nTake matrix derivative w.r.t $\\beta$:\n\n```tex\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n```\n\n$$\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n$$",
+            icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+            date: "Mar 10, 2020",
+            datetime: "2020-03-10",
+            imageUrl: "/assets/imgs/posts/portfolio_04.jpg",
+            readingTime: "4 min",
+            author: {
+               name: "Brenna Goyette",
+               href: "#",
+               imageUrl:
+                  "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+            },
+         },
+         {
+            id: 4,
+            title: "octommerce modest clothes",
+            href: "/work",
+            callToAction: [
+               {
+                  title: "ReadMore",
+                  href: "/work/4",
+                  alt: "Read more aobut this project",
+                  icon: "",
+               },
+               {
+                  title: "View Live",
+                  href: "https://octommerce.com/",
+                  alt: "muslic player app",
+                  icon: "",
+               },
+            ],
+            category: [1, 2, 16],
+            excerpt:
+               "Introduction Parsing and display of math equations is included in this blo",
+
+            description:
+               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n# Introduction\n\nParsing and display of math equations is included in this blog template. Parsing of math is enabled by `remark-math` and `rehype-katex`.\nKaTeX and its associated font is included in `_document.js` so feel free to use it on any page.\n^[For the full list of supported TeX functions, check out the [KaTeX documentation](https://katex.org/docs/supported.html)]\n\nInline math symbols can be included by enclosing the term between the `$` symbol.\n\nMath code blocks are denoted by `$$`.\n\nIf you intend to use the `$` sign instead of math, you can escape it (`\\$`), or specify the HTML entity (`&dollar;`) [^2]\n\nInline or manually enumerated footnotes are also supported. Click on the links above to see them in action.\n\n[^2]: \\$10 and &dollar;20.\n\n# Deriving the OLS Estimator\n\nUsing matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.\n\nThe vector of outcome variables $\\mathbf{Y}$ is a $n \\times 1$ matrix,\n\n```tex\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n$$\n\nThe matrix of regressors $\\mathbf{X}$ is a $n \\times k$ matrix (or each row is a $k \\times 1$ vector),\n\n```latex\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n$$\n\nThe vector of error terms $\\mathbf{U}$ is also a $n \\times 1$ matrix.\n\nAt times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.\n\n## Least Squares\n\n**Start**:  \n$$y_i = \\mathbf{x}'_i \\beta + u_i$$\n\n**Assumptions**:\n\n1. Linearity (given above)\n2. $E(\\mathbf{U}|\\mathbf{X}) = 0$ (conditional independence)\n3. rank($\\mathbf{X}$) = $k$ (no multi-collinearity i.e. full rank)\n4. $Var(\\mathbf{U}|\\mathbf{X}) = \\sigma^2 I_n$ (Homoskedascity)\n\n**Aim**:  \nFind $\\beta$ that minimises the sum of squared errors:\n\n$$\nQ = \\sum_{i=1}^{n}{u_i^2} = \\sum_{i=1}^{n}{(y_i - \\mathbf{x}'_i\\beta)^2} = (Y-X\\beta)'(Y-X\\beta)\n$$\n\n**Solution**:  \nHints: $Q$ is a $1 \\times 1$ scalar, by symmetry $\\frac{\\partial b'Ab}{\\partial b} = 2Ab$.\n\nTake matrix derivative w.r.t $\\beta$:\n\n```tex\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n```\n\n$$\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n$$",
+            icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+            date: "Mar 10, 2020",
+            datetime: "2020-03-10",
+            imageUrl: "/assets/imgs/posts/portfolio_07.jpg",
+            readingTime: "4 min",
+            author: {
+               name: "Brenna Goyette",
+               href: "#",
+               imageUrl:
+                  "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+            },
+         },
+         {
+            id: 5,
+            title: "Halal Sweet Treats",
+            href: "/work",
+            callToAction: [
+               {
+                  title: "ReadMore",
+                  href: "/work/5",
+                  alt: "Read more aobut this project",
+                  icon: "",
+               },
+               {
+                  title: "View Live",
+                  href: "https://halalsweettreats.co.uk",
+                  alt: "muslic player app",
+                  icon: "",
+               },
+            ],
+            category: [1, 2, 16],
+            excerpt:
+               "Introduction Parsing and display of math equations is included in this blo",
+
+            description:
+               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n# Introduction\n\nParsing and display of math equations is included in this blog template. Parsing of math is enabled by `remark-math` and `rehype-katex`.\nKaTeX and its associated font is included in `_document.js` so feel free to use it on any page.\n^[For the full list of supported TeX functions, check out the [KaTeX documentation](https://katex.org/docs/supported.html)]\n\nInline math symbols can be included by enclosing the term between the `$` symbol.\n\nMath code blocks are denoted by `$$`.\n\nIf you intend to use the `$` sign instead of math, you can escape it (`\\$`), or specify the HTML entity (`&dollar;`) [^2]\n\nInline or manually enumerated footnotes are also supported. Click on the links above to see them in action.\n\n[^2]: \\$10 and &dollar;20.\n\n# Deriving the OLS Estimator\n\nUsing matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.\n\nThe vector of outcome variables $\\mathbf{Y}$ is a $n \\times 1$ matrix,\n\n```tex\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n$$\n\nThe matrix of regressors $\\mathbf{X}$ is a $n \\times k$ matrix (or each row is a $k \\times 1$ vector),\n\n```latex\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n$$\n\nThe vector of error terms $\\mathbf{U}$ is also a $n \\times 1$ matrix.\n\nAt times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.\n\n## Least Squares\n\n**Start**:  \n$$y_i = \\mathbf{x}'_i \\beta + u_i$$\n\n**Assumptions**:\n\n1. Linearity (given above)\n2. $E(\\mathbf{U}|\\mathbf{X}) = 0$ (conditional independence)\n3. rank($\\mathbf{X}$) = $k$ (no multi-collinearity i.e. full rank)\n4. $Var(\\mathbf{U}|\\mathbf{X}) = \\sigma^2 I_n$ (Homoskedascity)\n\n**Aim**:  \nFind $\\beta$ that minimises the sum of squared errors:\n\n$$\nQ = \\sum_{i=1}^{n}{u_i^2} = \\sum_{i=1}^{n}{(y_i - \\mathbf{x}'_i\\beta)^2} = (Y-X\\beta)'(Y-X\\beta)\n$$\n\n**Solution**:  \nHints: $Q$ is a $1 \\times 1$ scalar, by symmetry $\\frac{\\partial b'Ab}{\\partial b} = 2Ab$.\n\nTake matrix derivative w.r.t $\\beta$:\n\n```tex\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n```\n\n$$\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n$$",
+            icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+            date: "Mar 10, 2020",
+            datetime: "2020-03-10",
+            imageUrl: "/assets/imgs/posts/portfolio_16.jpg",
             readingTime: "4 min",
             author: {
                name: "Brenna Goyette",

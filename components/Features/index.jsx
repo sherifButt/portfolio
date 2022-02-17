@@ -5,7 +5,8 @@ import FlashText from "../Options/FlashText";
 const {pretitle, title, subtitle, ctaButton, subCta, features } =
    data?.features ? data.features : "";
 
-const Features = ({
+const Features = ( {
+   data,
    variant,
    pretitle,
    title,
@@ -20,7 +21,8 @@ const Features = ({
       case 1:
          html = (
             <Features_01
-               variant
+               data={data}
+               variant={variant}
                pretitle={pretitle}
                title={title}
                subtitle={subtitle}

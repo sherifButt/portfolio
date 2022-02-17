@@ -26,7 +26,7 @@ const FeatureCard = ({ path, title, text, key }) => {
                      {title}
                   </h3>
                   <p className="mt-5 text-base text-gray-500 ">
-                     {text}
+                         {text}
                   </p>
                </div>
             </div>
