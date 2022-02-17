@@ -73,28 +73,35 @@ const About = () => {
               <div className="mt-8 lg:mt-0">
                  <div className="text-base max-w-prose mx-auto lg:max-w-none">
                     <p className="text-lg text-gray-500">
-                       Hi my name is Sherif and I’m a front web
-                       developer. I work with HTML5, CSS3, and
-                       JavaScript (React). My background is in
-                       Architecture and Design, but I also have
-                       experience in digital marketing.
+                       Hi my name is Sherif and I’m a frontend
+                       web developer. I have a passion for
+                       building outstanding digital experiences
+                       and experience in responsive design and
+                       mobile web development. I work with HTML5,
+                       CSS3, and JavaScript (React). My
+                       background is in Architecture and Design,
+                       but I also have experience in digital
+                       marketing (SEO).
                     </p>
                  </div>
                  <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
                     <p>
-                       Sollicitudin tristique eros erat odio sed
-                       vitae, consequat turpis elementum. Lorem
-                       nibh vel, eget pretium arcu vitae. Eros eu
-                       viverra donec ut volutpat donec laoreet
-                       quam urna.
+                       I will help you to create modern websites
+                       that are fast, dynamic and easy to use.
                     </p>
                     <p>
-                       I create modern websites that are fast,
-                       dynamic and easy to use.
+                       I am a self-starter who can take
+                       initiative, identify areas for
+                       improvement, bring suggestions and take
+                       accountability for finding solutions.I
+                       thrives on solving tough problems. I value
+                       the design of a product as much as I value
+                       the code.
                     </p>
                     <p>
-                       I free time I love to bake sourdough bread
-                       for my family and friends :)
+                       Out of the office you’ll find me doing DIY
+                       projects or baking sourdough bred for my
+                       family and friends.
                     </p>
                     <ul role="list">
                        <li>
