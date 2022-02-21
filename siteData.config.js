@@ -1,5 +1,22 @@
 import FlashText from "./components/Options/FlashText";
 export default {
+   gallery: {
+      posts: [
+         {
+            id: 1,
+            alt: "Artist Mostafa Butt on-line portafolio",
+            description: "",
+            src: "/assets/imgs/posts/portfolio_18.jpg",
+            featured: false,
+            isMobile: true,
+            frameVariant:3,
+            width: "",
+            height:"",
+            color: "bg-indigo-100 text-indigo-800",
+            icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+         },
+      ],
+   },
    category: {
       pretitle: "What do we say often?",
       title: "From the Portfolio",
@@ -603,6 +620,46 @@ export default {
             date: "Mar 10, 2020",
             datetime: "2020-03-10",
             imageUrl: "/assets/imgs/posts/portfolio_16.jpg",
+            readingTime: "4 min",
+            author: {
+               name: "Brenna Goyette",
+               href: "#",
+               imageUrl:
+                  "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+            },
+         },
+         {
+            id: 6,
+            title: "Artest Mostafa Butt",
+            href: "/work",
+            callToAction: [
+               {
+                  title: "ReadMore",
+                  href: "/work/6",
+                  alt: "Read more aobut this project",
+                  icon: "",
+               },
+               {
+                  title: "View Live",
+                  href: "https://halalsweettreats.co.uk",
+                  alt: "muslic player app",
+                  icon: "",
+               },
+            ],
+            category: [1, 2, 16],
+            excerpt:
+               "Introduction Parsing and display of math equations is included in this blo",
+
+            description:
+               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n# Introduction\n\nParsing and display of math equations is included in this blog template. Parsing of math is enabled by `remark-math` and `rehype-katex`.\nKaTeX and its associated font is included in `_document.js` so feel free to use it on any page.\n^[For the full list of supported TeX functions, check out the [KaTeX documentation](https://katex.org/docs/supported.html)]\n\nInline math symbols can be included by enclosing the term between the `$` symbol.\n\nMath code blocks are denoted by `$$`.\n\nIf you intend to use the `$` sign instead of math, you can escape it (`\\$`), or specify the HTML entity (`&dollar;`) [^2]\n\nInline or manually enumerated footnotes are also supported. Click on the links above to see them in action.\n\n[^2]: \\$10 and &dollar;20.\n\n# Deriving the OLS Estimator\n\nUsing matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.\n\nThe vector of outcome variables $\\mathbf{Y}$ is a $n \\times 1$ matrix,\n\n```tex\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n$$\n\nThe matrix of regressors $\\mathbf{X}$ is a $n \\times k$ matrix (or each row is a $k \\times 1$ vector),\n\n```latex\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n$$\n\nThe vector of error terms $\\mathbf{U}$ is also a $n \\times 1$ matrix.\n\nAt times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.\n\n## Least Squares\n\n**Start**:  \n$$y_i = \\mathbf{x}'_i \\beta + u_i$$\n\n**Assumptions**:\n\n1. Linearity (given above)\n2. $E(\\mathbf{U}|\\mathbf{X}) = 0$ (conditional independence)\n3. rank($\\mathbf{X}$) = $k$ (no multi-collinearity i.e. full rank)\n4. $Var(\\mathbf{U}|\\mathbf{X}) = \\sigma^2 I_n$ (Homoskedascity)\n\n**Aim**:  \nFind $\\beta$ that minimises the sum of squared errors:\n\n$$\nQ = \\sum_{i=1}^{n}{u_i^2} = \\sum_{i=1}^{n}{(y_i - \\mathbf{x}'_i\\beta)^2} = (Y-X\\beta)'(Y-X\\beta)\n$$\n\n**Solution**:  \nHints: $Q$ is a $1 \\times 1$ scalar, by symmetry $\\frac{\\partial b'Ab}{\\partial b} = 2Ab$.\n\nTake matrix derivative w.r.t $\\beta$:\n\n```tex\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n```\n\n$$\n\\begin{aligned}\n  \\min Q           & = \\min_{\\beta} \\mathbf{Y}'\\mathbf{Y} - 2\\beta'\\mathbf{X}'\\mathbf{Y} +\n  \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n                   & = \\min_{\\beta} - 2\\beta'\\mathbf{X}'\\mathbf{Y} + \\beta'\\mathbf{X}'\\mathbf{X}\\beta \\\\\n  \\text{[FOC]}~~~0 & =  - 2\\mathbf{X}'\\mathbf{Y} + 2\\mathbf{X}'\\mathbf{X}\\hat{\\beta}                  \\\\\n  \\hat{\\beta}      & = (\\mathbf{X}'\\mathbf{X})^{-1}\\mathbf{X}'\\mathbf{Y}                              \\\\\n                   & = (\\sum^{n} \\mathbf{x}_i \\mathbf{x}'_i)^{-1} \\sum^{n} \\mathbf{x}_i y_i\n\\end{aligned}\n$$",
+            icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+            date: "Mar 10, 2020",
+            datetime: "2020-03-10",
+            imgs: [1, 2],
+            imageUrl: "/assets/imgs/posts/portfolio_18.jpg",
+            imageUrlIn: "/assets/imgs/posts/portfolio_19.png",
+            imageUrlInDetail:
+               "/assets/imgs/posts/portfolio_20.png",
             readingTime: "4 min",
             author: {
                name: "Brenna Goyette",

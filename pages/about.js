@@ -54,8 +54,8 @@ const About = () => {
                              className="rounded-lg shadow-lg object-cover object-center"
                              src="/assets/imgs/posts/sbutt_about_01.jpg"
                              alt="Sherif holding a loaf of sower dough bread"
-                             width={1184}
-                             height={1376}
+                             width={300}
+                             height={360}
                           />
                        </div>
                        <figcaption className="mt-3 flex text-sm text-gray-500">
@@ -64,7 +64,7 @@ const About = () => {
                              aria-hidden="true"
                           />
                           <span className="ml-2">
-                             Photograph by Marcus O’Leary
+                             Photograph by Ewa Butt
                           </span>
                        </figcaption>
                     </figure>
@@ -73,8 +73,8 @@ const About = () => {
               <div className="mt-8 lg:mt-0">
                  <div className="text-base max-w-prose mx-auto lg:max-w-none">
                     <p className="text-lg text-gray-500">
-                       Hi my name is Sherif and I’m a frontend
-                       web developer. I have a passion for
+                       Hi my name is Sherif and I’m a <strong>front-end
+                       web developer</strong>. I have a passion for
                        building outstanding digital experiences
                        and experience in responsive design and
                        mobile web development. I work with HTML5,
@@ -86,8 +86,12 @@ const About = () => {
                  </div>
                  <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
                     <p>
-                       I will help you to create modern websites
-                       that are fast, dynamic and easy to use.
+                       <strong>
+                         <u>
+                           I will help you to create modern websites
+                           that are fast, dynamic and easy to use.
+                         </u>
+                       </strong>
                     </p>
                     <p>
                        I am a self-starter who can take
@@ -126,7 +130,7 @@ const About = () => {
                        tempus egestas. Enim sit aliquam nec, a.
                        Morbi enim fermentum lacus in. Viverra.
                     </p>
-                    <h3>How we helped</h3>
+                    <h3>How can I help</h3>
                     <p>
                        Tincidunt integer commodo, cursus etiam
                        aliquam neque, et. Consectetur pretium in

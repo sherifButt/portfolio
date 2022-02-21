@@ -4,78 +4,74 @@ export default async function helloAPI(req, res) {
    const _data = await { ...JSON.parse(JSON.stringify(data)) };
    // replace blog categories id: with category object
    // iterate through data object to ge to category
+   /**
+    *
+    * @param {Object} _data data to process
+    * @param {String} type Post type to manipulate
+    * @param {String} typeSubElement Post's sub element name to manipulate
+    * @param {String} category category type to consume
+    * @returns Object
+    */
    const replaceCatIdWithFullObject = async (
-      _data,
       type = "blog", // Post type to manipulate
+      typeSubElement = "category", // Post's sub element name to manipulate
       category = "category" // category type to consume
    ) => {
-      _data[type].posts.map(
-        (post, postIdx) => {
-           let arr = [];
-           post.category.map((cats, catsIdx) => {
-              // check the relevant category object to match blog post's id
-              _data[category].posts.map((c, ii) => {
-                 if (c.id === cats) arr = [...arr, c];
-              });
-              _data[type].posts[postIdx].category = arr;
-           });
-        }
-     );
- 
-      return  _data;
-   };
-
-
-
-   
-   let _cats = await replaceCatIdWithFullObject(
-      _data,
-      "blog",
-      "category"
-   );
-   let _work = await replaceCatIdWithFullObject(
-      _cats,
-      "work",
-      "toolkit"
-   );
-   res.status(200).json(_work);
-}
-
-export const getData = async () => {
-   const _data = await { ...JSON.parse(JSON.stringify(data)) };
-   // replace blog categories id: with category object
-   // iterate through data object to ge to category
-   const replaceCatIdWithFullObject = async (
-      _data,
-      type = "blog", // Post type to manipulate
-      category = "category" // category type to consume
-   ) => {
-     await _data[type].posts.map((post, postIdx) => {
+      _data[type].posts.map((post, postIdx) => {
          let arr = [];
-         post.category.map((cats, catsIdx) => {
+         post[typeSubElement]?.map((cats, catsIdx) => {
             // check the relevant category object to match blog post's id
             _data[category].posts.map((c, ii) => {
                if (c.id === cats) arr = [...arr, c];
             });
-            _data[type].posts[postIdx].category = arr;
+            _data[type].posts[postIdx][typeSubElement] = arr;
          });
       });
 
-      return await _data;
+      return _data;
    };
 
+   replaceCatIdWithFullObject("blog", "category", "category");
+   replaceCatIdWithFullObject("work", "category", "toolkit");
+   replaceCatIdWithFullObject("work", "imgs", "gallery");
    
-   let _cats = await replaceCatIdWithFullObject(
-      _data,
-      "blog",
-      "category"
-   );
-   
-   let _work = await replaceCatIdWithFullObject(
-      _cats,
-      "work",
-      "toolkit"
-   );
+   res.status( 200 ).json( _data );
+}
 
-   return  _work;
+export const getData = async () => {
+    const _data = await { ...JSON.parse(JSON.stringify(data)) };
+    // replace blog categories id: with category object
+    // iterate through data object to ge to category
+    /**
+     *
+     * @param {Object} _data data to process
+     * @param {String} type Post type to manipulate
+     * @param {String} typeSubElement Post's sub element name to manipulate
+     * @param {String} category category type to consume
+     * @returns Object
+     */
+    const replaceCatIdWithFullObject = async (
+       type = "blog", // Post type to manipulate
+       typeSubElement = "category", // Post's sub element name to manipulate
+       category = "category" // category type to consume
+    ) => {
+       _data[type].posts.map((post, postIdx) => {
+          let arr = [];
+          post[typeSubElement]?.map((cats, catsIdx) => {
+             // check the relevant category object to match blog post's id
+             _data[category].posts.map((c, ii) => {
+                if (c.id === cats) arr = [...arr, c];
+             });
+             _data[type].posts[postIdx][typeSubElement] = arr;
+          });
+       });
+
+       return _data;
+    };
+
+    replaceCatIdWithFullObject("blog", "category", "category");
+    replaceCatIdWithFullObject("work", "category", "toolkit");
+    replaceCatIdWithFullObject("work", "imgs", "gallery");
+
+   return _data;
 };
