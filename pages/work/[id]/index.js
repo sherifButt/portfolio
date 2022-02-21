@@ -57,31 +57,33 @@ const Work = ({ post, content }) => {
                <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
                   {/* Testimonial card*/}
 
-                  {post?.imgs?.map((img, idx) => (
-                     <Frame
-                        key={idx}
-                        variant={img.frameVariant}
-                        img={img}
-                     />
-                  ))}
+                  {post?.imgs?.map((img, idx) =>
+                     idx === 0 ? (
+                        ""
+                     ) : (
+                        <Frame
+                           key={idx}
+                           variant={img.frameVariant}
+                           img={img}
+                        />
+                     )
+                  )}
 
-                  <div
-                     className={`relative pt-96 pb-20 ${
-                        post?.imageUrlIn
+                  { post?.imgs ? "" : <div
+                     className={ `relative pt-96 pb-20 ${ post?.imageUrlIn
                            ? ""
                            : "rounded-2xl shadow-xl overflow-hidden"
-                     }`}>
+                        }` }>
                      <img
                         className="absolute inset-0 h-full w-full object-cover"
-                        src={post?.imageUrlIn || post?.imageUrl}
+                        src={ post?.imageUrlIn || post?.imageUrl }
                         alt=""
                      />
 
-                     {/* <div className="absolute inset-0 bg-indigo-500 mix-blend-multiply" /> */}
-                     {/* <div className="absolute inset-0 bg-gradient-to-t from-indigo-600 via-indigo-600 opacity-50" /> */}
+                     {/* <div className="absolute inset-0 bg-indigo-500 mix-blend-multiply" /> */ }
+                     {/* <div className="absolute inset-0 bg-gradient-to-t from-indigo-600 via-indigo-600 opacity-50" /> */ }
                      <div className="relative px-8"></div>
-                  </div>
-                  
+                  </div> }
                </div>
             </div>
 

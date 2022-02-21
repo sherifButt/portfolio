@@ -29,13 +29,16 @@ IphoneX.defaultProps = {
 export default IphoneX;
 
 //styled componenets
+
 const Container = styled.div`
-  font-size: 1vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  background-color: lighten(#5cbfe2, 20%);
+   font-size: 1vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   background-color: lighten(#5cbfe2, 20%);
+   margin-top: 25%;
+   transform: translate(0%, -5%);
 `;
 const Iphone = styled.div`
    top: 0;

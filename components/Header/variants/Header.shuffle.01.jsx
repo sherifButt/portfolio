@@ -15,6 +15,7 @@ import DOMPurify from "isomorphic-dompurify";
 import Blog from "../../Blog";
 import Blob from "../../MorphedSvg/svg/Blob";
 import ReactCardFlip from "react-card-flip";
+import Frame from "../../FramesCss"
 
 const Header = ({
    title,
@@ -112,7 +113,14 @@ const Header = ({
                   /> */}
                   <Link href="#blog">
                      <a>
-                        <img src="/assets/imgs/posts/portfolio_17.png" />
+                        {/* <img src="/assets/imgs/posts/portfolio_17.png" /> */}
+                        <Frame
+                           variant={2}
+                           img={{
+                              src: "/assets/imgs/posts/portfolio_17.png",
+                              alt:"stuff"
+                           }}
+                        />
                      </a>
                   </Link>
                </div>
