@@ -35,7 +35,7 @@ export default {
             src: "/assets/imgs/posts/portfolio_31.jpg",
             featured: false,
             isMobile: true,
-            frameVariant:1,
+            frameVariant:2,
             width: "",
             height:"",
             color: "bg-indigo-100 text-indigo-800",

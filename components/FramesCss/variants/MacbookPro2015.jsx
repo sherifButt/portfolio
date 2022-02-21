@@ -4,8 +4,8 @@ import styled from "styled-components";
 // Components
 const MacbookPro2015 = ({ img }) => {
   return (
-     <div>
-        <Macbook>
+     <div >
+        <Macbook >
            <Screen>
               <Viewport img={img.src} />
            </Screen>
@@ -28,8 +28,10 @@ img:"https://picturepan2.github.io/devices.css/src/img/bg-07.jpg"
 
 export default MacbookPro2015;
 
+
 const Macbook = styled.div`
    padding: 2% 1%;
+   
    margin: 0 auto;
    max-width: 800px;
    transition: background-position 3s ease;

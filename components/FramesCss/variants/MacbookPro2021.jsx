@@ -33,7 +33,10 @@ export default MacbookPro2021;
 
 // Styled Components
 const Container = styled.div`
-   font-size: 0.54vw;
+   font-size: 0.6vw;
+   @media (max-width: 768px) {
+      font-size: 1.3vw;
+   }
    display: flex;
    align-items: center;
    justify-content: center;
