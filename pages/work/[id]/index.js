@@ -64,7 +64,8 @@ const Work = ({ post, content }) => {
                         <Frame
                            key={idx}
                            variant={img.frameVariant}
-                           img={img}
+                              img={ img }
+                              options={{idx,isCaption:true}}
                         />
                      )
                   )}

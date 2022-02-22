@@ -3,31 +3,36 @@ import React from "react";
 import styled from "styled-components";
 
 // Components
-const MacbookPro2021 = ({ img }) => {
+import Caption from "../Caption"
+const MacbookPro2021 = ({ img,options }) => {
    return (
       <div>
-        <Container>
-           <Macbook>
-              <Display>
-                 <Screen img={img.src} />
-              </Display>
-              <Base>
-                 <Indent />
-              </Base>
-              <Bottom />
-           </Macbook>
-        </Container>
-           <Caption>
-              <cation>
-                 <strong>Macbook Por 2021 Mockup Showing: </strong>{" "}
-                 {img?.description || img?.alt}
-              </cation>
-           </Caption>
+         <Container>
+            <Macbook>
+               <Display>
+                  <Screen img={img.src} />
+               </Display>
+               <Base>
+                  <Indent />
+               </Base>
+               <Bottom />
+            </Macbook>
+         </Container>
+         {options?.isCaption && (
+            <Caption
+               img={img}
+               options={{
+                  ...options,
+                  deviceType: "Laptop",
+               }}
+            />
+         )}
       </div>
    );
 };
 MacbookPro2021.defaultProps = {
    img: "https://picturepan2.github.io/devices.css/src/img/bg-07.jpg",
+   options: { isCaption: true },
 };
 export default MacbookPro2021;
 
@@ -45,8 +50,8 @@ const Container = styled.div`
 `;
 const Macbook = styled.div`
    width: 68.125em;
-   margin-top: 25%;
-   transform: translate(0%, -30%);
+   margin-top: 15%;
+   transform: translate(0%, -20%);
 `;
 const Display = styled.div`
    background-color: #000;
@@ -154,10 +159,3 @@ const Bottom = styled.div`
       0 15px 12px rgba(0, 0, 0, 0.05);
 `;
 
-const Caption = styled.div`
-   /* margin-top: -20%; */
-   font-size: 0.75rem;
-   text-align: center;
-   transparent: 0.8;
-
-`;

@@ -2,26 +2,33 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-const BrowserMockup = ({ img }) => {
+import Caption from "../Caption"
+const BrowserMockup = ({ img,options }) => {
    return (
       <div>
-         
-            <BrowserMockupD>
-               <img style={{"border-radius":"0 0 5px 5px"}} src={img.src} />
-            </BrowserMockupD>
-           
-         <Caption>
-            <cation>
-               <strong>Macbook Pro 2015 Mockup Showing: </strong>{" "}
-               {img?.description || img?.alt}
-            </cation>
-         </Caption>
+         <BrowserMockupD>
+            <img
+               style={{ "border-radius": "0 0 5px 5px" }}
+               src={img.src}
+            />
+         </BrowserMockupD>
+
+         {options?.isCaption && (
+            <Caption
+               img={img}
+               options={{
+                  ...options,
+                  deviceType: "Web Browser",
+               }}
+            />
+         )}
       </div>
    );
 };
 
 BrowserMockup.defaultProps = {
    img: "https://picturepan2.github.io/devices.css/src/img/bg-07.jpg",
+   options: { isCaption: true },
 };
 
 export default BrowserMockup;
@@ -32,7 +39,7 @@ const BrowserMockupD = styled.div`
    position: relative;
    border-radius: 5px;
    margin-top: 25%;
-   
+
    transform: translate(0%, -5%);
    :before {
       display: block;
@@ -61,9 +68,3 @@ const BrowserMockupD = styled.div`
    }
 `;
 
-const Caption = styled.div`
-   /* margin-top: -20%; */
-   font-size: 0.75rem;
-   text-align: center;
-   transparent: 0.8;
-`;

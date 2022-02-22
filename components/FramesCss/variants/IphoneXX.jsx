@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-
+import Caption from "../Caption"
 const IphoneXX = ({ img, options }) => {
    return (
       <Container>
@@ -33,12 +33,13 @@ const IphoneXX = ({ img, options }) => {
             </Layer2>
          </FrameBase>
          {options?.isCaption && (
-            <Caption>
-               <cation>
-                  <strong>Iphone X Mockup Showing: </strong>{" "}
-                  {img?.description || img?.alt}
-               </cation>
-            </Caption>
+            <Caption
+               img={img}
+               options={{
+                  ...options,
+                  deviceType: "Mobile Phone",
+               }}
+            />
          )}
       </Container>
    );
@@ -346,9 +347,3 @@ const LenzRight = styled(Lenz)`
    top: 1px;
 `;
 
-const Caption = styled.div`
-   /* margin-top: -20%; */
-   font-size: 0.75rem;
-   text-align: center;
-   transparent: 0.8;
-`;

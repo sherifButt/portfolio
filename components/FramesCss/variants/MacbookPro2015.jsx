@@ -2,29 +2,34 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-const MacbookPro2015 = ({ img }) => {
+import Caption from "../Caption"
+const MacbookPro2015 = ({ img,options }) => {
   return (
-     <div >
-        <Macbook >
+     <div>
+        <Macbook>
            <Screen>
               <Viewport img={img.src} />
            </Screen>
            <Base />
            <Notch />
         </Macbook>
-        <Caption>
-           <cation>
-              <strong>Macbook Pro 2015 Mockup Showing: </strong>{" "}
-              {img?.description || img?.alt}
-           </cation>
-        </Caption>
+        {options?.isCaption && (
+           <Caption
+              img={img}
+              options={{
+                 ...options,
+                 deviceType: '13\" Laptop',
+              }}
+           />
+        )}
      </div>
   );
 };
 
 MacbookPro2015.defaultProps = {
-img:"https://picturepan2.github.io/devices.css/src/img/bg-07.jpg"
-}
+   img: "https://picturepan2.github.io/devices.css/src/img/bg-07.jpg",
+   options: { isCaption: true },
+};
 
 export default MacbookPro2015;
 
@@ -158,11 +163,4 @@ const Notch = styled.div`
     /* for aspect ratio ~1:10 */
     padding-top: 10%;
   }
-`;
-const Caption = styled.div`
-   /* margin-top: -20%; */
-   font-size: 0.75rem;
-   text-align: center;
-   transparent: 0.8;
-
 `;

@@ -3,27 +3,30 @@ import React from "react";
 import styled from "styled-components";
 
 // Componenets
-
-const IphoneX = ({ img }) => {
+import Caption from "../Caption"
+const IphoneX = ({ img,options }) => {
   
   return (
      <div>
-       <Container>
-          <Iphone id="iphone-x" img={img.src} />
-       </Container>
-          <Caption>
-             <cation>
-                <strong>Imac 27" Mockup Showing: </strong>{" "}
-                {img?.description || img?.alt}
-             </cation>
-          </Caption>
+        <Container>
+           <Iphone id="iphone-x" img={img.src} />
+        </Container>
+        {options?.isCaption && (
+           <Caption
+              img={img}
+              options={{
+                 ...options,
+                 deviceType: "Mobile Phone",
+              }}
+           />
+        )}
      </div>
   );
 };
 
 IphoneX.defaultProps = {
-  img:
-    "https://picturepan2.github.io/devices.css/src/img/bg-07.jpg"
+   img: "https://picturepan2.github.io/devices.css/src/img/bg-07.jpg",
+   options: { isCaption: true },
 };
 
 export default IphoneX;
@@ -66,11 +69,4 @@ const Iphone = styled.div`
       content: "";
       border-radius: 0 0 15px 15px;
    }
-`;
-const Caption = styled.div`
-   /* margin-top: -20%; */
-   font-size: 0.75rem;
-   text-align: center;
-   transparent: 0.8;
-   margin-top: 40px;
 `;

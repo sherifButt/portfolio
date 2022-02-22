@@ -3,8 +3,8 @@ import React from "react";
 import styled from "styled-components";
 
 // Componenets
-
-const Imac27 = ({ img }) => {
+import Caption from "../Caption"
+const Imac27 = ({ img,options }) => {
    return (
       <div>
          <Imac>
@@ -14,12 +14,15 @@ const Imac27 = ({ img }) => {
             <Logo />
             <Leg />
             <Foot />
-            <Caption>
-               <cation>
-                  <strong>Imac 27" Mockup Showing: </strong>{" "}
-                  {img?.description || img?.alt}
-               </cation>
-            </Caption>
+            {options?.isCaption && (
+               <Caption
+                  img={img}
+                  options={{
+                     ...options,
+                     deviceType: "Desk Top Computer",
+                  }}
+               />
+            )}
          </Imac>
       </div>
    );
@@ -27,6 +30,7 @@ const Imac27 = ({ img }) => {
 
 Imac27.defaultProps = {
    img: "https://picturepan2.github.io/devices.css/src/img/bg-07.jpg",
+   options: { isCaption: true },
 };
 
 export default Imac27;
@@ -175,11 +179,4 @@ const Foot = styled.div`
       box-shadow: 0 -10px 5px rgba(255, 255, 255, 0.1) inset,
          0 -17px 6px rgba(0, 0, 0, 0.1) inset;
    }
-`;
-const Caption = styled.div`
-   /* margin-top: -20%; */
-   font-size: 0.75rem;
-   text-align: center;
-   transparent: 0.8;
-   margin-top:40px;
 `;
