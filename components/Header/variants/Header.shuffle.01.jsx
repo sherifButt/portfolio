@@ -115,10 +115,11 @@ const Header = ({
                      <a>
                         {/* <img src="/assets/imgs/posts/portfolio_17.png" /> */}
                         <Frame
-                           variant={2}
+                           variant={ 2 }
+                           options={{isCaption:false}}
                            img={{
-                              src: "/assets/imgs/posts/portfolio_17.png",
-                              alt:"stuff"
+                              src: "/assets/imgs/posts/portfolio_62.png",
+                              alt: "stuff",
                            }}
                         />
                      </a>

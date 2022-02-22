@@ -1,6 +1,7 @@
 import data from "../../siteData.config";
 
-export default async function helloAPI(req, res) {
+export default async function helloAPI ( req, res ) {
+   console.time('apiDataTime')
    const _data = await { ...JSON.parse(JSON.stringify(data)) };
    // replace blog categories id: with category object
    // iterate through data object to ge to category
@@ -27,7 +28,7 @@ export default async function helloAPI(req, res) {
             _data[type].posts[postIdx][typeSubElement] = arr;
          });
       });
-
+console.timeEnd("apiDataTime");
       return _data;
    };
 
@@ -39,6 +40,7 @@ export default async function helloAPI(req, res) {
 }
 
 export const getData = async () => {
+   console.time("getDataTime");
     const _data = await { ...JSON.parse(JSON.stringify(data)) };
     // replace blog categories id: with category object
     // iterate through data object to ge to category
@@ -72,6 +74,6 @@ export const getData = async () => {
     replaceCatIdWithFullObject("blog", "category", "category");
     replaceCatIdWithFullObject("work", "category", "toolkit");
     replaceCatIdWithFullObject("work", "imgs", "gallery");
-
+console.timeEnd("getDataTime");
    return _data;
 };

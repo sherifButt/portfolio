@@ -97,7 +97,7 @@ export const getStaticProps = async context => {
    const data = await getData();
    // const res = await axios( '/api/data' );
    // const data = res.data
-   console.log(data)
+   // console.log(data)
    return {
       props: {
          data,

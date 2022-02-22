@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 // Components
 
-const IphoneXX = ({ img }) => {
+const IphoneXX = ({ img, options }) => {
    return (
       <Container>
          <FrameBase>
@@ -32,18 +32,21 @@ const IphoneXX = ({ img }) => {
                </Screen>
             </Layer2>
          </FrameBase>
-         <Caption>
-            <cation>
-               <strong>Iphone X Mockup Showing: </strong>{" "}
-               {img?.description || img?.alt}
-            </cation>
-         </Caption>
+         {options?.isCaption && (
+            <Caption>
+               <cation>
+                  <strong>Iphone X Mockup Showing: </strong>{" "}
+                  {img?.description || img?.alt}
+               </cation>
+            </Caption>
+         )}
       </Container>
    );
 };
 
 IphoneXX.defaultProps = {
    img: "https://picturepan2.github.io/devices.css/src/img/bg-07.jpg",
+   options:{isCaption: true},
 };
 
 export default IphoneXX;
@@ -346,7 +349,6 @@ const LenzRight = styled(Lenz)`
 const Caption = styled.div`
    /* margin-top: -20%; */
    font-size: 0.75rem;
-   text-align:center;
-   transparent:.8;
+   text-align: center;
+   transparent: 0.8;
 `;
-

@@ -51,8 +51,8 @@ const Imac = styled.div`
    position: relative;
    right: 0;
    /* top: 0; */
-   margin-top: 35%;
-   transform: translate(0%, -30%);
+   margin-top: 15%;
+   transform: translate(0%, -10%);
 `;
 const Screen = styled.div`
    background: #000;

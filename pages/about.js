@@ -97,14 +97,14 @@ const About = () => {
                        I am a self-starter who can take
                        initiative, identify areas for
                        improvement, bring suggestions and take
-                       accountability for finding solutions.I
+                       accountability for finding solutions. I
                        thrives on solving tough problems. I value
                        the design of a product as much as I value
                        the code.
                     </p>
                     <p>
                        Out of the office you’ll find me doing DIY
-                       projects or baking sourdough bred for my
+                       projects or baking sourdough bread for my
                        family and friends.
                     </p>
                     <ul role="list">
