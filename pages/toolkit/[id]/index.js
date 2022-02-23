@@ -5,11 +5,14 @@ import DOMPurify from "isomorphic-dompurify";
 import matter from "gray-matter";
 import { marked } from "marked";
 
+import ProgressBar from "../../../components/UX/ProgressBar";
+import MenuIcons from "../../../components/Navigation/MenuIcons"
+
 const stats = [
-   { label: "Founded", value: "2021" },
-   { label: "Employees", value: "5" },
-   { label: "Beta Users", value: "521" },
-   { label: "Raised", value: "$25M" },
+   { label: "Started", value: "2021" },
+   { label: "Projects", value: "5" },
+   { label: "Collaborations", value: "11" },
+   { label: "Commercial Value", value: "$25M" },
 ];
 
 const Example = ({ post, content }) => {
@@ -55,16 +58,24 @@ const Example = ({ post, content }) => {
                </div>
                <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
                   {/* Testimonial card*/}
-                  <div className="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
-                     <img
-                        className="absolute inset-0 h-full w-full object-cover"
-                        src={post.imageUrl}
-                        alt=""
-                     />
-                     {/* <div className="absolute inset-0 bg-indigo-500 mix-blend-multiply" /> */}
-                     {/* <div className="absolute inset-0 bg-gradient-to-t from-indigo-600 via-indigo-600 opacity-50" /> */}
-                     <div className="relative px-8"></div>
-                  </div>
+                  {post?.icon ? (
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="400"
+                        height="400"
+                        viewBox="0 0 24 24"
+                        className="fill-indigo-700 dark:fill-indigo-100 mr-1 scale-75 -translate-x-20 md:scale-100 md:translate-x-0 ">
+                        <path d={post.icon} />
+                     </svg>
+                  ) : (
+                     <div className="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
+                        <img
+                           className="absolute inset-0 h-full w-full object-cover"
+                           src={post.imageUrl}
+                           alt=""
+                        />
+                     </div>
+                  )}
                </div>
             </div>
 
@@ -84,9 +95,45 @@ const Example = ({ post, content }) => {
                      </p>
                   </article>
                </div>
+               {/* Work */}
+               {post.work && <div>
+                  <h2 className="pt-5">
+                     Work done using {post?.title}
+                  </h2>
+                  <MenuIcons posts={post?.work} />
+              </div>}
 
                {/* Stats section */}
                <div className="mt-10">
+                  
+                  <div className=" py-10 border-t"><h2 className="py-5 ">
+                      {post?.title} Stats
+                  </h2>
+                     <ProgressBar
+                        options={{
+                           label: "Experience",
+                           percentage: post?.experience,
+                           description:
+                              "calculated base on total experience as frontend webDev",
+                        }}
+                     />
+                     <ProgressBar
+                        options={{
+                           label: "Experience",
+                           percentage: 60,
+                           description:
+                              "calculated base on total experience as frontend webDev",
+                        }}
+                     />
+                     <ProgressBar
+                        options={{
+                           label: "Experience",
+                           percentage: 60,
+                           description:
+                              "calculated base on total experience as frontend webDev",
+                        }}
+                     />
+                  </div>
                   <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
                      {stats.map(stat => (
                         <div
@@ -102,7 +149,7 @@ const Example = ({ post, content }) => {
                      ))}
                   </dl>
                   <div className="mt-10">
-                     <a
+                     {/* <a
                         href="#"
                         className="text-base font-medium text-indigo-600">
                         {" "}
@@ -111,7 +158,7 @@ const Example = ({ post, content }) => {
                         <span aria-hidden="true">
                            &rarr;
                         </span>{" "}
-                     </a>
+                     </a> */}
                   </div>
                </div>
             </div>
@@ -121,29 +168,28 @@ const Example = ({ post, content }) => {
 };
 
 export const getServerSideProps = async context => {
- try { const data = await getData();
-   const posts = await data.toolkit.posts;
+   try {
+      const data = await getData();
+      const posts = await data.toolkit.posts;
 
-   // console.log( posts.filter( i => i.id == context.params.id ) );
-   const post = await posts.filter(
-      i => i.id == context.params.id
-   )[0];
-   
+      // console.log( posts.filter( i => i.id == context.params.id ) );
+      const post = await posts.filter(
+         i => i.id == context.params.id
+      )[0];
 
-   const { content } = matter( post?.description );
-   
-   console.log(content);
-   return {
-      props: {
-         post: post,
-         content,
-      }
-    }
- } catch ( e )
- {
-    return {
-       notFound: true,
-    };
+      const { content } = matter(post?.description);
+
+      console.log(content);
+      return {
+         props: {
+            post: post,
+            content,
+         },
+      };
+   } catch (e) {
+      return {
+         notFound: true,
+      };
    }
 };
 

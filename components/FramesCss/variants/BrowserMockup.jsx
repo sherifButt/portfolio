@@ -19,6 +19,7 @@ const BrowserMockup = ({ img,options }) => {
                options={{
                   ...options,
                   deviceType: "Web Browser",
+                  showing: "- (wide screen version)",
                }}
             />
          )}

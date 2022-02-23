@@ -3,8 +3,8 @@ import React from "react";
 import styled from "styled-components";
 
 // Components
-import Caption from "../Caption"
-const MacbookPro2021 = ({ img,options }) => {
+import Caption from "../Caption";
+const MacbookPro2021 = ({ img, options }) => {
    return (
       <div>
          <Container>
@@ -17,13 +17,15 @@ const MacbookPro2021 = ({ img,options }) => {
                </Base>
                <Bottom />
             </Macbook>
-         </Container>
+       </Container>
+       
          {options?.isCaption && (
             <Caption
                img={img}
                options={{
                   ...options,
                   deviceType: "Laptop",
+                  showing: "- (wide screen version)",
                }}
             />
          )}
@@ -38,7 +40,7 @@ export default MacbookPro2021;
 
 // Styled Components
 const Container = styled.div`
-   font-size: 0.6vw;
+   font-size: 50.6%;
    @media (max-width: 768px) {
       font-size: 1.3vw;
    }
@@ -104,6 +106,7 @@ const Screen = styled.div`
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
+   overflow: scroll;
 `;
 const Base = styled.div`
    height: 1.25em;
@@ -158,4 +161,3 @@ const Bottom = styled.div`
    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.05),
       0 15px 12px rgba(0, 0, 0, 0.05);
 `;
-

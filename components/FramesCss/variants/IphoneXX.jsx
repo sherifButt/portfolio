@@ -38,6 +38,7 @@ const IphoneXX = ({ img, options }) => {
                options={{
                   ...options,
                   deviceType: "Mobile Phone",
+                  showing: "- (mobile screen version)",
                }}
             />
          )}

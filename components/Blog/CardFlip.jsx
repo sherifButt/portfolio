@@ -67,6 +67,7 @@ const Card = ({
                      <a
                         key={cat.title}
                         href={cat.href}
+                        alt={cat.alt}
                         className={classNames(
                            cat.color,
                            "hover:underline bg-transparent  mt-2 inline-flex items-center  px-3 py-0.5 rounded-full text-sm font-medium "
@@ -119,15 +120,20 @@ const Card = ({
                   <p className="text-sm font-medium dark:text-indigo-400  text-indigo-600 hidden md:inline-block ">
                      {Array.isArray(category) &&
                         category.filter(Boolean).map(cat => (
-                           <a
-                              key={cat.title}
+                           <Link
                               href={cat.href}
-                              className={classNames(
-                                 cat.color,
-                                 "hover:underline dark:bg-gray-800 mt-2 inline-flex items-center mr-2 px-3 py-0.5 rounded-full text-sm font-medium "
-                              )}>
-                              {cat.title}
-                           </a>
+                              title={cat.alt}
+                              passHref>
+                              <a
+                                 key={cat.title}
+                                 title={cat.alt}
+                                 className={classNames(
+                                    cat.color,
+                                    "hover:underline dark:bg-gray-800 mt-2 inline-flex items-center mr-2 px-3 py-0.5 rounded-full text-sm font-medium "
+                                 )}>
+                                 {cat.title}..
+                              </a>
+                           </Link>
                         ))}
                   </p>
 

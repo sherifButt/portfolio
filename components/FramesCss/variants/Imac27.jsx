@@ -20,6 +20,7 @@ const Imac27 = ({ img,options }) => {
                   options={{
                      ...options,
                      deviceType: "Desk Top Computer",
+                     showing: "- (Extra wide screen version)",
                   }}
                />
             )}

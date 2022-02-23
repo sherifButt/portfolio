@@ -16,7 +16,8 @@ const IphoneX = ({ img,options }) => {
               img={img}
               options={{
                  ...options,
-                 deviceType: "Mobile Phone",
+                deviceType: "Mobile Phone",
+                 showing:"- (Mobile screen version)"
               }}
            />
         )}

@@ -18,7 +18,8 @@ const MacbookPro2015 = ({ img,options }) => {
               img={img}
               options={{
                  ...options,
-                 deviceType: '13\" Laptop',
+                 deviceType: '13" Laptop',
+                 showing: "- (wide screen version)",
               }}
            />
         )}

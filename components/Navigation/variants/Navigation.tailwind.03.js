@@ -34,39 +34,25 @@ import MenuPosts from "../MenuPosts";
 
 const work = [
    {
-      name: "Analytics",
+      name: "work",
       description:
          "Get a better understanding of where your traffic is coming from.",
-      href: "#",
+      href: "/work",
       icon: ChartBarIcon,
    },
    {
-      name: "Engagement",
+      name: "Tool Kit",
       description:
          "Speak directly to your customers in a more meaningful way.",
-      href: "#",
+      href: "/toolkit",
       icon: CursorClickIcon,
    },
    {
-      name: "Security",
+      name: "About",
       description:
          "Your customers' data will be safe and secure.",
-      href: "#",
+      href: "/about",
       icon: ShieldCheckIcon,
-   },
-   {
-      name: "Integrations",
-      description:
-         "Connect with third-party tools that you're already using.",
-      href: "#",
-      icon: ViewGridIcon,
-   },
-   {
-      name: "Automations",
-      description:
-         "Build strategic funnels that will drive your customers to convert",
-      href: "#",
-      icon: RefreshIcon,
    },
 ];
 const callsToAction = [
@@ -278,7 +264,7 @@ export default function Navigation({ className, data }) {
                                     "group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-indigo-900 focus:ring-indigo-500 pl-3"
                                  )}>
                                  <span className="capitalize">
-                                    toolkit
+                                    my toolkit
                                  </span>
                                  <ChevronDownIcon
                                     className={classNames(
@@ -309,6 +295,7 @@ export default function Navigation({ className, data }) {
                                              data?.toolkit
                                           }
                                           mainTitle="tools"
+                                          random={true}
                                        />
                                        
                                        
@@ -328,7 +315,7 @@ export default function Navigation({ className, data }) {
                   </motion.a>
                   
 
-                  <motion.div variants={item}>
+                  {/* <motion.div variants={item}>
                      <Popover className="relative">
                         {({ open }) => (
                            <>
@@ -383,7 +370,7 @@ export default function Navigation({ className, data }) {
                            </>
                         )}
                      </Popover>
-                  </motion.div>
+                  </motion.div> */}
                </Popover.Group>
 
                <div
@@ -477,7 +464,7 @@ export default function Navigation({ className, data }) {
                   </div>
                   <div className="py-6 px-5 space-y-6 dark:bg-gray-800">
                      <div className="grid grid-cols-2 gap-y-4 gap-x-8 ">
-                        <a
+                        {/* <a
                            href="#"
                            className="text-base font-medium text-gray-900 dark:text-gray-600 hover:text-gray-700 ">
                            about
@@ -487,28 +474,28 @@ export default function Navigation({ className, data }) {
                            href="#"
                            className="text-base font-medium text-gray-900 dark:text-gray-600 hover:text-gray-700">
                            Docs
-                        </a>
-                        {categories.map(item => (
+                        </a> */}
+                        {/* {categories.map(item => (
                            <a
                               key={item.name}
                               href={item.href}
                               className="text-base font-medium text-gray-900 dark:text-gray-600 hover:text-gray-700">
                               {item.name}
                            </a>
-                        ))}
+                        ))} */}
                      </div>
                      <div>
                         <a
                            href="#"
                            className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                           Hire mef
+                           Hire Me
                         </a>
                         <p className="mt-6 text-center text-base font-medium text-gray-500">
                            Get my{" "}
                            <a
                               href="#"
                               className="text-indigo-600 hover:text-indigo-500">
-                              Resume
+                              CV
                            </a>
                         </p>
                      </div>
