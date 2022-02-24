@@ -45,9 +45,9 @@ export default function Blog({
    // framer motion animation control
    const controls = useAnimation();
 
-   // Hook allow us to control the elemnt in the screen view
+   // Hook allow us to control the element in the screen view
    let { inView, entry, ref } = useInView({
-      threshold: 0.5,
+      threshold: 0.2,
       triggerOnce: false,
    });
 

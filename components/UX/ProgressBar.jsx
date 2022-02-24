@@ -5,11 +5,11 @@ const ProgressBar = ({options,disabled} ) => {
       <div className="">
          <div className="flex justify-between mb-1">
             <span
-               className={`text-base font-medium text-${options?.color}-700 dark:text-white`}>
+               className={`text-base font-medium text-${options?.color}-700 dark:text-gray-400`}>
                {options?.label}
             </span>
             <span
-               className={`text-sm font-medium text-${options?.color}-700 dark:text-white`}>
+               className={`text-sm font-medium text-${options?.color}-700 dark:text-gray-400`}>
                {options?.percentage} {options?.percentage && "%"}
             </span>
          </div>
@@ -22,7 +22,7 @@ const ProgressBar = ({options,disabled} ) => {
                }}></div>
          </div>
          <span
-            className={`text-sm  font-medium text-${options?.color}-200 dark:text-white`}>
+            className={`text-sm  text-${options?.color}-200 dark:text-gray-500`}>
             {options?.description}
          </span>
       </div>

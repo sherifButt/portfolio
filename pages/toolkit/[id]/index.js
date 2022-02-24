@@ -6,7 +6,7 @@ import matter from "gray-matter";
 import { marked } from "marked";
 
 import ProgressBar from "../../../components/UX/ProgressBar";
-import MenuIcons from "../../../components/Navigation/MenuIcons"
+import MenuIcons from "../../../components/Navigation/MenuIcons";
 
 const stats = [
    { label: "Started", value: "2021" },
@@ -16,7 +16,17 @@ const stats = [
 ];
 
 const Example = ({ post, content }) => {
-   let description = marked(DOMPurify.sanitize(content)); // clean description
+   // replace existing work icon with toolkit icon inside
+   post = {
+      ...post,
+      work: post.work.map((item, idx) => ({
+         ...item,
+         icon: post.icon,
+      })),
+   };
+
+   // clean description
+   let description = marked(DOMPurify.sanitize(content));
    return (
       <div className=" relative  py-16 sm:py-24">
          <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
@@ -96,19 +106,21 @@ const Example = ({ post, content }) => {
                   </article>
                </div>
                {/* Work */}
-               {post.work && <div>
-                  <h2 className="pt-5">
-                     Work done using {post?.title}
-                  </h2>
-                  <MenuIcons posts={post?.work} />
-              </div>}
+               {post.work && (
+                  <div>
+                     <h3 className="pt-5 leading-loose text-2xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal">
+                        Work done using {post?.title}
+                     </h3>
+                     <MenuIcons posts={post?.work} />
+                  </div>
+               )}
 
                {/* Stats section */}
-               <div className="mt-10">
-                  
-                  <div className=" py-10 border-t"><h2 className="py-5 ">
-                      {post?.title} Stats
-                  </h2>
+               <div className="">
+                  <div className="">
+                     <h3 className="pt-5 leading-loose text-2xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal">
+                        {post?.title} Stats
+                     </h3>
                      <ProgressBar
                         options={{
                            label: "Experience",
