@@ -19,7 +19,7 @@ const Example = ({ post, content }) => {
    // replace existing work icon with toolkit icon inside
    post = {
       ...post,
-      work: post.work.map((item, idx) => ({
+      work: post.work?.map((item, idx) => ({
          ...item,
          icon: post.icon,
       })),

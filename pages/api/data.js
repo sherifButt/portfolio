@@ -4,9 +4,11 @@ export default async function helloAPI(req, res) {
    console.time("apiDataTime");
    const _data = await { ...JSON.parse(JSON.stringify(data)) };
    // replace blog categories id: with category object
+
    // iterate through data object to ge to category
+
    /**
-    *
+    * Replace blog categories id: with category object
     * @param {Object} _data data to process
     * @param {String} type Post type to manipulate
     * @param {String} typeSubElement Post's sub element name to manipulate
@@ -14,7 +16,7 @@ export default async function helloAPI(req, res) {
     * @param {Array} exclude objects
     * @returns Object
     */
-   const replaceCatIdWithFullObject = async (
+   const replaceIdWithFullObject = async (
       type = "blog", // Post type to manipulate
       typeSubElement = "category", // Post's sub element name to manipulate
       category = "category", // category type to consume
@@ -35,17 +37,53 @@ export default async function helloAPI(req, res) {
             _data[type].posts[postIdx][typeSubElement] = arr;
          });
       });
-      console.timeEnd("apiDataTime");
+
       return _data;
    };
-   replaceCatIdWithFullObject("toolkit", "work", "work", [
+   // check if a toolkit exist in any of works
+// loop through toolkit Object
+   // in toolkit[0] loop through work Objects
+   // in work[0] loop through category array
+   // in category[0] check if category[0] === toolkit.id
+   // push work object to toolkit.work 
+
+   const addWorkToToolkits = () => {
+      const check = _data.toolkit.posts?.map((tool, toolIdx) =>
+      {
+         let arr = [];
+         
+         const foundWorks = data.work.posts?.filter( work => {
+            const foundWork = work.category.filter(category => {
+               if (category === tool.id) {
+                  arr = [...arr, work];
+                  // _data = {..._data,toolkit:[..._data.toolkit.posts]}
+                  // console.log(tool.title, work.title, arr);
+               }
+            });
+            _data.toolkit.posts[toolIdx].work = arr;
+            // console.log(_data.toolkit.posts[toolIdx])
+            return foundWork;
+         } )
+         // console.log(foundWorks)
+         return foundWorks
+      }
+         
+      );
+
+       return check;
+   };
+
+   
+   replaceIdWithFullObject("toolkit", "work", "work", [
       "description",
    ]);
-   replaceCatIdWithFullObject("blog", "category", "category");
-   replaceCatIdWithFullObject("work", "category", "toolkit");
-   replaceCatIdWithFullObject("work", "imgs", "gallery");
-
-   res.status(200).json(_data);
+   replaceIdWithFullObject("blog", "category", "category");
+   replaceIdWithFullObject("work", "category", "toolkit");
+   replaceIdWithFullObject("work", "imgs", "gallery");
+ addWorkToToolkits();
+   
+   res.status(200).json( _data);
+   console.timeEnd("apiDataTime");
 }
 
 export const getData = async () => {
@@ -54,7 +92,6 @@ export const getData = async () => {
    // replace blog categories id: with category object
    // iterate through data object to ge to category
    /**
-    *
     * @param {Object} _data data to process
     * @param {String} type Post type to manipulate
     * @param {String} typeSubElement Post's sub element name to manipulate
@@ -62,7 +99,7 @@ export const getData = async () => {
     * @param {Array} exclude objects
     * @returns Object
     */
-   const replaceCatIdWithFullObject = async (
+   const replaceIdWithFullObject = async (
       type = "blog", // Post type to manipulate
       typeSubElement = "category", // Post's sub element name to manipulate
       category = "category", // category type to consume
@@ -83,15 +120,46 @@ export const getData = async () => {
             _data[type].posts[postIdx][typeSubElement] = arr;
          });
       });
-      console.timeEnd("apiDataTime");
+
       return _data;
    };
-   replaceCatIdWithFullObject("toolkit", "work", "work", [
+
+   // check if a toolkit exist in any of works
+   // loop through toolkit Object
+   // in toolkit[0] loop through work Objects
+   // in work[0] loop through category array
+   // in category[0] check if category[0] === toolkit.id
+   // push work object to toolkit.work
+
+   const addWorkToToolkits = () => {
+      const check = _data.toolkit.posts?.map((tool, toolIdx) => {
+         let arr = [];
+
+         const foundWorks = data.work.posts?.filter(work => {
+            const foundWork = work.category.filter(category => {
+               if (category === tool.id) {
+                  arr = [...arr, work];
+                  // _data = {..._data,toolkit:[..._data.toolkit.posts]}
+                  // console.log(tool.title, work.title, arr);
+               }
+            });
+            _data.toolkit.posts[toolIdx].work = arr;
+            // console.log(_data.toolkit.posts[toolIdx]);
+            return foundWork;
+         });
+         // console.log(foundWorks)
+         return foundWorks;
+      });
+
+      return check;
+   };
+   replaceIdWithFullObject("toolkit", "work", "work", [
       "description",
    ]);
-   replaceCatIdWithFullObject("blog", "category", "category");
-   replaceCatIdWithFullObject("work", "category", "toolkit");
-   replaceCatIdWithFullObject("work", "imgs", "gallery");
+   replaceIdWithFullObject("blog", "category", "category");
+   replaceIdWithFullObject("work", "category", "toolkit");
+   replaceIdWithFullObject( "work", "imgs", "gallery" );
+    addWorkToToolkits();
    console.timeEnd("getDataTime");
    return _data;
 };

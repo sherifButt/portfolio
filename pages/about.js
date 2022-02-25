@@ -1,4 +1,5 @@
 import { CameraIcon } from "@heroicons/react/solid";
+import Link from "next/link";
 const About = () => {
    return (
       <div className=" overflow-hidden">
@@ -14,6 +15,7 @@ const About = () => {
                   </h3>
                </div>
             </div>
+
             <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
                <div className="relative lg:row-start-1 lg:col-start-2">
                   <svg
@@ -73,14 +75,15 @@ const About = () => {
                <div className="mt-8 lg:mt-0">
                   <div className="text-base max-w-prose mx-auto lg:max-w-none">
                      <p className="text-lg text-gray-500">
-                        Hi my name is Sherif and I am a front-end web developer.
-                        I have a passion for building outstanding
-                        digital experiences and experience in
-                        responsive design and mobile web
-                        development. I work with HTML5, CSS3, and
-                        JavaScript (React). My background is in
-                        Architecture and Design, but I also have
-                        experience in digital marketing (SEO).
+                        Hi my name is Sherif and I am a front-end
+                        web developer. I have a passion for
+                        building outstanding digital experiences
+                        and experience in responsive design and
+                        mobile web development. I work with
+                        HTML5, CSS3, and JavaScript (React). My
+                        background is in Architecture and Design,
+                        but I also have experience in digital
+                        marketing (SEO).
                      </p>
                   </div>
                   <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
@@ -88,8 +91,8 @@ const About = () => {
                         <strong className="dark:text-gray-400">
                            <u>
                               I will help you to create modern
-                              websites and web applications that are fast, dynamic and
-                              easy to use.
+                              websites and web applications that
+                              are fast, dynamic and easy to use.
                            </u>
                         </strong>
                      </p>
@@ -98,26 +101,39 @@ const About = () => {
                         initiative, identify areas for
                         improvement, bring suggestions and take
                         accountability for finding solutions. I
-                        thrive on solving tough problems. I
-                        value the design of a product as much as
-                        I value the code.
+                        thrive on solving tough problems. I value
+                        the design of a product as much as I
+                        value the code.
                      </p>
                      <p>
                         Out of the office you’ll find me doing
                         DIY projects or baking sourdough bread
                         for my family and friends.
                      </p>
-                     <h3 className="dark:text-gray-400">I will help you Build:</h3>
-                     <ul role="list" className="capitalize">
-                        <li>elegant </li>
-                        <li>intuitive </li>
-                        <li>responsive </li>
-                        <li>interactive </li>
-                     </ul>
-                     <p>
-                        websites and web apps that work well on
-                        various devices.
-                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         {/* CAT2 */}
+         <div className="bg-gray-50 dark:bg-gray-800 mt-10 rounded-lg z-50">
+            <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+               <h2 className="text-3xl font-normal tracking-tight leading-loose text-black dark:text-white  sm:text-4xl ">
+                  <span className="block">
+                     I will help you Build:
+                  </span>
+               </h2>
+               <p className="  mt-4 text-lg leading-6 text-indigo-400">
+                  Elegant, Intuitive, Responsive and Interactive
+                  websites and webapps that work well on various
+                  devices.
+               </p>
+               <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                  <div className="inline-flex rounded-md shadow">
+                     <Link href="/contact" passHref>
+                        <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                           Let Me Help
+                        </a>
+                     </Link>
                   </div>
                </div>
             </div>
