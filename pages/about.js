@@ -1,15 +1,15 @@
 import { CameraIcon } from "@heroicons/react/solid";
 const About = () => {
    return (
-      <div className="bg-white overflow-hidden">
+      <div className=" overflow-hidden">
          <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
+            <div className="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen" />
             <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
                <div>
                   <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
                      About
                   </h2>
-                  <h3 className="mt-4 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                  <h3 className="mt-4 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-400">
                      Meet Sherif
                   </h3>
                </div>
@@ -36,7 +36,7 @@ const About = () => {
                               y={0}
                               width={4}
                               height={4}
-                              className="text-gray-200"
+                              className="text-gray-200 dark:text-gray-800"
                               fill="currentColor"
                            />
                         </pattern>
@@ -85,10 +85,10 @@ const About = () => {
                   </div>
                   <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
                      <p>
-                        <strong>
+                        <strong className="dark:text-gray-400">
                            <u>
                               I will help you to create modern
-                              websites and webapplications that are fast, dynamic and
+                              websites and web applications that are fast, dynamic and
                               easy to use.
                            </u>
                         </strong>
@@ -107,7 +107,7 @@ const About = () => {
                         DIY projects or baking sourdough bread
                         for my family and friends.
                      </p>
-                     <h3>I will help you Build:</h3>
+                     <h3 className="dark:text-gray-400">I will help you Build:</h3>
                      <ul role="list" className="capitalize">
                         <li>elegant </li>
                         <li>intuitive </li>

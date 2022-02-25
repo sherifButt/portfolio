@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from "../../NoScrollLink";
 import Card from "../CardFlip";
+import CardMobile from "../Card_03";
 import Pagination from "../Pagination";
 import Lottie from "../../Lottie";
 import {
@@ -177,29 +178,64 @@ export default function Blog({
                                     <motion.div
                                        variants={item}
                                        key={"blogp_" + i}>
-                                       <Card
-                                          id={id}
-                                          title={title}
-                                          href={href}
-                                          callToAction={
-                                             callToAction
-                                          }
-                                          imageUrl={imageUrl}
-                                          imageUrlDetail={
-                                             imageUrlDetail
-                                          }
-                                          excerpt={excerpt}
-                                          category={category}
-                                          description={
-                                             description
-                                          }
-                                          author={author}
-                                          datetime={datetime}
-                                          date={date}
-                                          readingTime={
-                                             readingTime
-                                          }
-                                       />
+                                       <>
+                                          <div className="hidden lg:inline-block">
+                                             <Card
+                                                id={id}
+                                                title={title}
+                                                href={href}
+                                                callToAction={
+                                                   callToAction
+                                                }
+                                                imageUrl={
+                                                   imageUrl
+                                                }
+                                                imageUrlDetail={
+                                                   imageUrlDetail
+                                                }
+                                                excerpt={excerpt}
+                                                category={
+                                                   category
+                                                }
+                                                description={
+                                                   description
+                                                }
+                                                author={author}
+                                                datetime={
+                                                   datetime
+                                                }
+                                                date={date}
+                                                readingTime={
+                                                   readingTime
+                                                }
+                                             />
+                                          </div>
+                                          <div className="inline-block lg:hidden">
+                                             <CardMobile
+                                                id={id}
+                                                title={title}
+                                                href={href}
+                                                callToAction={
+                                                   callToAction
+                                                }
+                                                imageUrl={imageUrl}
+                                                imageUrlDetail={
+                                                   imageUrlDetail
+                                                }
+                                                excerpt={excerpt}
+                                                category={category}
+                                                description={
+                                                   description
+                                                }
+                                                author={author}
+                                                datetime={datetime}
+                                                date={date}
+                                                readingTime={
+                                                   readingTime
+                                                }
+                                             />
+                                          </div>
+                                       </>
                                     </motion.div>
                                  )
                               )}

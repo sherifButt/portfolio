@@ -105,30 +105,40 @@ const Card = ({
                      </a>
                   </div>
 
-                  <span className="relative z-0 inline-flex mt-5 right">
-                     {posts ? posts[displayedPost].callToAction :
-                     callToAction.map(button =>(
-                     <Link href={button.href} passHref>
-                        <a>
-                           <button
-                              type="button"
-                              className="inline-flex items-center px-4 mr-2 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                              {button.icon?(<svg
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 width="20"
-                                 height="20"
-                                 viewBox="0 0 24 24"
-                                 className="fill-indigo-700 mr-1">
-                                 <path d={button.icon} />
-                                 </svg>):""}
-                              {button
-                                 ? button.title
-                                 : ""}
-                              
-                           </button>
-                        </a>
-                     </Link>
-                     ))}
+                  <span className="relative  z-0 flex-1 flex flex-wrap  mt-5 right">
+                     {posts
+                        ? posts[displayedPost].callToAction
+                        : callToAction.map(button => (
+                             <Link href={button.href} passHref>
+                                <a>
+                                   <button
+                                      type="button"
+                                      className={`${
+                                         button.href
+                                            ? ""
+                                            : "cursor-not-allowed hover:bg-white"
+                                      } inline-flex items-center px-4 mr-2 mt-2 py-2 border dark:border-indigo-600 border-indigo-600 shadow-sm text-sm font-medium rounded-md dark:text-indigo-100 text-indigo-600 bg-white dark:bg-indigo-600 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:shadow-lg dark:shadow-indigo-500/50`}>
+                                      {button.icon ? (
+                                         <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="20"
+                                            height="20"
+                                            viewBox="0 0 24 24"
+                                            className="fill-indigo-700 dark:fill-indigo-100 mr-1 ">
+                                            <path
+                                               d={button.icon}
+                                            />
+                                         </svg>
+                                      ) : (
+                                         ""
+                                      )}
+                                      {button
+                                         ? button.title
+                                         : ""}
+                                   </button>
+                                </a>
+                             </Link>
+                          ))}
                   </span>
                </div>
             </a>
