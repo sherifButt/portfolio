@@ -340,7 +340,7 @@ export default {
       posts: [
          {
             id: 1,
-            title: "css3",
+            title: "css",
             href: "/toolkit/1",
             description:
                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.",
@@ -352,7 +352,7 @@ export default {
          },
          {
             id: 2,
-            title: "Semantic Html5",
+            title: "Semantic Html",
             href: "/toolkit/2",
             color: "bg-indigo-100 text-indigo-800",
             level: 3,
@@ -694,7 +694,7 @@ export default {
    work: {
       pretitle: "I did it!",
       title: "My Work",
-      subtitle: "",
+      subtitle: "Some of my work ",
       href: "/work",
       posts: [
          {
@@ -904,7 +904,7 @@ export default {
          },
          {
             id: 6,
-            title: "Artest Mostafa Butt",
+            title: "Artist Mostafa Butt",
             href: "/work",
             callToAction: [
                {

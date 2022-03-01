@@ -4,9 +4,12 @@ import { getData } from "../../api/data";
 import DOMPurify from "isomorphic-dompurify";
 import matter from "gray-matter";
 import { marked } from "marked";
+import inWords  from "../../../util/inWords"
 
+// componenets
 import ProgressBar from "../../../components/UX/ProgressBar";
 import MenuIcons from "../../../components/Navigation/MenuIcons";
+
 
 const stats = [
    { label: "Started", value: "2021" },
@@ -91,7 +94,7 @@ const Example = ({ post, content }) => {
 
             <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
                {/* Content area */}
-               <div className="pt-12 sm:pt-16 lg:pt-20">
+               <div className="pt-4 sm:pt-16 lg:pt-10">
                   <h2 className="leading-relaxed text-4xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal ">
                      {post.title}
                   </h2>
@@ -106,22 +109,30 @@ const Example = ({ post, content }) => {
                   </article>
                </div>
                {/* Work */}
-               {post.work && (
+               {post.work.length !== 0 && (
                   <div>
                      <h3 className="pt-5 leading-loose text-2xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal">
-                        Work done using {post?.title}
+                        I used {post?.title} in{" "}
+                        <u className="capitalize">
+                           {inWords(post?.work.length)}
+                        </u>{" "}
+                        Projects:
                      </h3>
-                     <MenuIcons posts={post?.work} />
+                     <MenuIcons
+                        posts={post?.work}
+                        limit={99}
+                        numerized
+                     />
                   </div>
                )}
 
                {/* Stats section */}
                <div className="">
                   <div className="">
-                     <h3 className="pt-5 leading-loose text-2xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal">
+                   {/*  <h3 className="pt-5 leading-loose text-2xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal">
                         {post?.title} Stats
                      </h3>
-                     <ProgressBar
+                      <ProgressBar
                         options={{
                            label: "Experience",
                            percentage: post?.experience,
@@ -144,9 +155,9 @@ const Example = ({ post, content }) => {
                            description:
                               "calculated base on total experience as frontend webDev",
                         }}
-                     />
+                     /> */}
                   </div>
-                  <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
+                  {/* <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
                      {stats.map(stat => (
                         <div
                            key={stat.label}
@@ -159,7 +170,7 @@ const Example = ({ post, content }) => {
                            </dd>
                         </div>
                      ))}
-                  </dl>
+                  </dl> */}
                   <div className="mt-10">
                      {/* <a
                         href="#"

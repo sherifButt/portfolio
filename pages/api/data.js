@@ -40,49 +40,42 @@ export default async function helloAPI(req, res) {
 
       return _data;
    };
-   // check if a toolkit exist in any of works
-// loop through toolkit Object
-   // in toolkit[0] loop through work Objects
-   // in work[0] loop through category array
-   // in category[0] check if category[0] === toolkit.id
-   // push work object to toolkit.work 
+
+   /**
+   * check if a toolkit exist in any of works
+   * loop through toolkit Object
+   * in toolkit[0] loop through work Objects
+   * in work[0] loop through category array
+   * in category[0] check if category[0] === toolkit.id
+   *push work object to toolkit.work
+   
+    */
 
    const addWorkToToolkits = () => {
-      const check = _data.toolkit.posts?.map((tool, toolIdx) =>
-      {
+      _data.toolkit.posts?.map((tool, toolIdx) => {
          let arr = [];
-         
-         const foundWorks = data.work.posts?.filter( work => {
-            const foundWork = work.category.filter(category => {
+         data.work.posts?.map(work => {
+            work.category.map(category => {
                if (category === tool.id) {
                   arr = [...arr, work];
-                  // _data = {..._data,toolkit:[..._data.toolkit.posts]}
-                  // console.log(tool.title, work.title, arr);
                }
             });
             _data.toolkit.posts[toolIdx].work = arr;
-            // console.log(_data.toolkit.posts[toolIdx])
-            return foundWork;
-         } )
-         // console.log(foundWorks)
-         return foundWorks
-      }
-         
-      );
-
-       return check;
+         });
+      });
    };
 
    
+
    replaceIdWithFullObject("toolkit", "work", "work", [
       "description",
    ]);
    replaceIdWithFullObject("blog", "category", "category");
    replaceIdWithFullObject("work", "category", "toolkit");
    replaceIdWithFullObject("work", "imgs", "gallery");
- addWorkToToolkits();
-   
-   res.status(200).json( _data);
+   addWorkToToolkits();
+
+   res.status(200).json(_data);
    console.timeEnd("apiDataTime");
 }
 
@@ -135,19 +128,17 @@ export const getData = async () => {
       const check = _data.toolkit.posts?.map((tool, toolIdx) => {
          let arr = [];
 
-         const foundWorks = data.work.posts?.filter(work => {
-            const foundWork = work.category.filter(category => {
+         const foundWorks = data.work.posts?.map(work => {
+            const foundWork = work.category.map(category => {
                if (category === tool.id) {
                   arr = [...arr, work];
-                  // _data = {..._data,toolkit:[..._data.toolkit.posts]}
-                  // console.log(tool.title, work.title, arr);
                }
             });
             _data.toolkit.posts[toolIdx].work = arr;
-            // console.log(_data.toolkit.posts[toolIdx]);
+
             return foundWork;
          });
-         // console.log(foundWorks)
+
          return foundWorks;
       });
 
@@ -158,8 +149,8 @@ export const getData = async () => {
    ]);
    replaceIdWithFullObject("blog", "category", "category");
    replaceIdWithFullObject("work", "category", "toolkit");
-   replaceIdWithFullObject( "work", "imgs", "gallery" );
-    addWorkToToolkits();
+   replaceIdWithFullObject("work", "imgs", "gallery");
+   addWorkToToolkits();
    console.timeEnd("getDataTime");
    return _data;
 };

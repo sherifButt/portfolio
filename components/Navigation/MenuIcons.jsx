@@ -1,11 +1,17 @@
 import Link from "../NoScrollLink"
 
-const MenuIcon = ({ posts, category, mainTitle }) => {
+const MenuIcon = ({
+   posts,
+   category,
+   mainTitle,
+   limit,
+   numerized,
+}) => {
    // const ar = Array.apply(null, { length: 5 }).map(  Function.call,  Math.random);
    // console.log(ar)
    return (
       <div className="relative grid gap-6 bg-white dark:bg-gray-900 px-5 py-6 sm:gap-8 sm:p-8 ">
-         {posts?.slice(0, 4).map(item => (
+         {posts?.slice(0, limit).map((item, idx) => (
             <Link
                key={item.title}
                href={`${
@@ -32,11 +38,11 @@ const MenuIcon = ({ posts, category, mainTitle }) => {
                   </svg>
                   <div className="ml-4">
                      <p className="text-base font-medium text-gray-900 dark:text-gray-400">
-                        {item.title.substring(0, 30)}
+                        {numerized&&idx+1+"."} {item.title.substring(0, 30)}
                      </p>
                      <p className="mt-1 text-sm text-gray-500">
-                        {item?.description.substring(0, 60) ||
-                           item?.excerpt.substring(0, 60)}
+                        {item?.excerpt?.substring(0, 60) ||
+                           item?.description?.substring(0, 60)}
                      </p>
                   </div>
                </a>
@@ -57,6 +63,8 @@ const MenuIcon = ({ posts, category, mainTitle }) => {
 
 MenuIcon.defaultProps = {
    mainTitle: "post",
+   limit: 4
+   
 };
 
 export default MenuIcon
