@@ -20,10 +20,12 @@ h1,h2,h3{
 font-family:"lagag"
 }
 
-
-
-
-
+.react-card-front{
+  transform-style: initial;
+}
+.react-card-back{
+  transform-style: initial;
+}
 /*
 code,
 .code,
