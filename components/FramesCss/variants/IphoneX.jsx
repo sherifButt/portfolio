@@ -41,7 +41,7 @@ const Container = styled.div`
    justify-content: center;
    height: 100%;
    background-color: lighten(#5cbfe2, 20%);
-   margin-top: 25%;
+   margin-top: 15%;
    transform: translate(0%, -5%);
 `;
 const Iphone = styled.div`

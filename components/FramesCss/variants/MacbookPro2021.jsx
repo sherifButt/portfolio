@@ -52,7 +52,7 @@ const Container = styled.div`
 `;
 const Macbook = styled.div`
    width: 68.125em;
-   margin-top: 15%;
+   margin-top: 25%;
    transform: translate(0%, -20%);
 `;
 const Display = styled.div`

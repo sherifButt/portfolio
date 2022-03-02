@@ -199,19 +199,22 @@ const Work = ({ post, content }) => {
 
                {/* Stats section */}
                <div className="mt-10">
+                  
                   <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
-                     {stats.map(stat => (
-                        <div
-                           key={stat.label}
-                           className="border-t-2 border-gray-100 dark:border-gray-800 pt-6">
-                           <dt className="text-base font-medium text-gray-500 dark:text-gray-400">
-                              {stat.label}
-                           </dt>
-                           <dd className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
-                              {stat.value}
-                           </dd>
-                        </div>
-                     ))}
+                     {post.stats &&
+                        Object.keys(post.stats).map(key => (
+                           <div
+                              key={key}
+                              className="border-t-2 border-gray-100 dark:border-gray-800 pt-6">
+                              <dt className="capitalize  text-base font-medium text-gray-500 dark:text-gray-400">
+                                 {key}
+                                 {/* {console.log("stat")} */}
+                              </dt>
+                              <dd className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
+                                 {post.stats[key]}
+                              </dd>
+                           </div>
+                        ))}
                   </dl>
                   <div className="mt-10"></div>
                </div>

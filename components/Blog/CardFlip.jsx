@@ -91,10 +91,7 @@ const Card = ({
             key={posts ? posts[displayedPost].title : title}
             className="react-card-back flex h-auto flex-col rounded-lg shadow-lg overflow-hidden  dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-40 border dark:border-0  border-gray-100 dark:border-gray-800"
             onMouseLeave={ handleMouseLeave }>
-            {!isFlipped&&<p className="invisible">
-               .............................................................................................................................
-               .....
-            </p>}
+            {!isFlipped&&<p className="invisible min-w-full"></p>}
             {isFlipped&&<div className="flex-shrink-0">
                <div className="ml-auto p-3 absolute right-0">
                   <div className="-mx-1.5 -my-1.5">
