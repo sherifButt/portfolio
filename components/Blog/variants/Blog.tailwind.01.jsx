@@ -83,10 +83,8 @@ export default function Blog({
       <section id="blog" className="">
          <div
             className={`m-auto relative  ${
-               isTitle ? "pt-16" : ""
-            } pb-20 ${
-               isTitle ? "lg:pt-32" : ""
-            }  lg:pb-28 lg:px-8`}>
+               isTitle && "pt-16"
+            } pb-20 ${isTitle && "lg:pt-20"}  lg:pb-28 lg:px-8`}>
             <div className=" inset-0">
                <div className=" h-1/3 sm:h-2/3" />
             </div>
@@ -94,7 +92,7 @@ export default function Blog({
                <div
                   ref={ref}
                   className="relative z-10 text-center">
-                  {isTitle ? (
+                  {isTitle && (
                      <Link href={href} passHref>
                         <a>
                            <h2 className=" text-5xl text-center leading-normal tracking-tight font-extrabold text-gray-900 dark:text-gray-100 ">
@@ -102,20 +100,16 @@ export default function Blog({
                            </h2>
                         </a>
                      </Link>
-                  ) : (
-                     ""
                   )}
 
-                  {isSubtitle ? (
+                  {isSubtitle && (
                      <p className=" mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
                         {subtitle}
                      </p>
-                  ) : (
-                     ""
                   )}
                </div>
                <div className="flex  justify-center items-center">
-                  {isPaginationArrows ? (
+                  {isPaginationArrows && (
                      <div className=" mr-2 h-auto -ml-14 lg:ml-0  text-6xl  origin-right hover:scale-y-[2.4] scale-y-[2] ease-out duration-200 text-gray-300 drop-shadow-md hover:drop-shadow-lg hover:text-indigo-600 cursor-pointer">
                         {currentPage == 1 ? (
                            <>&nbsp;</>
@@ -133,17 +127,13 @@ export default function Blog({
                            </a>
                         )}
                      </div>
-                  ) : (
-                     ""
                   )}
                   <div>
-                     {isBackground ? (
+                     {isBackground && (
                         <Lottie
                            className="z-0 w-200 absolute blur-sm flex items-center scale-130"
                            path="blob_2color_yellow_red.json"
                         />
-                     ) : (
-                        ""
                      )}
 
                      <motion.div
@@ -151,7 +141,7 @@ export default function Blog({
                         variants={container}
                         initial="hidden"
                         animate={controls}
-                        className={` mt-12 max-w-lg mx-auto grid gap-8 lg:grid-cols-${columns} lg:max-w-none`}>
+                        className={` mt-12 max-w-lg mx-auto grid gap-8 gap-y-20 lg:grid-cols-${columns} lg:max-w-none`}>
                         {Array.isArray(currentPosts) &&
                            currentPosts
                               .filter(Boolean)
@@ -218,17 +208,23 @@ export default function Blog({
                                                 callToAction={
                                                    callToAction
                                                 }
-                                                imageUrl={imageUrl}
+                                                imageUrl={
+                                                   imageUrl
+                                                }
                                                 imageUrlDetail={
                                                    imageUrlDetail
                                                 }
                                                 excerpt={excerpt}
-                                                category={category}
+                                                category={
+                                                   category
+                                                }
                                                 description={
                                                    description
                                                 }
                                                 author={author}
-                                                datetime={datetime}
+                                                datetime={
+                                                   datetime
+                                                }
                                                 date={date}
                                                 readingTime={
                                                    readingTime

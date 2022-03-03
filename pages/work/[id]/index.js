@@ -19,7 +19,7 @@ function classNames(...classes) {
 const Work = ({ post, content }) => {
    let description = marked(DOMPurify.sanitize(content)); // clean description
    return (
-      <div className=" relative  py-16 sm:py-24">
+      <div className=" relative  py-16 sm:py-16">
          <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
             <div className="relative sm:py-16 lg:py-0">
                <div
@@ -57,7 +57,7 @@ const Work = ({ post, content }) => {
                      />
                   </svg>
                </div>
-               <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
+               <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl  lg:px-0 lg:max-w-none lg:py-6">
                   {/* Testimonial card*/}
 
                   {post?.imgs?.map((img, idx) =>

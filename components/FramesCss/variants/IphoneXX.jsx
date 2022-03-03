@@ -75,7 +75,7 @@ const FrameBase = styled.div`
    height: 664.4px;
    background: white;
    margin-left: 50%;
-   margin-top: 35%;
+   margin-top: -5%;
    transform: translate(-50%, -10%);
    border-radius: 48.6px;
    -moz-box-shadow: inset 0 0 12px #494949;

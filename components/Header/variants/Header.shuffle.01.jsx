@@ -91,7 +91,7 @@ const Header = ({
                isFlipped={isFlipped}
                flipDirection="horizontal">
                <div
-                  onMouseEnter={handleMouseEnter}
+                  // onMouseEnter={handleMouseEnter}
                   onClick={handleMouseEnter}
                   className="opacity-70 md:opacity-100 ease-in duration-300 hover:opacity-100  hover:scale-110">
                   {" "}
@@ -142,7 +142,7 @@ const Header = ({
                isFlipped={isFlipped}
                flipDirection="horizontal">
                <div
-                  onMouseEnter={handleMouseEnter}
+                   onMouseEnter={handleMouseEnter}
                   onClick={handleMouseEnter}
                   className="relative opacity-70 ease-in duration-300 hover:opacity-100 hover:scale-105">
                   <Lottie path={img.imgSrc.dark} />
