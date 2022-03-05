@@ -252,7 +252,7 @@ const Img = styled.img`
    top: -1px;
    width: 100%;
    height: 100.5%;
-   filter: brightness(80%);
+   filter: brightness(95%);
 `;
 
 const Mask = styled.div`

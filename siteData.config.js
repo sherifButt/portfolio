@@ -998,7 +998,7 @@ export default {
          },
          {
             id: 4,
-            title: "octommerce modest clothes",
+            title: "octommerce modest clothing",
             href: "/work",
             callToAction: [
                {
@@ -1016,7 +1016,7 @@ export default {
             ],
             category: [1, 2, 16],
             excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
+               "octommerce modest clothing eshop selling fashion clothes and acessories.",
 
             description:
                "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n## Introduction\n\nParsing and display of math equations is included in this blog template. Parsing of math is enabled by `remark-math` and `rehype-katex`.\nKaTeX and its associated font is included in `_document.js` so feel free to use it on any page.\n^[For the full list of supported TeX functions, check out the [KaTeX documentation](https://katex.org/docs/supported.html)]\n\nInline math symbols can be included by enclosing the term between the `$` symbol.\n\nMath code blocks are denoted by `$$`.\n\nIf you intend to use the `$` sign instead of math, you can escape it (`\\$`), or specify the HTML entity (`&dollar;`) [^2]\n\nInline or manually enumerated footnotes are also supported. Click on the links above to see them in action.\n\n[^2]: \\$10 and &dollar;20.\n\n## Deriving the OLS Estimator\n\nUsing matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.\n\nThe vector of outcome variables $\\mathbf{Y}$ is a $n \\times 1$ matrix,\n\n```tex\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n$$\n\nThe matrix of regressors $\\mathbf{X}$ is a $n \\times k$ matrix (or each row is a $k \\times 1$ vector),\n\n```latex\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n$$\n\nThe vector of error terms $\\mathbf{U}$ is also a $n \\times 1$ matrix.\n\nAt times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.\n\n",
