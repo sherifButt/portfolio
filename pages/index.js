@@ -17,6 +17,7 @@ import Team from "../components/Team";
 import Testimonials from "../components/Testimonials";
 import { getData } from "./api/data";
 import axios from   "axios"
+import LogInForm from "../components/LogInform"
 
 export default function Home({
    data,
@@ -61,6 +62,7 @@ export default function Home({
             posts={posts?posts:[]}
             noObservation={false}
          />
+        
          {/* <Features data={data} /> */}
          {/* <Faq /> */}
          <Testimonials variant={3} data={testimonials} />
