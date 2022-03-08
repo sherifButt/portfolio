@@ -15,6 +15,19 @@ const navigation = [
          </svg>
       ),
    },
+   {
+      name: "Linkedin",
+      href: "https://www.linkedin.com/in/sherif-butt-966187234/",
+      icon: props => (
+         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+            <path
+               fillRule="evenodd"
+               d="M 2.3824 8.2152 h 4.3225 V 21.2825 h -4.3225 z m 15.4779 -0.4322 c -1.8952 0 -3.0257 0.6982 -4.2227 2.2277 v -1.7955 H 9.315 V 21.2825 h 4.3557 V 14.2002 c 0 -1.4962 0.7647 -2.9592 2.4937 -2.9592 s 2.7597 1.463 2.7597 2.926 V 21.2825 H 23.28 V 13.8677 c 0 -5.1537 -3.4912 -6.0847 -5.4197 -6.0847 z M 4.5602 1.8645 C 3.1305 1.8645 2 2.8952 2 4.1587 s 1.1305 2.2942 2.5602 2.2942 s 2.5602 -1.0307 2.5602 -2.2942 S 5.99 1.8645 4.5602 1.8645 z"
+               clipRule="evenodd"
+            />
+         </svg>
+      ),
+   },
 ];
 
 export default function Footer() {

@@ -2,120 +2,466 @@ import { EyeIcon, EyeOffIcon, LockClosedIcon, MailIcon, UserIcon, UsersIcon } fr
 
 const LogInForm = () => {
   return (
-     <div className="flex flex-col gap-8 justify-center items-center max-w-[27.25rem] mx-auto p-12 bg-white rounded-lg shadow-[0px_9px_20px_0px_rgba(16,87,66,0.2)]">
-        <div className="flex flex-row gap-2.5 justify-start items-start overflow-hidden p-[0.94rem]">
-           <p className="block text-2xl text-black  font-semibold">
-              Log in or sign up
-           </p>
-        </div>
-        <form action="" className="grid grid-cols-1 gap-y-6 ">
-           {/* email */}
-           <div className="mt-1 relative rounded-md shadow-sm">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                 <UserIcon
-                    className="h-5 w-5 text-gray-400"
-                    aria-hidden="true"
-                 />
-              </div>
-              <input
-                 type="email"
-                 name="email"
-                 id="email"
-                 className="h-12  focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border border-gray-200 rounded-md"
-                 placeholder="Email"
+     <div class="flex flex-col justify-start items-start max-w-[90rem] mx-auto">
+        <div class="flex flex-row justify-between items-center w-full px-20 py-6 bg-gray-50">
+           <div>
+              <img
+                 class="block"
+                 src="./assets/image-28405.794152267783.png"
               />
            </div>
-           {/* password */}
-           <div className="mt-1 relative rounded-md shadow-sm">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                 <LockClosedIcon
-                    className="h-5 w-5 text-gray-400"
-                    aria-hidden="true"
-                 />
-                 <EyeIcon
-                    className="h-5 w-5 text-gray-400 left"
-                    aria-hidden="true"
-                 />
-              </div>
-              <input
-                 type="password"
-                 name="password"
-                 id="password"
-                 autoComplete="current-password"
-                 required
-                 className="h-12  focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border border-gray-200 rounded-md"
-                 placeholder="Password"
-              />
-           </div>
-
-           <div className="flex flex-col gap-4 justify-start items-start w-[21.25rem]">
-              <div>
-                 <input
-                    type="email"
-                    name="email"
-                    className="flex flex-row gap-4 justify-start items-center px-4 py-3 border-zinc-300 border rounded-DEFAULT"
-                 />
-                 <img
-                    className="block"
-                    src="./assets/image-79971.79099255873.svg"
-                 />
-                 <p className="block w-[15.25rem] text-sm text-neutral-400  font-light">
-                    Email
-                 </p>
-                 <img
-                    className="block"
-                    src="./assets/image-56059.48391199185.svg"
-                 />
-              </div>
-              <div className="flex flex-row gap-4 justify-start items-center px-4 py-3 border-zinc-300 border rounded-DEFAULT">
-                 <img
-                    className="block"
-                    src="./assets/image-78529.06632208062.svg"
-                 />
-                 <p className="block w-[15.25rem] text-sm text-neutral-400  font-light">
-                    Password
-                 </p>
-                 <img
-                    className="block"
-                    src="./assets/image-42429.675631409584.svg"
-                 />
-              </div>
-              <div className="flex flex-row gap-[6.63rem] justify-start items-center">
-                 <div className="flex flex-col gap-2.5 justify-start items-center">
-                    <div className="flex flex-row gap-2 justify-start items-start">
-                       <div className="rounded-DEFAULT">
-                          <div>
-                             <img
-                                className="block"
-                                src="./assets/image-27899.919588951372.png"
-                             />
-                             <img
-                                className="block"
-                                src="./assets/image-55199.285165458314.png"
-                             />
-                          </div>
-                       </div>
-                       <p className="block text-sm text-zinc-600 ">
-                          Remember me
-                       </p>
-                    </div>
-                 </div>
-                 <p className="block text-sm text-indigo-400 ">
-                    Forgot password
-                 </p>
-              </div>
-           </div>
-           <div className="flex flex-col gap-6 justify-center items-center w-full">
-              <div className="flex flex-row gap-2.5 justify-center items-center w-[21.25rem] px-[1.63rem] py-3.5 bg-indigo-400 rounded-md">
-                 <p className="block text-center text-white  font-semibold">
-                    Log in
-                 </p>
-              </div>
-              <p className="block text-center text-sm text-indigo-400 ">
-                 Don’t have an account? Sign up
+           <div class="flex flex-row gap-9 justify-start items-start">
+              <p class="block text-gray-800  font-medium">
+                 Home
+              </p>
+              <p class="block text-gray-800  font-medium">
+                 About
+              </p>
+              <p class="block text-gray-800  font-medium">
+                 Contact
+              </p>
+              <p class="block text-gray-800  font-medium">
+                 Pricing
+              </p>
+              <p class="block text-gray-800  font-medium">
+                 Support
               </p>
            </div>
-        </form>
+           <div class="flex flex-row gap-2 justify-start items-start px-4 py-3 bg-blue-100 rounded-md">
+              <p class="block text-center text-blue-700  font-medium">
+                 Button Text
+              </p>
+              <div>
+                 <img
+                    class="block"
+                    src="./assets/image-78504.96299019478.png"
+                 />
+                 <img
+                    class="block"
+                    src="./assets/image-99874.32360301558.png"
+                 />
+              </div>
+           </div>
+        </div>
+        <div class="flex flex-col justify-between items-center w-full h-[68rem] px-20 py-12 bg-white">
+           <div class="flex flex-row justify-start items-start w-full h-[46.13rem] p-8 bg-blue-700 rounded-md">
+              <div class="flex flex-col gap-2.5 justify-end items-center h-full">
+                 <div>
+                    <img
+                       class="block"
+                       src="./assets/image-6922.59254509513.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-33338.531633059734.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-58791.39687782737.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-27682.286734584282.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-6659.6598044804.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-47277.5719518461.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-29134.763899193316.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-79718.82817919906.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-45934.24736930356.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-61992.7066931542.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-15497.455584569409.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-15295.989728450653.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-27672.198709348362.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-12248.569663672715.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-42502.20308357118.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-27559.151737674736.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-98896.93071274237.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-49757.45402069522.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-99477.80952308838.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-42806.147614807654.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-47662.531268904786.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-22146.715928723992.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-31295.848761535417.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-16229.894809707957.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-17054.251685283893.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-74000.82048660313.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-38075.38708804219.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-92489.8408728857.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-97441.51182461814.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-27759.698901708973.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-74088.34713442715.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-45080.47745869046.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-94983.95015938432.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-82649.58056864046.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-97838.74576862459.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-54347.296187868174.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-2284.1746246502926.png"
+                    />
+                 </div>
+              </div>
+              <div class="flex flex-col gap-6 justify-start items-center w-full pt-16">
+                 <p class="block w-full text-center text-6xl text-white ">
+                    Be in the know of high level & intricate
+                    details, always
+                 </p>
+                 <div class="flex flex-row gap-4 justify-center items-center w-[28.19rem] p-4 bg-white rounded-md">
+                    <p class="block w-full text-gray-500 ">
+                       Enter your email
+                    </p>
+                    <div>
+                       <img
+                          class="block"
+                          src="./assets/image-54192.25712590279.png"
+                       />
+                    </div>
+                 </div>
+              </div>
+              <div class="flex flex-col gap-2.5 justify-start items-center h-full">
+                 <div>
+                    <img
+                       class="block"
+                       src="./assets/image-28459.02180872952.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-36434.45517597683.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-34621.14693794755.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-7953.334679894919.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-46578.791539805796.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-30373.694683687536.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-65081.96128421877.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-99009.4791244749.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-9903.076416411483.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-61572.50970365189.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-56582.41604171792.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-85676.85886170858.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-91688.29476475877.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-45921.6030494294.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-11398.75064145548.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-52608.66796830754.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-45413.719851385446.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-25628.49165193628.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-93012.0451270255.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-11222.525836842779.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-92850.531594817.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-49836.86872822302.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-71799.42307586798.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-15380.656619718658.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-53689.94819525343.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-96467.141474023.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-98324.63880024762.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-86824.12891788864.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-78402.17264723728.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-57254.964317368875.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-8814.922567381322.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-39516.912455269674.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-66945.8371049765.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-57524.303954248346.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-11084.009905362846.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-64898.731234901556.png"
+                    />
+                    <img
+                       class="block"
+                       src="./assets/image-69910.19289635644.png"
+                    />
+                 </div>
+              </div>
+           </div>
+           <div class="flex flex-col gap-2.5 justify-center items-center w-full px-[6.81rem]">
+              <div class="bg-white rounded-[0.63rem] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1)] shadow-[0px_4px_6px_-2px_rgba(0,0,0,0.1)]">
+                 <div class="bg-white rounded-t-[0.63rem] shadow-[0px_0.5px_0px_0px_rgba(0,0,0,0.1)] shadow-[0px_-0.5px_0px_0px_rgba(0,0,0,0.1)_inset]">
+                    <div class="flex flex-row gap-2 justify-start items-center overflow-hidden">
+                       <div class="rounded-md">
+                          <img
+                             class="block"
+                             src="./assets/image-69800.49193010223.png"
+                          />
+                       </div>
+                       <div class="rounded-md">
+                          <img
+                             class="block"
+                             src="./assets/image-10742.66563091113.png"
+                          />
+                       </div>
+                       <div class="rounded-md">
+                          <img
+                             class="block"
+                             src="./assets/image-98905.6983967439.png"
+                          />
+                       </div>
+                       <div class="rounded-md">
+                          <img
+                             class="block"
+                             src="./assets/image-32451.31623148052.png"
+                          />
+                       </div>
+                    </div>
+                    <div class="flex flex-row justify-start items-center overflow-hidden">
+                       <div class="rounded-md">
+                          <img
+                             class="block"
+                             src="./assets/image-47040.63936611036.png"
+                          />
+                       </div>
+                       <div class="rounded-md">
+                          <img
+                             class="block"
+                             src="./assets/image-48146.64499111938.png"
+                          />
+                       </div>
+                    </div>
+                    <div class="rounded-md">
+                       <img
+                          class="block"
+                          src="./assets/image-64650.09034963869.png"
+                       />
+                    </div>
+                    <div>
+                       <img
+                          class="block"
+                          src="./assets/image-33896.02340867106.png"
+                       />
+                       <img
+                          class="block"
+                          src="./assets/image-76109.25666840808.png"
+                       />
+                       <img
+                          class="block"
+                          src="./assets/image-19082.136675034177.png"
+                       />
+                    </div>
+                    <div>
+                       <div class="rounded-md">
+                          <img
+                             class="block"
+                             src="./assets/image-69389.84709203213.png"
+                          />
+                       </div>
+                       <div class="bg-black bg-opacity-[0.05] rounded-md">
+                          <div class="flex flex-row gap-1.5 justify-start items-center overflow-hidden">
+                             <img
+                                class="block"
+                                src="./assets/image-79411.29553078368.png"
+                             />
+                             <p class="block text-[0.81rem] text-neutral-600 ">
+                                tailwinduikit.com
+                             </p>
+                          </div>
+                          <img
+                             class="block"
+                             src="./assets/image-4629.0211932910715.png"
+                          />
+                       </div>
+                       <div class="rounded-md"></div>
+                    </div>
+                 </div>
+                 <img
+                    class="block"
+                    src="./assets/image-51460.17387446642.png"
+                 />
+              </div>
+           </div>
+        </div>
      </div>
   );
 }
