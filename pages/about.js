@@ -5,7 +5,7 @@ const About = () => {
    return (
       <div className=" overflow-hidden">
          <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-         {/* <LogInForm/> */}
+            {/* <LogInForm/> */}
             <div className="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen" />
             <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
                <div>
@@ -103,9 +103,11 @@ const About = () => {
                         initiative, identify areas for
                         improvement, bring suggestions and take
                         accountability for finding solutions. I
-                        thrive on solving tough problems. I value
-                        the design of a product as much as I
-                        value the code.
+                        thrive on solving tough problems. I have
+                        a flair for design. I value the design of
+                        a product as much as I value the code. I
+                        am always keen to expand my knowledge and
+                        enjoy taking on new challenges.
                      </p>
                      <p>
                         Out of the office you’ll find me doing
