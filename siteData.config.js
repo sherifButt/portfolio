@@ -466,8 +466,8 @@ export default {
          },
          {
             id: 4,
-            title: "Css",
-            href: "css",
+            title: "CSS",
+            href: "CSS",
             color: "bg-indigo-100 text-indigo-800",
             description: "",
             icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
@@ -491,7 +491,7 @@ export default {
       posts: [
          {
             id: 1,
-            title: "css",
+            title: "CSS",
             href: "/toolkit/1",
             description:
                "CSS is what gives your entire website a style. By using CSS language for interesting fonts, colours, and background images, I will make your webpage look slick and smart.",
@@ -503,13 +503,13 @@ export default {
          },
          {
             id: 2,
-            title: "Semantic Html",
+            title: "Semantic HTML",
             href: "/toolkit/2",
             color: "bg-indigo-100 text-indigo-800",
             level: 3,
             experience: 1,
             description:
-               "Thanks to my HTML5 skills your website can be scaled to any device and will performs brilliantly on mobile phones.",
+               "Thanks to my HTML5 skills your website can be scaled to any device and will perform brilliantly on mobile phones.",
             icon: "M 4.1 3.1 L 4.15 4 L 5.5 19.45 l 0.05 0.55 l 0.5 0.15 l 6.2 1.75 l 0.2 0.05 l 0.2 -0.05 l 6.2 -1.7 l 0.5 -0.15 l 0.05 -0.55 l 1.4 -15.5 l 0.05 -0.85 h -0.85 l -15.15 0 H 4.1 z M 5.8 4.7 l 13.45 0 l -1.25 14.05 l -5.45 1.5 l -5.45 -1.5 L 5.8 4.7 z M 7.65 7.05 l 0.5 5.85 h 6.7 l -0.2 2.5 L 12.5 15.95 h 0 l -2.15 -0.6 l -0.1 -1.6 h -1.95 l 0.25 3.1 l 3.95 1.1 h 0 l 3.95 -1.1 L 17 10.95 H 9.95 l -0.15 -2 h 7.4 l 0.15 -1.95 H 7.65 z",
          },
          {
@@ -535,7 +535,7 @@ export default {
             collaborations: 11,
             commercialValue: 2344,
             description:
-               "Thanks to my React skills your website/app will be dynamic instrument, no need for refreshing the page",
+               "Thanks to my React skills your website/app will be dynamic instrument, no need for refreshing the page.",
             icon: "M 8.9 2.6 c -0.65 -0.05 -1.3 0.05 -1.9 0.4 c -0.75 0.45 -1.25 1.2 -1.55 2.05 s -0.35 1.85 -0.25 2.95 c 0 0.1 0.05 0.2 0.05 0.35 c -0.1 0.05 -0.2 0.1 -0.3 0.15 c -1 0.45 -1.8 1 -2.4 1.65 s -1 1.5 -1 2.35 s 0.4 1.7 1 2.35 C 3.2 15.5 4 16.05 5 16.5 c 0.1 0.05 0.2 0.1 0.3 0.15 c 0 0.1 -0.05 0.25 -0.05 0.35 c -0.1 1.1 -0.05 2.1 0.25 2.95 s 0.8 1.6 1.55 2.05 s 1.65 0.5 2.55 0.3 c 0.9 -0.2 1.75 -0.65 2.65 -1.25 c 0.1 -0.05 0.2 -0.15 0.25 -0.2 c 0.1 0.05 0.2 0.15 0.25 0.2 c 0.9 0.65 1.8 1.05 2.65 1.25 c 0.9 0.2 1.8 0.15 2.55 -0.3 s 1.25 -1.2 1.55 -2.05 s 0.35 -1.85 0.25 -2.95 c 0 -0.1 -0.05 -0.2 -0.05 -0.35 c 0.1 -0.05 0.2 -0.1 0.3 -0.15 c 1 -0.45 1.8 -1 2.4 -1.65 c 0.6 -0.65 1 -1.5 1 -2.35 s -0.4 -1.7 -1 -2.35 S 21 8.95 20 8.5 c -0.1 -0.05 -0.2 -0.1 -0.3 -0.15 c 0 -0.1 0.05 -0.25 0.05 -0.35 c 0.1 -1.1 0.05 -2.1 -0.25 -2.95 s -0.8 -1.6 -1.55 -2.05 s -1.65 -0.5 -2.55 -0.3 c -0.9 0.2 -1.75 0.65 -2.65 1.25 c -0.1 0.05 -0.2 0.15 -0.25 0.2 c -0.1 -0.05 -0.2 -0.15 -0.25 -0.2 c -0.9 -0.65 -1.8 -1.05 -2.65 -1.25 C 9.35 2.65 9.15 2.65 8.9 2.6 z M 8.8 4.2 c 0.15 0 0.25 0.05 0.45 0.05 c 0.6 0.15 1.3 0.45 2.05 1 c -0.6 0.6 -1.25 1.25 -1.8 2 c -0.95 0.15 -1.85 0.3 -2.65 0.55 c -0.1 -0.9 0 -1.7 0.15 -2.25 c 0.2 -0.6 0.45 -0.95 0.85 -1.15 C 8.1 4.2 8.4 4.15 8.8 4.2 z M 16.2 4.2 c 0.4 -0.05 0.7 0.05 1 0.2 c 0.35 0.2 0.65 0.55 0.85 1.15 c 0.2 0.6 0.25 1.35 0.15 2.25 c -0.8 -0.25 -1.7 -0.45 -2.65 -0.55 c -0.6 -0.75 -1.2 -1.4 -1.8 -2 c 0.75 -0.5 1.45 -0.85 2.05 -1 C 15.9 4.2 16.05 4.2 16.2 4.2 z M 12.5 6.2 c 0.25 0.25 0.55 0.55 0.8 0.85 c -0.25 0 -0.55 0 -0.8 0 s -0.55 0 -0.8 0 C 11.95 6.75 12.25 6.45 12.5 6.2 z M 12.5 8.6 c 0.75 0 1.5 0.05 2.2 0.1 c 0.4 0.55 0.8 1.2 1.2 1.85 c 0.4 0.65 0.7 1.3 1 1.95 c -0.3 0.65 -0.6 1.3 -1 1.95 c -0.4 0.65 -0.8 1.25 -1.2 1.85 c -0.7 0.05 -1.45 0.1 -2.2 0.1 s -1.5 -0.05 -2.2 -0.1 c -0.4 -0.55 -0.8 -1.2 -1.2 -1.85 c -0.4 -0.65 -0.7 -1.3 -1 -1.95 c 0.3 -0.65 0.6 -1.3 1 -1.95 c 0.4 -0.65 0.8 -1.25 1.2 -1.85 C 11 8.65 11.75 8.6 12.5 8.6 z M 8.2 9.05 c -0.15 0.25 -0.3 0.45 -0.45 0.7 c -0.15 0.25 -0.25 0.5 -0.4 0.7 c -0.1 -0.4 -0.25 -0.75 -0.3 -1.15 C 7.4 9.25 7.8 9.15 8.2 9.05 z M 16.8 9.05 c 0.4 0.1 0.75 0.2 1.15 0.3 c -0.1 0.35 -0.2 0.75 -0.3 1.15 c -0.15 -0.25 -0.25 -0.5 -0.4 -0.7 C 17.1 9.55 16.95 9.3 16.8 9.05 z M 5.6 9.9 c 0.2 0.85 0.5 1.7 0.85 2.6 c -0.35 0.9 -0.65 1.75 -0.85 2.6 c -0.8 -0.4 -1.45 -0.85 -1.85 -1.3 c -0.4 -0.45 -0.6 -0.9 -0.6 -1.3 c 0 -0.4 0.2 -0.85 0.6 -1.3 C 4.15 10.75 4.75 10.3 5.6 9.9 z M 19.4 9.9 c 0.8 0.4 1.45 0.85 1.85 1.3 c 0.4 0.45 0.6 0.9 0.6 1.3 c 0 0.4 -0.2 0.85 -0.6 1.3 c -0.4 0.45 -1.05 0.9 -1.85 1.3 c -0.2 -0.85 -0.5 -1.7 -0.85 -2.6 C 18.95 11.6 19.2 10.75 19.4 9.9 z M 12.5 10.15 c -1.3 0 -2.35 1.05 -2.35 2.35 s 1.05 2.35 2.35 2.35 s 2.35 -1.05 2.35 -2.35 S 13.8 10.15 12.5 10.15 z M 12.5 11.7 c 0.45 0 0.8 0.35 0.8 0.8 s -0.35 0.8 -0.8 0.8 s -0.8 -0.35 -0.8 -0.8 S 12.05 11.7 12.5 11.7 z M 7.35 14.5 c 0.15 0.25 0.25 0.5 0.4 0.7 s 0.3 0.45 0.45 0.7 c -0.4 -0.1 -0.75 -0.2 -1.15 -0.3 C 7.15 15.3 7.25 14.9 7.35 14.5 z M 17.65 14.5 c 0.1 0.4 0.25 0.75 0.3 1.15 c -0.35 0.1 -0.75 0.2 -1.15 0.3 c 0.15 -0.25 0.3 -0.45 0.45 -0.7 S 17.5 14.75 17.65 14.5 z M 6.8 17.2 c 0.8 0.25 1.7 0.45 2.65 0.55 c 0.6 0.75 1.2 1.4 1.8 2 c -0.75 0.5 -1.45 0.85 -2.05 1 c -0.6 0.15 -1.05 0.05 -1.4 -0.15 c -0.35 -0.2 -0.65 -0.55 -0.85 -1.15 C 6.8 18.9 6.75 18.1 6.8 17.2 z M 18.2 17.2 c 0.1 0.9 0 1.7 -0.15 2.25 c -0.2 0.6 -0.45 0.95 -0.85 1.15 s -0.8 0.25 -1.4 0.15 c -0.6 -0.15 -1.3 -0.45 -2.05 -1 c 0.6 -0.6 1.25 -1.25 1.8 -2 C 16.5 17.65 17.35 17.45 18.2 17.2 z M 11.7 17.95 c 0.25 0 0.55 0 0.8 0 s 0.55 0 0.8 0 c -0.25 0.3 -0.55 0.6 -0.8 0.85 C 12.25 18.55 11.95 18.25 11.7 17.95 z",
          },
          {
@@ -573,7 +573,7 @@ export default {
             collaborations: 11,
             commercialValue: 2344,
             description:
-               "Reach who your competition neglect. I will making your digital content usable by as many people as possible. Accessibility solutions are not only for people with severe disabilities for life, they are  also for any person who has broken an arm or just can’t find their glasses.",
+               "Reach who your competition neglects. I will make your digital content usable by as many people as possible. Accessibility solutions are not only for people with severe disabilities for life, they are  also for any person who has broken an arm or just can’t find their glasses.",
             icon: "M10.6358.646c-.4695.0629-.6195.092-1.2826.242-1.9021.4356-3.9156 1.5778-5.3918 3.0492-1.7424 1.7424-2.8362 3.8478-3.2815 6.3065-.0968.5372-.1113.7696-.1113 1.9408 0 1.1713.0145 1.4036.1113 1.9408.2178 1.2052.5034 2.0909 1.0309 3.1654 1.6746 3.4219 4.8932 5.7983 8.6781 6.3985.7599.121 2.783.121 3.538 0 4.6125-.7308 8.3538-4.1188 9.5058-8.6007.271-1.0696.3194-1.4956.3194-2.9282 0-1.1568-.0145-1.3794-.1162-1.936-.7696-4.2979-3.7897-7.7827-7.894-9.1137-.4259-.1355-.6873-.2081-1.331-.3436-.9099-.1984-2.7636-.2565-3.7752-.121zm2.7927 1.3746c2.933.3727 5.6096 2.028 7.2455 4.477 1.5294 2.2893 2.0667 5.0723 1.5101 7.8021-.6292 3.0492-2.7394 5.7402-5.5805 7.1051-2.8362 1.3649-6.05 1.3649-8.8862 0-3.6203-1.7424-5.9096-5.4886-5.7886-9.4864.0097-.3485.0387-.7986.0678-1.0019.5566-4.3754 3.8672-7.9279 8.1796-8.7749.334-.0678.8228-.1404 1.089-.1646.5614-.0484 1.6262-.029 2.1635.0436zM11.6038 4.8762c-.4211.1646-.7841.5905-.8954 1.0551-.213.8906.5227 1.8005 1.452 1.8005.9196 0 1.6311-.8567 1.452-1.7569-.1791-.9099-1.1374-1.4326-2.0086-1.0987zM6.7106 7.9738c-.3049.121-.4695.5663-.334.9099.1549.3872.3049.4259 2.8072.7357.4501.0581.8906.1355.9777.1694.0871.0387.2033.1404.2565.2275.092.15.0968.242.0968 1.3455 0 1.7037-.0823 2.3522-.5276 4.235-.2468 1.0551-.3582 1.5246-.5614 2.3716-.2614 1.0793-.2614 1.2294-.0048 1.4617.15.1355.2081.1597.4211.1597.2904 0 .5034-.1258.6002-.3582.0339-.0823.1742-.5953.3146-1.1422.1355-.5469.334-1.3213.4404-1.7182.5179-1.9747.5808-2.149.7647-2.2506.1549-.0823.3436-.0532.4646.0678.1646.1646.2517.4646 1.0648 3.6348.3582 1.3988.392 1.5004.5614 1.6456.121.0968.1984.121.4162.121.2372 0 .2856-.0194.4259-.1597.2807-.2807.2807-.2759-.0484-1.6553-.1597-.6728-.2807-1.1955-.513-2.178-.4501-1.9021-.5421-2.6959-.5179-4.4141l.0145-1.1229.1355-.1404c.1549-.1646.2856-.1936 1.3649-.3243.9341-.1162 1.9602-.2662 2.1635-.3194.2033-.0532.4501-.3098.4985-.5179.0678-.3291-.1694-.7357-.484-.8131-.0629-.0145-.4356.0194-.8325.0774-.392.0532-.8567.121-1.0309.1452-.9874.1404-2.1393.213-3.4848.213-1.6892 0-2.5265-.0678-4.5109-.3582-.726-.1065-.7889-.1113-.939-.0484z",
          },
          {
@@ -721,7 +721,7 @@ export default {
          },
          {
             id: 3,
-            title: "Improve your customer experience",
+            title: "Improof your customer experience",
             href: "/blog",
             category: [3, 5],
             excerpt:
@@ -863,10 +863,10 @@ export default {
             ],
             category: [1, 2, 3, 4, 6, 9, 10, 15], //toolkit
             excerpt:
-               "A simple Nextjs portfolio that uses hosted Local JSON to data Object to demonstrate my work and development skills.",
+               "An interactive Nextjs portfolio that uses hosted Local JSON to data Object to demonstrate my work and development skills.",
             chalanges: "",
             description:
-               "---\ntitle: My protafolio \ndate: '2020-12-21'\ntags: ['next js', 'css', 'styled-components ']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n### Summery\n\n A simple Nextjs portfolio that uses hosted Local JSON to data Object to demonstrate my work and development skills. I decided to use Nextjs as it provides very good support for SEO. and provides server side rendering out of the box.\n### My Role\nI took this project from idea, to conceptual design, mockup creation, Next.s programming up to deployment.",
+               "---\ntitle: My protafolio \ndate: '2020-12-21'\ntags: ['next js', 'CSS', 'styled-components ']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n### Summary\n\n An interactive Nextjs portfolio that uses hosted Local JSON to data Object to demonstrate my work and development skills. I decided to use Nextjs as it provides very good support for SEO. and provides server side rendering out of the box.\n### My Role\nI took this project from idea, to conceptual design, mockup creation, Next.s programming up to deployment.",
             icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
             date: "Mar 16, 2020",
             datetime: "2020-03-16",
@@ -876,7 +876,7 @@ export default {
                "/assets/imgs/posts/portfolio_11.jpg",
             readingTime: "6 min",
             stats: {
-               compleation: "03.2022",
+               Completion: "03.2022",
                components: 18,
                pages: 6,
                APIs: 2,
@@ -914,10 +914,10 @@ export default {
             ],
             category: [1, 3, 4, 6, 11, 12, 13, 14],
             excerpt:
-               "Shopping list project used as a prove of concept for dynamic rearrange divs in mongo database.",
+               "Shopping list project used as a proof of concept for dynamic rearrange divs in mongo database.",
 
             description:
-               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n## Summery\n\nShopping list project used as a prove of concept for dynamic rearrange divs in mongo db.",
+               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n## Summary\n\nShopping list project used as a proof of concept for dynamic rearrange divs in mongo db.",
             icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
             date: "Mar 10, 2020",
             datetime: "2020-03-10",
@@ -925,7 +925,7 @@ export default {
             imageUrl: "/assets/imgs/posts/portfolio_02.jpg",
             readingTime: "4 min",
             stats: {
-               compleation: "06.2021",
+               Completion: "06.2021",
                components: 8,
                schemas: 4,
                APIs: 8,
@@ -962,11 +962,10 @@ export default {
                },
             ],
             category: [1, 2, 3, 4, 6],
-            excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
+            excerpt: "Experimental project",
 
             description:
-               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n## Introduction\n\nParsing and display of math equations is included in this blog template. Parsing of math is enabled by `remark-math` and `rehype-katex`.\nKaTeX and its associated font is included in `_document.js` so feel free to use it on any page.\n^[For the full list of supported TeX functions, check out the [KaTeX documentation](https://katex.org/docs/supported.html)]\n\nInline math symbols can be included by enclosing the term between the `$` symbol.\n\nMath code blocks are denoted by `$$`.\n\nIf you intend to use the `$` sign instead of math, you can escape it (`\\$`), or specify the HTML entity (`&dollar;`) [^2]\n\nInline or manually enumerated footnotes are also supported. Click on the links above to see them in action.\n\n[^2]: \\$10 and &dollar;20.\n\n## Deriving the OLS Estimator\n\nUsing matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.\n\nThe vector of outcome variables $\\mathbf{Y}$ is a $n \\times 1$ matrix,\n\n```tex\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{Y} = \\left[\\begin{array}\n  {c}\n  y_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  y_n\n\\end{array}\\right]\n$$\n\nThe matrix of regressors $\\mathbf{X}$ is a $n \\times k$ matrix (or each row is a $k \\times 1$ vector),\n\n```latex\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n```\n\n$$\n\\mathbf{X} = \\left[\\begin{array}\n  {ccccc}\n  x_{11} & . & . & . & x_{1k} \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  . & . & . & . & .  \\\\\n  x_{n1} & . & . & . & x_{nn}\n\\end{array}\\right] =\n\\left[\\begin{array}\n  {c}\n  \\mathbf{x}'_1 \\\\\n  . \\\\\n  . \\\\\n  . \\\\\n  \\mathbf{x}'_n\n\\end{array}\\right]\n$$\n\nThe vector of error terms $\\mathbf{U}$ is also a $n \\times 1$ matrix.\n\nAt times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.\n\n",
+               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n## Summary \n\n Experimental project - Clean, minimalistic React music player web application.",
             icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
             date: "Mar 10, 2020",
             datetime: "2020-03-10",
@@ -982,7 +981,7 @@ export default {
          },
          {
             id: 4,
-            title: "octommerce modest clothing",
+            title: "Octommerce Modest Clothing",
             href: "/work",
             callToAction: [
                {
@@ -1000,13 +999,13 @@ export default {
             ],
             category: [1, 2, 16],
             excerpt:
-               "octommerce modest clothing eshop selling fashion clothes and acessories.",
+               "Fashion e-commerce website targeting ethnic minority shoppers.",
 
             description:
-               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n## summery\n\nOriginal fashion e-commerce website targeting ethnic minority shoppers. \n### My role: \nFrom brand creation to designing and launching the full e-commerce site. Versatile full-stack web development experience in a commercial setting. This website can be scaled to any device and performs brilliantly on mobile phones. Works consistently across different browsers and platforms. ",
+               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n## Summary\n\nOriginal fashion e-commerce website targeting ethnic minority shoppers. \n### My role: \nFrom brand creation to designing and launching the full e-commerce site. Versatile full-stack web development experience in a commercial setting. This website can be scaled to any device and perform brilliantly on mobile phones. Works consistently across different browsers and platforms. ",
             icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
             stats: {
-               compleation: "08.2019",
+               Completion: "08.2019",
                plugins: 42,
                products: 124,
                pages: 26,
@@ -1043,10 +1042,10 @@ export default {
             ],
             category: [1, 2, 16],
             excerpt:
-               "Elegant and vibrant e-commerce shop. to  sell HST beautiful and vibrant sweets",
+               "Elegant and vibrant e-commerce shop providing delicious ranges of jelly sweets.",
 
             description:
-               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n## Summery\n\n Elegant and vibrant e-commerce shop. to sell HST beautiful and vibrant sweets,\n### Role  \nI developed this shop from scratch and helped to deliver all of:\nlogo\ne-shop (Wordpress)\nphotos",
+               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n## Summary\n\n Elegant and vibrant e-commerce shop providing delicious ranges of jelly sweets. ,\n### Role  \nImplementing web design and development principles to build stable web applications. Bringing mock-ups to life using HTML, CSS, Wordpress. Assessing UX and UI designs for technical feasibility. Testing to identify bugs and technical issues before and after deploying. I developed this shop from scratch and helped to deliver all of: logo e-shop (Wordpress) photos",
             icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
             date: "Mar 10, 2020",
             datetime: "2020-03-10",
@@ -1054,7 +1053,7 @@ export default {
             imageUrl: "/assets/imgs/posts/portfolio_16.jpg",
             readingTime: "4 min",
             stats: {
-               compleation: "06.2021",
+               Completion: "06.2021",
                Plugins: 38,
                Products: 42,
                pages: 28,
@@ -1089,7 +1088,7 @@ export default {
                "Modern Artist website for famous Egyptian Contemporary Painter.",
 
             description:
-               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n## summery\n\nModern Artist website for famous Egyptian Contemporary Painter.\n\n### My role: \n\nFrom creating the branding to designing and launching the full e-commerce site. Standardized all output with a new, responsive, mobile-first approach and strategy.",
+               "---\ntitle: Deriving the OLS Estimator\ndate: '2020-12-21'\ntags: ['next js', 'math', 'ols']\ndraft: false\nsummary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'\n---\n\n## Summary\n\nModern Artist website for famous Egyptian Contemporary Painter.\n\n### My role: \n\nFrom creating the branding to designing and launching the full e-commerce site. Standardized all output with a new, responsive, mobile-first approach and strategy.",
             icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
             date: "Mar 10, 2020",
             datetime: "2020-03-10",
@@ -1134,7 +1133,7 @@ export default {
          {
             path: "m11.2231,17.83805c1.61575,1.57101 3.20827,2.50019 4.49192,2.50019c0.42071,0 0.81906,-0.08862 1.1503,-0.28736c1.1503,-0.66419 1.57101,-2.32382 1.17266,-4.69152c-0.06625,-0.42071 -0.15486,-0.84057 -0.26585,-1.28365c0.44222,-0.13249 0.84057,-0.26585 1.23891,-0.39834c2.2352,-0.86294 3.47411,-2.05797 3.47411,-3.36313c0,-1.32753 -1.23891,-2.52256 -3.47411,-3.36313c-0.39834,-0.15486 -0.79669,-0.28736 -1.23891,-0.39834c0.11099,-0.44222 0.1996,-0.86294 0.26585,-1.28365c0.37598,-2.41158 -0.04388,-4.09357 -1.19503,-4.75777c-0.3321,-0.19874 -0.73044,-0.28736 -1.1503,-0.28736c-1.26128,0 -2.87703,0.92918 -4.49192,2.50019c-1.59338,-1.57101 -3.18676,-2.50019 -4.46955,-2.50019c-0.42071,0 -0.81906,0.08862 -1.1503,0.28736c-1.1503,0.66419 -1.57101,2.32382 -1.17266,4.69152c0.06625,0.42071 0.15486,0.84057 0.26585,1.28365c-0.44222,0.13249 -0.84057,0.26585 -1.23891,0.39834c-2.2352,0.86294 -3.47411,2.05797 -3.47411,3.36313c0,1.32753 1.23891,2.52256 3.47411,3.36313c0.39834,0.15486 0.79669,0.28736 1.23891,0.39834c-0.11099,0.44222 -0.1996,0.86294 -0.26585,1.28365c-0.37598,2.3677 0.04388,4.04969 1.17266,4.69152c0.3321,0.1996 0.73044,0.28736 1.1503,0.28736c1.28365,0.04388 2.87703,-0.88531 4.49192,-2.43395l0,0zm-1.23977,-2.98715c0.39834,0.02237 0.81906,0.02237 1.23891,0.02237s0.84057,0 1.23891,-0.02237c-0.39834,0.53084 -0.81906,1.0178 -1.23891,1.48239c-0.42071,-0.46459 -0.84057,-0.95155 -1.23891,-1.48239zm-2.74367,-2.27908c0.22111,0.37598 0.42071,0.73044 0.66419,1.08405c-0.6857,-0.08862 -1.32753,-0.1996 -1.94698,-0.3321c0.1996,-0.59709 0.42071,-1.2174 0.6857,-1.83686c0.17723,0.35361 0.37598,0.73044 0.59709,1.08405l0,0.00086zm-1.28365,-5.33334c0.61946,-0.13249 1.26128,-0.24348 1.94698,-0.3321c-0.22111,0.35447 -0.44222,0.70807 -0.66419,1.08405s-0.42071,0.73044 -0.59709,1.10642c-0.28736,-0.64183 -0.50933,-1.26128 -0.6857,-1.85923l0,0.00086zm1.2174,3.03189c0.28736,-0.59709 0.59709,-1.19503 0.95155,-1.79212c0.3321,-0.57558 0.70807,-1.1503 1.08405,-1.72587c0.66419,-0.04388 1.32753,-0.06625 2.01409,-0.06625c0.70807,0 1.37227,0.02237 2.01409,0.06625c0.39834,0.57558 0.75195,1.1503 1.08405,1.72587c0.35447,0.59709 0.66419,1.19503 0.95155,1.79212c-0.28736,0.59709 -0.59709,1.19503 -0.95155,1.79212c-0.3321,0.57558 -0.70807,1.1503 -1.08405,1.72587c-0.66419,0.04388 -1.32753,0.06625 -2.01409,0.06625c-0.70807,0 -1.37227,-0.02237 -2.01409,-0.06625c-0.39834,-0.57558 -0.75195,-1.1503 -1.08405,-1.72587c-0.35447,-0.59795 -0.66419,-1.19503 -0.95155,-1.79212l0,0zm8.65259,-1.19503l-0.59709,-1.10642c-0.22111,-0.37598 -0.42071,-0.73044 -0.66419,-1.08405c0.6857,0.08862 1.32753,0.1996 1.94698,0.3321c-0.19874,0.61946 -0.42071,1.23891 -0.6857,1.85923l0,0l0,-0.00086zm0,2.39007c0.26585,0.61946 0.48696,1.23891 0.6857,1.83686c-0.61946,0.13249 -1.26128,0.24348 -1.94698,0.3321c0.22111,-0.35447 0.44222,-0.70807 0.66419,-1.08405c0.1996,-0.3321 0.39834,-0.70807 0.59709,-1.08405l0,0l0,-0.00086zm0.50847,7.67867c-0.17723,0.11099 -0.39834,0.15486 -0.64183,0.15486c-1.08405,0 -2.43395,-0.88531 -3.76147,-2.21283c0.64183,-0.6857 1.26128,-1.46088 1.88074,-2.32382c1.04017,-0.08862 2.0356,-0.24348 2.96564,-0.46459c0.11099,0.39834 0.17723,0.79669 0.24348,1.19503c0.30973,1.88074 0.06625,3.23063 -0.6857,3.65135l-0.00086,0zm1.15116,-11.66212c2.47868,0.70807 3.96108,1.79212 3.96108,2.78841c0,0.86294 -1.0178,1.72587 -2.80992,2.41244c-0.35447,0.13249 -0.75195,0.26585 -1.1503,0.37598c-0.28736,-0.90767 -0.64183,-1.83686 -1.08405,-2.78841c0.44222,-0.95155 0.81906,-1.88074 1.08405,-2.78841l0,0l-0.00086,0zm-1.77061,-6.24016c0.24348,0 0.44222,0.04388 0.64183,0.15486c0.73044,0.42071 0.99543,1.74824 0.6857,3.65135c-0.06625,0.37598 -0.15486,0.77432 -0.24348,1.19503c-0.92918,-0.1996 -1.92548,-0.35447 -2.96564,-0.46459c-0.59709,-0.86294 -1.23891,-1.63726 -1.88074,-2.32382c1.32753,-1.30602 2.67743,-2.21283 3.76147,-2.21283l0.00086,0zm-3.253,4.44804c-0.39834,-0.02237 -0.81906,-0.02237 -1.23891,-0.02237s-0.84057,0 -1.23891,0.02237c0.39834,-0.53084 0.81906,-1.0178 1.23891,-1.48239c0.42071,0.46459 0.84057,0.97392 1.23891,1.48239l0,0zm-6.35114,-4.29317c0.17723,-0.11099 0.39834,-0.15486 0.64183,-0.15486c1.08405,0 2.43395,0.88531 3.76147,2.21283c-0.64183,0.6857 -1.26128,1.46002 -1.88074,2.32382c-1.04017,0.08862 -2.0356,0.24348 -2.96564,0.46459c-0.11099,-0.39834 -0.17723,-0.79669 -0.24348,-1.19503c-0.30973,-1.88074 -0.06625,-3.20827 0.6857,-3.65135l0,0l0.00086,0zm-1.1503,11.66212c-2.47868,-0.70807 -3.96108,-1.79212 -3.96108,-2.78841c0,-0.86294 1.0178,-1.72587 2.80992,-2.41158c0.35447,-0.13249 0.75195,-0.26585 1.1503,-0.37598c0.28736,0.90767 0.64183,1.83686 1.08405,2.78841c-0.44222,0.95155 -0.81906,1.90311 -1.08405,2.78841l0.00086,-0.00086zm0.46459,2.43395c0.06625,-0.37598 0.15486,-0.77432 0.24348,-1.19503c0.92918,0.1996 1.92548,0.35447 2.96564,0.46459c0.59709,0.86294 1.23891,1.63726 1.88074,2.32382c-1.32753,1.30516 -2.67743,2.21283 -3.76147,2.21283c-0.24348,0 -0.44222,-0.04388 -0.64183,-0.15486c-0.75281,-0.42071 -0.99543,-1.77061 -0.6857,-3.65135l-0.00086,0z",
             title: "React",
-            text: "Thanks to my React skills your website/app will be dynamic instrument, no need for refreshing the page",
+            text: "Thanks to my React skills your website/app will be dynamic instrument, no need for refreshing the page.",
          },
       ],
       subCta:
@@ -1210,7 +1209,7 @@ export default {
          {
             path: "m11.2231,17.83805c1.61575,1.57101 3.20827,2.50019 4.49192,2.50019c0.42071,0 0.81906,-0.08862 1.1503,-0.28736c1.1503,-0.66419 1.57101,-2.32382 1.17266,-4.69152c-0.06625,-0.42071 -0.15486,-0.84057 -0.26585,-1.28365c0.44222,-0.13249 0.84057,-0.26585 1.23891,-0.39834c2.2352,-0.86294 3.47411,-2.05797 3.47411,-3.36313c0,-1.32753 -1.23891,-2.52256 -3.47411,-3.36313c-0.39834,-0.15486 -0.79669,-0.28736 -1.23891,-0.39834c0.11099,-0.44222 0.1996,-0.86294 0.26585,-1.28365c0.37598,-2.41158 -0.04388,-4.09357 -1.19503,-4.75777c-0.3321,-0.19874 -0.73044,-0.28736 -1.1503,-0.28736c-1.26128,0 -2.87703,0.92918 -4.49192,2.50019c-1.59338,-1.57101 -3.18676,-2.50019 -4.46955,-2.50019c-0.42071,0 -0.81906,0.08862 -1.1503,0.28736c-1.1503,0.66419 -1.57101,2.32382 -1.17266,4.69152c0.06625,0.42071 0.15486,0.84057 0.26585,1.28365c-0.44222,0.13249 -0.84057,0.26585 -1.23891,0.39834c-2.2352,0.86294 -3.47411,2.05797 -3.47411,3.36313c0,1.32753 1.23891,2.52256 3.47411,3.36313c0.39834,0.15486 0.79669,0.28736 1.23891,0.39834c-0.11099,0.44222 -0.1996,0.86294 -0.26585,1.28365c-0.37598,2.3677 0.04388,4.04969 1.17266,4.69152c0.3321,0.1996 0.73044,0.28736 1.1503,0.28736c1.28365,0.04388 2.87703,-0.88531 4.49192,-2.43395l0,0zm-1.23977,-2.98715c0.39834,0.02237 0.81906,0.02237 1.23891,0.02237s0.84057,0 1.23891,-0.02237c-0.39834,0.53084 -0.81906,1.0178 -1.23891,1.48239c-0.42071,-0.46459 -0.84057,-0.95155 -1.23891,-1.48239zm-2.74367,-2.27908c0.22111,0.37598 0.42071,0.73044 0.66419,1.08405c-0.6857,-0.08862 -1.32753,-0.1996 -1.94698,-0.3321c0.1996,-0.59709 0.42071,-1.2174 0.6857,-1.83686c0.17723,0.35361 0.37598,0.73044 0.59709,1.08405l0,0.00086zm-1.28365,-5.33334c0.61946,-0.13249 1.26128,-0.24348 1.94698,-0.3321c-0.22111,0.35447 -0.44222,0.70807 -0.66419,1.08405s-0.42071,0.73044 -0.59709,1.10642c-0.28736,-0.64183 -0.50933,-1.26128 -0.6857,-1.85923l0,0.00086zm1.2174,3.03189c0.28736,-0.59709 0.59709,-1.19503 0.95155,-1.79212c0.3321,-0.57558 0.70807,-1.1503 1.08405,-1.72587c0.66419,-0.04388 1.32753,-0.06625 2.01409,-0.06625c0.70807,0 1.37227,0.02237 2.01409,0.06625c0.39834,0.57558 0.75195,1.1503 1.08405,1.72587c0.35447,0.59709 0.66419,1.19503 0.95155,1.79212c-0.28736,0.59709 -0.59709,1.19503 -0.95155,1.79212c-0.3321,0.57558 -0.70807,1.1503 -1.08405,1.72587c-0.66419,0.04388 -1.32753,0.06625 -2.01409,0.06625c-0.70807,0 -1.37227,-0.02237 -2.01409,-0.06625c-0.39834,-0.57558 -0.75195,-1.1503 -1.08405,-1.72587c-0.35447,-0.59795 -0.66419,-1.19503 -0.95155,-1.79212l0,0zm8.65259,-1.19503l-0.59709,-1.10642c-0.22111,-0.37598 -0.42071,-0.73044 -0.66419,-1.08405c0.6857,0.08862 1.32753,0.1996 1.94698,0.3321c-0.19874,0.61946 -0.42071,1.23891 -0.6857,1.85923l0,0l0,-0.00086zm0,2.39007c0.26585,0.61946 0.48696,1.23891 0.6857,1.83686c-0.61946,0.13249 -1.26128,0.24348 -1.94698,0.3321c0.22111,-0.35447 0.44222,-0.70807 0.66419,-1.08405c0.1996,-0.3321 0.39834,-0.70807 0.59709,-1.08405l0,0l0,-0.00086zm0.50847,7.67867c-0.17723,0.11099 -0.39834,0.15486 -0.64183,0.15486c-1.08405,0 -2.43395,-0.88531 -3.76147,-2.21283c0.64183,-0.6857 1.26128,-1.46088 1.88074,-2.32382c1.04017,-0.08862 2.0356,-0.24348 2.96564,-0.46459c0.11099,0.39834 0.17723,0.79669 0.24348,1.19503c0.30973,1.88074 0.06625,3.23063 -0.6857,3.65135l-0.00086,0zm1.15116,-11.66212c2.47868,0.70807 3.96108,1.79212 3.96108,2.78841c0,0.86294 -1.0178,1.72587 -2.80992,2.41244c-0.35447,0.13249 -0.75195,0.26585 -1.1503,0.37598c-0.28736,-0.90767 -0.64183,-1.83686 -1.08405,-2.78841c0.44222,-0.95155 0.81906,-1.88074 1.08405,-2.78841l0,0l-0.00086,0zm-1.77061,-6.24016c0.24348,0 0.44222,0.04388 0.64183,0.15486c0.73044,0.42071 0.99543,1.74824 0.6857,3.65135c-0.06625,0.37598 -0.15486,0.77432 -0.24348,1.19503c-0.92918,-0.1996 -1.92548,-0.35447 -2.96564,-0.46459c-0.59709,-0.86294 -1.23891,-1.63726 -1.88074,-2.32382c1.32753,-1.30602 2.67743,-2.21283 3.76147,-2.21283l0.00086,0zm-3.253,4.44804c-0.39834,-0.02237 -0.81906,-0.02237 -1.23891,-0.02237s-0.84057,0 -1.23891,0.02237c0.39834,-0.53084 0.81906,-1.0178 1.23891,-1.48239c0.42071,0.46459 0.84057,0.97392 1.23891,1.48239l0,0zm-6.35114,-4.29317c0.17723,-0.11099 0.39834,-0.15486 0.64183,-0.15486c1.08405,0 2.43395,0.88531 3.76147,2.21283c-0.64183,0.6857 -1.26128,1.46002 -1.88074,2.32382c-1.04017,0.08862 -2.0356,0.24348 -2.96564,0.46459c-0.11099,-0.39834 -0.17723,-0.79669 -0.24348,-1.19503c-0.30973,-1.88074 -0.06625,-3.20827 0.6857,-3.65135l0,0l0.00086,0zm-1.1503,11.66212c-2.47868,-0.70807 -3.96108,-1.79212 -3.96108,-2.78841c0,-0.86294 1.0178,-1.72587 2.80992,-2.41158c0.35447,-0.13249 0.75195,-0.26585 1.1503,-0.37598c0.28736,0.90767 0.64183,1.83686 1.08405,2.78841c-0.44222,0.95155 -0.81906,1.90311 -1.08405,2.78841l0.00086,-0.00086zm0.46459,2.43395c0.06625,-0.37598 0.15486,-0.77432 0.24348,-1.19503c0.92918,0.1996 1.92548,0.35447 2.96564,0.46459c0.59709,0.86294 1.23891,1.63726 1.88074,2.32382c-1.32753,1.30516 -2.67743,2.21283 -3.76147,2.21283c-0.24348,0 -0.44222,-0.04388 -0.64183,-0.15486c-0.75281,-0.42071 -0.99543,-1.77061 -0.6857,-3.65135l-0.00086,0z",
             title: "React",
-            text: "Thanks to my React skills your website/app will be dynamic instrument, no need for refreshing the page",
+            text: "Thanks to my React skills your website/app will be dynamic instrument, no need for refreshing the page.",
          },
       ],
    },
@@ -1225,7 +1224,7 @@ export default {
                imgSrc: "assets/imgs/ironfx.png",
                width: "2/3",
                alt: "WeTransfare",
-               css: "",
+               CSS: "",
             },
          },
          {
@@ -1234,7 +1233,7 @@ export default {
                imgSrc: "assets/imgs/octommerce.png",
                width: "2/3",
                alt: "Slack",
-               css: "",
+               CSS: "",
             },
          },
          {
@@ -1243,7 +1242,7 @@ export default {
                imgSrc: "assets/imgs/everfx.png",
                width: "2/3",
                alt: "Miro",
-               css: "lg:ml-auto",
+               CSS: "lg:ml-auto",
             },
          },
          {
@@ -1252,7 +1251,7 @@ export default {
                imgSrc: "assets/imgs/htc.png",
                width: "2/3",
                alt: "dropbox",
-               css: "",
+               CSS: "",
             },
          },
          {
@@ -1261,7 +1260,7 @@ export default {
                imgSrc: "assets/imgs/umrahexpress.png",
                width: "2/3",
                alt: "dropbox",
-               css: "md:mx-auto",
+               CSS: "md:mx-auto",
             },
          },
       ],
@@ -1342,7 +1341,7 @@ export default {
       ),
       subtitle:
          // "🇬🇧 I'm Sherif, MERN FullStack Web Dev, I'd Love to help building your next modern, fast and dynamic web project, websites, web app or web-shop",
-         "🇬🇧 Hi, I’m Sherif: passionate, self-taught front web developer with experience in structuring, developing and implementing interactive websites and webapps - hence, I desinged and coded this protfolio-site... 😎",
+         "🇬🇧 Hi, I’m Sherif: passionate, self-taught front web developer with experience in structuring, developing and implementing interactive websites and webapps - hence, I designed and coded this portfolio-site... 😎",
       // I make the Web come Alive
       button: {
          enabled: true,
