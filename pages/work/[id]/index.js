@@ -166,23 +166,27 @@ const Work = ({ post, content }) => {
                </p> */}
                   <p className="text-sm font-medium dark:text-indigo-400  text-indigo-600 hidden md:inline-block  py-4 ">
                      {post.category.filter(Boolean).map(cat => (
-                        <a
-                           key={cat.title}
+                        <Link
                            href={cat.href}
-                           className={classNames(
+                           passHref
+                           key={cat.title}
+                           >
+                           <a className={classNames(
                               cat.color,
                               "hover:underline dark:bg-gray-800 mt-2 inline-flex items-center mr-2 px-3 py-0.5 rounded-full text-sm font-medium "
-                           )}>
-                           <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 34 24"
-                              className="fill-indigo-600 dark:fill-indigo-100 mr-1 drop-shadow-sm ">
-                              <path d={cat.icon} />
-                           </svg>
-                           {cat.title}
-                        </a>
+                           )}
+                              >
+                              <svg
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 width="24"
+                                 height="24"
+                                 viewBox="0 0 34 24"
+                                 className="fill-indigo-600 dark:fill-indigo-100 mr-1 drop-shadow-sm ">
+                                 <path d={cat.icon} />
+                              </svg>
+                              {cat.title}
+                           </a>
+                        </Link>
                      ))}
                   </p>
 
@@ -199,7 +203,6 @@ const Work = ({ post, content }) => {
 
                {/* Stats section */}
                <div className="mt-10">
-                  
                   <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
                      {post.stats &&
                         Object.keys(post.stats).map(key => (
