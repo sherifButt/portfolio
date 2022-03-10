@@ -1,4 +1,5 @@
 import Link from "../NoScrollLink"
+import {Popover} from '@headlessui/react'
 
 const MenuPosts = ( { posts , mainTitle } ) => {
    return (
@@ -13,13 +14,15 @@ const MenuPosts = ( { posts , mainTitle } ) => {
                      <li
                         key={item.title.substring(0,20)}
                         className="text-base truncate">
-                        <Link
-                           href={`${item.href}/${item.id}`}
-                           passHref>
-                           <a className="font-medium text-gray-900 dark:text-gray-300 hover:text-gray-700">
-                              {item.title.substring(0,30)}
-                           </a>
-                        </Link>
+                        <Popover.Button>
+                           <Link
+                              href={`${item.href}/${item.id}`}
+                              passHref>
+                              <a className="font-medium text-gray-900 dark:text-gray-300 hover:text-gray-700">
+                                 {item.title.substring(0,30)}
+                              </a>
+                           </Link>
+                        </Popover.Button>
                      </li>
                   ))}
                </ul>
