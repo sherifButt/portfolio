@@ -122,17 +122,18 @@ const Example = ({ post, content }) => {
 
 export const getServerSideProps = async context => {
  try { const data = await getData();
-   const posts = await data.blog.posts;
-
-   // console.log( posts.filter( i => i.id == context.params.id ) );
-   const post = await posts.filter(
-      i => i.id == context.params.id
-   )[0];
-   
+    const posts = await data.blog.posts;
+    
+    // console.log( posts.filter( i => i.id == context.params.id ) );
+    const post = await posts.filter(
+       i => i.id == context.params.id
+       )[0];
+       
+       const postMd  = await axios(`/api/posts?path=${post.description}`)
 
    const { content } = matter( post?.description );
-   
-   console.log(content);
+ 
+   console.log('content');
    return {
       props: {
          post: post,

@@ -31,7 +31,6 @@ import MenuIcons from "../MenuIcons";
 import MenuCallsToAction from "../MenuCallsToAction";
 import MenuPosts from "../MenuPosts";
 
-
 const work = [
    {
       name: "work",
@@ -179,203 +178,207 @@ export default function Navigation({ className, data }) {
                   </motion.div>
                   <ThemeSwitch />
                </motion.div>
-               <div className="hidden md:inline-block">
+               <motion.div
+                  variants={item}
+                  className="hidden md:inline-block">
                   <ThemeSwitch />
-               </div>
+               </motion.div>
 
                <div className="-mr-2 -my-2 md:hidden">
-                 
-                     <Popover className="bg-white dark:bg-transparent  rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                        <span className="sr-only">Open menu</span>
-                        <MenuIcon
-                           className="h-6 w-6"
-                           aria-hidden="true"
-                        />
-                     </Popover>
-                
+                  <Popover.Button className="bg-white dark:bg-transparent  rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                     <span className="sr-only">Open menu</span>
+                     <MenuIcon
+                        className="h-6 w-6"
+                        aria-hidden="true"
+                     />
+                  </Popover.Button>
                </div>
 
                <Popover.Group
                   as="nav"
                   className="hidden md:flex space-x-10">
                   <motion.div variants={item}>
-                     <Popover className="relative">
-                        {({ open }) => (
-                           <>
-                              <Popover.Button
-                                 className={classNames(
-                                    open
-                                       ? "text-gray-900 dark:text-gray-200"
-                                       : "text-gray-500 dark:text-gray-400",
-                                    "group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-indigo-900 focus:ring-indigo-500 pl-3"
-                                 )}>
-                                 <span className="capitalize">
-                                    work
-                                 </span>
-                                 <ChevronDownIcon
+                     {data?.work?.isActive && (
+                        <Popover className="relative">
+                           {({ open }) => (
+                              <>
+                                 <Popover.Button
                                     className={classNames(
                                        open
-                                          ? "text-gray-600"
-                                          : "text-gray-400",
-                                       "ml-2 h-5 w-5 group-hover:text-gray-500"
-                                    )}
-                                    aria-hidden="true"
-                                 />
-                              </Popover.Button>
+                                          ? "text-gray-900 dark:text-gray-200"
+                                          : "text-gray-500 dark:text-gray-400",
+                                       "group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-indigo-900 focus:ring-indigo-500 pl-3"
+                                    )}>
+                                    <span className="capitalize">
+                                       work
+                                    </span>
+                                    <ChevronDownIcon
+                                       className={classNames(
+                                          open
+                                             ? "text-gray-600"
+                                             : "text-gray-400",
+                                          "ml-2 h-5 w-5 group-hover:text-gray-500"
+                                       )}
+                                       aria-hidden="true"
+                                    />
+                                 </Popover.Button>
 
-                              <Transition
-                                 as={Fragment}
-                                 enter="transition ease-out duration-200"
-                                 enterFrom="opacity-0 translate-y-1"
-                                 enterTo="opacity-100 translate-y-0"
-                                 leave="transition ease-in duration-150"
-                                 leaveFrom="opacity-100 translate-y-0"
-                                 leaveTo="opacity-0 translate-y-1">
-                                 <Popover.Panel className="absolute z-20 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                                    <div className="rounded-lg shadow-lg dark:shadow-gray-900 dark:border dark:border-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                       
-                                       <MenuPosts
-                                          posts={
-                                             data.work?.posts
-                                          }
-                                          mainTitle="work"
-                                       />
-                                       <MenuCallsToAction
-                                          posts={
-                                             data.callsToAction
-                                                ?.posts
-                                          }
-                                          
-                                       />
-                                    </div>
-                                 </Popover.Panel>
-                              </Transition>
-                           </>
-                        )}
-                     </Popover>
+                                 <Transition
+                                    as={Fragment}
+                                    enter="transition ease-out duration-200"
+                                    enterFrom="opacity-0 translate-y-1"
+                                    enterTo="opacity-100 translate-y-0"
+                                    leave="transition ease-in duration-150"
+                                    leaveFrom="opacity-100 translate-y-0"
+                                    leaveTo="opacity-0 translate-y-1">
+                                    <Popover.Panel className="absolute z-20 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                                       <div className="rounded-lg shadow-lg dark:shadow-gray-900 dark:border dark:border-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
+                                          <MenuPosts
+                                             posts={
+                                                data.work?.posts
+                                             }
+                                             mainTitle="work"
+                                          />
+                                          <MenuCallsToAction
+                                             posts={
+                                                data
+                                                   .callsToAction
+                                                   ?.posts
+                                             }
+                                          />
+                                       </div>
+                                    </Popover.Panel>
+                                 </Transition>
+                              </>
+                           )}
+                        </Popover>
+                     )}
                   </motion.div>
                   <motion.div variants={item}>
-                     <Popover className="relative">
-                        {({ open }) => (
-                           <>
-                              <Popover.Button
-                                 className={classNames(
-                                    open
-                                       ? "text-gray-900 dark:text-gray-200"
-                                       : "text-gray-500 dark:text-gray-400",
-                                    "group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-indigo-900 focus:ring-indigo-500 pl-3"
-                                 )}>
-                                 <span className="capitalize">
-                                    my toolkit
-                                 </span>
-                                 <ChevronDownIcon
+                     {data?.toolkit?.isActive && (
+                        <Popover className="relative">
+                           {({ open }) => (
+                              <>
+                                 <Popover.Button
                                     className={classNames(
                                        open
-                                          ? "text-gray-600"
-                                          : "text-gray-400",
-                                       "ml-2 h-5 w-5 group-hover:text-gray-500"
-                                    )}
-                                    aria-hidden="true"
-                                 />
-                              </Popover.Button>
+                                          ? "text-gray-900 dark:text-gray-200"
+                                          : "text-gray-500 dark:text-gray-400",
+                                       "group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-indigo-900 focus:ring-indigo-500 pl-3"
+                                    )}>
+                                    <span className="capitalize">
+                                       my toolkit
+                                    </span>
+                                    <ChevronDownIcon
+                                       className={classNames(
+                                          open
+                                             ? "text-gray-600"
+                                             : "text-gray-400",
+                                          "ml-2 h-5 w-5 group-hover:text-gray-500"
+                                       )}
+                                       aria-hidden="true"
+                                    />
+                                 </Popover.Button>
 
-                              <Transition
-                                 as={Fragment}
-                                 enter="transition ease-out duration-200"
-                                 enterFrom="opacity-0 translate-y-1"
-                                 enterTo="opacity-100 translate-y-0"
-                                 leave="transition ease-in duration-150"
-                                 leaveFrom="opacity-100 translate-y-0"
-                                 leaveTo="opacity-0 translate-y-1">
-                                 <Popover.Panel className="absolute z-20 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                                    <div className="rounded-lg shadow-lg dark:shadow-gray-900 dark:border dark:border-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                       <MenuIcons
-                                          posts={
-                                             data.toolkit?.posts
-                                          }
-                                          category={
-                                             data?.toolkit
-                                          }
-                                          mainTitle="tools"
-                                          random={true}
-                                       />
-                                       
-                                       
-                                    </div>
-                                 </Popover.Panel>
-                              </Transition>
-                           </>
-                        )}
-                     </Popover>
+                                 <Transition
+                                    as={Fragment}
+                                    enter="transition ease-out duration-200"
+                                    enterFrom="opacity-0 translate-y-1"
+                                    enterTo="opacity-100 translate-y-0"
+                                    leave="transition ease-in duration-150"
+                                    leaveFrom="opacity-100 translate-y-0"
+                                    leaveTo="opacity-0 translate-y-1">
+                                    <Popover.Panel className="absolute z-20 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                                       <div className="rounded-lg shadow-lg dark:shadow-gray-900 dark:border dark:border-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
+                                          <MenuIcons
+                                             posts={
+                                                data.toolkit
+                                                   ?.posts
+                                             }
+                                             category={
+                                                data?.toolkit
+                                             }
+                                             mainTitle="tools"
+                                             random={true}
+                                          />
+                                       </div>
+                                    </Popover.Panel>
+                                 </Transition>
+                              </>
+                           )}
+                        </Popover>
+                     )}
                   </motion.div>
 
-                  <motion.a
-                     variants={item}
-                     href="/about"
-                     className="capitalize text-base font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
-                     about
-                  </motion.a>
-                  
-
-                  {/* <motion.div variants={item}>
-                     <Popover className="relative">
-                        {({ open }) => (
-                           <>
-                              <Popover.Button
-                                 className={classNames(
-                                    open
-                                       ? "text-gray-900 dark:text-gray-200"
-                                       : "text-gray-500 dark:text-gray-400",
-                                    "group  dark:bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-indigo-900 focus:ring-indigo-500 pl-3"
-                                 )}>
-                                 <span className="capitalize">
-                                    blog
-                                 </span>
-                                 <ChevronDownIcon
+                  <motion.div variants={item}>
+                     <Link href="/about" passHref>
+                        <a className="capitalize text-base font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                           about
+                        </a>
+                     </Link>
+                  </motion.div>
+                  <motion.div variants={item}>
+                     {data?.blog?.isActive && (
+                        <Popover className="relative">
+                           {({ open }) => (
+                              <>
+                                 <Popover.Button
                                     className={classNames(
                                        open
-                                          ? "text-gray-600 dark:text-gray-400"
-                                          : "text-gray-400",
-                                       "ml-2 h-5 w-5 group-hover:text-gray-500"
-                                    )}
-                                    aria-hidden="true"
-                                 />
-                              </Popover.Button>
+                                          ? "text-gray-900 dark:text-gray-200"
+                                          : "text-gray-500 dark:text-gray-400",
+                                       "group  dark:bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-indigo-900 focus:ring-indigo-500 pl-3"
+                                    )}>
+                                    <span className="capitalize">
+                                       blog
+                                    </span>
+                                    <ChevronDownIcon
+                                       className={classNames(
+                                          open
+                                             ? "text-gray-600 dark:text-gray-400"
+                                             : "text-gray-400",
+                                          "ml-2 h-5 w-5 group-hover:text-gray-500"
+                                       )}
+                                       aria-hidden="true"
+                                    />
+                                 </Popover.Button>
 
-                              <Transition
-                                 as={Fragment}
-                                 enter="transition ease-out duration-200"
-                                 enterFrom="opacity-0 translate-y-1"
-                                 enterTo="opacity-100 translate-y-0"
-                                 leave="transition ease-in duration-150"
-                                 leaveFrom="opacity-100 translate-y-0"
-                                 leaveTo="opacity-0 translate-y-1">
-                                 <Popover.Panel className="absolute z-20 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0 ">
-                                    <div className="rounded-lg shadow-lg dark:shadow-gray-900 dark:border dark:border-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                       <MenuIcons
-                                          posts={
-                                             data.category?.posts
-                                          }
-                                          category={
-                                             data?.category
-                                          }
-                                       />
-                                       <MenuPosts
-                                          posts={
-                                             data.blog?.posts
-                                          }
-                                          mainTitle="posts"
-                                       />
-                                    </div>
-                                 </Popover.Panel>
-                              </Transition>
-                           </>
-                        )}
-                     </Popover>
-                  </motion.div> */}
+                                 <Transition
+                                    as={Fragment}
+                                    enter="transition ease-out duration-200"
+                                    enterFrom="opacity-0 translate-y-1"
+                                    enterTo="opacity-100 translate-y-0"
+                                    leave="transition ease-in duration-150"
+                                    leaveFrom="opacity-100 translate-y-0"
+                                    leaveTo="opacity-0 translate-y-1">
+                                    <Popover.Panel className="absolute z-20 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0 ">
+                                       <div className="rounded-lg shadow-lg dark:shadow-gray-900 dark:border dark:border-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
+                                          <MenuIcons
+                                             posts={
+                                                data.category
+                                                   ?.posts
+                                             }
+                                             category={
+                                                data?.category
+                                             }
+                                          />
+                                          <MenuPosts
+                                             posts={
+                                                data.blog?.posts
+                                             }
+                                             mainTitle="posts"
+                                          />
+                                       </div>
+                                    </Popover.Panel>
+                                 </Transition>
+                              </>
+                           )}
+                        </Popover>
+                     )}{" "}
+                  </motion.div>
                </Popover.Group>
 
-               <div
+               <motion.div
                   variants={item}
                   className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                   <Link
@@ -410,7 +413,7 @@ export default function Navigation({ className, data }) {
                      {/* <ThemeSwitch /> */}
                      {/* <Dropdown /> */}
                   </motion.div>
-               </div>
+               </motion.div>
             </motion.div>
          </div>
 
@@ -448,18 +451,21 @@ export default function Navigation({ className, data }) {
                      <div className="mt-6">
                         <nav className="grid gap-y-8">
                            {work.map(item => (
-                              <a
-                                 key={item.name}
-                                 href={item.href}
-                                 className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">
-                                 <item.icon
-                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                    aria-hidden="true"
-                                 />
-                                 <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-400 ">
-                                    {item.name}
-                                 </span>
-                              </a>
+                              <Popover.Button>
+                                 <Link href={item.href} passHref>
+                                    <a
+                                       key={item.name}
+                                       className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">
+                                       <item.icon
+                                          className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                          aria-hidden="true"
+                                       />
+                                       <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-400 ">
+                                          {item.name}
+                                       </span>
+                                    </a>
+                                 </Link>
+                              </Popover.Button>
                            ))}
                         </nav>
                      </div>
@@ -487,18 +493,40 @@ export default function Navigation({ className, data }) {
                         ))} */}
                      </div>
                      <div>
-                        <a
-                           href="#"
-                           className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                           Hire Me
-                        </a>
+                        <Popover.Button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                           <Link
+                              href={
+                                 data?.callsToAction?.posts
+                                    ? data?.callsToAction?.posts[1]
+                                         ?.href
+                                    : "#"
+                              }
+                              passHref>
+                              <a >
+                                 Hire Me
+                              </a>
+                           </Link>
+                        </Popover.Button>
                         <p className="mt-6 text-center text-base font-medium text-gray-500">
-                           Get my{" "}
-                           <a
-                              href="#"
-                              className="text-indigo-600 hover:text-indigo-500">
-                              CV
-                           </a>
+                          
+                           <Popover.Button>
+                              <Link
+                                 href={
+                                    data?.callsToAction?.posts
+                                       ? data?.callsToAction
+                                            ?.posts[0]?.href
+                                       : "#"
+                                 }>
+                                 <a
+                                    href="#"
+                                    className="text-indigo-600 hover:text-indigo-500">
+                                     Get my{" "}{
+                                       data?.callsToAction?.posts[0]
+                                          ?.title
+                                    }
+                                 </a>
+                              </Link>
+                           </Popover.Button>
                         </p>
                      </div>
                   </div>
