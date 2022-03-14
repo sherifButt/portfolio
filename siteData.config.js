@@ -1,5 +1,37 @@
 import FlashText from "./components/Options/FlashText";
 export default {
+   tags: {
+      pretitle: "What do we say often?",
+      title: "From the Portfolio",
+      subtitle: "",
+      href: "/tags",
+      posts: [
+         {
+            id: 1,
+            title: "Articles",
+            href: "articles",
+            color: "bg-indigo-100 text-indigo-800",
+            description: "some description",
+            icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+         },
+         {
+            id: 2,
+            title: "Books",
+            href: "books",
+            color: "bg-indigo-100 text-indigo-800",
+            description: "",
+            icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+         },
+         {
+            id: 3,
+            title: "other",
+            href: "other",
+            color: "bg-indigo-100 text-indigo-800",
+            description: "",
+            icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+         },
+      ],
+   },
    author: {
       pretitle: "What do we say often?",
       title: "From the Portfolio",
@@ -9,7 +41,7 @@ export default {
          {
             id: 1,
             name: "Sherif Butt",
-            job:"Frontend Web Developer",
+            job: "Frontend Web Developer",
             href: "#",
             imageUrl:
                "https://i.pinimg.com/280x280_RS/8d/d2/7a/8dd27a73eb1bd2674078ad0bbd6933b2.jpg",
@@ -797,8 +829,8 @@ export default {
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
             date: "Mar 16, 2020",
             datetime: "2020-03-16",
-imgs:
-               [13],  readingTime: "6 min",
+            imgs: [13],
+            readingTime: "6 min",
             author: {
                name: "Roel Aufderehar",
                href: "#",

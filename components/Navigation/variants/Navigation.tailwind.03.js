@@ -353,7 +353,7 @@ export default function Navigation({ className, data }) {
                                     leaveTo="opacity-0 translate-y-1">
                                     <Popover.Panel className="absolute z-20 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0 ">
                                        <div className="rounded-lg shadow-lg dark:shadow-gray-900 dark:border dark:border-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                          <MenuIcons
+                                          {/* <MenuIcons
                                              posts={
                                                 data.category
                                                    ?.posts
@@ -361,7 +361,7 @@ export default function Navigation({ className, data }) {
                                              category={
                                                 data?.category
                                              }
-                                          />
+                                          /> */}
                                           <MenuPosts
                                              posts={
                                                 data.blog?.posts

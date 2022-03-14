@@ -83,6 +83,7 @@ export async function getData() {
          replaceIdWithFullObject( "blog", "imgs", "gallery" );
          replaceIdWithFullObject("blog", "category", "category");
          replaceIdWithFullObject("blog", "author", "author");
+         replaceIdWithFullObject("blog", "tags", "tags");
       } catch (err) {
          console.log("error:", err.message);
       }
@@ -96,7 +97,8 @@ export async function getData() {
    ]);
    
    replaceIdWithFullObject("work", "category", "toolkit");
-   replaceIdWithFullObject("work", "imgs", "gallery");
+   replaceIdWithFullObject( "work", "imgs", "gallery" );
+   replaceIdWithFullObject("work", "tags", "tags");
    addWorkToToolkits();
    console.timeEnd("getDataTime");
    return _data;
