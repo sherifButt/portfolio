@@ -25,6 +25,7 @@ const Card = ({
    readingTime,
    author,
    posts, // posts array
+   imgs,
    displayedPost, // selected post to display
 }) => {
    const [isFlipped, setIsFlipped] = useState(false);
@@ -59,9 +60,11 @@ const Card = ({
                   onClick={handleMouseEnter}
                   className="h-96 -mb-2 w-full object-cover cursor-pointer "
                   src={
-                     posts
-                        ? posts[displayedPost].imageUrl
-                        : imageUrl
+                     // posts
+                     //    ? posts[displayedPost].imageUrl
+                     //    : imageUrl
+                     // blog.posts[0].imgs[0].src
+                     imgs[0].src
                   }
                   alt=""
                />
@@ -96,8 +99,7 @@ const Card = ({
          <div
             key={posts ? posts[displayedPost].title : title}
             className="react-card-back flex h-auto flex-col rounded-lg shadow-lg overflow-hidden  dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-40 border dark:border-0  border-gray-100 dark:border-gray-800"
-            onMouseLeave={ handleMouseLeave }
-         >
+            onMouseLeave={handleMouseLeave}>
             {!isFlipped && (
                <p className="invisible ">
                   .............................................................................................................................

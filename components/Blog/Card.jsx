@@ -21,9 +21,11 @@ const Card = ({
    author,
    posts, // posts array
    displayedPost, // selected post to display
+   imgs
 } ) => {
    
    return (
+   
       <div
          key={posts ? posts[displayedPost].title : title}
          className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:scale-105 transition ease-in-out dark:bg-gray-800 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl dark:bg-opacity-30 bg-opacity-40 ">
@@ -37,9 +39,7 @@ const Card = ({
                   <img
                      className="h-48 w-full object-cover "
                      src={
-                        posts
-                           ? posts[displayedPost].imageUrl
-                           : imageUrl
+                        imgs[0].src
                      }
                      alt=""
                   />
@@ -107,18 +107,12 @@ const Card = ({
                      <div className="flex-shrink-0">
                         <a href={author.href}>
                            <span className="sr-only">
-                              {posts
-                                 ? posts[displayedPost].author
-                                      .name
-                                 : author.name}
+                              {author.name}
                            </span>
                            <img
                               className="h-10 w-10 rounded-full"
                               src={
-                                 posts
-                                    ? posts[displayedPost].author
-                                         .imageUrl
-                                    : author.imageUrl
+                                 author.imageUrl
                               }
                               alt=""
                            />
@@ -128,16 +122,10 @@ const Card = ({
                         <p className="text-sm font-medium text-gray-900 dark:text-gray-300">
                            <a
                               href={
-                                 posts
-                                    ? posts[displayedPost].author
-                                         .href
-                                    : author.href
+                                 author.href
                               }
                               className="hover:underline">
-                              {posts
-                                 ? posts[displayedPost].author
-                                      .name
-                                 : author.name}
+                              {author.name}
                            </a>
                         </p>
                         <div className="flex space-x-1 text-sm text-gray-500">

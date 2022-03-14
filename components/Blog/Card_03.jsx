@@ -23,6 +23,7 @@ const Card = ({
    author,
    posts, // posts array
    displayedPost, // selected post to display
+   imgs,
 } ) => {
    
    return (
@@ -39,9 +40,10 @@ const Card = ({
                   <img
                      className="h-48 -mb-2 w-full object-cover "
                      src={
-                        posts
-                           ? posts[displayedPost].imageUrl
-                           : imageUrl
+                        // posts
+                        //    ? posts[displayedPost].imageUrl
+                        //    : imageUrl
+                        imgs[0].src
                      }
                      alt=""
                   />

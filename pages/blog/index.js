@@ -2,13 +2,13 @@ import Blog from "../../components/Blog";
 import Breadcrumb from "../../components/Breadcrumbs";
 import { getData } from "../api/data";
 
-const Blogs = ({ posts, title,href, subtitle }) => {
+const Work = ({ posts, title, href, subtitle }) => {
    return (
       <>
          {/* <Breadcrumb className="mt-8 ml-8" /> */}
          <Blog
-            variant={3}
-            items={ 6 }
+            variant={2}
+            items={6}
             href={href}
             title={title}
             subtitle={subtitle}
@@ -18,7 +18,7 @@ const Blogs = ({ posts, title,href, subtitle }) => {
    );
 };
 
-export default Blogs;
+export default Work;
 
 export const getStaticProps = async context => {
    console.log(`context`, context);

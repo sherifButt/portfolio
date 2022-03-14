@@ -1,6 +1,6 @@
 import Blog_01 from "./variants/Bolg.shuffle.01";
 import Blog_02 from "./variants/Blog.tailwind.02";
-import Blog_03 from "./variants/Blog.tailwind.01";
+import Blog_03 from "./variants/Blog.tailwind.03";
 
 const Blog = ({
    variant,

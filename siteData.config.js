@@ -1,5 +1,28 @@
 import FlashText from "./components/Options/FlashText";
 export default {
+   author: {
+      pretitle: "What do we say often?",
+      title: "From the Portfolio",
+      subtitle: "",
+      href: "/category",
+      posts: [
+         {
+            id: 1,
+            name: "Sherif Butt",
+            job:"Frontend Web Developer",
+            href: "#",
+            imageUrl:
+               "https://i.pinimg.com/280x280_RS/8d/d2/7a/8dd27a73eb1bd2674078ad0bbd6933b2.jpg",
+         },
+         {
+            id: 2,
+            name: "Ewa Butt",
+            href: "#",
+            imageUrl:
+               "data:image/jpeg;base64,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",
+         },
+      ],
+   },
    gallery: {
       posts: [
          {
@@ -675,7 +698,8 @@ export default {
       pretitle: "What do we say often?",
       title: "From the Blog",
       subtitle: "",
-      isActive: false,
+      isActive: true,
+      isFiles: true,
       href: "/blog",
       posts: [
          {
@@ -689,8 +713,7 @@ export default {
             description: "/posts/deriving-the-ols-estimator.md",
             date: "Mar 16, 2020",
             datetime: "2020-03-16",
-            imageUrl:
-               "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+            imgs: [3],
             readingTime: "6 min",
             author: {
                name: "Roel Aufderehar",
@@ -711,8 +734,7 @@ export default {
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
             date: "Mar 10, 2020",
             datetime: "2020-03-10",
-            imageUrl:
-               "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+            imgs: [6],
             readingTime: "4 min",
             author: {
                name: "Brenna Goyette",
@@ -733,8 +755,7 @@ export default {
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
             date: "Feb 12, 2020",
             datetime: "2020-02-12",
-            imageUrl:
-               "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+            imgs: [7],
             readingTime: "11 min",
             author: {
                name: "Daniela Metz",
@@ -755,8 +776,7 @@ export default {
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
             date: "Mar 10, 2020",
             datetime: "2020-03-10",
-            imageUrl:
-               "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+            imgs: [8],
             readingTime: "4 min",
             author: {
                name: "Brenna Goyette",
@@ -777,9 +797,8 @@ export default {
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
             date: "Mar 16, 2020",
             datetime: "2020-03-16",
-            imageUrl:
-               "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-            readingTime: "6 min",
+imgs:
+               [13],  readingTime: "6 min",
             author: {
                name: "Roel Aufderehar",
                href: "#",

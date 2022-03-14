@@ -10,6 +10,7 @@ const Card = ({
    imageUrl,
    readingTime,
    author,
+   imgs
 }) => {
    return (
       <div
@@ -18,7 +19,7 @@ const Card = ({
          <Link href={`${href}/${id}`} passHref>
             <a>
                <img
-                  src={imageUrl}
+                  src={imgs[0].src}
                   alt=" random imgee"
                   className="w-full object-cover object-center rounded-lg shadow-md hover:scale-105 transition ease-in-out"
                />

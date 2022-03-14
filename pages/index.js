@@ -1,3 +1,4 @@
+import absoluteUrl from 'next-absolute-url'
 import {
    useTransform,
    useViewportScroll,
@@ -95,7 +96,7 @@ const Text = styled.h1`
 `;
 
 export const getStaticProps = async context => {
-   
+   console.log('context', context)
    const data = await getData();
    // const res = await axios( '/api/data' );
    // const data = res.data

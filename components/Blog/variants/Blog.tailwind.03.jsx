@@ -39,6 +39,7 @@ export default function Blog({
    isBackground,
    href,
    posts,
+
    isPagination,
    isPaginationArrows,
    noObservation,
@@ -162,6 +163,7 @@ export default function Blog({
                                        datetime,
                                        date,
                                        readingTime,
+                                       imgs,
                                     },
                                     i
                                  ) => (
@@ -190,7 +192,7 @@ export default function Blog({
                                                 description={
                                                    description
                                                 }
-                                                author={author}
+                                                author={author[0]}
                                                 datetime={
                                                    datetime
                                                 }
@@ -198,6 +200,7 @@ export default function Blog({
                                                 readingTime={
                                                    readingTime
                                                 }
+                                                imgs={imgs}
                                              />
                                           </div>
                                           <div className="inline-block lg:hidden">
@@ -221,7 +224,7 @@ export default function Blog({
                                                 description={
                                                    description
                                                 }
-                                                author={author}
+                                                author={author[0]}
                                                 datetime={
                                                    datetime
                                                 }
@@ -229,6 +232,7 @@ export default function Blog({
                                                 readingTime={
                                                    readingTime
                                                 }
+                                                imgs={imgs}
                                              />
                                           </div>
                                        </>
