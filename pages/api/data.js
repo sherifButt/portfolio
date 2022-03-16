@@ -12,8 +12,8 @@ export default async function helloAPI(req, res) {
 
 export async function getData() {
    console.time("getDataTime");
-   const _data = await { ...JSON.parse(JSON.stringify(data)) };
-   
+   const _data = await { ...data };
+   console.log(_data)
    const addBlogToData = async () => {
       try {
          const postData = await getPostData();
