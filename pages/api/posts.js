@@ -77,7 +77,7 @@ export async function getData() {
      const _data = await { ...JSON.parse( JSON.stringify( data ) ) };
      _data.blog.posts = posts
      
- fs.writeFileSync(path.join(path.resolve('./'),'/siteData.config.json'),JSON.stringify(_data))
+//  fs.writeFileSync(path.join(path.resolve('./'),'/siteData.config.json'),JSON.stringify(_data))
       return { posts };
    } catch ( err )
    {

@@ -521,7 +521,8 @@ export default {
             title: "Setup",
             href: "/category/2",
             color: "bg-indigo-100 text-indigo-800",
-            description: "In setup we will show step by step how to install and plugings, frameworks, libraries fornts and more. whatever a webdeveloper need to set we will digge it out here. ",
+            description:
+               "In setup we will show step by step how to install and plugings, frameworks, libraries fornts and more. whatever a webdeveloper need to set we will digge it out here. ",
             icon: "M17.5 12c.293 0 .58.024.86.072l.174.716a2 2 0 0 0 2.413 1.475l.098-.026l.601-.179c.363.467.653.997.854 1.57l-.447.43a2 2 0 0 0-.17 2.7l.142.156l.475.457c-.2.574-.49 1.103-.853 1.57l-.602-.178a2 2 0 0 0-2.485 1.351l-.026.098l-.173.716a5.178 5.178 0 0 1-1.723 0l-.172-.716a2 2 0 0 0-2.413-1.475l-.098.026l-.602.178a5.546 5.546 0 0 1-.853-1.57l.447-.43a2 2 0 0 0 .17-2.698l-.142-.157l-.475-.457c.2-.574.49-1.103.853-1.57l.602.178a2 2 0 0 0 2.485-1.351l.026-.098l.172-.716c.28-.047.569-.072.862-.072ZM13.75 2A2.25 2.25 0 0 1 16 4.25v6.924a6.454 6.454 0 0 0-1.5.558V4.25a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0-.75.75v15.5c0 .414.336.75.75.75l5.483.001a6.516 6.516 0 0 0 1.077 1.5L6.25 22A2.25 2.25 0 0 1 4 19.75V4.25A2.25 2.25 0 0 1 6.25 2h7.5ZM8.749 17.504L11 17.499c0 .517.06 1.02.174 1.5l-2.423.005a.75.75 0 0 1-.002-1.5ZM17.5 16c-.8 0-1.45.672-1.45 1.5S16.7 19 17.5 19c.8 0 1.45-.672 1.45-1.5S18.3 16 17.5 16Z",
          },
          {
@@ -747,152 +748,63 @@ export default {
       href: "/blog",
       posts: [
          {
-            id: 1,
-            title: "Boost your conversion rate",
+            id: 2,
+            filename:
+               "Installing-Nextjs-Understanding-Folder-Structure",
+            title: "Installing Next.js & Understanding Folder Structure",
             href: "/blog",
-            category: [1, 2],
-            excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
-
-            description: "/posts/deriving-the-ols-estimator.md",
-            date: "Mar 16, 2020",
-            datetime: "2020-03-16",
-            imgs: [3],
-            readingTime: "6 min",
-            author: {
-               name: "Roel Aufderehar",
-               href: "#",
-               imageUrl:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            },
+            date: "2020-06-21",
+            datetime: null,
+            imageUrl: null,
+            tags: [1, 3, 4],
+            category: [1, 2, 3, 5, 7],
+            imgs: [2, 3, 4, 5, 6],
+            relatedPosts: [1, 2, 3, 4, 5],
+            draft: false,
+            author: [1],
+            excerpt: "How to build MD files auto reader, using",
+            readingTime: "8 min",
+            description:
+               '\n## Problem:\nIn this article we will start building our Next.js project move2room. So first lets install Next.js and I\'ll show you the folder structure of Next.js\n## Installing Next.js:\nWe can install next very easy by pulling a pre created template from git, I\'ll show you how to do this in the following step, however now I\'d prefer to start with the basic method where we will install a react app, then add libraries step by step, so we can understand the full folder structure and the ins and outs of Next.js setup. I can write any thing now right.\n\n### Installing node.js\n1. go to https://nodejs.org/en/ and download the latest version of Node.js, npm and npx will be installed as well.\n1. Open an empty folder to store the project directory\n   in mac use `terminal`\n### Installing Next.js\n### Basic installation :\n2. Use use `npx` to create react app\n  \n   \n   ```bash\n    npx create-next-app . ⏎\n    # or\n    yarn create next-app . ⏎  \n    ```\n  if you noticed we used a dot after the command to tell npx to install Next.js in the same folder.\n\n  After the app has been installed successfully, you can see all the files structure has been created.\n  \n  If we go to the `package.json` file\n\n  ```json\n  {\n  "name": "move2room",\n  "version": "0.1.0",\n  "private": true,\n  "scripts": {\n    "dev": "next dev",\n    "build": "next build",\n    "start": "next start"\n  },\n  "dependencies": {\n    "next": "12.1.0",\n    "react": "17.0.2",\n    "react-dom": "17.0.2"\n  }\n}\n  ```\n  \n  We can see `"next" , "react" ,"react-dom"` \n\n  On the other hand you can see scripts `"dev","build","start"` so if we want to run a development mode we should type:\n  ```bash\n  npm run dev ⏎\n  ```\n - to start the development server on http://localhost:3000\n - Visit http://localhost:3000 to view your application\n- Edit pages/index.js and see the updated result in your browser\n  \nTo run a build mode (where we will have a build ready for deployment) we need to type:\n  ```bash\n  npm run build ⏎\n  ```\n  To run production mode type:\n  ```bash\n  npm run start ⏎\n  ```\nFor manual set please refare to: https://nextjs.org/docs/getting-started\n\n### Folder structure:\n```\n/root\n  \\_ /.next/\n  \\_ /components/\n      \\_ Button/\n          \\_ button.spec.jsx\n          \\_ button.styles.jsx\n          \\_ index.jsx\n  \\_ /constants/\n      \\_ theme.js\n      \\_ page.js\n  \\_ /contexts/\n      \\_ Locale/\n         \\_ index.js\n      \\_ Page/\n         \\_ index.js\n  \\_ /pages/\n      \\_ _app.jsx\n      \\_ _document.jsx\n      \\_ about.jsx\n      \\_ index.jsx\n  \\_ /providers/\n      \\_ Locale/\n         \\_ index.js\n      \\_ Page/\n         \\_ index.js\n  \\_ /public/\n      \\_ favicon.ico\n      \\_ header.png\n  \\_ /redux/\n      \\_ actions/\n         \\_ users/\n            \\_ index.js\n         \\_ products/\n            \\_ index.js\n      \\_ reducers/\n         \\_ users/\n            \\_ index.js\n         \\_ products/\n            \\_ index.js\n      \\_ store/\n         \\_ index.js\n      \\_ types/\n         \\_ index.js\n  \\_ /shared/\n      \\_ jsons/\n          \\_ users.json\n      \\_ libs/\n          \\_ locale.js\n      \\_ styles/\n          \\_ global.css\n  \\_ /widgets/\n      \\_ PageHeader/\n          \\_ index.jsx\n  \\\n  \\_ .eslintignore\n  \\_ .eslintrc\n  \\_ .env\n  \\_ babel.config.js\n  \\_ Dockerfile\n  \\_ jest.config.js\n  \\_ next.config.js\n  \\_ package.json\n  \\_ README.md\n```',
          },
          {
-            id: 2,
-            title: "How to use search engine optimization to drive sales",
+            id: 1,
+            filename:
+               "adding-custom-fonts-to-nextjs-application-with-tailwind-css",
+            title: "Google Fonts to NextJS app with Tailwind CSS",
             href: "/blog",
-            category: [2],
-            excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
-
+            date: "2020-12-21",
+            datetime: null,
+            imageUrl: null,
+            tags: [1, 3, 4],
+            category: [1, 2],
+            imgs: [35, 35],
+            relatedPosts: [1, 2, 3, 4, 5],
+            draft: false,
+            author: [1],
+            excerpt: "How to build MD files auto reader, using",
+            readingTime: "6 min",
             description:
-               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
-            date: "Mar 10, 2020",
-            datetime: "2020-03-10",
-            imgs: [6],
-            readingTime: "4 min",
-            author: {
-               name: "Brenna Goyette",
-               href: "#",
-               imageUrl:
-                  "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            },
+               'Using custom Font Family in a Next JS application involves 3 easy steps! setting up` _document.js` , declaring the custom font family in tailwind.`config.js` and using it in our `Components/Pages`.\nFor this example, we will be using “Google Fonts” as the font provider!\nLet\'s pick `Inter` Sans font from fonts.google.com and copy the href URL.\nIn this case, it’ll be:\n```html\n  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">\n```\n',
          },
          {
             id: 3,
-            title: "Improof your customer experience",
+            filename: "setingup-nextjs-tailwind-redux",
+            title: "Next.js fetching new Data",
             href: "/blog",
-            category: [3, 5],
-            excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
-
-            description:
-               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
-            date: "Feb 12, 2020",
-            datetime: "2020-02-12",
-            imgs: [7],
-            readingTime: "11 min",
-            author: {
-               name: "Daniela Metz",
-               href: "#",
-               imageUrl:
-                  "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            },
-         },
-         {
-            id: 4,
-            title: "How to use search engine optimization to drive sales",
-            href: "/blog",
-            category: [1],
-            excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
-
-            description:
-               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
-            date: "Mar 10, 2020",
-            datetime: "2020-03-10",
-            imgs: [8],
-            readingTime: "4 min",
-            author: {
-               name: "Brenna Goyette",
-               href: "#",
-               imageUrl:
-                  "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            },
-         },
-         {
-            id: 5,
-            title: "Boost your conversion rate",
-            href: "/blog",
-            category: [2, 3],
-            excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
-
-            description:
-               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-            date: "Mar 16, 2020",
-            datetime: "2020-03-16",
-            imgs: [13],
-            readingTime: "6 min",
-            author: {
-               name: "Roel Aufderehar",
-               href: "#",
-               imageUrl:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            },
-         },
-         {
-            id: 6,
-            title: "Boost your conversion rate",
-            href: "/blog",
+            date: " 2022-03-21",
+            datetime: null,
+            imageUrl: null,
+            tags: [1, 3, 4],
             category: [1, 2],
+            imgs: [9, 9],
+            relatedPosts: [1, 2, 3, 4, 5],
+            draft: false,
+            author: [1],
             excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
-
-            description:
-               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-            date: "Mar 16, 2020",
-            datetime: "2020-03-16",
-            imageUrl:
-               "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-            readingTime: "6 min",
-            author: {
-               name: "Roel Aufderehar",
-               href: "#",
-               imageUrl:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            },
-         },
-         {
-            id: 7,
-            title: "Boost your conversion rate",
-            href: "/blog",
-            category: [1],
-            excerpt:
-               "Introduction Parsing and display of math equations is included in this blo",
-
-            description:
-               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-            date: "Mar 16, 2020",
-            datetime: "2020-03-16",
-            imageUrl:
-               "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-            readingTime: "6 min",
-            author: {
-               name: "Roel Aufderehar",
-               href: "#",
-               imageUrl:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-            },
+               "How to fitch data in Next.js for fast preformence and better SEO",
+            readingTime: "10 min",
+            description: "## Problem:\nI have files saved in ",
          },
       ],
    },

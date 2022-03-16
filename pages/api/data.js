@@ -1,4 +1,4 @@
-import data from "../../siteData.config.js";
+import data from "../../siteData.config";
 import { getData as getPostData } from "./posts";
 
 export default async function helloAPI(req, res) {
@@ -13,13 +13,11 @@ export default async function helloAPI(req, res) {
 export async function getData() {
    console.time("getDataTime");
    const _data = await { ...JSON.parse(JSON.stringify(data)) };
-   console.log(_data)
+
    const addBlogToData = async () => {
       try {
          const postData = await getPostData();
-         _data.blog.posts = postData.posts;
-         
-         // console.log(_data.blog.posts);  
+         _data.blog.posts = await postData.posts;
       } catch (err) {
          console.log("error:", err.message);
       }
@@ -36,7 +34,6 @@ export async function getData() {
     * @param {Array} exclude objects
     * @returns Object
     */
-
    const replaceIdWithFullObject = async (
       type = "blog", // Post type to manipulate
       typeSubElement = "category", // Post's sub element name to manipulate
@@ -81,6 +78,7 @@ export async function getData() {
       const check = _data[container].posts?.map(
          (tool, toolIdx) => {
             let arr = [];
+
             const foundWorks = data[something].posts?.map(
                work => {
                   const foundWork = work.category.map(
@@ -90,32 +88,32 @@ export async function getData() {
                         }
                      }
                   );
-                  _data[container].posts[toolIdx][something] =
-                     arr;
+                  _data[container].posts[toolIdx][something] = arr;
                   return foundWork;
                }
             );
             return foundWorks;
          }
       );
+
       return check;
    };
 
    replaceIdWithFullObject("blog", "imgs", "gallery");
    replaceIdWithFullObject("blog", "category", "category");
    replaceIdWithFullObject("blog", "author", "author");
-   replaceIdWithFullObject( "blog", "tags", "tags" );
-   
+   replaceIdWithFullObject("blog", "tags", "tags");
+
    addSomethingToContainer("blog", "category");
 
    replaceIdWithFullObject("toolkit", "work", "work", [
-      "description",]);
+      "description",
+   ]);
 
    replaceIdWithFullObject("work", "category", "toolkit");
    replaceIdWithFullObject("work", "imgs", "gallery");
    replaceIdWithFullObject("work", "tags", "tags");
    addSomethingToContainer("work", "toolkit");
-   console.timeEnd( "getDataTime" );
-   
+   console.timeEnd("getDataTime");
    return _data;
 }
