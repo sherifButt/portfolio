@@ -1,6 +1,5 @@
 import data from "../../siteData.config.json";
 import { getData as getPostData } from "./posts";
-import FlashText from "../../components/Options/FlashText";
 
 export default async function helloAPI(req, res) {
    console.time("apiDataTime");
@@ -13,7 +12,7 @@ export default async function helloAPI(req, res) {
 
 export async function getData() {
    console.time("getDataTime");
-   const _data = await { ...data };
+   const _data = await { ...JSON.parse(JSON.stringify(data)) };
    console.log(_data)
    const addBlogToData = async () => {
       try {
