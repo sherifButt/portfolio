@@ -28,13 +28,15 @@ const MenuPosts = ( { posts , mainTitle } ) => {
                </ul>
             </div>
             <div className="mt-5 text-sm">
-               <Link href={posts[0].href}  passHref>
-                  <a className="font-medium text-indigo-600 hover:text-indigo-500">
-                     {" "}
-                     View all {mainTitle}{" "}
-                     <span aria-hidden="true">&rarr;</span>
-                  </a>
-               </Link>
+               <Popover.Button>
+                  <Link href={posts[0].href}  passHref>
+                     <a className="font-medium text-indigo-600 hover:text-indigo-500">
+                        {" "}
+                        View all {mainTitle}{" "}
+                        <span aria-hidden="true">&rarr;</span>
+                     </a>
+                  </Link>
+               </Popover.Button>
             </div>
          </div>
          

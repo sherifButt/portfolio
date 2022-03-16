@@ -1,20 +1,28 @@
 /* This example requires Tailwind CSS v2.0+ */
 
-import matter from "gray-matter";
-import DOMPurify from "isomorphic-dompurify";
-import { marked } from "marked";
-import Link from "next/link";
-import MenuIcons from "../../../components/Navigation/MenuIcons";
-import inWords from "../../../util/inWords";
 import { getData } from "../../api/data";
+import DOMPurify from "isomorphic-dompurify";
+import matter from "gray-matter";
+import { marked } from "marked";
+import inWords  from "../../../util/inWords"
+
+// componenets
+import ProgressBar from "../../../components/UX/ProgressBar";
+import MenuIcons from "../../../components/Navigation/MenuIcons";
 
 
+const stats = [
+   { label: "Started", value: "2021" },
+   { label: "Projects", value: "5" },
+   { label: "Collaborations", value: "11" },
+   { label: "Commercial Value", value: "$25M" },
+];
 
-const ToolkitItem = ({ post, toolkit, content }) => {
-   // replace existing work icon with toolkit icon inside
+const Example = ({ post, content }) => {
+   // replace existing blog icon with toolkit icon inside
    post = {
       ...post,
-      work: post.work?.map((item, idx) => ({
+      blog: post.blog?.map((item, idx) => ({
          ...item,
          icon: post.icon,
       })),
@@ -86,12 +94,9 @@ const ToolkitItem = ({ post, toolkit, content }) => {
 
             <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
                {/* Content area */}
-               <Link href={toolkit?.href} passHref>
-                  <a className="text-indigo-700">&larr;</a>
-               </Link>
                <div className="pt-4 sm:pt-16 lg:pt-10">
                   <h1 className="leading-relaxed text-4xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal ">
-                     {post.title}
+                     {post.title} Articls
                   </h1>
                   <article className="prose dark:prose-invert mt-6 text-gray-500 space-y-6">
                      <p className="text-lg">
@@ -103,25 +108,28 @@ const ToolkitItem = ({ post, toolkit, content }) => {
                      </p>
                   </article>
                </div>
-               {/* Work */}
-               {post.work.length !== 0 && (
+               {/* blog */}
+               {post?.blog?.length !== 0 && (
                   <div>
-                     <h3 className="pt-5 leading-loose text-2xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal">
-                        I used {post?.title} in{" "}
+                     <h3 className="capitalize pt-5 leading-loose text-2xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal">
+                        We wrote{" "}
                         <u className="capitalize">
-                           {inWords(post?.work.length)}
+                           {inWords(post?.blog?.length)}
                         </u>{" "}
-                        Projects:
+                        {post?.title} article
+                        {post?.blog?.length > 1 && "s"}
                      </h3>
                      <MenuIcons
-                        posts={post?.work}
+                        posts={post?.blog}
                         limit={99}
                         numerized
-                        rootHref="/work"
-                        mainTitle="Projects"
+                        mainTitle="Articles"
+                        rootHref="/blog"
+                        isAuthor
                      />
                   </div>
                )}
+
                {/* Stats section */}
                <div className="">
                   <div className="">
@@ -189,7 +197,7 @@ const ToolkitItem = ({ post, toolkit, content }) => {
 export const getServerSideProps = async context => {
    try {
       const data = await getData();
-      const posts = await data.toolkit.posts;
+      const posts = await data.category.posts;
 
       // console.log( posts.filter( i => i.id == context.params.id ) );
       const post = await posts.filter(
@@ -202,7 +210,6 @@ export const getServerSideProps = async context => {
       return {
          props: {
             post: post,
-            toolkit:data.toolkit,
             content,
          },
       };
@@ -213,4 +220,4 @@ export const getServerSideProps = async context => {
    }
 };
 
-export default ToolkitItem;
+export default Example;

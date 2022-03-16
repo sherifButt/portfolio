@@ -1,8 +1,4 @@
-import Link from "../NoScrollLink";
-import Image from "next/image";
-import Blob from "../Blob";
-import MorphedSvg from "../MorphedSvg";
-import { GithubIcon } from "@heroicons/react/solid";
+import Link from "../NoScrollLink"
 
 function classNames(...classes) {
    return classes.filter(Boolean).join(" ");
@@ -43,7 +39,7 @@ const Card = ({
                         // posts
                         //    ? posts[displayedPost].imageUrl
                         //    : imageUrl
-                        imgs[0].src
+                        imgs?.[0].src
                      }
                      alt=""
                   />

@@ -39,7 +39,7 @@ const Card = ({
                   <img
                      className="h-48 w-full object-cover "
                      src={
-                        imgs[0].src
+                        imgs?.[0].src
                      }
                      alt=""
                   />

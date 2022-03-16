@@ -1,11 +1,10 @@
-import { getData } from "../../api/data";
-import DOMPurify from "isomorphic-dompurify";
 import matter from "gray-matter";
+import DOMPurify from "isomorphic-dompurify";
 import { marked } from "marked";
 import Link from "next/link";
-
 // Components
 import Frame from "../../../components/FramesCss";
+import { getData } from "../../api/data";
 
 const stats = [
    { label: "Founded", value: "2021" },
@@ -16,7 +15,7 @@ const stats = [
 function classNames(...classes) {
    return classes.filter(Boolean).join(" ");
 }
-const Blog = ({ post, content }) => {
+const Blog = ({ blog,post, content }) => {
    let description = marked(DOMPurify.sanitize(content)); // clean description
    return (
       <div className=" relative  py-16 sm:py-16">
@@ -104,6 +103,9 @@ const Blog = ({ post, content }) => {
 
             <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
                {/* Content area */}
+               <Link href={blog?.href} passHref>
+                  <a className="text-indigo-700">&larr;</a>
+               </Link>
                <div className="pt-10  lg:pt-10">
                   <h1 className="leading-relaxed text-4xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal ">
                      {post?.title}
@@ -190,13 +192,13 @@ const Blog = ({ post, content }) => {
                   </p>
                   <div className="mt-2 flex items-center">
                      <div className="flex-shrink-0">
-                        <a href={post.author[0].href}>
+                        <a href={post.author[0]?.href || "#"}>
                            <span className="sr-only">
-                              {post.author[0].name}
+                              {post.author[0]?.name}
                            </span>
                            <img
                               className="h-10 w-10 rounded-full"
-                              src={post.author[0].imageUrl}
+                              src={post.author[0]?.imageUrl}
                               alt=""
                            />
                         </a>
@@ -204,10 +206,14 @@ const Blog = ({ post, content }) => {
                      <div className="ml-3">
                         <p className="text-sm font-medium text-gray-900 dark:text-gray-300">
                            <a
-                              href={post.author[0].href}
+                              href={post.author[0]?.href || "#"}
                               className="hover:underline">
-                              {post.author[0].name}
-                              {post.author[0].job&&<span className="text-sm font-light text-gray-500 ml-3">{post.author[0].job}</span>}
+                              {post.author[0]?.name}
+                              {post.author[0]?.job && (
+                                 <span className="text-sm font-light text-gray-500 ml-3">
+                                    {post.author[0].job}
+                                 </span>
+                              )}
                            </a>
                         </p>
                         <div className="flex space-x-1 text-sm font-light text-gray-500">
@@ -271,6 +277,7 @@ export const getServerSideProps = async context => {
       return {
          props: {
             post: post,
+            blog:data.blog,
             content,
          },
       };

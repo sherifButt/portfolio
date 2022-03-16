@@ -1,4 +1,4 @@
-import data from "../../siteData.config";
+import data from "../../site_Data.configs";
 import { getData as getPostData } from "./posts";
 
 export default async function helloAPI(req, res) {
@@ -13,6 +13,19 @@ export default async function helloAPI(req, res) {
 export async function getData() {
    console.time("getDataTime");
    const _data = await { ...JSON.parse(JSON.stringify(data)) };
+   
+   const addBlogToData = async () => {
+      try {
+         const postData = await getPostData();
+         _data.blog.posts = postData.posts;
+         
+         // console.log(_data.blog.posts);  
+      } catch (err) {
+         console.log("error:", err.message);
+      }
+   };
+
+   await addBlogToData();
    // replace blog categories id: with category object
    // iterate through data object to ge to category
    /**
@@ -23,6 +36,7 @@ export async function getData() {
     * @param {Array} exclude objects
     * @returns Object
     */
+
    const replaceIdWithFullObject = async (
       type = "blog", // Post type to manipulate
       typeSubElement = "category", // Post's sub element name to manipulate
@@ -54,52 +68,54 @@ export async function getData() {
    // in work[0] loop through category array
    // in category[0] check if category[0] === toolkit.id
    // push work object to toolkit.work
-
-   const addWorkToToolkits = () => {
-      const check = _data.toolkit.posts?.map((tool, toolIdx) => {
-         let arr = [];
-
-         const foundWorks = data.work.posts?.map(work => {
-            const foundWork = work.category.map(category => {
-               if (category === tool.id) {
-                  arr = [...arr, work];
+   /**
+    *
+    * @param {Object} something to be added
+    * @param {Object} otherThing to be added to (container)
+    * @returns
+    */
+   const addSomethingToContainer = async (
+      something = "work",
+      container = "toolkit"
+   ) => {
+      const check = _data[container].posts?.map(
+         (tool, toolIdx) => {
+            let arr = [];
+            const foundWorks = data[something].posts?.map(
+               work => {
+                  const foundWork = work.category.map(
+                     category => {
+                        if (category === tool.id) {
+                           arr = [...arr, work];
+                        }
+                     }
+                  );
+                  _data[container].posts[toolIdx][something] =
+                     arr;
+                  return foundWork;
                }
-            });
-            _data.toolkit.posts[toolIdx].work = arr;
-
-            return foundWork;
-         });
-
-         return foundWorks;
-      });
-
+            );
+            return foundWorks;
+         }
+      );
       return check;
    };
 
-   const addBlogToData = async () => {
-      try {
-         const postData = await getPostData();
-         _data.blog.posts = postData.posts;
-         replaceIdWithFullObject( "blog", "imgs", "gallery" );
-         replaceIdWithFullObject("blog", "category", "category");
-         replaceIdWithFullObject("blog", "author", "author");
-         replaceIdWithFullObject("blog", "tags", "tags");
-      } catch (err) {
-         console.log("error:", err.message);
-      }
-   };
-
-   if (_data.blog.isActive && _data.blog.isFiles)
-      addBlogToData();
+   replaceIdWithFullObject("blog", "imgs", "gallery");
+   replaceIdWithFullObject("blog", "category", "category");
+   replaceIdWithFullObject("blog", "author", "author");
+   replaceIdWithFullObject( "blog", "tags", "tags" );
+   
+   addSomethingToContainer("blog", "category");
 
    replaceIdWithFullObject("toolkit", "work", "work", [
-      "description",
-   ]);
-   
+      "description",]);
+
    replaceIdWithFullObject("work", "category", "toolkit");
-   replaceIdWithFullObject( "work", "imgs", "gallery" );
+   replaceIdWithFullObject("work", "imgs", "gallery");
    replaceIdWithFullObject("work", "tags", "tags");
-   addWorkToToolkits();
-   console.timeEnd("getDataTime");
+   addSomethingToContainer("work", "toolkit");
+   console.timeEnd( "getDataTime" );
+   
    return _data;
 }

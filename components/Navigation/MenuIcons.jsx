@@ -7,6 +7,8 @@ const MenuIcon = ({
    mainTitle,
    limit,
    numerized,
+   rootHref,
+   isAuthor
 }) => {
    // const ar = Array.apply(null, { length: 5 }).map(  Function.call,  Math.random);
    // console.log(ar)
@@ -56,13 +58,17 @@ const MenuIcon = ({
             </Popover.Button>
          ))}
          <div className="mt-5 text-sm">
-            <Link href={category?.href || "#"} passHref>
-               <a className="font-medium text-indigo-600 hover:text-indigo-500">
-                  {" "}
-                  View all {mainTitle}{" "}
-                  <span aria-hidden="true">&rarr;</span>
-               </a>
-            </Link>
+            <Popover.Button>
+               <Link
+                  href={category?.href || rootHref || "#"}
+                  passHref>
+                  <a className="font-medium text-indigo-600 hover:text-indigo-500">
+                     {" "}
+                     View all {mainTitle}{" "}
+                     <span aria-hidden="true">&rarr;</span>
+                  </a>
+               </Link>
+            </Popover.Button>
          </div>
       </Popover>
    );

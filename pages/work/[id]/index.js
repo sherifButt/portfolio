@@ -1,22 +1,15 @@
-import { getData } from "../../api/data";
-import DOMPurify from "isomorphic-dompurify";
 import matter from "gray-matter";
+import DOMPurify from "isomorphic-dompurify";
 import { marked } from "marked";
 import Link from "next/link";
-
 // Components
 import Frame from "../../../components/FramesCss";
+import { getData } from "../../api/data";
 
-const stats = [
-   { label: "Founded", value: "2021" },
-   { label: "Employees", value: "5" },
-   { label: "Beta Users", value: "521" },
-   { label: "Raised", value: "$25M" },
-];
 function classNames(...classes) {
    return classes.filter(Boolean).join(" ");
 }
-const Work = ({ post, content }) => {
+const Work = ({ work, post, content }) => {
    let description = marked(DOMPurify.sanitize(content)); // clean description
    return (
       <div className=" relative  py-16 sm:py-16">
@@ -104,6 +97,9 @@ const Work = ({ post, content }) => {
 
             <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
                {/* Content area */}
+               <Link href={work?.href} passHref>
+                  <a className="text-indigo-700">&#8593; back</a>
+               </Link>
                <div className="pt-10  lg:pt-10">
                   <h2 className="leading-relaxed text-4xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal ">
                      {post?.title}
@@ -169,13 +165,12 @@ const Work = ({ post, content }) => {
                         <Link
                            href={cat.href}
                            passHref
-                           key={cat.title}
-                           >
-                           <a className={classNames(
-                              cat.color,
-                              "hover:underline dark:bg-gray-800 mt-2 inline-flex items-center mr-2 px-3 py-0.5 rounded-full text-sm font-medium "
-                           )}
-                              >
+                           key={cat.title}>
+                           <a
+                              className={classNames(
+                                 cat.color,
+                                 "hover:underline dark:bg-gray-800 mt-2 inline-flex items-center mr-2 px-3 py-0.5 rounded-full text-sm font-medium "
+                              )}>
                               <svg
                                  xmlns="http://www.w3.org/2000/svg"
                                  width="24"
@@ -240,6 +235,7 @@ export const getServerSideProps = async context => {
       return {
          props: {
             post: post,
+            work: data.work,
             content,
          },
       };
