@@ -1,5 +1,6 @@
 import data from "../../siteData.config.json";
 import { getData as getPostData } from "./posts";
+import FlashText from "../../components/Options/FlashText";
 
 export default async function helloAPI(req, res) {
    console.time("apiDataTime");
