@@ -87,7 +87,7 @@ const ToolkitItem = ({ post, toolkit, content }) => {
             <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
                {/* Content area */}
                <Link href={toolkit?.href} passHref>
-                  <a className="text-indigo-700">&larr; back</a>
+                  <a className="text-indigo-700">&larr; back to Toolkit </a>
                </Link>
                <div className="pt-4 sm:pt-16 lg:pt-10">
                   <h1 className="leading-relaxed text-4xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal ">

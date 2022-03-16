@@ -23,7 +23,7 @@ export async function getData() {
       }
    };
 
-   await addBlogToData();
+   // await addBlogToData();
    // replace blog categories id: with category object
    // iterate through data object to ge to category
    /**
