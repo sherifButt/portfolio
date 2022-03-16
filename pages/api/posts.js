@@ -76,8 +76,8 @@ export async function getData() {
      
      const _data = await { ...JSON.parse( JSON.stringify( data ) ) };
      _data.blog.posts = posts
-     console.log(path.join(__dirname, "/site_Data.configs.js"));
- fs.writeFileSync(path.join(path.resolve('./'),'/site_Data.configs.js'),'import FlashText from "./components/Options/FlashText"; export default'+JSON.stringify(_data))
+     
+ fs.writeFileSync(path.join(path.resolve('./'),'/siteData.config.json'),JSON.stringify(_data))
       return { posts };
    } catch ( err )
    {

@@ -4,7 +4,8 @@ import { getData } from "../../api/data";
 import DOMPurify from "isomorphic-dompurify";
 import matter from "gray-matter";
 import { marked } from "marked";
-import inWords  from "../../../util/inWords"
+import inWords from "../../../util/inWords"
+import Link from "next/link"
 
 // componenets
 import ProgressBar from "../../../components/UX/ProgressBar";
@@ -18,7 +19,7 @@ const stats = [
    { label: "Commercial Value", value: "$25M" },
 ];
 
-const Example = ({ post, content }) => {
+const Example = ({category, post, content }) => {
    // replace existing blog icon with toolkit icon inside
    post = {
       ...post,
@@ -94,6 +95,9 @@ const Example = ({ post, content }) => {
 
             <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
                {/* Content area */}
+               <Link href={category?.href} passHref>
+                  <a className="text-indigo-700">&larr; back</a>
+               </Link>
                <div className="pt-4 sm:pt-16 lg:pt-10">
                   <h1 className="leading-relaxed text-4xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal ">
                      {post.title} Articls
@@ -210,6 +214,7 @@ export const getServerSideProps = async context => {
       return {
          props: {
             post: post,
+         category:data.category,
             content,
          },
       };

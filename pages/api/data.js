@@ -1,4 +1,4 @@
-import data from "../../site_Data.configs";
+import data from "../../siteData.config.json";
 import { getData as getPostData } from "./posts";
 
 export default async function helloAPI(req, res) {
