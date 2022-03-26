@@ -500,6 +500,19 @@ export default {
             color: "bg-indigo-100 text-indigo-800",
             icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
          },
+         {
+            id: 36,
+            alt: "a CSS selector",
+            description: "",
+            src: "/assets/imgs/posts/04.png",
+            featured: false,
+            isMobile: false,
+            frameVariant: 4,
+            width: "",
+            height: "",
+            color: "bg-indigo-100 text-indigo-800",
+            icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+         },
       ],
    },
    category: {
@@ -527,11 +540,11 @@ export default {
          },
          {
             id: 3,
-            title: "Fish",
+            title: "WebDev",
             href: "/category/3",
             color: "bg-indigo-100 text-indigo-800",
             description: "",
-            icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+            icon: "M16.5 12c0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2c0 .37-.03.73-.08 1.08c.69.1 1.33.32 1.92.64c.1-.56.16-1.13.16-1.72c0-5.5-4.5-10-10-10C6.47 2 2 6.5 2 12s4.5 10 10 10c.59 0 1.16-.06 1.72-.16A5.9 5.9 0 0 1 13 19c0-.29.03-.57.07-.85c-.32.63-.67 1.24-1.07 1.81c-.83-1.2-1.5-2.53-1.91-3.96h3.72a5.95 5.95 0 0 1 2.59-2.4c.06-.53.1-1.06.1-1.6M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26m.82 2H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m6.34 6H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2m.25-9.56c1.84.63 3.37 1.9 4.33 3.56h-2.95a15.65 15.65 0 0 0-1.38-3.56m7.91 12.81L17.75 22L15 19l1.16-1.16l1.59 1.59l3.59-3.59l1.16 1.41Z",
          },
          {
             id: 4,
@@ -539,16 +552,25 @@ export default {
             href: "/category/4",
             color: "bg-indigo-100 text-indigo-800",
             description: "",
-            icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+            icon: "M18 20.5a.5.5 0 0 0 .5-.5V10H14a2 2 0 0 1-2-2V3.5H6a.5.5 0 0 0-.5.5v10.627a3.482 3.482 0 0 0-1.5-.592V4a2 2 0 0 1 2-2h6.172c.028 0 .055.004.082.007a.63.63 0 0 0 .059.007c.215.015.427.056.624.138c.057.024.112.056.166.087l.05.029l.047.024a.652.652 0 0 1 .081.044c.078.053.148.116.219.18a.63.63 0 0 0 .036.03a.491.491 0 0 1 .049.04l5.829 5.828A2 2 0 0 1 20 9.828V20a2 2 0 0 1-2 2h-1.736a2.94 2.94 0 0 0 .702-1.5H18Zm-.622-12L13.5 4.621V8a.5.5 0 0 0 .5.5h3.378Zm-5.326 12c.203.86.976 1.5 1.898 1.5h.1A1.95 1.95 0 0 0 16 20.05v-.234a1.75 1.75 0 0 0-.85-1.5l-1.529-.918a.25.25 0 0 1-.121-.214v-.234a.45.45 0 0 1 .45-.45h.1a.45.45 0 0 1 .45.45V17a.75.75 0 0 0 1.5 0v-.05A1.95 1.95 0 0 0 14.05 15h-.1A1.95 1.95 0 0 0 12 16.95v.234c0 .614.322 1.184.85 1.5l1.529.918a.25.25 0 0 1 .121.214v.234a.45.45 0 0 1-.45.45h-.1a.45.45 0 0 1-.45-.45V20a.75.75 0 0 0-1.5 0v.05c0 .155.018.305.052.45ZM5.95 22l.05-.05V22h-.05Zm1.297-1A1.938 1.938 0 0 1 7 20.05V20a.75.75 0 0 1 1.5 0v.05c0 .248.201.45.45.45h.1a.45.45 0 0 0 .45-.45v-.234a.25.25 0 0 0-.121-.214l-1.53-.918a1.75 1.75 0 0 1-.849-1.5v-.234A1.95 1.95 0 0 1 8.95 15h.1A1.95 1.95 0 0 1 11 16.95V17a.75.75 0 0 1-1.5 0v-.05a.45.45 0 0 0-.45-.45h-.1a.45.45 0 0 0-.45.45v.234a.25.25 0 0 0 .121.214l1.53.918c.527.316.849.886.849 1.5v.234a1.957 1.957 0 0 1-.247.95a1.95 1.95 0 0 1-1.703 1h-.1a1.95 1.95 0 0 1-1.703-1Zm-1.439-.538c.124-.296.192-.621.192-.962a.75.75 0 1 0-1.5 0a1 1 0 1 1-2 0v-2a1 1 0 1 1 2 0a.75.75 0 1 0 1.5 0a2.5 2.5 0 1 0-5 0v2a2.5 2.5 0 0 0 4.808.962Z",
          },
          {
             id: 5,
             title: "javascript",
-            href: "js",
+            href: "/category/5",
             color: "bg-indigo-100 text-indigo-800",
             description:
                "Websites don't have to be static, I love making pages come to life.",
-            icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+            icon: "M8.5 7.5A1.5 1.5 0 0 1 10 6h1.5a.5.5 0 0 1 0 1H10a.5.5 0 0 0-.5.5V8a.5.5 0 0 0 .5.5h.5A1.5 1.5 0 0 1 12 10v.5a1.5 1.5 0 0 1-1.5 1.5H9a.5.5 0 0 1 0-1h1.5a.5.5 0 0 0 .5-.5V10a.5.5 0 0 0-.5-.5H10A1.5 1.5 0 0 1 8.5 8v-.5Zm-.5-1a.5.5 0 0 0-1 0v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 0 0 1h1A1.5 1.5 0 0 0 8 10.5v-4Zm-6-2A2.5 2.5 0 0 1 4.5 2h7A2.5 2.5 0 0 1 14 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7ZM4.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7Z",
+         },
+         {
+            id: 6,
+            title: "Interview",
+            href: "/category/6",
+            color: "bg-indigo-100 text-indigo-800",
+            description:
+               "Websites don't have to be static, I love making pages come to life.",
+            icon: "M3 5.75A2.75 2.75 0 0 1 5.75 3h16.5A2.75 2.75 0 0 1 25 5.75v8.75a7.486 7.486 0 0 0-1.5-.876V5.75c0-.69-.56-1.25-1.25-1.25H5.75c-.69 0-1.25.56-1.25 1.25v16.5c0 .69.56 1.25 1.25 1.25h7.874c.234.535.529 1.038.875 1.5H5.75A2.75 2.75 0 0 1 3 22.25V5.75Zm3.75 10.248h7.75a7.493 7.493 0 0 0-.875 1.5H6.75a.75.75 0 0 1 0-1.5ZM6 20.751a.75.75 0 0 1 .75-.75h5.502a.75.75 0 0 1 0 1.5H6.75a.75.75 0 0 1-.75-.75ZM11.502 6a.75.75 0 0 1 .69.458l2.749 6.503a.75.75 0 1 1-1.382.583l-.44-1.042H9.881l-.441 1.043a.75.75 0 1 1-1.382-.585l2.752-6.503A.75.75 0 0 1 11.5 6Zm-.985 5.002h1.967l-.983-2.327l-.984 2.327ZM17.75 6a.75.75 0 0 1 .75.75V8h1.25a.75.75 0 0 1 0 1.5H18.5v1.248a.75.75 0 0 1-1.5 0V9.5h-1.248a.75.75 0 0 1 0-1.5H17V6.75a.75.75 0 0 1 .75-.75ZM27 20.5a6.5 6.5 0 1 1-13 0a6.5 6.5 0 0 1 13 0Zm-6-4a.5.5 0 0 0-1 0V20h-3.5a.5.5 0 0 0 0 1H20v3.5a.5.5 0 0 0 1 0V21h3.5a.5.5 0 0 0 0-1H21v-3.5Z",
          },
       ],
    },
@@ -749,8 +771,7 @@ export default {
       posts: [
          {
             id: 2,
-            filename:
-               "Installing-Nextjs-Understanding-Folder-Structure",
+            filename: "Installing-Nextjs-Understanding-Folder-Structure",
             title: "Installing Next.js & Understanding Folder Structure",
             href: "/blog",
             date: "2020-06-21",
@@ -785,7 +806,47 @@ export default {
             excerpt: "How to build MD files auto reader, using",
             readingTime: "6 min",
             description:
-               'Using custom Font Family in a Next JS application involves 3 easy steps! setting up` _document.js` , declaring the custom font family in tailwind.`config.js` and using it in our `Components/Pages`.\nFor this example, we will be using “Google Fonts” as the font provider!\nLet\'s pick `Inter` Sans font from fonts.google.com and copy the href URL.\nIn this case, it’ll be:\n```html\n  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">\n```\n',
+               '',
+         },
+         {
+            id: 5,
+            filename: "css-selectors",
+            title: "CSS Selectors",
+            href: "/blog",
+            date: " 2022-03-25",
+            datetime: null,
+            imageUrl: null,
+            tags: [1, 3, 4],
+            category: [1, 3, 4, 6],
+            imgs: [36, 36],
+            relatedPosts: [1, 2, 3, 4, 5],
+            draft: false,
+            author: [1],
+            excerpt:
+               "How to fitch data in Next.js for fast preformence and better SEO",
+            readingTime: "10 min",
+            description:
+               '',
+         },
+         {
+            id: 4,
+            filename: "css-specificity",
+            title: "CSS specificity",
+            href: "/blog",
+            date: " 2022-03-25",
+            datetime: null,
+            imageUrl: null,
+            tags: [1, 3, 4],
+            category: [1, 2, 3, 4, 6],
+            imgs: [9, 9],
+            relatedPosts: [1, 2, 3, 4, 5],
+            draft: false,
+            author: [1],
+            excerpt:
+               "How to fitch data in Next.js for fast preformence and better SEO",
+            readingTime: "10 min",
+            description:
+               '',
          },
          {
             id: 3,
@@ -804,7 +865,7 @@ export default {
             excerpt:
                "How to fitch data in Next.js for fast preformence and better SEO",
             readingTime: "10 min",
-            description: "## Problem:\nI have files saved in ",
+            description: "",
          },
       ],
    },
@@ -850,8 +911,7 @@ export default {
             datetime: "2020-03-16",
             imgs: [1, 2, 23, 24, 3, 4],
             imageUrl: "/assets/imgs/posts/portfolio_03.jpg",
-            imageUrlDetail:
-               "/assets/imgs/posts/portfolio_11.jpg",
+            imageUrlDetail: "/assets/imgs/posts/portfolio_11.jpg",
             readingTime: "6 min",
             stats: {
                Completion: "03.2022",
@@ -1073,8 +1133,7 @@ export default {
             imgs: [1, 27, 28, 29, 30, 31, 32],
             imageUrl: "/assets/imgs/posts/portfolio_18.jpg",
             imageUrlIn: "/assets/imgs/posts/portfolio_19.png",
-            imageUrlInDetail:
-               "/assets/imgs/posts/portfolio_20.png",
+            imageUrlInDetail: "/assets/imgs/posts/portfolio_20.png",
             readingTime: "4 min",
             author: {
                name: "Brenna Goyette",
@@ -1100,10 +1159,9 @@ export default {
             title: "Nextjs",
             text: (
                <FlashText delay={4000}>
-                  using NextJs, I'll infuse your web app with SEO
-                  cappbilties, and basing fast spped and server
-                  side rendring|using NextJs, I'll infuse your
-                  web app with SEO cappbilties, and basing fast
+                  using NextJs, I'll infuse your web app with SEO cappbilties,
+                  and basing fast spped and server side rendring|using NextJs,
+                  I'll infuse your web app with SEO cappbilties, and basing fast
                   spped and server side rendring
                </FlashText>
             ),
@@ -1138,17 +1196,13 @@ export default {
             How to{" "}
             <strong className="text-indigo-700">
                <u>
-                  <FlashText
-                     delay={8000}
-                     className="text-indigo-700">
+                  <FlashText delay={8000} className="text-indigo-700">
                      Finish|Shipp|Deliver
                   </FlashText>
                </u>
             </strong>{" "}
             your Web
-            <FlashText delay={16000}>
-               App|Site|Shop
-            </FlashText>{" "}
+            <FlashText delay={16000}>App|Site|Shop</FlashText>{" "}
             <FlashText delay={8000} className="text-indigo-700">
                Faster|Esasyer
             </FlashText>
@@ -1157,9 +1211,9 @@ export default {
       ),
       subtitle: (
          <>
-            By nurturing your greate business idea thrugh my vast
-            web development experianse using the sate state of
-            art web technologies available to human, such:
+            By nurturing your greate business idea thrugh my vast web
+            development experianse using the sate state of art web technologies
+            available to human, such:
          </>
       ),
       ctaButton: {
@@ -1176,10 +1230,9 @@ export default {
             title: "Nextjs",
             text: (
                <FlashText delay={4000}>
-                  using NextJs, I'll infuse your web app with SEO
-                  cappbilties, and basing fast spped and server
-                  side rendring|using NextJs, I'll infuse your
-                  web app with SEO cappbilties, and basing fast
+                  using NextJs, I'll infuse your web app with SEO cappbilties,
+                  and basing fast spped and server side rendring|using NextJs,
+                  I'll infuse your web app with SEO cappbilties, and basing fast
                   spped and server side rendring
                </FlashText>
             ),
@@ -1309,8 +1362,7 @@ export default {
       pretitle: "What do we do?",
       title: (
          <>
-            I translate{" "}
-            <span className="text-indigo-700">IDEAS</span> into{" "}
+            I translate <span className="text-indigo-700">IDEAS</span> into{" "}
             <span className="text-indigo-700">code</span> using{" "}
             <FlashText className="text-indigo-700">
                Javascript|React|NextJs|HTML|nodeJs
