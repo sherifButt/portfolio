@@ -4,7 +4,7 @@ title: CSS specificity
 href: /blog
 category: [1, 2,3,4,6]
 excerpt: How to fitch data in Next.js for fast preformence and better SEO
-imgs: [9,9]
+imgs: [42,42]
 date: ' 2022-03-25'
 datetime: null
 imageUrl: null

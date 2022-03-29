@@ -4,7 +4,7 @@ title: CSS Selectors
 href: /blog
 category: [1,3,4,6]
 excerpt: How to fitch data in Next.js for fast preformence and better SEO
-imgs: [36,36]
+imgs: [40,40]
 date: ' 2022-03-25'
 datetime: null
 imageUrl: null
