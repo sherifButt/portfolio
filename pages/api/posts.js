@@ -50,6 +50,7 @@ export async function getData() {
                draft,
                author,
                excerpt,
+               keywords,
             },
          } = matter(fileContent);
          const grayMatter = {
@@ -67,6 +68,7 @@ export async function getData() {
             draft,
             author,
             excerpt,
+            keywords,
             readingTime,
             description: content,
          };

@@ -4,6 +4,7 @@ title: HTML DOM Events
 href: /blog
 category: [1,3,5,7,6]
 excerpt: HTML DOM events allow JavaScript to register different event handlers on elements in an HTML document
+keywords: css,selectors,html
 imgs: [39,39]
 date: '2020-03-29'
 datetime: null

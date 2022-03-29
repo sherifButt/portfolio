@@ -4,6 +4,7 @@ title: Installing Next.js & Understanding Folder Structure
 href: /blog
 category: [1, 2,3,5,7]
 excerpt: How to build MD files auto reader, using
+keywords: css,selectors,html
 imgs: [2,3,4,5,6]
 date: '2020-06-21'
 datetime: null

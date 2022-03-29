@@ -4,6 +4,7 @@ title: CSS Animation
 href: /blog
 category: [1,3,4,6]
 excerpt: CSS allows animation of HTML elements without using JavaScript or Flash
+keywords: css,selectors,html
 imgs: [41,41]
 date: '2020-03-28'
 datetime: null

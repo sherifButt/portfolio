@@ -3,7 +3,8 @@ id: 5
 title: CSS Selectors 
 href: /blog
 category: [1,3,4,6]
-excerpt: How to fitch data in Next.js for fast preformence and better SEO
+excerpt: Selectors will help you to precisely select the exact element/s which should receive your desired styles
+keywords: css,selectors,html
 imgs: [40,40]
 date: ' 2022-03-25'
 datetime: null
@@ -15,7 +16,7 @@ relatedPosts: [1,2,3,4,5]
 draft: false
 ---
 ## Why should I care about CSS Selectors?
-Selectors will help you to precisely   select the exact element/s which should receive your desired styles (colors, size, animation.... etc). You will need them as well in ___javascript___ to select element/s to manipulate... 
+Selectors will help you to precisely select the exact element/s which should receive your desired styles (colors, size, animation.... etc). You will need them as well in ___javascript___ to select element/s to manipulate... 
 
 Learn about CSS Selectors correctly and structurally and you will thank me later.
 

@@ -6,18 +6,13 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import inWords from "../../../util/inWords"
 import Link from "next/link"
+import Head from 'next/head'
 
 // componenets
 import ProgressBar from "../../../components/UX/ProgressBar";
 import MenuIcons from "../../../components/Navigation/MenuIcons";
 
 
-const stats = [
-   { label: "Started", value: "2021" },
-   { label: "Projects", value: "5" },
-   { label: "Collaborations", value: "11" },
-   { label: "Commercial Value", value: "$25M" },
-];
 
 const Example = ({category, post, content }) => {
    // replace existing blog icon with toolkit icon inside
@@ -32,7 +27,13 @@ const Example = ({category, post, content }) => {
    // clean description
    let description = marked(DOMPurify.sanitize(content));
    return (
-      <div className=" relative  py-16 sm:py-24">
+      <article className=" relative  py-16 sm:py-24">
+         <Head>
+            <title>{post?.title} | SBUTT Webdev Home</title>
+
+            <meta name="description" content={post?.excerpt}></meta>
+            <meta name="keywords" content={post?.keywords}></meta>
+         </Head>
          <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
             <div className="relative sm:py-16 lg:py-0">
                <div
@@ -115,14 +116,14 @@ const Example = ({category, post, content }) => {
                {/* blog */}
                {post?.blog?.length !== 0 && (
                   <div>
-                     <h3 className="capitalize pt-5 leading-loose text-2xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal">
+                     <h2 className="capitalize pt-5 leading-loose text-2xl lg:text-3x text-black dark:text-gray-100 font-extrabold tracking-normal">
                         We wrote{" "}
                         <u className="capitalize">
                            {inWords(post?.blog?.length)}
                         </u>{" "}
                         {post?.title} article
                         {post?.blog?.length > 1 && "s"}
-                     </h3>
+                     </h2>
                      <MenuIcons
                         posts={post?.blog}
                         limit={99}
@@ -194,7 +195,7 @@ const Example = ({category, post, content }) => {
                </div>
             </div>
          </div>
-      </div>
+      </article>
    );
 };
 

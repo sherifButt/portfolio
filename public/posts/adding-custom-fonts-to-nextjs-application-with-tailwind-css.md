@@ -4,6 +4,7 @@ title: Google Fonts to NextJS app with Tailwind CSS
 href: /blog
 category: [1, 2]
 excerpt: How to build MD files auto reader, using
+keywords: css,selectors,html
 imgs: [35,35]
 date: '2020-12-21'
 datetime: null
