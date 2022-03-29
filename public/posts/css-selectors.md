@@ -23,13 +23,15 @@ There is a ton of them in this article I'll teach you how to get started with th
 ## 1.0 Basic CSS selectors
 
 ### 1.1 Universal CSS Selector
-`*` 
+__syntax__: `*` 
 
-it is to select latterly every element in the body.
+_Universal selector_ will select latterly every element in the body.
 
     * {
      color:red;
     }
+
+Result selecting all body elements:
 
     <div class="red"> Love Cats </div> ←
     <span id="blue"> Love Dogs </span> ←
