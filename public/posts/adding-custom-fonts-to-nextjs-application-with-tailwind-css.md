@@ -28,9 +28,6 @@ In this case, it’ll be:
 
 Go to pages folder  `next-project/pages/` , and create a new custom document `file _document.js` and set it up with the following code
 
-
-```html
-
           import Document, {
               Html,
               Head,
@@ -42,12 +39,11 @@ Go to pages folder  `next-project/pages/` , and create a new custom document `fi
               {
                 const initialProps = await 
                 Document.getInitialProps(ctx)
-            
                 return initialProps
               }
               render() {
                 return (
-                      `<Html>`
+                      <Html>
                         <Head>
                         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
                         </Head>
@@ -61,5 +57,3 @@ Go to pages folder  `next-project/pages/` , and create a new custom document `fi
             }
 
             export default MyDocument
-        
-```
