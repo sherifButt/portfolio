@@ -15,7 +15,9 @@ relatedPosts: [1,2,3,4,5]
 draft: false
 ---
 ## Why should I care about CSS Selectors?
-Selectors will help you to select exactly which element to apply your CSS (colors, shapes - attributes).
+Selectors will help you to precisely   select the exact element/s which should receive your desired CSS (colors, shapes - attributes). You will need them all the time spicily in with javascript... 
+
+Learn about the correctly and structurally and you will thank me later.
 
 There is a ton of them in this article I'll teach you how to get started with them.
 ## 1.0 Basic selectors
