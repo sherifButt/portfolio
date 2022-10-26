@@ -103,7 +103,7 @@ const Screen = styled.div`
    margin: auto;
    position: absolute;
    background: url(${props => props.img});
-   background-position: center;
+   background-position: top ;
    background-repeat: no-repeat;
    background-size: cover;
    overflow: scroll;

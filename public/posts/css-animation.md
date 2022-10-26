@@ -62,7 +62,7 @@ You can control the individual components of the transition with the following s
 The shorthand CSS syntax is written as follows:
 
     div {
-    transition: (property) (duration) (timing-function) (delay);
+    transition: <property> <duration> <timing-function> <delay>;
     }
 
 __Example:__

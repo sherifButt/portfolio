@@ -181,7 +181,6 @@ const Layer2 = styled.div`
 `;
 
 const Screen = styled.div`
-   background: white;
    width: 286.6px;
    height: 631.4px;
    margin-left: 50%;
