@@ -1149,7 +1149,7 @@ export default {
             callToAction: [
                {
                   title: 'ReadMore',
-                  href: '/work/6',
+                  href: '/work/2',
                   alt: 'Read more aobut this project',
                   icon: '',
                },
