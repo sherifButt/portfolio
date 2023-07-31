@@ -1623,7 +1623,7 @@ export default {
       ),
       subtitle:
          // "🇬🇧 I'm Sherif, MERN FullStack Web Dev, I'd Love to help building your next modern, fast and dynamic web project, websites, web app or web-shop",
-         '🇬🇧 Hi, I’m Sherif: passionate, self-taught front web developer with experience in structuring, developing and implementing interactive websites and webapps - hence, I designed and coded this portfolio-site... 😎',
+         '🇬🇧 Hi, I’m Sherif: passionate, Full-Stack web developer with experience in structuring, developing and implementing interactive websites and webapps - hence, I designed and coded this portfolio-site... 😎',
       // I make the Web come Alive
       button: {
          enabled: true,
