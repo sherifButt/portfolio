@@ -50,7 +50,7 @@ Install the latest release:
 $ sudo n latest
 ```
 
-Install a specific version:
+Install a specific version..:
 
 ```
 $ sudo n [version.number]
